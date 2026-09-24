@@ -1,0 +1,108 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+
+interface ExperienceItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    id: 1,
+    title: "CIRCLE ISLAND TOURS",
+    description:
+      "Embark on a journey that takes you through lush landscapes, stunning beaches, and captivating cultural sites.",
+    image: "/sites/gotourshawaii/root/optimized-water-fall-002.jpg",
+    alt: "Waimea Waterfall Circle Island Tour",
+  },
+  {
+    id: 2,
+    title: "HAWAIIAN LUAU",
+    description:
+      "Experience the magic of aloha at our Hawaiian Luau! Indulge in a feast of traditional island delicacies, from succulent kalua pig to sweet poi.",
+    image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
+    alt: "Hawaiian Luau Experience",
+  },
+  {
+    id: 3,
+    title: "PEARL HARBOR",
+    description:
+      "Journey through history at Pearl Harbor, a solemn tribute to bravery and resilience. Walk in the footsteps of heroes as you explore iconic sites.",
+    image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
+    alt: "USS Arizona Memorial Pearl Harbor",
+  },
+];
+
+interface ExperienceCardsProps {
+  onSelectExperience?: (title: string) => void;
+}
+
+export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
+  return (
+    <section id="experiences" className="relative bg-[#f5f0e8] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none mb-3">
+            CHOOSE YOUR EXPERIENCE
+          </h2>
+          <p className="text-neutral-700 text-sm sm:text-base font-normal max-w-2xl mx-auto">
+            Come experience the best of our island with a local expert on one of our highly rated
+            Hidden Gems of Oahu tour options.
+          </p>
+        </div>
+
+        {/* 3 Experience Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {experiences.map((exp) => (
+            <div
+              key={exp.id}
+              onClick={() => onSelectExperience?.(exp.title)}
+              className="group relative h-[440px] sm:h-[480px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <Image
+                  src={exp.image}
+                  alt={exp.alt}
+                  fill
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+                {/* Gradient dark overlay from bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+              </div>
+
+              {/* Number Badge (Top Center) */}
+              <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+                <div className="w-13 h-13 rounded-full border-2 border-white/70 bg-black/40 backdrop-blur-md flex items-center justify-center text-white font-heading text-2xl shadow-lg transition-transform group-hover:scale-110 group-hover:border-[#f15d22]">
+                  {exp.id}
+                </div>
+              </div>
+
+              {/* Content (Bottom) */}
+              <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 z-10 flex flex-col justify-end">
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wide mb-2 transition-colors group-hover:text-amber-400">
+                  {exp.title}
+                </h3>
+                <p className="text-neutral-200 text-xs sm:text-sm font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
+                  {exp.description}
+                </p>
+
+                {/* View Details prompt on hover */}
+                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-white/90 group-hover:text-white">
+                  <span>Explore Tour</span>
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
