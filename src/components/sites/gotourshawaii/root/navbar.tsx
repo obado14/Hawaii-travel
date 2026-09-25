@@ -64,26 +64,26 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-medium tracking-wide">
             <Link
               href="/"
-              className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
+              className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors py-0.5"
             >
-              <Home className="w-4 h-4 text-[#f15d22]" />
+              <Home className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
               <span>Home</span>
             </Link>
 
             {/* Tours & Packages Dropdown */}
             <div
-              className="relative py-1"
+              className="relative py-0.5"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <Link
                 href="/tour-packages"
-                className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors focus:outline-none"
+                className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors focus:outline-none"
               >
-                <Sun className="w-4 h-4 text-[#f15d22]" />
+                <Sun className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
                 <span className="flex items-center gap-1">
                   Tours &amp; Packages
-                  <ChevronDown className="w-3 h-3 transition-transform duration-200" />
+                  <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200" />
                 </span>
               </Link>
 
@@ -96,7 +96,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">All Tours &amp; Packages</div>
-                      <div className="text-xs text-[#f5b324]">Explore all 7 handcrafted tours</div>
+                      <div className="text-xs text-[#f5b324]">Explore all 9 handcrafted tours</div>
                     </Link>
                     <Link
                       href="/tour-packages"
@@ -145,33 +145,33 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
 
             <Link
               href="/private-tours"
-              className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
+              className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors py-0.5"
             >
-              <Bus className="w-4 h-4 text-[#f15d22]" />
+              <Bus className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
               <span>Private Tours</span>
             </Link>
 
             <Link
               href="/blog"
-              className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
+              className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors py-0.5"
             >
-              <BookOpen className="w-4 h-4 text-[#f15d22]" />
+              <BookOpen className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
               <span>Blog</span>
             </Link>
 
             <Link
               href="/our-story"
-              className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
+              className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors py-0.5"
             >
-              <Compass className="w-4 h-4 text-[#f15d22]" />
+              <Compass className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
               <span>Our Story</span>
             </Link>
 
             <Link
               href="/contact-us"
-              className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
+              className="group flex flex-col items-center gap-[7px] text-white hover:text-[#f15d22] transition-colors py-0.5"
             >
-              <PhoneCall className="w-4 h-4 text-[#f15d22]" />
+              <PhoneCall className="w-[19px] h-[19px] text-[#f15d22] shrink-0 transition-transform duration-200 group-hover:scale-110" />
               <span>Contact Us</span>
             </Link>
           </nav>
@@ -228,7 +228,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-wider"
             >
-              <Sun className="w-4 h-4 text-[#f15d22]" />
+              <Sun className="w-5 h-5 text-[#f15d22]" />
               <span>Tours &amp; Packages</span>
             </Link>
             <div className="pl-7 space-y-1.5 border-l border-white/10 ml-2">
