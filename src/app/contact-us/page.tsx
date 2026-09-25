@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
@@ -15,10 +16,13 @@ import {
   CheckCircle2,
   Sparkles,
   Navigation,
+  ChevronRight,
 } from "lucide-react";
 
 export default function ContactUsPage() {
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -31,8 +35,16 @@ export default function ContactUsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.subject) return;
-    setSubmitted(true);
+    setFormError("");
+    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim()) {
+      setFormError("Silakan lengkapi kolom Nama, Email, dan Subjek yang wajib diisi.");
+      return;
+    }
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 600);
   };
 
   return (
@@ -83,8 +95,17 @@ export default function ContactUsPage() {
         </section>
 
         {/* 2. Contact Form & Information */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-10 sm:pt-12 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
+            {/* Breadcrumb Navigation for User Orientation */}
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-600 mb-6 font-medium px-1">
+              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+                Beranda
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+              <span className="text-neutral-900 font-bold">Hubungi Kami</span>
+            </nav>
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Form (Col 7 on Desktop, 1 Col on Mobile) */}
               <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-neutral-200/80">
@@ -128,6 +149,11 @@ export default function ContactUsPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {formError && (
+                      <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold animate-in fade-in">
+                        {formError}
+                      </div>
+                    )}
                     {/* Row 1: Name & Contact Number */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
@@ -224,9 +250,17 @@ export default function ContactUsPage() {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
                       <button
                         type="submit"
-                        className="bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#f15d22]/25 hover:shadow-xl hover:shadow-[#f15d22]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-center"
+                        disabled={isSubmitting}
+                        className="bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#f15d22]/25 hover:shadow-xl hover:shadow-[#f15d22]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-center disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
-                        KIRIM PESAN
+                        {isSubmitting ? (
+                          <>
+                            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
+                            <span>MENGIRIM PESAN...</span>
+                          </>
+                        ) : (
+                          <span>KIRIM PESAN</span>
+                        )}
                       </button>
                       <p className="text-xs text-neutral-500 flex items-center gap-1.5 justify-center sm:justify-start">
                         <Clock className="w-3.5 h-3.5 text-[#f15d22] shrink-0" />

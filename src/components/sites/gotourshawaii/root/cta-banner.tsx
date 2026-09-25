@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CtaBannerProps {
   onBookNow?: () => void;
@@ -43,12 +44,12 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
                 PESAN SEKARANG
               </button>
 
-              <a
+              <Link
                 href="/contact-us"
                 className="w-full sm:w-auto bg-[#0c1f38] hover:bg-[#152e4f] text-white font-heading text-lg sm:text-xl font-bold uppercase tracking-wider px-9 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 active:translate-y-0 text-center"
               >
                 HUBUNGI KAMI
-              </a>
+              </Link>
             </div>
           </div>
         </div>

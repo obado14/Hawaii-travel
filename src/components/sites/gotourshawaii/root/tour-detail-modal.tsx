@@ -14,6 +14,12 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+export interface TourItineraryItem {
+  time?: string;
+  title: string;
+  desc: string;
+}
+
 export interface TourPackageDetail {
   id: string;
   name: string;
@@ -29,6 +35,7 @@ export interface TourPackageDetail {
   description: string;
   fullDescription: string;
   highlights: string[];
+  itinerary?: TourItineraryItem[];
   included: string[];
   notIncluded: string[];
   meetingPoint: string;
@@ -65,6 +72,9 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tour-modal-title"
     >
       <div
         className="relative w-full max-w-3xl bg-[#0c1f38] border border-white/20 rounded-3xl shadow-2xl text-white overflow-hidden animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col"
@@ -73,15 +83,15 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f15d22] text-white flex items-center justify-center transition-colors cursor-pointer border border-white/20 shadow-lg"
-          aria-label="Tutup detail"
+          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-[#f15d22] text-white flex items-center justify-center transition-colors cursor-pointer border border-white/20 shadow-lg focus-visible:ring-2 focus-visible:ring-white"
+          aria-label="Tutup detail tur"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Scrollable Container */}
         <div className="overflow-y-auto overflow-x-hidden flex-1">
-          {/* Hero Image Section */}
+          {/* 1. Hero Image Section */}
           <div className="relative h-64 sm:h-80 w-full overflow-hidden">
             <Image
               src={tour.image}
@@ -90,15 +100,15 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
               className="object-cover object-center"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1f38] via-[#0c1f38]/40 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1f38] via-[#0c1f38]/45 to-black/35" />
 
             {/* Badges on Image */}
             <div className="absolute top-4 left-4 flex items-center gap-2">
-              <span className="bg-[#f15d22] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              <span className="bg-[#f15d22] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md border border-white/20 backdrop-blur-md">
                 {tour.categoryLabel}
               </span>
               {tour.recommended && (
-                <span className="bg-amber-400 text-neutral-950 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+                <span className="bg-amber-400 text-neutral-950 text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1">
                   ★ Rekomendasi #1
                 </span>
               )}
@@ -125,7 +135,10 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
                   {tour.location}
                 </span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl text-white uppercase tracking-wide leading-tight drop-shadow-md">
+              <h2
+                id="tour-modal-title"
+                className="font-heading text-2xl sm:text-3xl lg:text-4xl text-white uppercase tracking-wide leading-tight drop-shadow-md"
+              >
                 {tour.name}
               </h2>
             </div>
@@ -134,20 +147,21 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
           {/* Modal Body */}
           <div className="p-5 sm:p-7 space-y-6">
             {/* Price & Book Fast Strip */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4.5 rounded-2xl bg-white/5 border border-white/10 shadow-inner">
               <div>
-                <div className="text-xs text-neutral-400 uppercase tracking-wider">Harga per Tamu</div>
+                <div className="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Harga Mulai Dari</div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl sm:text-3xl font-extrabold text-[#f15d22]">
                     ${tour.price}
                   </span>
+                  <span className="text-xs text-neutral-300">/ orang</span>
                   {tour.originalPrice > tour.price && (
                     <span className="text-sm text-neutral-400 line-through">
                       ${tour.originalPrice}
                     </span>
                   )}
-                  <span className="text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded-full">
-                    Hemat ${tour.originalPrice - tour.price}
+                  <span className="text-xs text-emerald-400 font-bold bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-0.5 rounded-full ml-1">
+                    Hemat ${tour.originalPrice - tour.price} (Online Promo)
                   </span>
                 </div>
               </div>
@@ -156,18 +170,28 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
                   onClose();
                   onBookNow(tour.name);
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#f15d22] hover:bg-[#d84b13] text-white px-6 py-3 rounded-xl font-bold uppercase tracking-wider text-sm shadow-lg shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-[#f15d22] hover:bg-[#d84b13] text-white px-6 py-3 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm shadow-lg shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
                 <span>PESAN TUR INI</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
-            {/* Highlights */}
+            {/* 2. Overview / Gambaran Umum */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-[#f15d22] mb-2 flex items-center gap-1.5">
+                Gambaran Umum Pengalaman
+              </h3>
+              <p className="text-sm sm:text-base text-neutral-200 leading-relaxed font-normal">
+                {tour.fullDescription || tour.description}
+              </p>
+            </div>
+
+            {/* 3. Highlights / Sorotan Utama */}
             {tour.highlights && tour.highlights.length > 0 && (
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-widest text-[#f15d22] mb-3 flex items-center gap-1.5">
-                  <Star className="w-3.5 h-3.5" />
+                  <Star className="w-3.5 h-3.5 fill-[#f15d22]" />
                   Sorotan Utama Tur
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -184,18 +208,39 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
               </div>
             )}
 
-            {/* Overview / Full Description */}
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-[#f15d22] mb-2">
-                Gambaran Umum Pengalaman
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-200 leading-relaxed font-normal">
-                {tour.fullDescription || tour.description}
-              </p>
-            </div>
+            {/* 4. Itinerary Timeline */}
+            {tour.itinerary && tour.itinerary.length > 0 && (
+              <div>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-[#f5b324] mb-3.5 flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5" />
+                  Rencana Perjalanan (Itinerary)
+                </h3>
+                <div className="space-y-3 relative pl-6 border-l-2 border-[#f15d22]/30 ml-2">
+                  {tour.itinerary.map((step, idx) => (
+                    <div key={idx} className="relative group">
+                      {/* Step bullet */}
+                      <div className="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-[#f15d22] border-2 border-[#0c1f38] shadow-sm flex items-center justify-center" />
+                      <div className="bg-white/5 rounded-xl p-3 border border-white/5 text-xs sm:text-sm">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-white font-semibold">{step.title}</strong>
+                          {step.time && (
+                            <span className="text-[11px] font-bold text-[#f5b324] bg-white/10 px-2 py-0.5 rounded-full shrink-0">
+                              {step.time}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-neutral-300 text-xs leading-relaxed font-normal">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-            {/* Included & Not Included Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+            {/* 5. Included & Not Included Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-1">
               {/* Included */}
               <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
@@ -229,7 +274,7 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
               </div>
             </div>
 
-            {/* Meeting Point */}
+            {/* 6. Meeting Point */}
             {tour.meetingPoint && (
               <div className="p-4 rounded-2xl bg-[#f15d22]/10 border border-[#f15d22]/20 flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
@@ -242,7 +287,7 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
               </div>
             )}
 
-            {/* Important Info */}
+            {/* 7. Important Info */}
             {tour.importantInfo && tour.importantInfo.length > 0 && (
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-widest text-[#f5b324] mb-2.5 flex items-center gap-1.5">
@@ -264,9 +309,9 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
             <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400">
               <span className="flex items-center gap-1 text-emerald-400 font-semibold">
                 <ShieldCheck className="w-4 h-4" />
-                Jaminan Harga Terbaik &amp; Pembatalan Fleksibel
+                Jaminan Harga Terbaik &amp; Pembatalan Fleksibel 48 Jam
               </span>
-              <span>Go Tours Hawaii</span>
+              <span>Go Tours Hawaii Official</span>
             </div>
           </div>
         </div>

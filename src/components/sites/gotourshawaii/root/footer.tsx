@@ -175,6 +175,15 @@ export function Footer() {
             <p className="text-xs sm:text-sm text-neutral-200 font-medium">
               Terletak strategis di jantung kawasan wisata Waikiki, Honolulu.
             </p>
+            <div className="pt-1">
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f5b324] hover:text-white transition-colors group"
+              >
+                <span>Peta Interaktif &amp; Petunjuk Arah</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
           </div>
         </div>
 

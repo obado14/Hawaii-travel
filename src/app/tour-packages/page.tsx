@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
@@ -22,6 +23,7 @@ import {
   SlidersHorizontal,
   Eye,
   AlertCircle,
+  ChevronRight,
 } from "lucide-react";
 
 const allTours: TourPackageDetail[] = [
@@ -64,6 +66,14 @@ const allTours: TourPackageDetail[] = [
       "Sepatu jalan kaki atau kets nyaman diperlukan untuk jalur lembah beraspal sejauh 1,2 km.",
       "Berenang di air terjun bergantung pada kondisi keamanan debit air di lembah.",
     ],
+    itinerary: [
+      { time: "07:30", title: "Penjemputan Hotel Waikiki", desc: "Penjemputan nyaman dengan Sprinter van ber-AC langsung di lobi hotel Anda." },
+      { time: "08:45", title: "Gardu Pandang Pali & Halona Blowhole", desc: "Menyaksikan pemandangan samudra megah dan fenomena semburan ombak alami." },
+      { time: "10:30", title: "Kebun Botani Waimea & Air Terjun", desc: "Menyusuri jalur botani tropis dan berenang menyegarkan di bawah air terjun." },
+      { time: "13:30", title: "Sentra Kuliner Udang North Shore", desc: "Mencicipi kuliner udang mentega bawang putih autentik yang tersohor." },
+      { time: "15:00", title: "Pantai Penyu Liar Laniakea", desc: "Melihat penyu laut hijau Hawaii yang berjemur di pasir keemasan." },
+      { time: "17:00", title: "Kembali ke Waikiki", desc: "Pengantaran santai kembali ke hotel dengan segudang kenangan indah." },
+    ],
     recommended: true,
   },
   {
@@ -100,6 +110,14 @@ const allTours: TourPackageDetail[] = [
       "Pakaian sopan dihargai saat memasuki area lonceng kuil yang sakral.",
       "Jaket tipis disarankan untuk area pegunungan yang sejuk berkabut.",
     ],
+    itinerary: [
+      { time: "08:00", title: "Penjemputan di Waikiki", desc: "Penjemputan pagi tepat waktu di lobi hotel." },
+      { time: "09:00", title: "Kuil Kedamaian Byodo-In", desc: "Membunyikan lonceng Bon-Sho dan memberi makan ikan koi di kaki Pegunungan Koʻolau." },
+      { time: "11:00", title: "Perkebunan Kacang Macadamia", desc: "Mencicipi aneka kacang macadamia panggang dan seduhan kopi Kona segar gratis." },
+      { time: "12:30", title: "Pesisir Pantai Windward & Makan Siang", desc: "Menikmati lanskap pesisir timur yang asri dan santap kuliner lokal." },
+      { time: "14:30", title: "Pengamatan Penyu North Shore", desc: "Kunjungan ke spot konservasi satwa laut alami." },
+      { time: "16:30", title: "Tiba di Hotel Waikiki", desc: "Kembali ke hotel Anda." },
+    ],
   },
   {
     id: "turtle-snorkeling",
@@ -133,6 +151,12 @@ const allTours: TourPackageDetail[] = [
     importantInfo: [
       "Usia minimal 3 tahun. Diwajibkan memiliki kemampuan dasar mengapung di air.",
       "Semua tamu harus mematuhi hukum perlindungan satwa laut: dilarang menyentuh penyu.",
+    ],
+    itinerary: [
+      { time: "09:00", title: "Kumpul & Check-in di Waikiki", desc: "Penyambutan ramah oleh kru dan pembagian alat snorkeling premium." },
+      { time: "09:30", title: "Pelayaran Katamaran Waikiki", desc: "Berlayar santai melintasi garis pantai Waikiki dengan latar Diamond Head." },
+      { time: "10:00", title: "Snorkeling di Turtle Canyon", desc: "Berenang bersama penyu laut hijau (Honu) didampingi instruktur bersertifikasi." },
+      { time: "11:30", title: "Pelayaran Kembali & Minuman Dingin", desc: "Menikmati camilan dan minuman tropis segar di dek kapal." },
     ],
   },
   {
@@ -168,6 +192,13 @@ const allTours: TourPackageDetail[] = [
     importantInfo: [
       "Pakaian santai tropis (aloha attire) sangat disarankan.",
       "Menu ramah vegetarian, vegan, dan bebas gluten tersedia di meja prasmanan.",
+    ],
+    itinerary: [
+      { time: "17:00", title: "Kedatangan & Kalung Bunga Lei", desc: "Penyambutan hangat khas Aloha dengan kalung bunga anggrek segar dan koktail Mai Tai." },
+      { time: "17:30", title: "Workshop Budaya & Upacara Imu", desc: "Menyaksikan proses pengangkatan babi panggang kalua dari oven batu vulkanik tradisional." },
+      { time: "18:30", title: "Prasmanan Mewah Polinesia", desc: "Santap malam hidangan autentik Hawaii sepuasnya di bawah langit senja." },
+      { time: "19:30", title: "Pertunjukan Musik & Tarian Api", desc: "Kisah epik migrasi Polinesia, tarian Hula memukau, dan atraksi puncak tari pisau api Samoa." },
+      { time: "21:00", title: "Penutupan Acara Luau", desc: "Sesi foto bersama para penari dan perpisahan Aloha." },
     ],
     recommended: true,
   },
@@ -208,6 +239,13 @@ const allTours: TourPackageDetail[] = [
       "Kebijakan tas ketat: Dilarang membawa tas, ransel, atau tas popok berukuran lebih dari 1,5 x 2,25 x 5,5 inci ke dalam Pearl Harbor.",
       "Layanan penitipan tas tersedia di pintu masuk dengan biaya terjangkau.",
     ],
+    itinerary: [
+      { time: "06:30", title: "Penjemputan Pagi di Hotel", desc: "Penjemputan awal untuk memastikan akses antrean terbaik di Pearl Harbor." },
+      { time: "07:30", title: "Pusat Pengunjung & Museum Pearl Harbor", desc: "Menjelajahi galeri memorabilia 'Road to War' dan pemutaran film dokumenter 23 menit." },
+      { time: "09:00", title: "Shuttle Perahu AL & Memorial USS Arizona", desc: "Menyeberang dengan perahu resmi AL AS untuk memberi penghormatan langsung di atas bangkai kapal perang legendaris." },
+      { time: "10:45", title: "Tur Bersejarah Pusat Kota Honolulu", desc: "Melewati Istana Iolani, Patung Raja Kamehameha, Gedung Parlemen Hawaii, dan Punchbowl Cemetery." },
+      { time: "12:30", title: "Kembali ke Waikiki", desc: "Pengantaran kembali ke hotel dengan jadwal siang yang masih leluasa." },
+    ],
   },
   {
     id: "diamond-head",
@@ -243,6 +281,12 @@ const allTours: TourPackageDetail[] = [
       "Sepatu olahraga atau kets tertutup diwajibkan.",
       "Topi, kacamata hitam, dan tabir surya sangat disarankan.",
     ],
+    itinerary: [
+      { time: "Jadwal Fleksibel", title: "Penjemputan di Hotel Waikiki", desc: "Armada ber-AC menjemput langsung di hotel Anda sesuai jam reservasi yang dipilih." },
+      { time: "Menit ke-20", title: "Tiba di Kawah Diamond Head", desc: "Masuk langsung dengan tiket reservasi resmi tanpa repot mencari parkir umum." },
+      { time: "2 Jam Bebas", title: "Pendakian Puncak & Spot Foto 360°", desc: "Mendaki jalur kawah, terowongan bersejarah, dan menikmati pemandangan spektakuler Samudra Pasifik." },
+      { time: "Selesai", title: "Shuttle Pengantaran Kembali", desc: "Armada ber-AC siap menjemput Anda tepat waktu untuk kembali ke Waikiki." },
+    ],
   },
   {
     id: "surf-lessons",
@@ -277,6 +321,12 @@ const allTours: TourPackageDetail[] = [
     importantInfo: [
       "Usia minimal 6 tahun. Diperlukan kemampuan dasar mengapung/berenang.",
       "Garansi 100% bisa berdiri atau ulangi sesi pelajaran secara gratis!",
+    ],
+    itinerary: [
+      { time: "09:00", title: "Penyambutan & Pemilihan Papan", desc: "Pencocokan papan selancar busa ramah pemula dan pakaian pelindung UV." },
+      { time: "09:15", title: "Latihan Teori di Atas Pasir", desc: "Instruktur mengajarkan keamanan ombak, etika selancar, dan gerakan berdiri (pop-up) yang tepat." },
+      { time: "09:45", title: "Praktik Menunggangi Ombak di Laut", desc: "Instruktur mendorong papan Anda ke ombak yang tepat dan memandu keseimbangan Anda." },
+      { time: "11:00", title: "Selesai & Evaluasi Sesi", desc: "Bilas air tawar, foto sertifikat pencapaian, dan rekomendasi spot selancar." },
     ],
   },
   {
@@ -314,6 +364,14 @@ const allTours: TourPackageDetail[] = [
       "Datanglah dengan selera makan yang baik! Banyak perhentian kuliner lezat sepanjang hari.",
       "Alergi makanan laut dapat diganti dengan opsi ayam bawang putih atau tahu vegetarian.",
     ],
+    itinerary: [
+      { time: "08:30", title: "Penjemputan di Waikiki", desc: "Perjalanan santai menuju pesisir utara melalui lembah tengah Oahu." },
+      { time: "09:45", title: "Kebun Nanas Dole Plantation", desc: "Mencicipi sajian es krim nanas segar yang legendaris." },
+      { time: "11:30", title: "Sentra Udang Bawang Putih Kahuku", desc: "Makan siang dengan seporsi udang bawang putih panas khas food truck North Shore." },
+      { time: "13:30", title: "Kota Bersejarah Haleiwa & Es Serut Matsumoto", desc: "Menjelajahi butik kayu tempo dulu dan menikmati es serut pelangi ikonik." },
+      { time: "15:00", title: "Kedai Buah Tropis & Pantai Selancar", desc: "Menikmati buah tropis segar sambil menyaksikan deburan ombak pesisir utara." },
+      { time: "16:30", title: "Tiba Kembali di Waikiki", desc: "Pengantaran kembali ke hotel dengan perut kenyang dan hati senang." },
+    ],
     recommended: true,
   },
   {
@@ -350,6 +408,13 @@ const allTours: TourPackageDetail[] = [
       "Keberangkatan pukul 17.30 (menyesuaikan waktu sunset). Harap hadir 20 menit sebelumnya.",
       "Berusia minimal 21 tahun dengan kartu identitas berfoto untuk mengonsumsi minuman beralkohol.",
       "Jaket tipis atau penahan angin disarankan untuk angin laut sore.",
+    ],
+    itinerary: [
+      { time: "17:00", title: "Check-in di Dermaga Kewalo Basin", desc: "Penyambutan di dermaga dan pengenalan keselamatan kapal." },
+      { time: "17:30", title: "Pelayaran Sunset Membelah Ombak", desc: "Katamaran membentangkan layar dan melaju santai menyusuri pesisir Waikiki." },
+      { time: "18:00", title: "Koktail Tropis & Panorama Diamond Head", desc: "Menikmati racikan Mai Tai dingin dan alunan lagu akustik Hawaii dengan latar langit senja keemasan." },
+      { time: "18:45", title: "Matahari Terbenam di Cakrawala Pasifik", desc: "Menyaksikan bola matahari perlahan tenggelam di samudra lepas." },
+      { time: "19:30", title: "Kembali ke Dermaga", desc: "Berlabuh kembali ke daratan dengan pemandangan lampu-lampu gemerlap kota Waikiki." },
     ],
   },
 ];
@@ -473,8 +538,17 @@ export default function TourPackagesPage() {
         </section>
 
         {/* 2. Main Tour Listing Section */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-8 sm:pt-10 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+            {/* Breadcrumb Navigation for User Orientation */}
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-600 mb-5 font-medium px-1">
+              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+                Beranda
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+              <span className="text-neutral-900 font-bold">Tur &amp; Paket</span>
+            </nav>
+
             {/* Filter Pills, Search Bar, and Sorter */}
             <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-lg border border-neutral-200/80 mb-10 sm:mb-12">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
@@ -491,7 +565,7 @@ export default function TourPackagesPage() {
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full hover:bg-neutral-200 text-neutral-400 hover:text-neutral-700 transition-colors"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full hover:bg-neutral-200 text-neutral-400 hover:text-neutral-700 transition-colors cursor-pointer"
                       aria-label="Hapus pencarian"
                     >
                       <X className="w-3.5 h-3.5" />
@@ -586,8 +660,20 @@ export default function TourPackagesPage() {
                     key={tour.id}
                     className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
                   >
-                    {/* Top Image Box with Badges */}
-                    <div className="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+                    {/* Top Image Box with Badges - Clickable for fast detail preview */}
+                    <div
+                      onClick={() => handleViewDetails(tour)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          handleViewDetails(tour);
+                        }
+                      }}
+                      className="relative h-56 sm:h-60 w-full overflow-hidden shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f15d22]"
+                      aria-label={`Buka detail lengkap tur ${tour.name}`}
+                    >
                       <Image
                         src={tour.image}
                         alt={tour.name}
@@ -597,7 +683,7 @@ export default function TourPackagesPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
 
                       {/* Top Badges */}
-                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
+                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
                         <span className="bg-black/65 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md border border-white/10">
                           {tour.categoryLabel}
                         </span>
@@ -609,7 +695,7 @@ export default function TourPackagesPage() {
                       </div>
 
                       {/* Bottom Image Strip: Duration & Location */}
-                      <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-white/95 font-medium drop-shadow-md">
+                      <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-white/95 font-medium drop-shadow-md pointer-events-none">
                         <span className="flex items-center gap-1.5 bg-black/55 backdrop-blur-sm px-3 py-0.5 rounded-full border border-white/10">
                           <Clock className="w-3.5 h-3.5 text-[#f5b324]" />
                           {tour.duration}
@@ -636,8 +722,11 @@ export default function TourPackagesPage() {
                           </span>
                         </div>
 
-                        {/* Title */}
-                        <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-tight mb-2.5 group-hover:text-[#f15d22] transition-colors line-clamp-2 min-h-[3.25rem]">
+                        {/* Title - Clickable for fast detail preview */}
+                        <h3
+                          onClick={() => handleViewDetails(tour)}
+                          className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-tight mb-2.5 group-hover:text-[#f15d22] transition-colors line-clamp-2 min-h-[3.25rem] cursor-pointer"
+                        >
                           {tour.name}
                         </h3>
 

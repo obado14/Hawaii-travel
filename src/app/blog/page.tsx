@@ -17,6 +17,7 @@ import {
   Search,
   X,
   ChevronDown,
+  ChevronRight,
 } from "lucide-react";
 import { posts } from "@/data/blog-posts";
 
@@ -126,8 +127,17 @@ export default function BlogPage() {
         </section>
 
         {/* Main Blog Content Section with Cream Background */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-8 sm:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+            {/* Breadcrumb Navigation for User Orientation */}
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-600 mb-6 font-medium px-1">
+              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+                Beranda
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+              <span className="text-neutral-900 font-bold">Blog Wisata</span>
+            </nav>
+
             {/* 1. Featured Article Section (Horizontal Card) */}
             <div className="mb-12 sm:mb-14">
               <div className="flex items-center gap-2 mb-4 px-1">

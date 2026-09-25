@@ -27,8 +27,17 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
 
         {/* Wide Hero Card */}
         <div
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onBookShuttle?.();
+            }
+          }}
+          aria-label="Pesan tiket shuttle pendakian Diamond Head"
           onClick={onBookShuttle}
-          className="group relative h-[420px] sm:h-[480px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40 border border-black/10 bg-black"
+          className="group relative h-[420px] sm:h-[480px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f15d22]"
         >
           {/* Panoramic Diamond Head Image */}
           <div className="absolute inset-0">

@@ -90,8 +90,9 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggle(faq.id)}
-                  className="w-full flex items-center justify-between text-left py-4 sm:py-5 group focus:outline-none cursor-pointer"
+                  className="w-full flex items-center justify-between text-left py-4 sm:py-5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b324] rounded-2xl cursor-pointer"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${faq.id}`}
                 >
                   <span className="text-lg sm:text-xl md:text-[1.35rem] font-semibold text-white group-hover:text-[#f5b324] transition-colors pr-4 leading-snug">
                     {faq.question}
@@ -111,6 +112,9 @@ export function FAQSection() {
 
                 {/* Smooth Expand/Collapse Grid Transition */}
                 <div
+                  id={`faq-answer-${faq.id}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${faq.id}`}
                   className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}

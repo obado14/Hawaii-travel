@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
@@ -18,6 +19,7 @@ import {
   Clock,
   MapPin,
   Camera,
+  ChevronRight,
 } from "lucide-react";
 
 interface TeamMember {
@@ -165,8 +167,17 @@ export default function OurStoryPage() {
         </section>
 
         {/* 2. Narrative Section */}
-        <section className="bg-[#f5f0e8] text-neutral-900 py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-8 sm:pt-12 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
+            {/* Breadcrumb Navigation for User Orientation */}
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-600 mb-8 font-medium px-1">
+              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+                Beranda
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+              <span className="text-neutral-900 font-bold">Kisah Kami</span>
+            </nav>
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-7 space-y-5">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 shadow-xs">

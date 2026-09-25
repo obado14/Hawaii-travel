@@ -62,14 +62,27 @@ const TOURS: TourOption[] = [
   },
 ];
 
+const matchTourId = (nameOrId?: string): string => {
+  if (!nameOrId) return TOURS[0].id;
+  const lower = nameOrId.toLowerCase();
+  const direct = TOURS.find((t) => t.id.toLowerCase() === lower);
+  if (direct) return direct.id;
+
+  if (lower.includes("luau") || lower.includes("paina")) return "Hawaiian Luau";
+  if (lower.includes("pearl") || lower.includes("arizona")) return "Pearl Harbor Tour";
+  if (lower.includes("diamond") || lower.includes("shuttle")) return "Diamond Head Shuttle";
+  if (lower.includes("snorkeling") || lower.includes("penyu") || lower.includes("turtle")) return "Waikiki Turtle Canyon Snorkeling";
+  return "Circle Island Tour";
+};
+
 export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogProps) {
   const [step, setStep] = useState<1 | 2 | 3 | 4 | 5>(1);
-  const [selectedTour, setSelectedTour] = useState(defaultTour || "Circle Island Tour");
+  const [selectedTour, setSelectedTour] = useState(() => matchTourId(defaultTour));
   const [prevDefaultTour, setPrevDefaultTour] = useState(defaultTour);
   if (defaultTour !== prevDefaultTour) {
     setPrevDefaultTour(defaultTour);
     if (defaultTour) {
-      setSelectedTour(defaultTour);
+      setSelectedTour(matchTourId(defaultTour));
     }
   }
 
@@ -92,6 +105,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
   const [errorMsg, setErrorMsg] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [bookingRef, setBookingRef] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
@@ -144,14 +158,27 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
     }
   };
 
+  const handleStepJump = (targetStep: 1 | 2 | 3 | 4 | 5) => {
+    if (targetStep < step) {
+      setErrorMsg("");
+      setStep(targetStep);
+    }
+  };
+
   const handleConfirm = () => {
-    const randomCode = `GTH-${Math.floor(10000 + Math.random() * 90000)}`;
-    setBookingRef(randomCode);
-    setConfirmed(true);
+    setIsSubmitting(true);
+    setErrorMsg("");
+    setTimeout(() => {
+      const randomCode = `GTH-${Math.floor(10000 + Math.random() * 90000)}`;
+      setBookingRef(randomCode);
+      setConfirmed(true);
+      setIsSubmitting(false);
+    }, 600);
   };
 
   const handleResetAndClose = () => {
     setConfirmed(false);
+    setIsSubmitting(false);
     setStep(1);
     onClose();
   };
@@ -229,7 +256,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
           <div className="flex flex-col h-full overflow-y-auto pr-1">
             {/* Top Stepper Indicator */}
             <div className="mb-6">
-              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
+              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2.5">
                 <span>Langkah {step} dari 5</span>
                 <span className="text-[#f5b324] font-semibold">
                   {step === 1 && "Pilih Tur"}
@@ -240,12 +267,31 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 </span>
               </div>
 
-              {/* Progress bar */}
-              <div className="w-full bg-white/10 rounded-full h-1.5 overflow-hidden flex">
-                <div
-                  className="bg-gradient-to-r from-[#f15d22] to-amber-400 h-full transition-all duration-300 rounded-full"
-                  style={{ width: `${(step / 5) * 100}%` }}
-                />
+              {/* Interactive step navigation bars */}
+              <div className="grid grid-cols-5 gap-1.5 mb-1.5">
+                {[
+                  { s: 1 as const, label: "Tur" },
+                  { s: 2 as const, label: "Jadwal" },
+                  { s: 3 as const, label: "Tamu" },
+                  { s: 4 as const, label: "Kontak" },
+                  { s: 5 as const, label: "Tinjau" },
+                ].map((item) => (
+                  <button
+                    key={item.s}
+                    type="button"
+                    disabled={item.s >= step}
+                    onClick={() => handleStepJump(item.s)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      item.s === step
+                        ? "bg-[#f15d22] ring-2 ring-[#f15d22]/40"
+                        : item.s < step
+                        ? "bg-emerald-500 cursor-pointer hover:opacity-80"
+                        : "bg-white/15 cursor-not-allowed"
+                    }`}
+                    title={item.s < step ? `Klik untuk kembali ke langkah ${item.label}` : item.label}
+                    aria-label={`Langkah ${item.s}: ${item.label}`}
+                  />
+                ))}
               </div>
             </div>
 
@@ -633,11 +679,21 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               ) : (
                 <button
                   type="button"
+                  disabled={isSubmitting}
                   onClick={handleConfirm}
-                  className="px-8 py-3.5 rounded-xl bg-[#00aa6c] hover:bg-[#00905b] text-white font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#00aa6c]/30 transition-all cursor-pointer flex items-center gap-2"
+                  className="px-8 py-3.5 rounded-xl bg-[#00aa6c] hover:bg-[#00905b] text-white font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#00aa6c]/30 transition-all cursor-pointer flex items-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
                 >
-                  <Check className="w-5 h-5 stroke-[3]" />
-                  <span>KONFIRMASI PEMESANAN</span>
+                  {isSubmitting ? (
+                    <>
+                      <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
+                      <span>MEMPROSES RESERVASI...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Check className="w-5 h-5 stroke-[3]" />
+                      <span>KONFIRMASI PEMESANAN</span>
+                    </>
+                  )}
                 </button>
               )}
             </div>

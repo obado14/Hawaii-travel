@@ -69,8 +69,17 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
           {experiences.map((exp) => (
             <div
               key={exp.id}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  onSelectExperience?.(exp.title);
+                }
+              }}
+              aria-label={`Jelajahi ${exp.title}`}
               onClick={() => onSelectExperience?.(exp.title)}
-              className="group relative h-[510px] sm:h-[550px] md:h-[580px] lg:h-[610px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black"
+              className="group relative h-[510px] sm:h-[550px] md:h-[580px] lg:h-[610px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f15d22]"
             >
               {/* Background Image with subtle zoom */}
               <div className="absolute inset-0">

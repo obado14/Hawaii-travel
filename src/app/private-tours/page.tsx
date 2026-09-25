@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
@@ -68,6 +69,7 @@ export default function PrivateToursPage() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [quoteSent, setQuoteSent] = useState(false);
   const [inquiryRef, setInquiryRef] = useState("PVT-84291");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Quote Form State & Wizard Step
   const [wizardStep, setWizardStep] = useState<1 | 2 | 3>(1);
@@ -124,9 +126,14 @@ export default function PrivateToursPage() {
 
   const handleSubmitQuote = (e: React.FormEvent) => {
     e.preventDefault();
-    const generatedRef = `PVT-${Math.floor(10000 + Math.random() * 90000)}`;
-    setInquiryRef(generatedRef);
-    setQuoteSent(true);
+    setIsSubmitting(true);
+    setFormError("");
+    setTimeout(() => {
+      const generatedRef = `PVT-${Math.floor(10000 + Math.random() * 90000)}`;
+      setInquiryRef(generatedRef);
+      setQuoteSent(true);
+      setIsSubmitting(false);
+    }, 600);
   };
 
   return (
@@ -177,8 +184,17 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 2. Intro Feature Highlights */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-14 sm:pt-18 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-8 sm:pt-10 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
+            {/* Breadcrumb Navigation for User Orientation */}
+            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs text-neutral-600 mb-6 font-medium">
+              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+                Beranda
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+              <span className="text-neutral-900 font-bold">Tur Privat</span>
+            </nav>
+
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
               <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
@@ -652,9 +668,17 @@ export default function PrivateToursPage() {
 
                       <button
                         type="submit"
-                        className="px-8 py-3.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg shadow-[#f15d22]/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                        disabled={isSubmitting}
+                        className="px-8 py-3.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg shadow-[#f15d22]/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex items-center gap-2"
                       >
-                        KIRIM PERMINTAAN PENAWARAN
+                        {isSubmitting ? (
+                          <>
+                            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
+                            <span>MENGIRIM PERMINTAAN...</span>
+                          </>
+                        ) : (
+                          <span>KIRIM PERMINTAAN PENAWARAN</span>
+                        )}
                       </button>
                     </div>
                   </div>
