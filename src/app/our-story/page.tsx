@@ -19,19 +19,19 @@ export default function OurStoryPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-[460px] sm:min-h-[520px] md:min-h-[560px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/sites/gotourshawaii/root/Banner-BG-Thumbnail.jpg"
-              alt="Oahu Koʻolau Mountains"
+              src="/sites/gotourshawaii/root/our-story-hero.png"
+              alt="Go Tours Hawaii Team and Fleet"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-[center_35%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0c1f38]/70 via-black/50 to-[#0c1f38]/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0c1f38]/70 via-black/40 to-[#0c1f38]/85" />
           </div>
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-12 pb-16">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-12 pb-28 sm:pb-36 md:pb-44">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
@@ -47,13 +47,14 @@ export default function OurStoryPage() {
           </div>
 
           {/* Polynesian Divider */}
-          <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none translate-y-1">
-            <div className="relative w-full h-12 sm:h-16">
+          <div className="absolute bottom-0 inset-x-0 w-full pointer-events-none z-20 translate-y-0.5">
+            <div className="relative w-full aspect-[1536/284]">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
-                alt="Polynesian tribal divider"
+                alt="Polynesian mountain divider"
                 fill
                 className="object-cover object-bottom"
+                priority
               />
             </div>
           </div>

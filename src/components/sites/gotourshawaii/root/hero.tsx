@@ -25,7 +25,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 pb-28">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 pb-32 sm:pb-40 md:pb-48">
         {/* TripAdvisor Award Badge */}
         <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15 shadow-xl animate-in fade-in duration-700">
           <div className="w-6 h-6 rounded-full bg-[#00aa6c] flex items-center justify-center text-white">
@@ -72,13 +72,14 @@ export function Hero({ onOpenBooking }: HeroProps) {
       </div>
 
       {/* Polynesian Tribal Divider Graphic at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none translate-y-1">
-        <div className="relative w-full h-12 sm:h-16 md:h-20 lg:h-24">
+      <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none translate-y-0.5">
+        <div className="relative w-full aspect-[1536/284]">
           <Image
             src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
             alt="Polynesian tribal divider"
             fill
             className="object-cover object-bottom"
+            priority
           />
         </div>
       </div>
