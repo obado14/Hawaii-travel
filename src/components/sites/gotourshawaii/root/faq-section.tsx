@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface FAQItem {
   id: number;
@@ -53,7 +53,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative bg-[#081d38] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+    <section className="relative bg-[#081d38] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
       {/* Texture Background */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -66,13 +66,13 @@ export function FAQSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10">
           <h2 className="font-heading text-4xl sm:text-6xl md:text-7xl text-[#f5b324] uppercase tracking-wider">
             FREQUENTLY ASKED QUESTIONS
           </h2>
         </div>
 
-        {/* Accordions with smooth expand/collapse and refined hover effect */}
+        {/* Accordions with smooth expand/collapse and transformed icon */}
         <div className="space-y-4">
           {faqs.map((faq) => {
             const isOpen = openIds.includes(faq.id);
@@ -90,13 +90,15 @@ export function FAQSection() {
                     {faq.question}
                   </span>
 
-                  {/* Orange circle with arrow */}
+                  {/* Icon that visually transforms to show expanded state */}
                   <span
-                    className={`shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f15d22] text-white flex items-center justify-center transition-all duration-300 shadow-md ${
-                      isOpen ? "rotate-90 bg-amber-500 scale-105" : "group-hover:scale-110 group-hover:bg-[#d84b13]"
+                    className={`shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
+                      isOpen
+                        ? "bg-amber-500 text-white rotate-180 scale-105"
+                        : "bg-[#f15d22] text-white group-hover:scale-110 group-hover:bg-[#d84b13]"
                     }`}
                   >
-                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
+                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                   </span>
                 </button>
 
