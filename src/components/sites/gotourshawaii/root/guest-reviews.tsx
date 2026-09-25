@@ -115,16 +115,22 @@ export function GuestReviews() {
           </div>
         </div>
 
-        {/* Testimonial Card Display (Enlarged ~25% for better presence & readability) */}
+        {/* Testimonial Card Display */}
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
           {/* Card */}
-          <div className="bg-white text-neutral-900 rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl transition-all duration-300 min-h-[320px] sm:min-h-[360px] flex flex-col justify-between border-4 border-white/20">
-            <div>
-              {/* 5 Stars */}
-              <div className="flex items-center justify-center gap-1.5 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 sm:w-7 sm:h-7 fill-[#f59e0b] text-[#f59e0b]" />
-                ))}
+          <div className="bg-white text-neutral-900 rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 min-h-[320px] sm:min-h-[360px] flex flex-col justify-between border-4 border-white/20 hover:border-amber-400/30 relative">
+            {/* Animated Content on Slide Change */}
+            <div key={current.id} className="animate-in fade-in duration-300">
+              {/* 5 Stars & Verified Badge */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+                <div className="flex items-center gap-1.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 sm:w-7 sm:h-7 fill-[#f59e0b] text-[#f59e0b] drop-shadow-sm" />
+                  ))}
+                </div>
+                <span className="text-xs uppercase tracking-wider font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                  ✓ Verified Tour Guest
+                </span>
               </div>
 
               {/* Review Title if present */}
@@ -135,7 +141,7 @@ export function GuestReviews() {
               )}
 
               {/* Review Quote */}
-              <p className="text-base sm:text-xl md:text-2xl text-neutral-800 italic text-center font-normal leading-relaxed whitespace-pre-line max-w-3xl mx-auto">
+              <p className="text-base sm:text-xl md:text-[1.35rem] text-neutral-800 italic text-center font-normal leading-relaxed whitespace-pre-line max-w-3xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
@@ -151,7 +157,7 @@ export function GuestReviews() {
           {/* Navigation Arrows */}
           <button
             onClick={prevReview}
-            className="absolute left-[-12px] sm:left-[-16px] md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-[-12px] sm:left-[-16px] md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
             aria-label="Previous Review"
           >
             <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
@@ -159,7 +165,7 @@ export function GuestReviews() {
 
           <button
             onClick={nextReview}
-            className="absolute right-[-12px] sm:right-[-16px] md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-[-12px] sm:right-[-16px] md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
             aria-label="Next Review"
           >
             <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />

@@ -63,40 +63,40 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
             <div
               key={exp.id}
               onClick={() => onSelectExperience?.(exp.title)}
-              className="group relative h-[500px] sm:h-[540px] md:h-[560px] lg:h-[590px] xl:h-[610px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
+              className="group relative h-[500px] sm:h-[540px] md:h-[560px] lg:h-[590px] xl:h-[610px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/35 border border-black/5"
             >
-              {/* Background Image */}
+              {/* Background Image with subtle zoom */}
               <div className="absolute inset-0">
                 <Image
                   src={exp.image}
                   alt={exp.alt}
                   fill
-                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 {/* Gradient dark overlay from bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent transition-opacity duration-300" />
               </div>
 
               {/* Number Badge (Top Center) */}
               <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-                <div className="w-14 h-14 sm:w-15 sm:h-15 rounded-full border-2 border-white/70 bg-black/40 backdrop-blur-md flex items-center justify-center text-white font-heading text-2xl sm:text-3xl shadow-lg transition-transform group-hover:scale-110 group-hover:border-[#f15d22]">
+                <div className="w-14 h-14 sm:w-15 sm:h-15 rounded-full border-2 border-white/70 bg-black/40 backdrop-blur-md flex items-center justify-center text-white font-heading text-2xl sm:text-3xl shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:border-[#f15d22] group-hover:bg-[#f15d22]/30">
                   {exp.id}
                 </div>
               </div>
 
               {/* Content (Bottom) */}
               <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 lg:p-9 z-10 flex flex-col justify-end">
-                <h3 className="font-heading text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-[#f15d22] uppercase tracking-wide leading-tight mb-3 transition-colors group-hover:text-amber-400 drop-shadow-md">
+                <h3 className="font-heading text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-[#f15d22] uppercase tracking-wide leading-tight mb-3 transition-colors duration-250 group-hover:text-amber-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                   {exp.title}
                 </h3>
-                <p className="text-neutral-100 text-sm sm:text-base font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
+                <p className="text-neutral-100 text-[15px] sm:text-base font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
                   {exp.description}
                 </p>
 
                 {/* View Details prompt on hover */}
                 <div className="mt-4 sm:mt-5 flex items-center gap-2 text-sm sm:text-base font-bold text-white tracking-wide">
-                  <span className="group-hover:text-amber-300 transition-colors">Explore Tour</span>
-                  <span className="transition-transform group-hover:translate-x-1.5 text-amber-300">→</span>
+                  <span className="group-hover:text-amber-300 transition-colors duration-250">Explore Tour</span>
+                  <span className="transition-transform duration-250 ease-out group-hover:translate-x-2 text-amber-300">→</span>
                 </div>
               </div>
             </div>

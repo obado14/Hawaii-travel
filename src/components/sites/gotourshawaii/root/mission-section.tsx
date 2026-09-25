@@ -27,9 +27,9 @@ export function MissionSection() {
         </div>
 
         {/* 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {/* Column 1: Local Experts */}
-          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+          <div className="flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-white/60 hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 border border-black/5 group">
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/1.png"
@@ -38,7 +38,7 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
               LOCAL EXPERTS
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
@@ -50,7 +50,7 @@ export function MissionSection() {
           </div>
 
           {/* Column 2: Responsibility */}
-          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+          <div className="flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-white/60 hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 border border-black/5 group">
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/2.png"
@@ -59,7 +59,7 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
               RESPONSIBILITY
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
@@ -71,7 +71,7 @@ export function MissionSection() {
           </div>
 
           {/* Column 3: Aloha */}
-          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+          <div className="flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-white/60 hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 border border-black/5 group">
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/3.png"
@@ -80,7 +80,7 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
               ALOHA
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">

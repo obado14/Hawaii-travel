@@ -140,13 +140,13 @@ export function VisualOdyssey() {
               </button>
             </div>
 
-            {/* Circular Navigation Buttons */}
+            {/* Polished Circular Navigation Buttons */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 prevSlide();
               }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-lg transition-transform duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl shadow-black/40 ring-2 ring-white/30 transition-all duration-250 transform hover:scale-110 active:scale-95 cursor-pointer"
               aria-label="Previous Photo"
             >
               <ChevronLeft className="w-6 h-6 stroke-[3]" />
@@ -157,23 +157,39 @@ export function VisualOdyssey() {
                 e.stopPropagation();
                 nextSlide();
               }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-lg transition-transform duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl shadow-black/40 ring-2 ring-white/30 transition-all duration-250 transform hover:scale-110 active:scale-95 cursor-pointer"
               aria-label="Next Photo"
             >
               <ChevronRight className="w-6 h-6 stroke-[3]" />
             </button>
           </div>
 
-          {/* Thumbnail Track with gentle hover effects */}
-          <div className="mt-6 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto pb-2">
+          {/* Active Progress Dots */}
+          <div className="mt-4 flex items-center justify-center gap-1.5">
+            {photos.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  currentIndex === idx
+                    ? "w-8 bg-[#f15d22]"
+                    : "w-2 bg-neutral-300 hover:bg-neutral-500"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Thumbnail Track with active indicator */}
+          <div className="mt-4 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto pb-2 px-2">
             {photos.map((photo, idx) => (
               <button
                 key={photo.id}
                 onClick={() => setCurrentIndex(idx)}
                 className={`group/thumb relative w-14 h-14 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 border-2 transition-all duration-300 cursor-pointer ${
                   currentIndex === idx
-                    ? "border-[#f15d22] scale-105 shadow-lg ring-2 ring-[#f15d22]/40 opacity-100"
-                    : "border-transparent opacity-65 hover:opacity-100 hover:scale-105 hover:shadow-md hover:border-white/40"
+                    ? "border-[#f15d22] scale-105 shadow-xl ring-4 ring-[#f15d22]/30 opacity-100"
+                    : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:shadow-md hover:border-neutral-300"
                 }`}
               >
                 <Image

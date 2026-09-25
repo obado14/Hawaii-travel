@@ -13,10 +13,19 @@ export function ContactSection() {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorField, setErrorField] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (!formData.name.trim()) {
+      setErrorField("name");
+      return;
+    }
+    if (!formData.email.trim()) {
+      setErrorField("email");
+      return;
+    }
+    setErrorField(null);
     setIsSubmitted(true);
   };
 
@@ -74,9 +83,14 @@ export function ContactSection() {
                       type="text"
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) => {
+                        setFormData({ ...formData, name: e.target.value });
+                        if (errorField === "name") setErrorField(null);
+                      }}
                       placeholder="John Doe"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className={`w-full bg-[#f8f9fa] focus:bg-white border rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all duration-250 ${
+                        errorField === "name" ? "border-red-500 ring-1 ring-red-500" : "border-neutral-300"
+                      }`}
                     />
                   </div>
                   <div>
@@ -89,7 +103,7 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+123 456 7890"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] focus:bg-white border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all duration-250"
                     />
                   </div>
                 </div>
@@ -103,9 +117,14 @@ export function ContactSection() {
                       type="email"
                       required
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                        if (errorField === "email") setErrorField(null);
+                      }}
                       placeholder="youremail@company.com"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className={`w-full bg-[#f8f9fa] focus:bg-white border rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all duration-250 ${
+                        errorField === "email" ? "border-red-500 ring-1 ring-red-500" : "border-neutral-300"
+                      }`}
                     />
                   </div>
                   <div>
@@ -115,7 +134,7 @@ export function ContactSection() {
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] focus:bg-white border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all duration-250 cursor-pointer"
                     >
                       <option value="Oahu Island Tours">Oahu Island Tours</option>
                       <option value="Pearl Harbor Tours">Pearl Harbor Tours</option>
@@ -135,15 +154,15 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your travel dates and group..."
-                    className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all resize-none"
+                    className="w-full bg-[#f8f9fa] focus:bg-white border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all duration-250 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-auto bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-xl font-bold uppercase tracking-wider px-10 py-3.5 rounded-xl shadow-xl shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                  className="w-full sm:w-auto bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg sm:text-xl font-bold uppercase tracking-wider px-10 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-[#f15d22]/30 hover:shadow-2xl hover:shadow-[#f15d22]/50 transition-all duration-250 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                 >
-                  SUBMIT
+                  SUBMIT MESSAGE
                 </button>
               </form>
             )}

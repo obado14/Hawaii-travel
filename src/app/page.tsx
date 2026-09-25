@@ -5,6 +5,7 @@ import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Hero } from "@/components/sites/gotourshawaii/root/hero";
 import { ExperienceCards } from "@/components/sites/gotourshawaii/root/experience-cards";
+import { WhyChooseUs } from "@/components/sites/gotourshawaii/root/why-choose-us";
 import { DiamondHeadBanner } from "@/components/sites/gotourshawaii/root/diamond-head-banner";
 import { VisualOdyssey } from "@/components/sites/gotourshawaii/root/visual-odyssey";
 import { GuestReviews } from "@/components/sites/gotourshawaii/root/guest-reviews";
@@ -15,6 +16,7 @@ import { ContactSection } from "@/components/sites/gotourshawaii/root/contact-se
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
+import { ScrollReveal } from "@/components/sites/gotourshawaii/root/scroll-reveal";
 
 export default function Home() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -26,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white overflow-x-hidden">
       {/* 1. Top Announcement Bar */}
       <TopBar />
 
@@ -38,37 +40,56 @@ export default function Home() {
         <Hero onOpenBooking={() => handleOpenBooking("Circle Island Tour")} />
 
         {/* 4. Choose Your Experience (Circle Island, Luau, Pearl Harbor) */}
-        <ExperienceCards onSelectExperience={(title) => handleOpenBooking(title)} />
+        <ScrollReveal>
+          <ExperienceCards onSelectExperience={(title) => handleOpenBooking(title)} />
+        </ScrollReveal>
 
-        {/* 5. Exclusive Diamond Head Shuttle Banner */}
-        <DiamondHeadBanner onBookShuttle={() => handleOpenBooking("Diamond Head Shuttle")} />
+        {/* 5. NEW: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
+        <ScrollReveal delay={100}>
+          <WhyChooseUs />
+        </ScrollReveal>
 
-        {/* 6. Visual Odyssey interactive photo carousel */}
-        <VisualOdyssey />
+        {/* 6. Exclusive Diamond Head Shuttle Banner */}
+        <ScrollReveal>
+          <DiamondHeadBanner onBookShuttle={() => handleOpenBooking("Diamond Head Shuttle")} />
+        </ScrollReveal>
 
-        {/* 7. Hear From Our Guests review slider & ratings */}
-        <GuestReviews />
+        {/* 7. Visual Odyssey interactive photo carousel */}
+        <ScrollReveal>
+          <VisualOdyssey />
+        </ScrollReveal>
 
-        {/* 8. Mission: Excellence, Responsibility, Value */}
-        <MissionSection />
+        {/* 8. Hear From Our Guests review slider & ratings */}
+        <ScrollReveal>
+          <GuestReviews />
+        </ScrollReveal>
 
-        {/* 9. Frequently Asked Questions interactive accordions */}
-        <FAQSection />
+        {/* 9. Mission: Excellence, Responsibility, Value */}
+        <ScrollReveal>
+          <MissionSection />
+        </ScrollReveal>
 
-        {/* 10. Partner Trust Badges */}
+        {/* 10. Frequently Asked Questions interactive accordions */}
+        <ScrollReveal>
+          <FAQSection />
+        </ScrollReveal>
+
+        {/* 11. Partner Trust Badges */}
         <TrustBadges />
 
-        {/* 11. Contact Form & Details */}
-        <ContactSection />
+        {/* 12. Contact Form & Details */}
+        <ScrollReveal>
+          <ContactSection />
+        </ScrollReveal>
 
-        {/* 12. Experience Hawaii Callout Banner */}
+        {/* 13. Experience Hawaii Callout Banner */}
         <CtaBanner onBookNow={() => handleOpenBooking("Circle Island Tour")} />
       </main>
 
-      {/* 13. Comprehensive Footer with map & links */}
+      {/* 14. Comprehensive Footer with map & links */}
       <Footer />
 
-      {/* 14. Interactive Booking Modal */}
+      {/* 15. Modern 5-Step Interactive Booking Wizard */}
       <BookingDialog
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
