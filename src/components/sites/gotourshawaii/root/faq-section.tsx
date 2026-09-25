@@ -37,19 +37,17 @@ const faqs: FAQItem[] = [
   },
   {
     id: 5,
-    question: "What is the cancellation policy for the bookings?",
+    question: "What is the cancellation policy for bookings?",
     answer:
-      "Our Oahu Circle Island Tour, Pearl Harbor Tour and Waikiki Turtle Canyon Snorkeling Tour have a 48 hour cancellation policy. While the Paina Luau has a 72 hour cancellation policy. Full refunds for all tours cancelled due to weather.",
+      "Our Oahu Circle Island Tour, Pearl Harbor Tour, and Waikiki Turtle Canyon Snorkeling Tour have a flexible 48-hour cancellation policy for a full refund. The Paina Luau requires 72 hours notice. Additionally, full 100% refunds are provided for all tours canceled due to hazardous weather or ocean conditions.",
   },
 ];
 
 export function FAQSection() {
-  const [openIds, setOpenIds] = useState<number[]>([1]); // First FAQ opened by default as on live site
+  const [openId, setOpenId] = useState<number | null>(1); // Single FAQ open by default
 
   const toggle = (id: number) => {
-    setOpenIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -75,7 +73,7 @@ export function FAQSection() {
         {/* Accordions with smooth expand/collapse and transformed icon */}
         <div className="space-y-4 sm:space-y-5">
           {faqs.map((faq) => {
-            const isOpen = openIds.includes(faq.id);
+            const isOpen = openId === faq.id;
             return (
               <div
                 key={faq.id}
