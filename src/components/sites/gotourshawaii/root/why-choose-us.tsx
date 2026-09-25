@@ -14,31 +14,31 @@ interface BenefitItem {
 const benefits: BenefitItem[] = [
   {
     id: 1,
-    title: "LOCAL EXPERTS",
-    description: "Local guides who know Hawaii inside and out.",
+    title: "PAKAR LOKAL ASLI",
+    description: "Pemandu lokal berlisensi yang memahami setiap sudut dan kekayaan budaya Hawaii.",
     icon: Compass,
-    badge: "100% Local",
+    badge: "100% Lokal",
   },
   {
     id: 2,
-    title: "AUTHENTIC EXPERIENCES",
-    description: "Discover Hawaii beyond the typical tourist spots.",
+    title: "PENGALAMAN AUTENTIK",
+    description: "Temukan keindahan Hawaii yang sesungguhnya di luar spot wisata biasa.",
     icon: Sparkles,
-    badge: "Hidden Gems",
+    badge: "Permata Tersembunyi",
   },
   {
     id: 3,
-    title: "SMALL GROUPS",
-    description: "More personal, comfortable, and memorable experiences.",
+    title: "GRUP KECIL & NYAMAN",
+    description: "Pengalaman perjalanan yang lebih personal, leluasa, dan penuh kesan mendalam.",
     icon: Users,
-    badge: "Intimate Tours",
+    badge: "Tur Intim",
   },
   {
     id: 4,
-    title: "5-STAR SERVICE",
-    description: "Friendly support and carefully planned experiences.",
+    title: "LAYANAN BINTANG 5",
+    description: "Pelayanan ramah berkelas dan rencana perjalanan yang dipersiapkan secara matang.",
     icon: Star,
-    badge: "Top Rated",
+    badge: "Peringkat Teratas",
   },
 ];
 
@@ -50,18 +50,18 @@ export function WhyChooseUs() {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3">
             <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
-              THE ALOHA ADVANTAGE
+              KEUNGGULAN SEMANGAT ALOHA
             </span>
           </div>
           <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none mb-3">
-            WHY CHOOSE GO TOURS HAWAII
+            MENGAPA MEMILIH GO TOURS HAWAII
           </h2>
           <p className="text-neutral-700 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
-            Experience the difference of traveling with Hawaii&apos;s premier locally-owned tour specialist.
+            Rasakan keistimewaan menjelajah bersama spesialis tur lokal terkemuka di Hawaii.
           </p>
         </div>
 
-        {/* 4 Benefit Cards Grid: 4 cols desktop, 2 cols tablet, 1 col mobile */}
+        {/* 4 Benefit Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {benefits.map((item) => {
             const Icon = item.icon;
@@ -97,8 +97,8 @@ export function WhyChooseUs() {
 
                 {/* Subtle bottom indicator */}
                 <div className="mt-5 pt-3 border-t border-neutral-100 flex items-center justify-between text-xs font-semibold text-[#0c2340]/60 group-hover:text-[#f15d22] transition-colors">
-                  <span>Guaranteed Aloha</span>
-                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                  <span>Jaminan Semangat Aloha</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </div>
             );

@@ -72,7 +72,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-300 hover:text-white bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 transition-all hover:bg-black/60"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Back to All Guides</span>
+                <span>Kembali ke Semua Panduan</span>
               </Link>
             </div>
 
@@ -147,7 +147,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                         <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 mt-4">
                           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#f15d22]">
                             <Sparkles className="w-4 h-4 text-[#f15d22]" />
-                            <span>Insider Local Tips</span>
+                            <span>Tips Lokal Berharga</span>
                           </div>
                           <ul className="space-y-1.5 text-xs sm:text-sm text-neutral-800">
                             {section.tips.map((tip, tIdx) => (
@@ -171,7 +171,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                     </div>
                     <div>
                       <h4 className="font-heading text-lg font-bold text-[#0c2340]">
-                        Written by {post.author.name}
+                        Ditulis oleh {post.author.name}
                       </h4>
                       <p className="text-xs text-neutral-500 font-medium">
                         {post.author.role}
@@ -184,7 +184,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-200 text-xs font-bold text-neutral-700 hover:bg-neutral-50 hover:text-[#f15d22] transition-colors cursor-pointer"
                   >
                     <Share2 className="w-4 h-4" />
-                    <span>{copied ? "Link Copied!" : "Share Guide"}</span>
+                    <span>{copied ? "Tautan Disalin!" : "Bagikan Panduan"}</span>
                   </button>
                 </div>
               </div>
@@ -195,19 +195,19 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 <div className="bg-[#0c1f38] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-white/10 text-center relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#f15d22]/10 rounded-full blur-2xl pointer-events-none" />
                   <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest block mb-2">
-                    Recommended Island Tour
+                    Rekomendasi Tur Pulau
                   </span>
                   <h3 className="font-heading text-2xl text-white uppercase leading-snug mb-3">
                     {post.relatedTourName}
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6 font-normal">
-                    Experience this destination firsthand with local expert guides, reserved tickets, and stress-free hotel pickup.
+                    Rasakan langsung pengalaman destinasi ini bersama pemandu lokal berpengetahuan luas, tiket reservasi resmi, dan antar-jemput hotel tanpa repot.
                   </p>
                   <button
                     onClick={() => handleBook(post.relatedTourName)}
                     className="w-full bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-base font-bold uppercase tracking-wider py-3 rounded-xl shadow-lg shadow-[#f15d22]/30 transition-all transform hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <span>Book This Tour</span>
+                    <span>Pesan Tur Ini</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -215,7 +215,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 {/* More Travel Guides */}
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-neutral-200/80">
                   <h3 className="font-heading text-lg font-bold text-[#0c2340] uppercase tracking-wider mb-4 border-b border-neutral-100 pb-3">
-                    More Hawaii Guides
+                    Panduan Hawaii Lainnya
                   </h3>
                   <div className="space-y-4">
                     {otherPosts.map((other) => (
@@ -245,7 +245,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                     className="inline-flex items-center gap-2 text-xs font-bold text-[#0c2340] hover:text-[#f15d22] uppercase tracking-wider transition-colors"
                   >
                     <ArrowLeft className="w-4 h-4" />
-                    <span>View All Blog Articles</span>
+                    <span>Lihat Semua Artikel Blog</span>
                   </Link>
                 </div>
               </div>

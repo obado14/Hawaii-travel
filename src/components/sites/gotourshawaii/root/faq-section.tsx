@@ -13,33 +13,33 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: 1,
-    question: "How do I book a tour with Go Tours Hawaii?",
+    question: "Bagaimana cara memesan tur bersama Go Tours Hawaii?",
     answer:
-      "To book a tour with Go Tours Hawaii, you have two convenient options. You can either book online through our website or give us a call at 808-926-3090. If you choose to book online, you’ll receive an email confirmation containing all the necessary information for the tour. This includes what to bring and, if needed, photos of the pick-up location. We aim to make the booking process as seamless as possible for our customers.",
+      "Untuk memesan tur bersama Go Tours Hawaii, Anda memiliki dua opsi mudah. Anda dapat memesan secara online melalui situs web kami atau menghubungi kami di 808-926-3090. Setelah memesan secara online, Anda akan menerima email konfirmasi instan yang memuat semua informasi penting tur, daftar perlengkapan yang disarankan, dan panduan foto lokasi penjemputan. Kami memastikan proses reservasi Anda berlangsung praktis dan cepat.",
   },
   {
     id: 2,
-    question: "Do our tours pick up in Waikiki?",
+    question: "Apakah tur menyediakan layanan penjemputan di Waikiki?",
     answer:
-      "Our tours offer 8 convenient pick-up locations in Waikiki. When you insert your hotel information into the booking portal, your pick-up location will automatically populate. Additionally, your email confirmation will include a Google map and a photo of the pick-up location for your convenience. We strive to make the pick-up process easy and hassle-free for our customers.",
+      "Tentu saja! Kami menyediakan 8 titik lokasi penjemputan yang sangat strategis di kawasan Waikiki. Ketika Anda memasukkan nama hotel Anda pada formulir pemesanan, lokasi penjemputan terdekat akan muncul secara otomatis. Selain itu, email konfirmasi Anda akan dilengkapi peta Google Maps dan foto lokasi penjemputan untuk kemudahan Anda.",
   },
   {
     id: 3,
-    question: "Do we offer private tours or standard transportation services?",
+    question: "Apakah tersedia opsi tur privat atau layanan transportasi grup?",
     answer:
-      "Yes, Go Tours Hawaii not only offers Oahu and Maui tour services, but we also provide standard transportation services to help you navigate with your friends, family, or colleagues during your Hawaiian adventure. Whether it’s a company retreat or a group outing, we’ve got you covered. Click Here for more information",
+      "Ya, Go Tours Hawaii tidak hanya melayani tur reguler di Oahu dan Maui, tetapi kami juga menyediakan armada transportasi privat ber-AC untuk mengakomodasi perjalanan bersama keluarga, rombongan teman, maupun acara perusahaan. Anda bebas menentukan jadwal keberangkatan dan rute yang Anda sukai.",
   },
   {
     id: 4,
-    question: "Are there any age or fitness restrictions for the tour?",
+    question: "Apakah ada batasan usia atau kriteria kebugaran fisik untuk mengikuti tur?",
     answer:
-      "Our tours are suitable for all ages except for the Waikiki Turtle Canyon Tour where the minimum age is 3 years old to attend.",
+      "Sebagian besar tur kami ramah untuk semua usia dan seluruh anggota keluarga, kecuali Tur Snorkeling Waikiki Turtle Canyon yang mewajibkan usia minimal 3 tahun demi alasan keselamatan di laut.",
   },
   {
     id: 5,
-    question: "What is the cancellation policy for bookings?",
+    question: "Bagaimana kebijakan pembatalan untuk pemesanan tur?",
     answer:
-      "Our Oahu Circle Island Tour, Pearl Harbor Tour, and Waikiki Turtle Canyon Snorkeling Tour have a flexible 48-hour cancellation policy for a full refund. The Paina Luau requires 72 hours notice. Additionally, full 100% refunds are provided for all tours canceled due to hazardous weather or ocean conditions.",
+      "Tur Keliling Pulau Oahu (Circle Island), Tur Pearl Harbor, dan Tur Snorkeling Turtle Canyon memiliki kebijakan pembatalan fleksibel hingga 48 jam sebelum jadwal keberangkatan untuk pengembalian dana 100% penuh. Khusus Paina Luau, pembatalan membutuhkan pemberitahuan 72 jam sebelumnya. Selain itu, pengembalian dana penuh 100% dijamin untuk setiap tur yang dibatalkan oleh pihak kami akibat faktor cuaca buruk atau ombak tinggi.",
   },
 ];
 
@@ -56,7 +56,7 @@ export function FAQSection() {
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
           src="/sites/gotourshawaii/root/optimized-bg-texture-002.jpg"
-          alt="Texture"
+          alt="Tekstur Latar Belakang"
           fill
           className="object-cover"
         />
@@ -66,7 +66,7 @@ export function FAQSection() {
         {/* Title */}
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="font-heading text-4xl sm:text-6xl md:text-7xl text-[#f5b324] uppercase tracking-wider">
-            FREQUENTLY ASKED QUESTIONS
+            PERTANYAAN YANG SERING DIAJUKAN (FAQ)
           </h2>
         </div>
 

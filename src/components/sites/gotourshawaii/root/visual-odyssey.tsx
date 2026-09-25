@@ -15,50 +15,50 @@ const photos: OdysseyPhoto[] = [
   {
     id: 1,
     src: "/sites/gotourshawaii/root/Visual-img-2-e1714631806737.jpg",
-    alt: "Authentic North Shore Kahuku Garlic Shrimp Platter",
-    caption: "Famous North Shore Garlic Shrimp",
+    alt: "Sajian Udang Bawang Putih Kahuku Asli North Shore",
+    caption: "Udang Bawang Putih Terkenal North Shore",
   },
   {
     id: 2,
     src: "/sites/gotourshawaii/root/GPTempDownload4-1-1.jpg",
-    alt: "Beginner surfer riding gentle turquoise wave in Waikiki",
-    caption: "Waikiki Surfing Lessons",
+    alt: "Peselancar pemula menikmati ombak toska di Pantai Waikiki",
+    caption: "Pelajaran Selancar di Waikiki",
   },
   {
     id: 3,
     src: "/sites/gotourshawaii/root/waikiki-turtle-banner.png",
-    alt: "Hawaiian Green Sea Turtle Honu swimming in crystal waters",
-    caption: "Turtle Canyon Snorkeling Adventure",
+    alt: "Penyu Hijau Hawaii Honu berenang di air laut jernih",
+    caption: "Petualangan Snorkeling di Turtle Canyon",
   },
   {
     id: 4,
     src: "/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg",
-    alt: "Byodo-In Temple under the mist of the Koʻolau Mountains",
-    caption: "Byodo-In Temple Sacred Grounds",
+    alt: "Kuil Byodo-In di bawah kabut Pegunungan Koʻolau",
+    caption: "Kawasan Sakral Kuil Byodo-In",
   },
   {
     id: 5,
     src: "/sites/gotourshawaii/root/Visual-img-4-e1714632180613.jpg",
-    alt: "Lush tropical botanical gardens and dramatic cliffs",
-    caption: "Waimea Valley Botanical Walk",
+    alt: "Kebun raya tropis asri dan tebing dramatis Lembah Waimea",
+    caption: "Jelajah Kebun Raya Lembah Waimea",
   },
   {
     id: 6,
     src: "/sites/gotourshawaii/root/Visual-img-1-e1714631873659.jpg",
-    alt: "Polynesian Cultural Center Luau Fire Knife Performer",
-    caption: "Traditional Polynesian Luau & Fire Knife Dance",
+    alt: "Penari Api Tradisional Luau Polinesia",
+    caption: "Pesta Luau Polinesia & Tarian Api Tradisional",
   },
   {
     id: 7,
     src: "/sites/gotourshawaii/root/Visual-img-7-e1714632127105.jpg",
-    alt: "Scenic coastal lookout overlooking Oahu windward shores",
-    caption: "Nuʻuanu Pali Lookout Panoramic Vista",
+    alt: "Pemandangan pesisir dari Gardu Pandang Nuʻuanu Pali",
+    caption: "Panorama Spektakuler Gardu Pandang Nuʻuanu Pali",
   },
   {
     id: 8,
     src: "/sites/gotourshawaii/root/3-3.jpg",
-    alt: "Famous Oahu North Shore sunset and pristine beach",
-    caption: "Sunset Beach & Banzai Pipeline",
+    alt: "Matahari terbenam dan pantai murni di North Shore Oahu",
+    caption: "Sunset Beach & Ombak Banzai Pipeline",
   },
 ];
 
@@ -77,147 +77,125 @@ export function VisualOdyssey() {
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev === photos.length - 1 ? 0 : prev + 1));
-    }, 4500);
-
+      nextSlide();
+    }, 5500);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, []);
+  }, [currentIndex]);
+
+  const activePhoto = photos[currentIndex];
 
   return (
-    <section id="visual-odyssey" className="relative bg-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-[#0c1f38] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <div className="text-center mb-10 sm:mb-14">
-          <h2 className="font-heading text-4xl sm:text-6xl md:text-7xl text-[#f5b324] uppercase tracking-wider drop-shadow-sm">
-            VISUAL ODYSSEY
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 mb-3">
+            <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
+              GALERI PERJALANAN
+            </span>
+          </div>
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-md">
+            PETUALANGAN VISUAL
           </h2>
-          <p className="text-neutral-500 text-sm mt-2 max-w-lg mx-auto">
-            A glimpse into the unforgettable landscapes, wildlife, and tastes of Oahu.
+          <p className="text-neutral-300 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+            Potret momen keindahan dan kenangan magis dari para tamu kami saat menjelajahi surga Hawaii.
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Main Displayed Slide */}
-          <div className="relative h-[380px] sm:h-[480px] md:h-[580px] w-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 group">
-            {/* Layered smooth crossfade images */}
-            {photos.map((photo, idx) => (
-              <div
-                key={photo.id}
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  idx === currentIndex ? "opacity-100 scale-100 z-0" : "opacity-0 scale-[1.03] z-0 pointer-events-none"
-                }`}
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover object-center"
-                  priority={idx === 0}
-                />
-              </div>
-            ))}
+        {/* Main Stage Image */}
+        <div className="relative w-full h-[360px] sm:h-[480px] md:h-[540px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
+          <Image
+            src={activePhoto.src}
+            alt={activePhoto.alt}
+            fill
+            priority
+            className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-105"
+          />
 
-            {/* Gradient Caption Overlay */}
-            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-6 sm:p-8">
-              <div>
-                <span className="text-xs uppercase font-bold text-[#f15d22] tracking-widest block mb-1">
-                  Photo {currentIndex + 1} of {photos.length}
-                </span>
-                <p className="text-white text-base sm:text-xl font-medium drop-shadow-md">
-                  {photos[currentIndex].caption}
-                </p>
-              </div>
+          {/* Dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
 
-              <button
-                onClick={() => setSelectedPhoto(photos[currentIndex])}
-                className="p-2.5 rounded-full bg-black/50 hover:bg-[#f15d22] text-white transition-colors cursor-pointer shadow-md"
-                title="Expand image"
-              >
-                <Maximize2 className="w-4 h-4" />
-              </button>
+          {/* Left / Right Nav Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            aria-label="Foto Sebelumnya"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            aria-label="Foto Berikutnya"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Fullscreen Button */}
+          <button
+            onClick={() => setSelectedPhoto(activePhoto)}
+            className="absolute top-4 sm:top-6 right-4 sm:right-6 w-11 h-11 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer z-10"
+            aria-label="Lihat Layar Penuh"
+          >
+            <Maximize2 className="w-5 h-5" />
+          </button>
+
+          {/* Caption Overlay */}
+          <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 lg:p-10 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div>
+              <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest block mb-1">
+                Foto {currentIndex + 1} dari {photos.length}
+              </span>
+              <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white uppercase drop-shadow-md">
+                {activePhoto.caption}
+              </h3>
             </div>
+            <p className="text-xs sm:text-sm text-neutral-300 max-w-md italic">
+              &ldquo;{activePhoto.alt}&rdquo;
+            </p>
+          </div>
+        </div>
 
-            {/* Polished Circular Navigation Buttons */}
+        {/* Thumbnail Carousel Bar */}
+        <div className="mt-5 grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-3">
+          {photos.map((photo, idx) => (
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                prevSlide();
-              }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl shadow-black/40 ring-2 ring-white/30 transition-all duration-250 transform hover:scale-110 active:scale-95 cursor-pointer"
-              aria-label="Previous Photo"
+              key={photo.id}
+              onClick={() => setCurrentIndex(idx)}
+              className={`relative h-16 sm:h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
+                idx === currentIndex
+                  ? "border-[#f15d22] scale-105 shadow-lg ring-2 ring-[#f15d22]/50"
+                  : "border-transparent opacity-60 hover:opacity-100"
+              }`}
+              aria-label={`Pilih foto ${idx + 1}`}
             >
-              <ChevronLeft className="w-6 h-6 stroke-[3]" />
+              <Image src={photo.src} alt={photo.caption} fill className="object-cover" />
             </button>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                nextSlide();
-              }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl shadow-black/40 ring-2 ring-white/30 transition-all duration-250 transform hover:scale-110 active:scale-95 cursor-pointer"
-              aria-label="Next Photo"
-            >
-              <ChevronRight className="w-6 h-6 stroke-[3]" />
-            </button>
-          </div>
-
-          {/* Active Progress Dots */}
-          <div className="mt-4 flex items-center justify-center gap-1.5">
-            {photos.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  currentIndex === idx
-                    ? "w-8 bg-[#f15d22]"
-                    : "w-2 bg-neutral-300 hover:bg-neutral-500"
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Thumbnail Track with active indicator */}
-          <div className="mt-4 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto pb-2 px-2">
-            {photos.map((photo, idx) => (
-              <button
-                key={photo.id}
-                onClick={() => setCurrentIndex(idx)}
-                className={`group/thumb relative w-14 h-14 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 border-2 transition-all duration-300 cursor-pointer ${
-                  currentIndex === idx
-                    ? "border-[#f15d22] scale-105 shadow-xl ring-4 ring-[#f15d22]/30 opacity-100"
-                    : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:shadow-md hover:border-neutral-300"
-                }`}
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover/thumb:scale-110"
-                />
-              </button>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
 
       {/* Lightbox Modal */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setSelectedPhoto(null)}
         >
-          <div className="relative max-w-5xl max-h-[90vh] w-full h-full flex flex-col items-center justify-center">
-            <button
-              onClick={() => setSelectedPhoto(null)}
-              className="absolute top-4 right-4 z-50 p-2 text-white/80 hover:text-white bg-black/50 rounded-full"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <div className="relative w-full h-[80vh]">
+          <button
+            onClick={() => setSelectedPhoto(null)}
+            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-[#f15d22] text-white flex items-center justify-center transition-colors cursor-pointer"
+            aria-label="Tutup Pratinjau"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <div
+            className="relative max-w-5xl max-h-[85vh] w-full h-full flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative w-full h-[75vh]">
               <Image
                 src={selectedPhoto.src}
                 alt={selectedPhoto.alt}
@@ -225,7 +203,7 @@ export function VisualOdyssey() {
                 className="object-contain"
               />
             </div>
-            <p className="text-white text-center mt-3 text-lg font-medium">
+            <p className="text-center font-heading text-xl sm:text-2xl text-white mt-4 uppercase">
               {selectedPhoto.caption}
             </p>
           </div>

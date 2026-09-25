@@ -11,7 +11,7 @@ export function MissionSection() {
         <div className="relative w-full h-8 sm:h-12 md:h-16">
           <Image
             src="/sites/gotourshawaii/root/new-bg-22-1024x139.png"
-            alt="Wave divider"
+            alt="Transisi pola ombak"
             fill
             className="object-cover object-bottom"
           />
@@ -22,7 +22,7 @@ export function MissionSection() {
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none">
-            GO TOURS HAWAII MISSION
+            MISI GO TOURS HAWAII
           </h2>
         </div>
 
@@ -33,19 +33,16 @@ export function MissionSection() {
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/1.png"
-                alt="Local Experts Emblem"
+                alt="Lambang Pakar Lokal"
                 fill
                 className="object-contain"
               />
             </div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
-              LOCAL EXPERTS
+              PAKAR LOKAL ASLI
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
-              We are extremely proud to be 100% locally-owned and operated. With one finger directly on
-              the pulse of the Hawaiian Islands, living and working here is second nature to us. This
-              guarantees that you will receive the best of everything Hawaii has to offer, with the peace
-              of mind of knowing that you are traveling with the #1 connected local tour operator.
+              Kami sangat bangga menjadi operator tur yang 100% dimiliki dan dikelola oleh warga lokal Hawaii. Berakar kuat di kepulauan ini, memahami setiap tradisi dan bentang alam adalah jati diri kami. Ini menjamin Anda mendapatkan pengalaman wisata terbaik Hawaii, didampingi oleh operator tur lokal terpercaya #1.
             </p>
           </div>
 
@@ -54,19 +51,16 @@ export function MissionSection() {
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/2.png"
-                alt="Responsibility Emblem"
+                alt="Lambang Tanggung Jawab"
                 fill
                 className="object-contain"
               />
             </div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
-              RESPONSIBILITY
+              TANGGUNG JAWAB (KULEANA)
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
-              Aloha is a philosophy we carry with us daily. Whether you interact with our tour guides,
-              phone representatives, or management, our aloha experts adhere to the highest standard of
-              responsibility and accountability. We rely on your feedback to ensure that you are being
-              treated with the true aloha spirit.
+              Semangat Aloha adalah falsafah yang kami hidupi setiap hari. Baik saat Anda berinteraksi dengan pemandu tur, staf layanan pelanggan, maupun tim manajemen, kami berkomitmen pada standar tanggung jawab dan keramahan tertinggi demi menjaga keaslian nilai aloha.
             </p>
           </div>
 
@@ -75,19 +69,16 @@ export function MissionSection() {
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/3.png"
-                alt="Aloha Emblem"
+                alt="Lambang Aloha"
                 fill
                 className="object-contain"
               />
             </div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5 group-hover:text-amber-500 transition-colors">
-              ALOHA
+              SEMANGAT ALOHA
             </h3>
             <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
-              We promise to deliver a memorable experience that will last a lifetime. Our team has put
-              in countless hours making sure your experience with us is one to remember! Additionally,
-              all of the tour and activity providers we work with have been through our thorough process
-              to ensure that everything we offer comes with exceptional value.
+              Kami berjanji menghadirkan pengalaman berharga yang akan Anda kenang seumur hidup. Tim kami mendedikasikan dedikasi penuh untuk memastikan perjalanan Anda berjalan sempurna dan seluruh mitra atraksi kami telah lolos uji kualitas yang ketat.
             </p>
           </div>
         </div>

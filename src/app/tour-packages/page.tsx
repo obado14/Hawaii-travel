@@ -27,51 +27,51 @@ import {
 const allTours: TourPackageDetail[] = [
   {
     id: "waimea-valley",
-    name: "Hidden Gems of Oahu with Waimea Botanical Garden & Waterfall",
+    name: "Permata Tersembunyi Oahu dengan Kebun Raya & Air Terjun Waimea",
     category: "circle-island",
-    categoryLabel: "Circle Island Tours",
-    duration: "8-9 Hours",
-    location: "North Shore & Windward",
+    categoryLabel: "Tur Keliling Pulau",
+    duration: "8-9 Jam",
+    location: "North Shore & Pesisir Windward",
     rating: 4.9,
     reviewsCount: 1824,
     price: 149,
     originalPrice: 165,
     image: "/sites/gotourshawaii/root/optimized-water-fall-002.jpg",
     description:
-      "Our signature full-day circle island tour. Experience Waimea Valley, swim under the waterfall, witness sea turtles on the North Shore, and visit sacred scenic vistas.",
+      "Tur keliling pulau seharian penuh terbaik kami. Jelajahi Lembah Waimea, berenang di bawah air terjun, saksikan penyu laut di North Shore, dan nikmati gardu pandang sakral.",
     fullDescription:
-      "Embark on our highest-rated full-day island excursion led by local cultural ambassadors. Journey through lush emerald valleys, panoramic coastal lookouts at Nuʻuanu Pali, and Halona Blowhole. Explore the world-renowned Waimea Valley botanical reserve where you can swim under the revitalizing cascading waterfall. Encounter wild Hawaiian green sea turtles resting on golden North Shore beaches, indulge in authentic garlic shrimp, and discover hidden lookouts rarely visited by tour buses.",
+      "Ikuti ekskursi pulau seharian penuh berperingkat tertinggi yang dipandu oleh duta budaya lokal Hawaii. Lintasi lembah hijau yang rimbun, nikmati gardu pandang pesisir panoramik di Nuʻuanu Pali dan Halona Blowhole. Jelajahi cagar botani Lembah Waimea kelas dunia tempat Anda dapat berenang di bawah air terjun segar alami. Saksikan penyu laut hijau liar yang berjemur di pasir emas North Shore, cicipi udang bawang putih autentik, dan temukan spot rahasia yang jarang dikunjungi bus wisata besar.",
     highlights: [
-      "Waimea Valley & Waterfall Swim",
-      "North Shore Shrimp & Turtle Beach",
-      "Nuʻuanu Pali Historic Lookout",
-      "Halona Blowhole Ocean Vista",
+      "Berenang di Air Terjun & Lembah Waimea",
+      "Kuliner Udang North Shore & Pantai Penyu",
+      "Gardu Pandang Bersejarah Nuʻuanu Pali",
+      "Panorama Samudra Halona Blowhole",
     ],
     included: [
-      "Waimea Valley admission ticket ($25 value)",
-      "Roundtrip air-conditioned hotel transportation",
-      "Certified local driver guide & live cultural narration",
-      "Complimentary life vests for waterfall swimming",
-      "Chilled Hawaiian spring water",
+      "Tiket resmi masuk Lembah Waimea (senilai $25)",
+      "Transportasi hotel ber-AC pulang-pergi",
+      "Pemandu wisata lokal berlisensi & narasi budaya",
+      "Rompi pelampung gratis untuk renang di air terjun",
+      "Air mineral dingin khas Hawaii",
     ],
     notIncluded: [
-      "Lunch (stop made at North Shore food trucks)",
-      "Guide gratuities (optional)",
+      "Makan siang (singgah di sentra food truck North Shore)",
+      "Tip sukarela untuk pemandu",
     ],
-    meetingPoint: "Waikiki hotel pickup between 7:15 AM – 7:45 AM",
+    meetingPoint: "Penjemputan hotel di Waikiki antara pukul 07.15 – 07.45",
     importantInfo: [
-      "Bring swimwear, dry change of clothes, towel, and reef-safe sunscreen.",
-      "Comfortable walking or athletic shoes required for the 3/4 mile paved valley trail.",
-      "Waterfall swimming is subject to valley safety conditions and water levels.",
+      "Bawalah pakaian renang, baju ganti kering, handuk, dan tabir surya aman terumbu karang.",
+      "Sepatu jalan kaki atau kets nyaman diperlukan untuk jalur lembah beraspal sejauh 1,2 km.",
+      "Berenang di air terjun bergantung pada kondisi keamanan debit air di lembah.",
     ],
     recommended: true,
   },
   {
     id: "byodo-temple",
-    name: "Hidden Gems of Oahu Byodo-In Temple & Turtle Spotting",
+    name: "Permata Tersembunyi Oahu Kuil Byodo-In & Pengamatan Penyu Laut",
     category: "circle-island",
-    categoryLabel: "Circle Island Tours",
-    duration: "7-8 Hours",
+    categoryLabel: "Tur Keliling Pulau",
+    duration: "7-8 Jam",
     location: "Windward Oahu & North Shore",
     rating: 4.9,
     reviewsCount: 1205,
@@ -79,283 +79,277 @@ const allTours: TourPackageDetail[] = [
     originalPrice: 155,
     image: "/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg",
     description:
-      "Explore the peaceful Buddhist temple nestled at the base of the emerald Koʻolau Mountains, combined with scenic east coast beaches and wildlife stops.",
+      "Kunjungi kuil kedamaian yang megah di kaki Pegunungan Koʻolau yang diselimuti kabut, dipadukan dengan keindahan pantai timur dan konservasi satwa liar.",
     fullDescription:
-      "Discover the serene spirituality and dramatic geography of Windward Oahu. Marvel at the stunning architecture of Byodo-In Temple, a non-denominational sanctuary commemorating the first Japanese immigrants in Hawaii, surrounded by tranquil koi ponds, peacocks, and mist-veiled mountain spires. Continue along scenic coastal highways to sacred Macadamia nut farms, pristine white sand beaches, and North Shore turtle reserves.",
+      "Temukan kedamaian spiritual dan panorama megah Windward Oahu. Kagumi arsitektur memukau Kuil Byodo-In yang dibangun untuk memperingati kedatangan imigran Jepang pertama di Hawaii, dikelilingi kolam koi tenang, burung merak, dan puncak gunung yang magis. Lanjutkan perjalanan menyusuri jalan raya pesisir menuju perkebunan kacang Macadamia, pantai pasir putih alami, dan kawasan penyu North Shore.",
     highlights: [
-      "Byodo-In Temple Admission Included",
-      "Turtle Spotting at Laniakea Beach",
-      "Macadamia Nut Farm Tasting",
-      "Windward Coast Scenic Highway",
+      "Tiket Masuk Kuil Byodo-In Termasuk",
+      "Pengamatan Penyu di Pantai Laniakea",
+      "Cicip Kacang Macadamia & Kopi Kona",
+      "Pemandangan Pesisir Windward yang Asri",
     ],
     included: [
-      "Byodo-In Temple official entrance ticket",
-      "Fresh roasted Macadamia nut & Kona coffee tastings",
-      "Roundtrip hotel transportation in luxury Mercedes Sprinter",
-      "Narrated historical storytelling",
+      "Tiket masuk resmi Kuil Byodo-In",
+      "Cicip kacang Macadamia panggang & kopi Kona segar",
+      "Transportasi pulang-pergi dengan Mercedes Sprinter mewah",
+      "Penceritaan sejarah dan budaya mendalam",
     ],
-    notIncluded: ["Lunch", "Personal souvenirs"],
-    meetingPoint: "Waikiki hotel pickup between 7:45 AM – 8:15 AM",
+    notIncluded: ["Makan siang", "Oleh-oleh pribadi"],
+    meetingPoint: "Penjemputan hotel di Waikiki antara pukul 07.45 – 08.15",
     importantInfo: [
-      "Modest attire appreciated when entering the sacred temple bell sanctuary.",
-      "Light jacket recommended for misty mountain micro-climates.",
+      "Pakaian sopan dihargai saat memasuki area lonceng kuil yang sakral.",
+      "Jaket tipis disarankan untuk area pegunungan yang sejuk berkabut.",
     ],
   },
   {
     id: "turtle-snorkeling",
-    name: "Waikiki Turtle Canyon Snorkeling and Swim",
+    name: "Snorkeling & Renang Bersama Penyu di Waikiki Turtle Canyon",
     category: "adventure",
-    categoryLabel: "Snorkeling & Water",
-    duration: "2-3 Hours",
-    location: "Waikiki Oceanfront",
+    categoryLabel: "Snorkeling & Bahari",
+    duration: "2-3 Jam",
+    location: "Kawasan Laut Waikiki",
     rating: 4.9,
     reviewsCount: 940,
     price: 129,
     originalPrice: 145,
     image: "/sites/gotourshawaii/root/waikiki-turtle-banner.png",
     description:
-      "Catamaran sailing from Waikiki directly to Turtle Canyon, Oahu's famous natural reef cleaning station. Snorkel alongside majestic Hawaiian green sea turtles.",
+      "Berlayar dengan katamaran dari pantai Waikiki langsung menuju Turtle Canyon, stasiun pembersihan karang alami Oahu. Berenang berdampingan dengan penyu laut hijau yang anggun.",
     fullDescription:
-      "Step aboard our custom ocean catamaran and sail along Waikiki's world-famous beachfront toward Diamond Head. Arrive at Turtle Canyon, an ancient natural reef cleaning station where schools of reef fish clean the shells of magnificent Hawaiian Green Sea Turtles (Honu). Jump into crystal-clear turquoise waters with professional marine guides who guide you safely next to these gentle marine creatures.",
+      "Naiki katamaran laut kami dan berlayarlah di sepanjang garis pantai Waikiki yang terkenal ke arah Diamond Head. Tiba di Turtle Canyon, terumbu karang alami tempat ikan-ikan karang membersihkan cangkang Penyu Hijau Hawaii (Honu). Selami perairan toska sebening kristal bersama pemandu renang profesional yang akan mendampingi Anda melihat satwa laut yang lembut ini dari dekat dengan aman.",
     highlights: [
-      "Guaranteed Turtle Sightings",
-      "Premium Snorkel Gear & Life Vests",
-      "Professional In-Water Marine Guides",
-      "Scenic Waikiki Skyline Views",
+      "Pemandu Alam Laut Profesional Bersertifikasi",
+      "Peralatan Snorkeling & Rompi Apung Premium",
+      "Pelayaran Katamaran Panoramik Waikiki",
+      "Jaminan Melihat Penyu Laut Hijau",
     ],
     included: [
-      "High-grade silicone snorkel masks, dry snorkels, and fins",
-      "USCG-approved flotation vests and water noodle aids",
-      "Fresh tropical juices, soft drinks, and island snacks",
-      "CPR and lifeguard certified in-water safety guides",
+      "Perlengkapan snorkeling lengkap (masker, snorkel, sirip renang, pelampung)",
+      "Panduan snorkeling mendalam untuk pemula hingga mahir",
+      "Minuman tropis dingin & camilan ringan di atas kapal",
     ],
-    notIncluded: [
-      "Towel (please bring hotel beach towel)",
-      "Hotel transfer to harbor (harbor is 5 minutes from central Waikiki)",
-    ],
-    meetingPoint: "Kewalo Basin Harbor, Slip F-22 (1025 Ala Moana Blvd)",
+    notIncluded: ["Penjemputan hotel (berkumpul langsung di dermaga pantai Waikiki)"],
+    meetingPoint: "Dermaga Katamaran Pantai Waikiki (di belakang hotel Outrigger Waikiki)",
     importantInfo: [
-      "Minimum age is 3 years old.",
-      "State law requires keeping a respectful 10-foot distance from all sea turtles.",
-      "100% turtle sighting guarantee—if no turtles are spotted, cruise again for free!",
+      "Usia minimal 3 tahun. Diwajibkan memiliki kemampuan dasar mengapung di air.",
+      "Semua tamu harus mematuhi hukum perlindungan satwa laut: dilarang menyentuh penyu.",
+    ],
+  },
+  {
+    id: "luau-experience",
+    name: "Pesta Tradisional Paina Waikiki Luau & Pertunjukan Polinesia",
+    category: "luau",
+    categoryLabel: "Pesta Luau & Budaya",
+    duration: "4 Jam",
+    location: "Waikiki Oceanfront Luau Lawn",
+    rating: 4.9,
+    reviewsCount: 1450,
+    price: 179,
+    originalPrice: 195,
+    image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
+    description:
+      "Perayaan budaya Hawaii autentik di bawah bintang-bintang. Pesta prasmanan lezat babi panggang kalua imu, tarian hula memikat, dan aksi menegangkan tari pisau api Samoa.",
+    fullDescription:
+      "Rasakan kehangatan perayaan malam khas Hawaii yang tiada duanya. Dimulai dengan penyambutan kalung bunga lei segar dan koktail selamat datang Mai Tai. Saksikan upacara pembongkaran oven bawah tanah tradisional (imu) tempat babi kalua dimasak perlahan. Nikmati hidangan prasmanan mewah khas Polinesia, diikuti oleh pertunjukan musikal spektakuler yang menceritakan migrasi pelayaran Polinesia, ditutup dengan atraksi tarian pisau api yang mendebarkan.",
+    highlights: [
+      "Penyambutan Kalung Bunga Lei Segar Asli",
+      "Prasmanan Mewah Hidangan Tradisional Polinesia",
+      "Atraksi Spektakuler Tarian Pisau Api Samoa",
+      "Workshop Kerajinan & Tari Hula Interaktif",
+    ],
+    included: [
+      "Prasmanan makan malam Hawaii sepuasnya",
+      "Kupon koktail selamat datang & minuman non-alkohol tak terbatas",
+      "Kursi pertunjukan berundak dengan pemandangan panggung jelas",
+      "Kalung bunga anggrek segar saat kedatangan",
+    ],
+    notIncluded: ["Minuman beralkohol premium tambahan", "Foto cetak kenang-kenangan"],
+    meetingPoint: "Pekarangan Luau Tepi Pantai Waikiki (Pukul 17.00)",
+    importantInfo: [
+      "Pakaian santai tropis (aloha attire) sangat disarankan.",
+      "Menu ramah vegetarian, vegan, dan bebas gluten tersedia di meja prasmanan.",
     ],
     recommended: true,
   },
   {
-    id: "paina-luau",
-    name: "Paina Waikiki Hawaiian Luau Experience",
-    category: "luau",
-    categoryLabel: "Hawaiian Luau",
-    duration: "3.5-4 Hours",
-    location: "Central Waikiki",
-    rating: 4.8,
-    reviewsCount: 860,
-    price: 179,
-    originalPrice: 199,
-    image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
-    description:
-      "A magical evening of Polynesian culture, imu oven ceremony, live Hawaiian music, hula dancing, and the world-famous Samoan fire knife dance finale.",
-    fullDescription:
-      "Immerse yourself in authentic aloha at the heart of Waikiki. Receive a fresh fragrant orchid flower lei upon arrival, learn traditional hula and ukulele chords from Hawaiian kupuna, and witness the traditional imu underground oven presentation. Indulge in an expansive culinary feast featuring slow-roasted kalua pork, fresh island poke, lomi lomi salmon, and haupia coconut pudding, followed by a dramatic Polynesian revue culminating in a blazing 3-man fire knife performance.",
-    highlights: [
-      "Fresh Orchid Flower Lei Greeting",
-      "Traditional Island Feast & Kalua Pig",
-      "Complimentary Welcome Mai Tai Cocktails",
-      "Thrilling Fire Knife Performance",
-    ],
-    included: [
-      "Fresh tropical flower lei greeting",
-      "All-you-can-enjoy authentic Hawaiian & Polynesian buffet dinner",
-      "2 complimentary adult alcoholic drink vouchers (or unlimited soft drinks)",
-      "75-minute award-winning theatrical cultural performance",
-    ],
-    notIncluded: ["Premium front-row VIP table upgrade (available upon request)"],
-    meetingPoint: "Waikiki Beachcomber Luau Grounds (2300 Kalakaua Ave)",
-    importantInfo: [
-      "Check-in opens at 5:00 PM; show concludes at approximately 8:30 PM.",
-      "Resort casual island attire recommended (aloha shirts, dresses).",
-      "Vegetarian, vegan, and gluten-free dietary dishes clearly marked on buffet.",
-    ],
-  },
-  {
     id: "pearl-harbor",
-    name: "Premier Pearl Harbor & USS Arizona Memorial Tour",
+    name: "Tur Utama Memorial Pearl Harbor & USS Arizona",
     category: "history",
-    categoryLabel: "Pearl Harbor",
-    duration: "5-6 Hours",
-    location: "Pearl Harbor & Honolulu",
+    categoryLabel: "Pearl Harbor & Sejarah",
+    duration: "5-6 Jam",
+    location: "Pearl Harbor & Pusat Kota Honolulu",
     rating: 4.9,
-    reviewsCount: 1430,
+    reviewsCount: 2130,
     price: 119,
     originalPrice: 135,
     image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
     description:
-      "Walk the hallowed grounds of World War II history. Includes reserved USS Arizona Memorial boat tickets, Pearl Harbor Visitor Center, and historic Honolulu downtown tour.",
+      "Perjalanan sejarah penuh makna yang bebas hambatan. Termasuk tiket shuttle perahu resmi Angkatan Laut ke Memorial USS Arizona, museum, dan tur sejarah Honolulu.",
     fullDescription:
-      "Experience a moving and educational tribute to American heroes. We guarantee your official US National Park Navy boat shuttle tickets out to the hallowed USS Arizona Memorial resting above the sunken battleship. Explore the Road to War museums, watch authentic wartime footage in the memorial theater, and finish with a narrated historical drive through historic downtown Honolulu, the King Kamehameha statue, and Iolani Palace.",
+      "Beri penghormatan kepada para pahlawan 7 Desember 1941 dalam tur terpandu yang tenang dan penuh hormat ini. Lewati kerumitan perebutan tiket harian karena reservasi perahu antar-jemput resmi Angkatan Laut AS ke Memorial USS Arizona telah kami sediakan. Jelajahi galeri museum 'Road to War', saksikan dokumenter arsip langka, dan nikmati tur berkendara melintasi Pusat Sejarah Kota Honolulu, Patung Raja Kamehameha, dan Pemakaman Nasional Punchbowl.",
     highlights: [
-      "Guaranteed USS Arizona Memorial Tickets",
-      "Historic Honolulu & Iolani Palace Drive",
-      "Expert Military History Guide",
-      "Hassle-Free Hotel Pickup",
+      "Tiket Perahu Memorial USS Arizona Terjamin",
+      "Museum & Galeri Sejarah Perang Dunia II",
+      "Gedung Bersejarah Kerajaan Honolulu",
+      "Penjemputan Hotel yang Praktis",
     ],
     included: [
-      "Reserved USS Arizona Memorial boat shuttle ticket",
-      "Pearl Harbor Visitor Center museum exhibits & theater film",
-      "Narrated historic tour of downtown Honolulu & Punchbowl National Cemetery",
-      "Roundtrip air-conditioned hotel transportation",
+      "Tiket reservasi resmi kapal shuttle Memorial USS Arizona",
+      "Akses pameran museum & teater film dokumenter Pearl Harbor",
+      "Narasi sejarah melintasi pusat kota Honolulu & Punchbowl",
+      "Transportasi hotel ber-AC pulang-pergi",
     ],
     notIncluded: [
-      "Battleship Missouri Memorial admission (available as add-on)",
-      "Lunch",
+      "Tiket Kapal Perang USS Missouri (tersedia sebagai opsi tambahan)",
+      "Makan siang",
     ],
-    meetingPoint: "Waikiki hotel pickup between 6:30 AM – 7:00 AM",
+    meetingPoint: "Penjemputan hotel di Waikiki antara pukul 06.30 – 07.00",
     importantInfo: [
-      "Strict bag policy: No bags, purses, backpacks, or diaper bags larger than 1.5\" x 2.25\" x 5.5\" permitted inside Pearl Harbor.",
-      "Baggage storage available at visitor center entrance for a nominal fee.",
+      "Kebijakan tas ketat: Dilarang membawa tas, ransel, atau tas popok berukuran lebih dari 1,5 x 2,25 x 5,5 inci ke dalam Pearl Harbor.",
+      "Layanan penitipan tas tersedia di pintu masuk dengan biaya terjangkau.",
     ],
   },
   {
     id: "diamond-head",
-    name: "Exclusive Diamond Head Shuttle Tour",
+    name: "Tur Eksklusif Shuttle Pendakian Diamond Head",
     category: "shuttle",
-    categoryLabel: "Diamond Head Shuttles",
-    duration: "3 Hours",
-    location: "Diamond Head Crater",
+    categoryLabel: "Shuttle Diamond Head",
+    duration: "3 Jam",
+    location: "Kawah Vulkanik Diamond Head",
     rating: 4.9,
     reviewsCount: 780,
     price: 45,
     originalPrice: 50,
     image: "/sites/gotourshawaii/root/Header-Photo-Diamond-Head.jpeg",
     description:
-      "Hike Oahu's iconic volcanic crater without parking nightmares. Daily roundtrip shuttles from Waikiki with pre-booked state park entry reservations included.",
+      "Daki kawah vulkanik ikonis Oahu tanpa repot mencari parkir. Layanan antar-jemput pulang-pergi dari Waikiki lengkap dengan tiket reservasi resmi taman nasional.",
     fullDescription:
-      "Conquer Oahu's most iconic natural landmark with zero logistics stress. We pre-secure your mandatory Hawaii State Park entrance reservation, pick you up directly at your Waikiki hotel, and drop you off right inside the crater floor. Enjoy 2 hours to hike the legendary 1.6-mile summit trail, walk through historic military tunnels, and stand atop the observation platform taking in panoramic 360° views of Waikiki, the Pacific Ocean, and East Oahu.",
+      "Taklukkan landmark alam paling terkenal di Oahu tanpa beban logistik. Kami mengamankan reservasi wajib Taman Nasional Hawaii Anda, menjemput langsung di hotel Waikiki, dan menurunkan Anda tepat di lantai kawah. Nikmati waktu luang 2 jam untuk mendaki jalur puncak 2,5 km, melintasi terowongan militer bersejarah, dan berdiri di gardu pandang dengan panorama 360° Waikiki, Samudra Pasifik, dan pesisir tenggara Oahu.",
     highlights: [
-      "State Park Entry Pass Included",
-      "Flexible Morning & Sunset Departures",
-      "Air-Conditioned Comfort",
-      "Panoramic Waikiki Summit Views",
+      "Tiket Masuk Resmi Taman Nasional Termasuk",
+      "Jadwal Keberangkatan Pagi & Sore Fleksibel",
+      "Kenyamanan Armada Ber-AC",
+      "Pemandangan Spektakuler Waikiki dari Puncak",
     ],
     included: [
-      "Pre-booked Diamond Head State Monument entry reservation ticket",
-      "Roundtrip express air-conditioned shuttle from Waikiki hotels",
-      "Trail map, orientation briefing, and cold bottled Hawaiian water",
+      "Tiket reservasi resmi Diamond Head State Monument",
+      "Shuttle ekspres ber-AC pulang-pergi dari hotel Waikiki",
+      "Peta jalur pendakian, panduan awal, dan air mineral dingin",
     ],
-    notIncluded: ["Guided hike (trail is clearly marked and self-guided)"],
-    meetingPoint: "Waikiki hotel curbside pickup (hourly departures 6:30 AM – 1:30 PM)",
+    notIncluded: ["Pemandu mendaki (jalur sudah ditandai sangat jelas untuk mandiri)"],
+    meetingPoint: "Lobi hotel Waikiki (keberangkatan setiap jam antara 06.30 – 13.30)",
     importantInfo: [
-      "Hike distance is 1.6 miles roundtrip with 560 feet elevation gain and stairs.",
-      "Closed-toe athletic shoes or sneakers required.",
-      "Sun hat, sunglasses, and sun protection strongly encouraged.",
+      "Panjang jalur pendakian 2,5 km pulang-pergi dengan elevasi 170 meter dan anak tangga.",
+      "Sepatu olahraga atau kets tertutup diwajibkan.",
+      "Topi, kacamata hitam, dan tabir surya sangat disarankan.",
     ],
   },
   {
     id: "surf-lessons",
-    name: "Waikiki Gentle Surf Lessons",
+    name: "Pelajaran Berselancar Pemula di Pantai Waikiki",
     category: "adventure",
-    categoryLabel: "Snorkeling & Water",
-    duration: "2 Hours",
-    location: "Waikiki Beach",
+    categoryLabel: "Snorkeling & Bahari",
+    duration: "2 Jam",
+    location: "Pantai Waikiki",
     rating: 4.9,
     reviewsCount: 420,
     price: 110,
     originalPrice: 125,
     image: "/sites/gotourshawaii/root/GPTempDownload4-1-1.jpg",
     description:
-      "Learn to surf on the gentle, forgiving waves of Waikiki where Hawaiian royalty once surfed. Small student-to-instructor ratios guaranteed to get you standing on your first wave.",
+      "Belajar berselancar di atas ombak tenang Waikiki tempat para bangsawan Hawaii dahulu bermain ombak. Rasio instruktur kecil menjamin Anda berdiri di atas papan pada ombak pertama!",
     fullDescription:
-      "Ride the sacred waves where the legendary Duke Kahanamoku and Hawaiian royalty surfed. Our certified lifeguard surf instructors begin with a 20-minute land lesson covering ocean safety, board dynamics, and the pop-up technique. Then paddle out to Waikiki's gentle rolling reef break where instructors assist you into each wave. You will experience the unforgettable thrill of riding your first wave in Hawaii!",
+      "Rasakan sensasi ombak sakral tempat Duke Kahanamoku dan para bangsawan Hawaii berselancar. Instruktur bersertifikasi penjaga pantai kami memulai sesi dengan panduan teori 20 menit di atas pasir mengenai keselamatan laut dan teknik berdiri (pop-up). Kemudian dayung papan Anda ke perairan tenang Waikiki di mana instruktur akan memandu Anda berdiri dan meluncur di atas ombak Hawaii yang menakjubkan!",
     highlights: [
-      "Beginner-Friendly Surf Board & Rash Guard",
-      "Safety Briefing on Sand First",
-      "CPR-Certified Lifeguard Instructors",
-      "Photo Packages Available",
+      "Papan Selancar Khusus Pemula & Pakaian Pelindung UV",
+      "Pelatihan Teori & Keselamatan di Pasir Terlebih Dahulu",
+      "Instruktur Bersertifikat CPR & Penjaga Pantai",
+      "Paket Foto Dokumentasi Tersedia",
     ],
     included: [
-      "Custom epoxy soft-top surfboard matched to your height/weight",
-      "UV-protective surf rash guard and reef booties",
-      "Small 4:1 student-to-instructor ratio",
-      "Land simulation and in-water coaching",
+      "Papan selancar busa lembut ramah pemula sesuai tinggi/berat badan",
+      "Baju selancar pelindung UV dan sepatu pelindung karang",
+      "Rasio murid-instruktur privat kecil maksimal 4:1",
+      "Pendampingan langsung di dalam air",
     ],
-    notIncluded: ["Digital photo/GoPro video package (available on-site)", "Towel"],
-    meetingPoint: "Waikiki Beach Surf Desk (Kalakaua Ave at Kaiulani)",
+    notIncluded: ["Paket foto/video GoPro digital (tersedia di lokasi)", "Handuk"],
+    meetingPoint: "Pos Selancar Pantai Waikiki (Kalakaua Ave di seberang Kaiulani)",
     importantInfo: [
-      "Minimum age is 6 years old. Basic swimming ability required.",
-      "100% standing guarantee or repeat the lesson free of charge!",
+      "Usia minimal 6 tahun. Diperlukan kemampuan dasar mengapung/berenang.",
+      "Garansi 100% bisa berdiri atau ulangi sesi pelajaran secara gratis!",
     ],
   },
   {
     id: "north-shore-food",
-    name: "North Shore Authentic Local Food & Taste Tour",
+    name: "Tur Kuliner & Cita Rasa Autentik North Shore Oahu",
     category: "circle-island",
-    categoryLabel: "Circle Island Tours",
-    duration: "6-7 Hours",
-    location: "North Shore & Haleiwa",
+    categoryLabel: "Tur Keliling Pulau",
+    duration: "6-7 Jam",
+    location: "North Shore & Kota Haleiwa",
     rating: 4.9,
     reviewsCount: 680,
     price: 135,
     originalPrice: 150,
     image: "/sites/gotourshawaii/root/Visual-img-2-e1714631806737.jpg",
     description:
-      "Savor the iconic culinary flavors of Oahu's legendary North Shore. Feast on authentic garlic shrimp, fresh tropical fruit stands, Hawaiian shave ice, and Haleiwa bakeries.",
+      "Nikmati kelezatan kuliner ikonis pedesaan North Shore. Pesta udang mentega bawang putih autentik, buah tropis segar, es serut Matsumoto, dan toko roti lokal.",
     fullDescription:
-      "Treat your taste buds to an authentic culinary road trip across Oahu's country side. Sample freshly cracked macadamia nuts and aromatic Waialua coffee, visit vibrant roadside fruit stands for sweet dragonfruit and mangoes, and savor an authentic hot garlic butter shrimp plate lunch from Kahuku's renowned shrimp farms. Stroll the historic wooden storefronts of Haleiwa surf town while enjoying legendary rainbow shave ice with coconut cream and mochi.",
+      "Manjakan lidah Anda dalam petualangan kuliner menyusuri kawasan pedesaan pesisir Oahu. Nikmati kacang macadamia segar dan kopi Waialua yang harum, kunjungi kedai buah tepi jalan untuk mencicipi buah naga manis dan mangga segar, serta nikmati seporsi udang bawang putih panas dari peternakan udang Kahuku yang tersohor. Susuri pertokoan kayu klasik di kota selancar bersejarah Haleiwa sambil menikmati es serut pelangi legendaris dengan krim kelapa dan mochi.",
     highlights: [
-      "Famous Kahuku Garlic Shrimp Feast",
-      "Haleiwa Historic Surf Town Walk",
-      "Dole Plantation Pineapple Tasting",
-      "Tropical Fruit Farm Experience",
+      "Pesta Kuliner Udang Bawang Putih Kahuku",
+      "Jelajah Kota Selancar Bersejarah Haleiwa",
+      "Mencicipi Nanas Segar di Perkebunan Dole",
+      "Kunjungan ke Kebun Buah Tropis Lokal",
     ],
     included: [
-      "Full platter of famous Kahuku Garlic Shrimp (or chicken/vegetarian option)",
-      "Traditional Hawaiian rainbow shave ice with sweet condensed milk",
-      "Dole Plantation Pineapple whip tasting ticket",
-      "Roundtrip Waikiki hotel pickup in air-conditioned van",
-      "Local culinary and cultural guide",
+      "Satu porsi lengkap udang bawang putih Kahuku (tersedia opsi ayam/vegetarian)",
+      "Es serut pelangi tradisional Hawaii dengan susu kental manis",
+      "Tiket mencicipi es krim nanas segar di Dole Plantation",
+      "Penjemputan hotel Waikiki dengan van ber-AC",
+      "Pemandu kuliner dan budaya lokal",
     ],
-    notIncluded: ["Additional specialty beverages", "Souvenirs"],
-    meetingPoint: "Waikiki hotel pickup at 8:30 AM",
+    notIncluded: ["Minuman khusus tambahan", "Oleh-oleh belanja pribadi"],
+    meetingPoint: "Penjemputan hotel di Waikiki pukul 08.30",
     importantInfo: [
-      "Bring an appetite! Multiple food stops throughout the day.",
-      "Shellfish allergies can be accommodated with garlic chicken or vegetarian tofu.",
+      "Datanglah dengan selera makan yang baik! Banyak perhentian kuliner lezat sepanjang hari.",
+      "Alergi makanan laut dapat diganti dengan opsi ayam bawang putih atau tahu vegetarian.",
     ],
     recommended: true,
   },
   {
     id: "sunset-catamaran",
-    name: "Waikiki Sunset Catamaran & Cocktail Sail",
+    name: "Pelayaran Sunset Katamaran & Koktail Waikiki",
     category: "adventure",
-    categoryLabel: "Snorkeling & Water",
-    duration: "2 Hours",
-    location: "Waikiki Coastline",
+    categoryLabel: "Snorkeling & Bahari",
+    duration: "2 Jam",
+    location: "Garis Pantai Waikiki",
     rating: 4.9,
     reviewsCount: 512,
     price: 95,
     originalPrice: 110,
     image: "/sites/gotourshawaii/root/3-3.jpg",
     description:
-      "Sail into the golden Hawaiian sunset off the shores of Waikiki with Diamond Head as your backdrop. Sip tropical cocktails and watch for playful dolphins.",
+      "Berlayar menuju matahari terbenam keemasan Hawaii di lepas pantai Waikiki dengan latar belakang kawah Diamond Head. Nikmati koktail tropis dan musik aloha yang menenangkan.",
     fullDescription:
-      "End your Hawaiian day in pure paradise. Board our sleek 54-foot sailing catamaran as the tropical afternoon light turns golden. Cruise past the iconic Waikiki skyline and Diamond Head crater as the sun dips below the horizon, painting the sky in fiery shades of amber, magenta, and orange. Sip refreshing island Mai Tais, local craft beers, and chilled wines while listening to soothing Hawaiian slack-key guitar and contemporary island tunes.",
+      "Akhiri hari Anda di Hawaii dalam suasana surga sejati. Naiki katamaran layar 54 kaki kami saat cahaya sore tropis berubah keemasan. Berlayar melewati cakrawala kota Waikiki dan kawah Diamond Head saat matahari perlahan tenggelam, mewarnai langit dengan gradasi jingga, merah muda, dan keemasan yang memukau. Nikmati koktail Mai Tai dingin, bir lokal, atau anggur sambil mendengarkan alunan gitar slack-key Hawaii yang syahdu.",
     highlights: [
-      "Golden Hour Waikiki Skyline Cruise",
-      "Complimentary Cocktails & Beverages",
-      "Diamond Head Oceanfront Vista",
-      "Chilled Island Vibes & Music",
+      "Pelayaran Sunset Romantis Cakrawala Waikiki",
+      "Koktail & Minuman Tropis Gratis Termasuk",
+      "Pemandangan Lautan Diamond Head Menawan",
+      "Alunan Musik Hawaii yang Santai & Menenangkan",
     ],
     included: [
-      "3 complimentary alcoholic beverages (Mai Tais, beer, wine, seltzers)",
-      "Unlimited non-alcoholic tropical juices and sodas",
-      "USCG-licensed captain and attentive crew",
-      "Spacious covered deck and open-air trampoline netting seating",
+      "3 kupon minuman beralkohol gratis (Mai Tai, bir lokal, wine, seltzer)",
+      "Minuman jus tropis dan soda non-alkohol tanpa batas",
+      "Kapten berlisensi USCG dan kru kapal yang ramah",
+      "Dek terlindung yang luas dan jaring trampolin terbuka di atas ombak",
     ],
-    notIncluded: ["Hotel transportation (Kewalo Basin Harbor is a 5-min drive from Waikiki)"],
-    meetingPoint: "Kewalo Basin Harbor, Gate 1 (1125 Ala Moana Blvd)",
+    notIncluded: ["Transportasi hotel (Dermaga Kewalo Basin berjarak 5 menit dari Waikiki)"],
+    meetingPoint: "Dermaga Kewalo Basin, Pintu Gerbang 1 (1125 Ala Moana Blvd)",
     importantInfo: [
-      "Departure is at 5:30 PM (adjusts seasonally with sunset time). Please arrive 20 minutes prior.",
-      "Must be 21+ with valid government photo ID to consume alcoholic beverages.",
-      "Light evening jacket or windbreaker recommended.",
+      "Keberangkatan pukul 17.30 (menyesuaikan waktu sunset). Harap hadir 20 menit sebelumnya.",
+      "Berusia minimal 21 tahun dengan kartu identitas berfoto untuk mengonsumsi minuman beralkohol.",
+      "Jaket tipis atau penahan angin disarankan untuk angin laut sore.",
     ],
   },
 ];
@@ -367,7 +361,7 @@ export default function TourPackagesPage() {
 
   // Modals state
   const [bookingOpen, setBookingOpen] = useState(false);
-  const [selectedTourName, setSelectedTourName] = useState("Circle Island Tour");
+  const [selectedTourName, setSelectedTourName] = useState("Tur Keliling Pulau");
   const [detailTour, setDetailTour] = useState<TourPackageDetail | null>(null);
   const [detailModalOpen, setDetailModalOpen] = useState(false);
 
@@ -434,7 +428,7 @@ export default function TourPackagesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white overflow-x-hidden">
       <TopBar />
-      <Navbar onOpenBooking={() => handleBook("Circle Island Tour")} />
+      <Navbar onOpenBooking={() => handleBook("Tur Keliling Pulau")} />
 
       <main className="flex-1">
         {/* 1. Header Hero */}
@@ -442,7 +436,7 @@ export default function TourPackagesPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/sites/gotourshawaii/root/waikiki-scaled.jpeg"
-              alt="Waikiki Beach, Hawaii"
+              alt="Pantai Waikiki Hawaii"
               fill
               priority
               className="object-cover object-center"
@@ -451,17 +445,17 @@ export default function TourPackagesPage() {
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
-            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
-                Top Rated Tours &amp; Excursions in Oahu
+                Tur Resmi Pulau Oahu &amp; Maui
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-sm">
-              TOURS &amp; PACKAGES
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+              PAKET &amp; PENGALAMAN TUR HAWAII
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 leading-relaxed font-normal">
-              Handcrafted island adventures with local expert guides. Guaranteed tickets, small groups, and unforgettable memories.
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
+              Jelajahi tur keliling pulau dengan rating tertinggi, pesta budaya Paina Luau, petualangan snorkeling, dan layanan shuttle harian praktis bersama pemandu lokal berlisensi.
             </p>
           </div>
 
@@ -469,7 +463,7 @@ export default function TourPackagesPage() {
             <div className="relative w-full h-14 sm:h-18 md:h-22 lg:h-24">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
-                alt="Polynesian mountain divider"
+                alt="Transisi motif pembatas polinesia"
                 fill
                 className="object-cover object-top"
                 priority
@@ -478,238 +472,263 @@ export default function TourPackagesPage() {
           </div>
         </section>
 
-        {/* 2. Interactive Search, Filter Tabs & 9 Tour Cards Grid */}
-        <section className="bg-[#f5f0e8] text-neutral-900 py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
+        {/* 2. Main Tour Listing Section */}
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-8 sm:pt-10 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            {/* Search Bar & Sort Dropdown Row */}
-            <div className="max-w-5xl mx-auto mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
-              {/* Search Input */}
-              <div className="relative w-full md:max-w-lg">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 pointer-events-none" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search your Hawaii adventure..."
-                  className="w-full bg-white border border-neutral-300 rounded-2xl pl-11 pr-10 py-3 text-sm sm:text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all shadow-sm"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery("")}
-                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 p-1"
-                    aria-label="Clear search"
+            {/* Filter Pills, Search Bar, and Sorter */}
+            <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-lg border border-neutral-200/80 mb-10 sm:mb-12">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+                {/* Search Input */}
+                <div className="relative flex-1">
+                  <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Cari tur berdasarkan nama, atraksi, atau lokasi (misal: Waimea, Penyu, Luau, Sunset)..."
+                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/20 transition-all"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full hover:bg-neutral-200 text-neutral-400 hover:text-neutral-700 transition-colors"
+                      aria-label="Hapus pencarian"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Sorter Dropdown */}
+                <div className="flex items-center gap-2.5 shrink-0 self-end lg:self-auto">
+                  <SlidersHorizontal className="w-4 h-4 text-neutral-400" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">Urutkan:</span>
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="bg-neutral-50 border border-neutral-200 rounded-xl px-3.5 py-2 text-xs font-semibold text-neutral-800 focus:outline-none focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/20 transition-all cursor-pointer"
                   >
-                    <X className="w-4 h-4" />
-                  </button>
-                )}
+                    <option value="popular">Paling Populer</option>
+                    <option value="rating">Rating Tertinggi</option>
+                    <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+                    <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+                  </select>
+                </div>
               </div>
 
-              {/* Sort By Dropdown */}
-              <div className="flex items-center gap-2.5 w-full md:w-auto justify-end">
-                <SlidersHorizontal className="w-4 h-4 text-neutral-500 shrink-0" />
-                <span className="text-xs sm:text-sm font-bold text-neutral-700 uppercase tracking-wider shrink-0">
-                  Sort By:
-                </span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-white border border-neutral-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-medium text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent shadow-xs cursor-pointer"
-                >
-                  <option value="popular">Most Popular</option>
-                  <option value="rating">Highest Rated</option>
-                  <option value="price-asc">Price: Low to High</option>
-                  <option value="price-desc">Price: High to Low</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Category Filter Pills - Responsive Row */}
-            <div className="w-full mb-10 sm:mb-12 flex justify-center">
-              <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 flex-wrap md:flex-wrap lg:flex-nowrap justify-center max-w-full overflow-x-auto no-scrollbar py-1 px-2">
+              {/* Category Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2 pt-5 border-t border-neutral-100 mt-5">
                 {[
-                  { label: "All Experiences", value: "all" },
-                  { label: "Circle Island Tours", value: "circle-island" },
-                  { label: "Snorkeling & Water", value: "adventure" },
-                  { label: "Hawaiian Luau", value: "luau" },
-                  { label: "Pearl Harbor", value: "history" },
-                  { label: "Diamond Head Shuttles", value: "shuttle" },
-                ].map((tab) => (
+                  { key: "all", label: "Semua Tur (9)" },
+                  { key: "circle-island", label: "Tur Keliling Pulau (4)" },
+                  { key: "luau", label: "Pesta Luau & Budaya (1)" },
+                  { key: "history", label: "Pearl Harbor & Sejarah (1)" },
+                  { key: "adventure", label: "Snorkeling & Bahari (2)" },
+                  { key: "shuttle", label: "Shuttle Diamond Head (1)" },
+                ].map((cat) => (
                   <button
-                    key={tab.value}
-                    onClick={() => setSelectedCategory(tab.value)}
-                    className={`px-4 sm:px-4.5 lg:px-5 py-2.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider whitespace-nowrap transition-all cursor-pointer shrink-0 ${
-                      selectedCategory === tab.value
-                        ? "bg-[#f15d22] text-white shadow-lg shadow-[#f15d22]/30 scale-105"
-                        : "bg-white text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 border border-neutral-200 shadow-xs"
+                    key={cat.key}
+                    onClick={() => setSelectedCategory(cat.key)}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                      selectedCategory === cat.key
+                        ? "bg-[#f15d22] text-white shadow-md shadow-[#f15d22]/30 scale-105"
+                        : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200/80 hover:text-neutral-900"
                     }`}
                   >
-                    {tab.label}
+                    {cat.label}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Results count label */}
-            <div className="mb-6 flex items-center justify-between text-xs sm:text-sm text-neutral-600 font-medium">
-              <span>
-                Showing <strong>{filteredAndSortedTours.length}</strong> of <strong>{allTours.length}</strong> Hawaiian adventures
-              </span>
-              {(searchQuery || selectedCategory !== "all" || sortBy !== "popular") && (
+            {/* Results Count & Clear Button */}
+            {(selectedCategory !== "all" || searchQuery.trim()) && (
+              <div className="flex items-center justify-between mb-6 px-1 text-xs sm:text-sm text-neutral-600">
+                <div>
+                  Menampilkan <strong className="text-neutral-900">{filteredAndSortedTours.length}</strong> tur
+                  {selectedCategory !== "all" && (
+                    <span> dalam kategori <strong className="text-[#f15d22]">{selectedCategory}</strong></span>
+                  )}
+                  {searchQuery.trim() && (
+                    <span> untuk &ldquo;{searchQuery}&rdquo;</span>
+                  )}
+                </div>
                 <button
                   onClick={handleClearFilters}
-                  className="text-[#f15d22] hover:underline font-bold text-xs uppercase tracking-wider cursor-pointer"
+                  className="text-[#f15d22] hover:underline font-bold cursor-pointer"
                 >
-                  Reset All Filters
+                  Reset Filter
                 </button>
-              )}
-            </div>
+              </div>
+            )}
 
-            {/* Empty State when no tours match */}
+            {/* 3. The 3x3 Card Grid */}
             {filteredAndSortedTours.length === 0 ? (
-              <div className="text-center py-16 px-4 bg-white/70 rounded-3xl border border-black/5 max-w-lg mx-auto shadow-md">
-                <AlertCircle className="w-12 h-12 text-[#f15d22] mx-auto mb-3" />
-                <h3 className="font-heading text-2xl font-bold text-[#0c2340]">
-                  No tours found. Try another search.
+              <div className="bg-white rounded-3xl p-12 text-center max-w-md mx-auto shadow-md border border-neutral-200">
+                <AlertCircle className="w-12 h-12 text-neutral-400 mx-auto mb-3" />
+                <h3 className="font-heading text-xl font-bold text-[#0c2340] mb-1">
+                  TIDAK DITEMUKAN TUR
                 </h3>
-                <p className="text-neutral-600 text-sm mt-1">
-                  We couldn&apos;t find any excursions matching &ldquo;{searchQuery}&rdquo;.
+                <p className="text-xs text-neutral-500 mb-6">
+                  Tidak ada paket tur yang cocok dengan filter atau kata kunci Anda. Silakan coba kata kunci lain.
                 </p>
                 <button
                   onClick={handleClearFilters}
-                  className="mt-5 px-6 py-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl font-heading text-sm font-bold uppercase tracking-wider shadow-md transition-all cursor-pointer"
+                  className="px-6 py-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                 >
-                  Clear Filters
+                  Lihat Semua Tur
                 </button>
               </div>
             ) : (
-              /* 9 Tour Cards Grid: 3x3 on desktop, 2-col on tablet, 1-col on mobile */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 items-stretch">
                 {filteredAndSortedTours.map((tour) => (
-                  <div
+                  <article
                     key={tour.id}
-                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
+                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/15"
                   >
-                    {/* Image Container with subtle zoom */}
-                    <div
-                      onClick={() => handleViewDetails(tour)}
-                      className="relative h-60 w-full overflow-hidden cursor-pointer"
-                    >
+                    {/* Top Image Box with Badges */}
+                    <div className="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
                       <Image
                         src={tour.image}
                         alt={tour.name}
                         fill
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
 
-                      {tour.recommended && (
-                        <div className="absolute top-4 left-4 bg-[#f15d22] text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md">
-                          Most Popular
-                        </div>
-                      )}
+                      {/* Top Badges */}
+                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
+                        <span className="bg-black/65 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                          {tour.categoryLabel}
+                        </span>
+                        {tour.recommended && (
+                          <span className="bg-amber-400 text-neutral-950 text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+                            ★ Populer
+                          </span>
+                        )}
+                      </div>
 
-                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs font-semibold">
-                        <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                          <Clock className="w-3.5 h-3.5 text-[#f5b324]" />
+                      {/* Bottom Image Strip: Duration & Location */}
+                      <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-white/95 font-medium drop-shadow-md">
+                        <span className="flex items-center gap-1 bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full">
+                          <Clock className="w-3.5 h-3.5 text-[#f15d22]" />
                           {tour.duration}
                         </span>
-                        <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                          <Star className="w-3.5 h-3.5 fill-[#f5b324] text-[#f5b324]" />
-                          {tour.rating} ({tour.reviewsCount})
+                        <span className="bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full">
+                          {tour.location}
                         </span>
                       </div>
                     </div>
 
-                    {/* Body Content */}
+                    {/* Card Content */}
                     <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                       <div>
-                        <h3
-                          onClick={() => handleViewDetails(tour)}
-                          className="font-heading text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-snug mb-2.5 group-hover:text-[#f15d22] transition-colors cursor-pointer"
-                        >
-                          {tour.name}
-                        </h3>
-                        <p className="text-neutral-600 text-sm font-normal leading-relaxed mb-4 line-clamp-3">
-                          {tour.description}
-                        </p>
-
-                        {/* Highlights */}
-                        <ul className="space-y-2 mb-6 text-xs sm:text-[13px] text-neutral-700 font-medium">
-                          {tour.highlights.map((h, i) => (
-                            <li key={i} className="flex items-center gap-2">
-                              <CheckCircle className="w-4 h-4 text-[#f15d22] shrink-0" />
-                              <span className="leading-tight">{h}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Price and CTA Buttons Row */}
-                      <div className="pt-4 border-t border-neutral-100 flex flex-col gap-3">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="text-xs text-neutral-400 font-semibold line-through mb-0.5">
-                              ${tour.originalPrice}
-                            </div>
-                            <div className="flex items-baseline gap-1">
-                              <span className="text-3xl font-extrabold text-[#f15d22] font-heading tracking-tight leading-none">
-                                ${tour.price}
-                              </span>
-                              <span className="text-xs text-neutral-500 font-medium">/ person</span>
-                            </div>
+                        {/* Rating row */}
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="flex items-center text-amber-500">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                            ))}
                           </div>
-
-                          <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md">
-                            Best Rate Guaranteed
+                          <span className="text-xs font-bold text-neutral-800">{tour.rating}</span>
+                          <span className="text-[11px] text-neutral-400">
+                            ({tour.reviewsCount.toLocaleString()} ulasan)
                           </span>
                         </div>
 
-                        {/* Action Buttons: VIEW DETAILS + BOOK NOW */}
+                        {/* Title */}
+                        <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-tight mb-2.5 group-hover:text-[#f15d22] transition-colors line-clamp-2 min-h-[3.25rem]">
+                          {tour.name}
+                        </h3>
+
+                        {/* Short Excerpt */}
+                        <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                          {tour.description}
+                        </p>
+
+                        {/* Highlights Pills */}
+                        <div className="space-y-1.5 mb-5 pb-5 border-b border-neutral-100">
+                          {tour.highlights.slice(0, 3).map((hl, i) => (
+                            <div key={i} className="flex items-center gap-2 text-xs text-neutral-700">
+                              <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                              <span className="truncate">{hl}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Pricing & CTA Actions */}
+                      <div className="pt-2 space-y-3">
+                        {/* Price Row */}
+                        <div className="flex items-baseline justify-between">
+                          <div>
+                            <span className="text-[11px] uppercase tracking-wider text-neutral-400 block font-semibold">
+                              Mulai dari
+                            </span>
+                            <div className="flex items-baseline gap-2">
+                              <span className="text-2xl sm:text-3xl font-extrabold text-[#f15d22] leading-none">
+                                ${tour.price}
+                              </span>
+                              {tour.originalPrice > tour.price && (
+                                <span className="text-xs text-neutral-400 line-through">
+                                  ${tour.originalPrice}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                          {tour.originalPrice > tour.price && (
+                            <span className="text-[11px] text-emerald-600 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                              Hemat ${tour.originalPrice - tour.price}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Dual Action Buttons */}
                         <div className="grid grid-cols-2 gap-2.5 pt-1">
                           <button
                             onClick={() => handleViewDetails(tour)}
-                            className="w-full bg-[#0c2340] hover:bg-[#071629] text-white text-xs sm:text-sm font-bold uppercase tracking-wider py-2.5 px-3 rounded-xl border border-transparent shadow-sm flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-neutral-300 hover:border-[#f15d22] text-neutral-700 hover:text-[#f15d22] hover:bg-neutral-50 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                           >
                             <Eye className="w-3.5 h-3.5" />
-                            <span>VIEW DETAILS</span>
+                            <span>DETAIL</span>
                           </button>
 
                           <button
                             onClick={() => handleBook(tour.name)}
-                            className="w-full bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs sm:text-sm font-bold uppercase tracking-wider py-2.5 px-3 rounded-xl shadow-md shadow-[#f15d22]/30 hover:shadow-lg hover:shadow-[#f15d22]/40 flex items-center justify-center gap-1.5 transition-all transform hover:scale-102 active:scale-98 cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                           >
-                            <span>BOOK NOW</span>
+                            <span>PESAN</span>
                             <ArrowRight className="w-3.5 h-3.5" />
                           </button>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             )}
           </div>
         </section>
 
-        {/* 3. Experience Hawaii Banner */}
-        <CtaBanner onBookNow={() => handleBook("Circle Island Tour")} />
+        {/* 4. Bottom Call To Action Banner */}
+        <CtaBanner onBookNow={() => handleBook("Tur Keliling Pulau")} />
       </main>
 
       <Footer />
 
-      {/* 4. Tour Detail Modal */}
-      <TourDetailModal
-        tour={detailTour}
-        isOpen={detailModalOpen}
-        onClose={() => setDetailModalOpen(false)}
-        onBookNow={(name) => handleBook(name)}
-      />
-
-      {/* 5. Modern 5-Step Booking Wizard */}
+      {/* Booking Dialog Modal */}
       <BookingDialog
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
         defaultTour={selectedTourName}
+      />
+
+      {/* Tour Detail Modal */}
+      <TourDetailModal
+        tour={detailTour}
+        isOpen={detailModalOpen}
+        onClose={() => setDetailModalOpen(false)}
+        onBookNow={handleBook}
       />
     </div>
   );

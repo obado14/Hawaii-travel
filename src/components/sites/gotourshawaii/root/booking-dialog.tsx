@@ -27,38 +27,38 @@ interface TourOption {
 const TOURS: TourOption[] = [
   {
     id: "Circle Island Tour",
-    name: "Circle Island Tour (Hidden Gems & Waterfall)",
+    name: "Tur Keliling Pulau Oahu (Permata Tersembunyi & Air Terjun)",
     price: 149,
-    duration: "Full Day (8-9 hrs)",
-    tag: "Most Popular",
+    duration: "Sehari Penuh (8-9 jam)",
+    tag: "Paling Populer",
   },
   {
     id: "Hawaiian Luau",
-    name: "Paina Waikiki Luau Feast & Polynesian Show",
+    name: "Pesta Luau Paina Waikiki & Pertunjukan Budaya Polinesia",
     price: 179,
-    duration: "Evening (4 hrs)",
-    tag: "Authentic Cultural",
+    duration: "Malam Hari (4 jam)",
+    tag: "Budaya Asli",
   },
   {
     id: "Pearl Harbor Tour",
-    name: "Pearl Harbor & USS Arizona Memorial Excursion",
+    name: "Ekskursi Bersejarah Pearl Harbor & Memorial USS Arizona",
     price: 119,
-    duration: "Half Day (5 hrs)",
-    tag: "Historic",
+    duration: "Setengah Hari (5 jam)",
+    tag: "Sejarah",
   },
   {
     id: "Diamond Head Shuttle",
-    name: "Diamond Head Hike Shuttle with Reserved Pass",
+    name: "Shuttle Pendakian Diamond Head dengan Tiket Reservasi",
     price: 45,
-    duration: "Express (3 hrs)",
-    tag: "Daily Shuttle",
+    duration: "Ekspres (3 jam)",
+    tag: "Shuttle Harian",
   },
   {
     id: "Waikiki Turtle Canyon Snorkeling",
-    name: "Waikiki Turtle Canyon Snorkeling & Swim",
+    name: "Snorkeling & Berenang Penyu Waikiki Turtle Canyon",
     price: 129,
-    duration: "Half Day (3.5 hrs)",
-    tag: "Eco Adventure",
+    duration: "Setengah Hari (3.5 jam)",
+    tag: "Petualangan Eko",
   },
 ];
 
@@ -82,7 +82,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
     return `${yyyy}-${mm}-${dd}`;
   });
 
-  const [timeSlot, setTimeSlot] = useState("8:00 AM (Morning Departure)");
+  const [timeSlot, setTimeSlot] = useState("08:00 (Keberangkatan Pagi)");
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [fullName, setFullName] = useState("");
@@ -104,33 +104,33 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
     setErrorMsg("");
     if (step === 1) {
       if (!selectedTour) {
-        setErrorMsg("Please select a tour to continue.");
+        setErrorMsg("Silakan pilih paket tur untuk melanjutkan.");
         return;
       }
       setStep(2);
     } else if (step === 2) {
       if (!date) {
-        setErrorMsg("Please pick your preferred tour date.");
+        setErrorMsg("Silakan tentukan tanggal tur yang diinginkan.");
         return;
       }
       setStep(3);
     } else if (step === 3) {
       if (adults < 1) {
-        setErrorMsg("At least 1 adult guest is required.");
+        setErrorMsg("Minimal 1 tamu dewasa diperlukan.");
         return;
       }
       setStep(4);
     } else if (step === 4) {
       if (!fullName.trim()) {
-        setErrorMsg("Please enter your full name.");
+        setErrorMsg("Silakan masukkan nama lengkap Anda.");
         return;
       }
       if (!email.trim() || !email.includes("@")) {
-        setErrorMsg("Please enter a valid email address.");
+        setErrorMsg("Silakan masukkan alamat email yang valid.");
         return;
       }
       if (!phone.trim()) {
-        setErrorMsg("Please enter your contact phone number.");
+        setErrorMsg("Silakan masukkan nomor telepon / WhatsApp Anda.");
         return;
       }
       setStep(5);
@@ -182,37 +182,36 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
             </div>
 
             <div className="inline-block px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-              Booking Ref: {bookingRef}
+              Kode Reservasi: {bookingRef}
             </div>
 
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
-              YOUR BOOKING REQUEST HAS BEEN RECEIVED!
+              PERMINTAAN PEMESANAN ANDA TELAH DITERIMA!
             </h3>
 
             <p className="text-neutral-200 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
-              Mahalo, <strong className="text-white">{fullName}</strong>! We have locked in your seats for{" "}
-              <strong className="text-[#f5b324]">{currentTourData.name}</strong> on{" "}
+              Mahalo, <strong className="text-white">{fullName}</strong>! Kami telah mengamankan kursi Anda untuk{" "}
+              <strong className="text-[#f5b324]">{currentTourData.name}</strong> pada{" "}
               <strong className="text-white">{date}</strong> ({timeSlot}).
             </p>
 
             <div className="p-4 bg-white/5 rounded-2xl border border-white/10 text-left text-xs sm:text-sm space-y-2 max-w-md mx-auto">
               <div className="flex justify-between text-neutral-300">
-                <span>Party Size:</span>
+                <span>Jumlah Tamu:</span>
                 <span className="font-semibold text-white">
-                  {adults} Adult{adults > 1 ? "s" : ""}
-                  {children > 0 ? `, ${children} Child${children > 1 ? "ren" : ""}` : ""}
+                  {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                 </span>
               </div>
               <div className="flex justify-between text-neutral-300">
-                <span>Estimated Total:</span>
+                <span>Perkiraan Total:</span>
                 <span className="font-bold text-[#f5b324] text-base">${total.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-neutral-300">
-                <span>Confirmation Sent To:</span>
+                <span>Konfirmasi Dikirim Ke:</span>
                 <span className="font-medium text-white">{email}</span>
               </div>
               <div className="pt-2 border-t border-white/10 text-[12px] text-neutral-400">
-                Free cancellation up to 48 hours before departure. Pickup details will be sent via email.
+                Pembatalan gratis hingga 48 jam sebelum keberangkatan. Detail titik penjemputan akan dikirimkan melalui email.
               </div>
             </div>
 
@@ -221,7 +220,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 onClick={handleResetAndClose}
                 className="w-full sm:w-auto px-10 py-3 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#f15d22]/30 transition-all cursor-pointer"
               >
-                DONE &amp; EXPLORE MORE
+                SELESAI &amp; JELAJAHI LEBIH LANJUT
               </button>
             </div>
           </div>
@@ -231,13 +230,13 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
             {/* Top Stepper Indicator */}
             <div className="mb-6">
               <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
-                <span>Step {step} of 5</span>
+                <span>Langkah {step} dari 5</span>
                 <span className="text-[#f5b324] font-semibold">
-                  {step === 1 && "Select Tour"}
-                  {step === 2 && "Choose Date & Time"}
-                  {step === 3 && "Number of Guests"}
-                  {step === 4 && "Contact Details"}
-                  {step === 5 && "Review & Confirm"}
+                  {step === 1 && "Pilih Tur"}
+                  {step === 2 && "Pilih Tanggal & Waktu"}
+                  {step === 3 && "Jumlah Tamu"}
+                  {step === 4 && "Data Kontak"}
+                  {step === 5 && "Tinjau & Konfirmasi"}
                 </span>
               </div>
 
@@ -262,10 +261,10 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               <div className="space-y-3.5 animate-in fade-in duration-200">
                 <div className="text-left mb-1">
                   <h3 className="font-heading text-2xl sm:text-3xl text-white uppercase tracking-wide">
-                    CHOOSE YOUR EXPERIENCE
+                    PILIH PENGALAMAN WISATA ANDA
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300">
-                    Select the award-winning excursion you wish to book.
+                    Pilih paket tur ekskursi pemenang penghargaan yang ingin Anda pesan.
                   </p>
                 </div>
 
@@ -296,7 +295,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                         <div className="text-lg sm:text-xl font-extrabold text-[#f5b324] font-heading">
                           ${t.price}
                         </div>
-                        <span className="text-[11px] text-neutral-400">/ person</span>
+                        <span className="text-[11px] text-neutral-400">/ orang</span>
                       </div>
                     </div>
                   ))}
@@ -309,25 +308,25 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               <div className="space-y-4 animate-in fade-in duration-200 text-left">
                 <div>
                   <h3 className="font-heading text-2xl sm:text-3xl text-white uppercase tracking-wide">
-                    SELECT DATE &amp; TIME
+                    PILIH TANGGAL &amp; WAKTU
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300">
-                    Daily tours depart from Waikiki with guaranteed seats.
+                    Tur harian berangkat dari Waikiki dengan jaminan ketersediaan kursi.
                   </p>
                 </div>
 
                 {/* Tour Selected Chip */}
                 <div className="p-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-between">
                   <div className="text-xs text-neutral-300">
-                    Selected: <strong className="text-white">{currentTourData.name}</strong>
+                    Pilihan: <strong className="text-white">{currentTourData.name}</strong>
                   </div>
-                  <span className="text-xs text-[#f5b324] font-bold">${currentTourData.price}/ea</span>
+                  <span className="text-xs text-[#f5b324] font-bold">${currentTourData.price}/org</span>
                 </div>
 
                 {/* Date Input */}
                 <div>
                   <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
-                    Tour Date <span className="text-red-400">*</span>
+                    Tanggal Tur <span className="text-red-400">*</span>
                   </label>
                   <input
                     type="date"
@@ -341,14 +340,14 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 {/* Time Slot Options */}
                 <div>
                   <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
-                    Departure Preference
+                    Pilihan Waktu Keberangkatan
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {[
-                      "7:30 AM (Early Explorer)",
-                      "9:00 AM (Recommended)",
-                      "11:30 AM (Midday)",
-                      "1:00 PM (Afternoon)",
+                      "07:30 (Penjelajah Pagi)",
+                      "09:00 (Sangat Direkomendasikan)",
+                      "11:30 (Tengah Hari)",
+                      "13:00 (Siang / Sore)",
                     ].map((slot) => (
                       <button
                         type="button"
@@ -373,19 +372,19 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               <div className="space-y-5 animate-in fade-in duration-200 text-left">
                 <div>
                   <h3 className="font-heading text-2xl sm:text-3xl text-white uppercase tracking-wide">
-                    HOW MANY GUESTS?
+                    BERAPA JUMLAH TAMU?
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300">
-                    Traveling in small groups for comfortable, personal aloha.
+                    Bepergian dalam rombongan kecil untuk kenyamanan aloha yang hangat dan personal.
                   </p>
                 </div>
 
                 {/* Adults Stepper */}
                 <div className="p-4 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-between">
                   <div>
-                    <div className="font-bold text-white text-base">Adults (12+)</div>
+                    <div className="font-bold text-white text-base">Dewasa (12+ thn)</div>
                     <div className="text-xs text-neutral-400">
-                      Standard admission (${currentTourData.price}/person)
+                      Tiket standar (${currentTourData.price}/orang)
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -412,9 +411,9 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 {/* Children Stepper */}
                 <div className="p-4 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-between">
                   <div>
-                    <div className="font-bold text-white text-base">Children (3–11)</div>
+                    <div className="font-bold text-white text-base">Anak-anak (3–11 thn)</div>
                     <div className="text-xs text-emerald-400 font-medium">
-                      25% Discount (${Math.round(currentTourData.price * 0.75)}/person)
+                      Diskon 25% (${Math.round(currentTourData.price * 0.75)}/orang)
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -441,9 +440,9 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 {/* Live Price Summary Box */}
                 <div className="p-4 rounded-2xl bg-gradient-to-r from-white/5 to-[#f15d22]/10 border border-white/10 flex items-center justify-between">
                   <div>
-                    <div className="text-xs text-neutral-400">Total with 10% Online Promo:</div>
+                    <div className="text-xs text-neutral-400">Total dengan Diskon Promo Online 10%:</div>
                     <div className="text-xs text-neutral-400 line-through">
-                      Regular: ${rawTotal.toFixed(2)}
+                      Harga Normal: ${rawTotal.toFixed(2)}
                     </div>
                   </div>
                   <div className="text-right">
@@ -460,21 +459,21 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               <div className="space-y-4 animate-in fade-in duration-200 text-left">
                 <div>
                   <h3 className="font-heading text-2xl sm:text-3xl text-white uppercase tracking-wide">
-                    LEAD GUEST DETAILS
+                    DATA TAMU UTAMA
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300">
-                    We will send pickup instructions and confirmation vouchers to this contact.
+                    Kami akan mengirimkan voucher pemesanan dan panduan penjemputan ke kontak ini.
                   </p>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-1">
-                    Full Name <span className="text-red-400">*</span>
+                    Nama Lengkap <span className="text-red-400">*</span>
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Sarah Jenkins"
+                    placeholder="cth. Sarah Jenkins"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
@@ -484,7 +483,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-1">
-                      Email Address <span className="text-red-400">*</span>
+                      Alamat Email <span className="text-red-400">*</span>
                     </label>
                     <input
                       type="email"
@@ -498,12 +497,12 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
 
                   <div>
                     <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-1">
-                      Phone Number <span className="text-red-400">*</span>
+                      Nomor Telepon / WhatsApp <span className="text-red-400">*</span>
                     </label>
                     <input
                       type="tel"
                       required
-                      placeholder="+1 (808) 555-0199"
+                      placeholder="+62 812-3456-7890"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
@@ -513,11 +512,11 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
 
                 <div>
                   <label className="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-1">
-                    Waikiki Hotel / Pickup Location <span className="text-neutral-400">(Optional)</span>
+                    Hotel Waikiki / Lokasi Penjemputan <span className="text-neutral-400">(Opsional)</span>
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. Sheraton Waikiki, Hilton Hawaiian Village..."
+                    placeholder="cth. Sheraton Waikiki, Hilton Hawaiian Village..."
                     value={hotel}
                     onChange={(e) => setHotel(e.target.value)}
                     className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
@@ -531,10 +530,10 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               <div className="space-y-4 animate-in fade-in duration-200 text-left">
                 <div>
                   <h3 className="font-heading text-2xl sm:text-3xl text-white uppercase tracking-wide">
-                    REVIEW YOUR RESERVATION
+                    TINJAU PESANAN ANDA
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-300">
-                    Verify all details before confirming your Hawaiian adventure.
+                    Periksa kembali semua detail sebelum mengonfirmasi petualangan Hawaii Anda.
                   </p>
                 </div>
 
@@ -543,7 +542,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   <div className="flex items-start justify-between border-b border-white/10 pb-3">
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                        Tour Selected
+                        Tur Terpilih
                       </span>
                       <h4 className="font-bold text-base sm:text-lg text-white">
                         {currentTourData.name}
@@ -557,34 +556,33 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
 
                   <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm border-b border-white/10 pb-3">
                     <div>
-                      <span className="text-neutral-400 block text-xs">Date:</span>
+                      <span className="text-neutral-400 block text-xs">Tanggal:</span>
                       <strong className="text-white">{date}</strong>
                     </div>
                     <div>
-                      <span className="text-neutral-400 block text-xs">Time:</span>
+                      <span className="text-neutral-400 block text-xs">Waktu:</span>
                       <strong className="text-white">{timeSlot}</strong>
                     </div>
                     <div>
-                      <span className="text-neutral-400 block text-xs">Guests:</span>
+                      <span className="text-neutral-400 block text-xs">Jumlah Tamu:</span>
                       <strong className="text-white">
-                        {adults} Adult{adults > 1 ? "s" : ""}
-                        {children > 0 ? `, ${children} Child${children > 1 ? "ren" : ""}` : ""}
+                        {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                       </strong>
                     </div>
                     <div>
-                      <span className="text-neutral-400 block text-xs">Lead Guest:</span>
+                      <span className="text-neutral-400 block text-xs">Tamu Utama:</span>
                       <strong className="text-white">{fullName}</strong>
                     </div>
                   </div>
 
                   <div className="text-xs text-neutral-300 space-y-1">
                     <div>
-                      Email: <span className="text-white">{email}</span> | Phone:{" "}
+                      Email: <span className="text-white">{email}</span> | Telp:{" "}
                       <span className="text-white">{phone}</span>
                     </div>
                     {hotel && (
                       <div>
-                        Pickup: <span className="text-white">{hotel}</span>
+                        Lokasi Jemput: <span className="text-white">{hotel}</span>
                       </div>
                     )}
                   </div>
@@ -592,8 +590,8 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   {/* Price Breakdown */}
                   <div className="pt-2 border-t border-white/10 flex items-center justify-between">
                     <div>
-                      <div className="text-xs text-neutral-400">Total with 10% Discount:</div>
-                      <div className="text-[11px] text-emerald-400">✓ No upfront payment required</div>
+                      <div className="text-xs text-neutral-400">Total Pembayaran (Diskon 10%):</div>
+                      <div className="text-[11px] text-emerald-400">✓ Tanpa pembayaran di muka saat ini</div>
                     </div>
                     <div className="text-2xl sm:text-3xl font-heading font-extrabold text-[#f5b324]">
                       ${total.toFixed(2)}
@@ -603,7 +601,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
 
                 <div className="flex items-center gap-2 text-xs text-neutral-300 bg-white/5 p-2.5 rounded-xl border border-white/10">
                   <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Free 48-hour cancellation policy. Pay in Hawaii upon pickup.</span>
+                  <span>Kebijakan pembatalan fleksibel 48 jam. Bayar saat keberangkatan di Hawaii.</span>
                 </div>
               </div>
             )}
@@ -617,7 +615,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors cursor-pointer flex items-center gap-1.5"
                 >
                   <ChevronLeft className="w-4 h-4" />
-                  <span>Back</span>
+                  <span>Kembali</span>
                 </button>
               ) : (
                 <div />
@@ -629,7 +627,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   onClick={handleNext}
                   className="px-7 py-3 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-base font-bold uppercase tracking-wider shadow-xl shadow-[#f15d22]/30 transition-all cursor-pointer flex items-center gap-1.5"
                 >
-                  <span>Next Step</span>
+                  <span>Langkah Selanjutnya</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
               ) : (
@@ -639,7 +637,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   className="px-8 py-3.5 rounded-xl bg-[#00aa6c] hover:bg-[#00905b] text-white font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#00aa6c]/30 transition-all cursor-pointer flex items-center gap-2"
                 >
                   <Check className="w-5 h-5 stroke-[3]" />
-                  <span>CONFIRM RESERVATION</span>
+                  <span>KONFIRMASI PEMESANAN</span>
                 </button>
               )}
             </div>

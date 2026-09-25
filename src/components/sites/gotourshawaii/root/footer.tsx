@@ -13,7 +13,7 @@ export function Footer() {
             <Link href="/" className="inline-block relative w-28 h-24 sm:w-32 sm:h-28 transition-transform duration-300 hover:scale-105">
               <Image
                 src="/sites/gotourshawaii/root/site-logo-white-e1714962363418.png"
-                alt="Hawaii Travel Logo"
+                alt="Logo Wisata Hawaii"
                 fill
                 className="object-contain object-left"
               />
@@ -68,7 +68,7 @@ export function Footer() {
           {/* Column 2: Experience */}
           <div className="space-y-3">
             <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
-              Experience
+              Pengalaman Wisata
             </h4>
             <ul className="space-y-2.5 text-[14.5px] sm:text-[15px] text-neutral-100">
               <li>
@@ -76,7 +76,7 @@ export function Footer() {
                   href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
-                  Hidden Gems of Oahu with Waimea Botanical Garden/ Waterfall
+                  Permata Tersembunyi Oahu &amp; Air Terjun Waimea
                 </Link>
               </li>
               <li>
@@ -84,7 +84,7 @@ export function Footer() {
                   href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
-                  Hidden Gems of Oahu Byodo-In Temple &amp; Turtle Spotting
+                  Kuil Byodo-In &amp; Pengamatan Penyu Laut
                 </Link>
               </li>
               <li>
@@ -92,7 +92,7 @@ export function Footer() {
                   href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
-                  Waikiki Turtle Canyon Snorkeling and Swim
+                  Snorkeling Bersama Penyu di Waikiki Turtle Canyon
                 </Link>
               </li>
               <li>
@@ -100,7 +100,7 @@ export function Footer() {
                   href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
-                  Paina Waikiki Luau
+                  Pesta Budaya Paina Waikiki Luau
                 </Link>
               </li>
               <li>
@@ -108,7 +108,7 @@ export function Footer() {
                   href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
-                  USS Arizona Memorial Pearl Harbor Tour
+                  Tur Memorial Bersejarah USS Arizona Pearl Harbor
                 </Link>
               </li>
             </ul>
@@ -118,22 +118,22 @@ export function Footer() {
           <div className="space-y-5">
             <div className="space-y-2.5">
               <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
-                About Us
+                Tentang Kami
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
                   <Link href="/our-story" className="hover:text-[#f15d22] transition-colors font-medium">
-                    Go Tours Hawaii History
+                    Sejarah Go Tours Hawaii
                   </Link>
                 </li>
                 <li>
                   <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors font-medium">
-                    Join Our Team!
+                    Bergabung dengan Tim Kami!
                   </Link>
                 </li>
                 <li>
                   <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors font-medium">
-                    Affiliate Program
+                    Program Kemitraan &amp; Afiliasi
                   </Link>
                 </li>
               </ul>
@@ -141,17 +141,17 @@ export function Footer() {
 
             <div className="space-y-2.5 pt-1">
               <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
-                Media
+                Media &amp; Galeri
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
                   <Link href="/blog" className="hover:text-[#f15d22] transition-colors font-medium">
-                    Photos
+                    Foto &amp; Dokumentasi
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog" className="hover:text-[#f15d22] transition-colors font-medium">
-                    Videos
+                    Video Perjalanan
                   </Link>
                 </li>
               </ul>
@@ -161,32 +161,32 @@ export function Footer() {
           {/* Column 4: Find Us & Map */}
           <div className="space-y-3">
             <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
-              Find Us
+              Lokasi Kami
             </h4>
             <div className="flex items-center group">
               <Image
                 src="/sites/gotourshawaii/root/location.png"
-                alt="Oahu Island Map and Headquarters Location"
+                alt="Peta Pulau Oahu dan Lokasi Kantor Pusat"
                 width={317}
                 height={236}
                 className="w-auto h-32 sm:h-36 object-contain filter brightness-110 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <p className="text-xs sm:text-sm text-neutral-200 font-medium">
-              Centrally located in the heart of Waikiki, Honolulu.
+              Terletak strategis di jantung kawasan wisata Waikiki, Honolulu.
             </p>
           </div>
         </div>
 
         {/* Bottom Bar: Copyright & Policy */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-neutral-300 gap-4">
-          <p>© 2026 Go Tours Hawaii. All rights Reserved</p>
+          <p>© 2026 Go Tours Hawaii. Hak Cipta Dilindungi.</p>
           <div className="flex items-center gap-6">
-            <Link href="#contact" className="hover:text-white transition-colors">
-              Terms &amp; Conditions
+            <Link href="/contact-us" className="hover:text-white transition-colors">
+              Syarat &amp; Ketentuan
             </Link>
-            <Link href="#contact" className="hover:text-white transition-colors">
-              Privacy Policy
+            <Link href="/contact-us" className="hover:text-white transition-colors">
+              Kebijakan Privasi
             </Link>
           </div>
         </div>

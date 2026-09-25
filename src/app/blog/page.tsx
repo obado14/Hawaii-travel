@@ -21,19 +21,19 @@ import {
 import { posts } from "@/data/blog-posts";
 
 const categories = [
-  "All",
-  "Travel Guide",
-  "Wildlife & Ocean",
-  "History & Culture",
-  "Nature & Hiking",
-  "Adventure",
-  "Food & Culture",
+  "Semua",
+  "Panduan Wisata",
+  "Satwa & Laut",
+  "Sejarah & Budaya",
+  "Alam & Pendakian",
+  "Petualangan",
+  "Kuliner & Budaya",
 ];
 
 export default function BlogPage() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Semua");
   const [visibleCount, setVisibleCount] = useState(6);
 
   // Pinned flagship featured article
@@ -43,7 +43,7 @@ export default function BlogPage() {
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
       const matchesCategory =
-        selectedCategory === "All" || post.category === selectedCategory;
+        selectedCategory === "Semua" || post.category === selectedCategory;
       const normalizedQuery = searchQuery.trim().toLowerCase();
       const matchesSearch =
         !normalizedQuery ||
@@ -68,7 +68,7 @@ export default function BlogPage() {
   };
 
   const handleClearFilters = () => {
-    setSelectedCategory("All");
+    setSelectedCategory("Semua");
     setSearchQuery("");
     setVisibleCount(6);
   };
@@ -101,14 +101,14 @@ export default function BlogPage() {
             <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
-                Local Insights &amp; Hawaii Travel Advice
+                Wawasan Lokal &amp; Panduan Wisata Hawaii
               </span>
             </div>
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-              HAWAII TRAVEL BLOG
+              BLOG WISATA HAWAII
             </h1>
             <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed">
-              Expert guides, hidden gems, cultural histories, and insider tips from our local Hawaiian tour team.
+              Panduan ahli, surga tersembunyi, sejarah budaya, dan tips lokal berharga dari tim pemandu wisata Hawaii kami.
             </p>
           </div>
 
@@ -133,7 +133,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-2 mb-4 px-1">
                 <Sparkles className="w-4 h-4 text-[#f15d22]" />
                 <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest">
-                  Featured Story
+                  Cerita Pilihan
                 </span>
               </div>
 
@@ -154,7 +154,7 @@ export default function BlogPage() {
                   <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2 z-10">
                     <div className="bg-[#f15d22] text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>Featured Article</span>
+                      <span>Artikel Unggulan</span>
                     </div>
                     <div className="bg-black/60 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
                       <Tag className="w-3 h-3 text-[#f5b324]" />
@@ -168,7 +168,7 @@ export default function BlogPage() {
                   <div>
                     {/* Author Information */}
                     <div className="flex items-center gap-2 text-xs font-bold text-[#f15d22] uppercase tracking-wider mb-2.5">
-                      <span>By Go Tours Hawaii</span>
+                      <span>Oleh Tim Go Tours Hawaii</span>
                     </div>
 
                     {/* Aligned Metadata */}
@@ -203,7 +203,7 @@ export default function BlogPage() {
                       href={`/blog/${featuredPost.id}`}
                       className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#f15d22]/25 group/btn cursor-pointer"
                     >
-                      <span>READ FULL GUIDE</span>
+                      <span>BACA PANDUAN LENGKAP</span>
                       <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -219,7 +219,7 @@ export default function BlogPage() {
                   type="text"
                   value={searchQuery}
                   onChange={handleSearchChange}
-                  placeholder="Search articles by title or keywords (e.g. Turtle Canyon, waterfalls, food)..."
+                  placeholder="Cari artikel berdasarkan judul atau kata kunci (cth. Turtle Canyon, air terjun, kuliner)..."
                   className="w-full pl-12 pr-10 py-3.5 sm:py-4 rounded-2xl bg-white border border-neutral-300 text-neutral-800 placeholder-neutral-400 text-sm sm:text-base shadow-sm focus:outline-none focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/20 transition-all"
                 />
                 {searchQuery && (
@@ -229,7 +229,7 @@ export default function BlogPage() {
                       setVisibleCount(6);
                     }}
                     className="absolute right-3.5 p-1 text-neutral-400 hover:text-neutral-700 rounded-full hover:bg-neutral-100 transition-colors cursor-pointer"
-                    aria-label="Clear search"
+                    aria-label="Hapus pencarian"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -258,22 +258,22 @@ export default function BlogPage() {
             </div>
 
             {/* Active Filter or Search Status Banner */}
-            {(selectedCategory !== "All" || searchQuery.trim()) && (
+            {(selectedCategory !== "Semua" || searchQuery.trim()) && (
               <div className="flex flex-wrap items-center justify-between gap-3 mb-8 px-2 text-xs sm:text-sm text-neutral-600 border-b border-neutral-200 pb-3">
                 <div>
-                  Showing <strong className="text-neutral-900">{filteredPosts.length}</strong> {filteredPosts.length === 1 ? "article" : "articles"}
-                  {selectedCategory !== "All" && (
-                    <span> in <strong className="text-[#f15d22]">{selectedCategory}</strong></span>
+                  Menampilkan <strong className="text-neutral-900">{filteredPosts.length}</strong> artikel
+                  {selectedCategory !== "Semua" && (
+                    <span> dalam kategori <strong className="text-[#f15d22]">{selectedCategory}</strong></span>
                   )}
                   {searchQuery.trim() && (
-                    <span> matching &ldquo;<strong className="text-neutral-900">{searchQuery}</strong>&rdquo;</span>
+                    <span> yang cocok dengan &ldquo;<strong className="text-neutral-900">{searchQuery}</strong>&rdquo;</span>
                   )}
                 </div>
                 <button
                   onClick={handleClearFilters}
                   className="text-[#f15d22] hover:text-[#d84b13] hover:underline font-bold cursor-pointer transition-colors"
                 >
-                  Clear Filters
+                  Hapus Filter
                 </button>
               </div>
             )}
@@ -283,16 +283,16 @@ export default function BlogPage() {
               <div className="bg-white rounded-3xl p-10 sm:p-14 text-center max-w-lg mx-auto shadow-md border border-neutral-200 my-8">
                 <Search className="w-10 h-10 text-neutral-300 mx-auto mb-3" />
                 <h3 className="font-heading text-xl font-bold text-[#0c2340] mb-2 uppercase">
-                  No Articles Found
+                  Tidak Ada Artikel Ditemukan
                 </h3>
                 <p className="text-sm text-neutral-500 mb-6 leading-relaxed">
-                  We couldn&apos;t find any travel articles matching your search query. Try another keyword or reset the category filters.
+                  Kami tidak dapat menemukan artikel wisata yang cocok dengan pencarian Anda. Coba kata kunci lain atau atur ulang filter kategori.
                 </p>
                 <button
                   onClick={handleClearFilters}
                   className="px-6 py-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                 >
-                  View All Articles
+                  Lihat Semua Artikel
                 </button>
               </div>
             ) : (
@@ -324,7 +324,7 @@ export default function BlogPage() {
                       <div className="flex-1 flex flex-col">
                         {/* Author Information */}
                         <div className="flex items-center gap-2 text-xs font-semibold text-[#f15d22] uppercase tracking-wider mb-2">
-                          <span>By Go Tours Hawaii</span>
+                          <span>Oleh Tim Go Tours Hawaii</span>
                         </div>
 
                         {/* Aligned Metadata */}
@@ -358,7 +358,7 @@ export default function BlogPage() {
                         href={`/blog/${post.id}`}
                         className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs sm:text-sm font-bold text-[#f15d22] hover:text-[#d84b13] uppercase tracking-wider transition-colors mt-auto group/btn cursor-pointer"
                       >
-                        <span className="group-hover/btn:underline">Read Full Guide</span>
+                        <span className="group-hover/btn:underline">Baca Panduan Lengkap</span>
                         <ArrowRight className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform" />
                       </Link>
                     </div>
@@ -374,7 +374,7 @@ export default function BlogPage() {
                   onClick={handleLoadMore}
                   className="px-8 py-3.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#f15d22]/30 inline-flex items-center gap-2 cursor-pointer group"
                 >
-                  <span>LOAD MORE ARTICLES</span>
+                  <span>MUAT LEBIH BANYAK ARTIKEL</span>
                   <ChevronDown className="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform" />
                 </button>
               </div>

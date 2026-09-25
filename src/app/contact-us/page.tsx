@@ -23,7 +23,7 @@ export default function ContactUsPage() {
     name: "",
     phone: "",
     email: "",
-    service: "Oahu Island Tours",
+    service: "Tur Keliling Pulau Oahu",
     subject: "",
     message: "",
   });
@@ -46,7 +46,7 @@ export default function ContactUsPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/sites/gotourshawaii/root/contact-us-hero-img.png"
-              alt="Hawaii Coastal Waves and Mountains"
+              alt="Pesisir Pantai dan Pegunungan Hawaii"
               fill
               priority
               className="object-cover object-center"
@@ -58,14 +58,14 @@ export default function ContactUsPage() {
             <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
-                We Are Here For You 7 Days a Week
+                Kami Siap Melayani Anda 7 Hari Seminggu
               </span>
             </div>
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-              CONTACT US
+              HUBUNGI KAMI
             </h1>
             <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed">
-              Have questions about hotel pickups, custom private tours, or reservations? Speak directly with our friendly local Oahu team.
+              Punya pertanyaan seputar penjemputan hotel, paket tur privat, atau reservasi perjalanan? Bicaralah langsung dengan tim lokal kami yang ramah di Oahu.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function ContactUsPage() {
             <div className="relative w-full h-14 sm:h-18 md:h-22 lg:h-24">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
-                alt="Polynesian mountain divider"
+                alt="Transisi motif pembatas polinesia"
                 fill
                 className="object-cover object-top"
                 priority
@@ -89,10 +89,10 @@ export default function ContactUsPage() {
               {/* Form (Col 7 on Desktop, 1 Col on Mobile) */}
               <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-neutral-200/80">
                 <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest block mb-1.5">
-                  Send Us a Direct Message
+                  Kirim Pesan Langsung
                 </span>
                 <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase mb-5 leading-tight">
-                  HOW CAN WE HELP YOU?
+                  BAGAIMANA KAMI DAPAT MEMBANTU ANDA?
                 </h2>
 
                 {submitted ? (
@@ -101,10 +101,10 @@ export default function ContactUsPage() {
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
                     <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#0c2340]">
-                      MAHALO FOR YOUR INQUIRY!
+                      MAHALO ATAS PERTANYAAN ANDA!
                     </h3>
                     <p className="text-neutral-600 text-sm max-w-sm mx-auto leading-relaxed">
-                      Your message has been delivered to our guest services desk. Our team will review your request and get back to you shortly.
+                      Pesan Anda telah berhasil diterima oleh tim layanan tamu kami. Kami akan segera menghubungi Anda dengan informasi lengkap.
                     </p>
                     <button
                       onClick={() => {
@@ -113,14 +113,14 @@ export default function ContactUsPage() {
                           name: "",
                           phone: "",
                           email: "",
-                          service: "Oahu Island Tours",
+                          service: "Tur Keliling Pulau Oahu",
                           subject: "",
                           message: "",
                         });
                       }}
                       className="mt-3 px-6 py-2.5 bg-[#f15d22] text-white rounded-xl text-sm font-semibold hover:bg-[#d84b13] transition-colors cursor-pointer"
                     >
-                      Send Another Message
+                      Kirim Pesan Lain
                     </button>
                   </div>
                 ) : (
@@ -129,27 +129,27 @@ export default function ContactUsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                          Name <span className="text-red-500">*</span>
+                          Nama Lengkap <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="text"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="John Doe"
+                          placeholder="Budi Santoso"
                           className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200"
                         />
                       </div>
                       <div>
                         <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                          Contact Number <span className="text-red-500">*</span>
+                          Nomor Telepon / WA <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="tel"
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+1 (808) 000-0000"
+                          placeholder="+62 812-3456-7890"
                           className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200"
                         />
                       </div>
@@ -159,31 +159,31 @@ export default function ContactUsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                          Email <span className="text-red-500">*</span>
+                          Alamat Email <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="email"
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="youremail@company.com"
+                          placeholder="nama@email.com"
                           className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200"
                         />
                       </div>
                       <div>
                         <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                          Services <span className="text-red-500">*</span>
+                          Pilihan Layanan <span className="text-red-500">*</span>
                         </label>
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200 cursor-pointer"
                         >
-                          <option value="Oahu Island Tours">Oahu Island Tours</option>
-                          <option value="Private Tours">Private Tours</option>
-                          <option value="Airport Transportation">Airport Transportation</option>
-                          <option value="Group Tours">Group Tours</option>
-                          <option value="Other">Other</option>
+                          <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
+                          <option value="Tur Privat">Tur Privat</option>
+                          <option value="Transportasi Bandara">Transportasi Bandara</option>
+                          <option value="Tur Rombongan / Grup">Tur Rombongan / Grup</option>
+                          <option value="Lainnya">Lainnya</option>
                         </select>
                       </div>
                     </div>
@@ -191,14 +191,14 @@ export default function ContactUsPage() {
                     {/* Row 3: Subject */}
                     <div>
                       <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                        Subject <span className="text-red-500">*</span>
+                        Subjek Pertanyaan <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
                         required
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        placeholder="e.g. Circle Island Tour Inquiry, Hotel Pickup Question"
+                        placeholder="Contoh: Pertanyaan Penjemputan Hotel, Tur Keliling Pulau"
                         className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200"
                       />
                     </div>
@@ -206,13 +206,13 @@ export default function ContactUsPage() {
                     {/* Row 4: Message */}
                     <div>
                       <label className="block text-xs font-bold uppercase text-neutral-700 mb-1.5">
-                        Message
+                        Pesan Anda
                       </label>
                       <textarea
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Write your questions or special requests..."
+                        placeholder="Tuliskan pertanyaan detail atau permintaan khusus Anda di sini..."
                         className="w-full bg-[#f8f9fa] border border-neutral-300 hover:border-neutral-400 rounded-xl px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:bg-white focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/30 transition-all duration-200 resize-none"
                       />
                     </div>
@@ -223,11 +223,11 @@ export default function ContactUsPage() {
                         type="submit"
                         className="bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#f15d22]/25 hover:shadow-xl hover:shadow-[#f15d22]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-center"
                       >
-                        SUBMIT MESSAGE
+                        KIRIM PESAN
                       </button>
                       <p className="text-xs text-neutral-500 flex items-center gap-1.5 justify-center sm:justify-start">
                         <Clock className="w-3.5 h-3.5 text-[#f15d22] shrink-0" />
-                        <span>We usually respond within 1 business day.</span>
+                        <span>Kami biasanya merespons dalam 1 hari kerja.</span>
                       </p>
                     </div>
                   </form>
@@ -239,14 +239,14 @@ export default function ContactUsPage() {
                 {/* Get in Touch Card */}
                 <div className="bg-[#081d38] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-white/10">
                   <h3 className="font-heading text-2xl sm:text-3xl text-[#f5b324] uppercase tracking-wide mb-5">
-                    GET IN TOUCH
+                    KONTAK LANGSUNG
                   </h3>
 
                   <div className="space-y-4 text-sm text-neutral-200">
                     <div className="flex items-start gap-3.5">
                       <MapPin className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Waikiki Office:</strong>
+                        <strong className="block text-white">Kantor Waikiki:</strong>
                         <span>2500 Kalakaua Ave Suite E, Honolulu, Hawaii 96815</span>
                       </div>
                     </div>
@@ -254,7 +254,7 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-3.5">
                       <Phone className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Telephone:</strong>
+                        <strong className="block text-white">Telepon:</strong>
                         <a href="tel:808-926-3090" className="hover:text-white underline">
                           808-926-3090
                         </a>
@@ -264,15 +264,15 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-3.5">
                       <Clock className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Hours of Operation:</strong>
-                        <span>6:00 AM – 9:00 PM HST, Open 7 Days a Week!</span>
+                        <strong className="block text-white">Jam Operasional:</strong>
+                        <span>06.00 – 21.00 HST, Buka 7 Hari Seminggu!</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
                       <Mail className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Email Address:</strong>
+                        <strong className="block text-white">Alamat Email:</strong>
                         <a href="mailto:info@gotourshawaii.com" className="hover:text-white underline">
                           info@gotourshawaii.com
                         </a>
@@ -281,15 +281,15 @@ export default function ContactUsPage() {
                   </div>
                 </div>
 
-                {/* 1. UPGRADED: Interactive Headquarters Location Map */}
+                {/* Interactive Headquarters Location Map */}
                 <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-neutral-200 text-left">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs sm:text-sm font-extrabold uppercase text-[#0c2340] tracking-wider block">
-                      Headquarters Location
+                      Lokasi Kantor Pusat
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#f15d22] bg-[#f15d22]/10 px-2.5 py-0.5 rounded-full">
                       <MapPin className="w-3 h-3" />
-                      Waikiki Beach
+                      Pantai Waikiki
                     </span>
                   </div>
 
@@ -303,7 +303,7 @@ export default function ContactUsPage() {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Go Tours Hawaii Waikiki Office Location"
+                      title="Lokasi Kantor Go Tours Hawaii Waikiki"
                       className="w-full h-full"
                     />
                   </div>
@@ -312,7 +312,7 @@ export default function ContactUsPage() {
                   <div className="space-y-3">
                     <div>
                       <h4 className="font-heading text-base font-bold text-[#0c2340] uppercase">
-                        Go Tours Hawaii / Waikiki Office
+                        Go Tours Hawaii / Kantor Waikiki
                       </h4>
                       <p className="text-xs text-neutral-600 mt-0.5">
                         2500 Kalakaua Ave Suite E, Honolulu, HI 96815
@@ -326,7 +326,7 @@ export default function ContactUsPage() {
                       className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
                     >
                       <Navigation className="w-3.5 h-3.5" />
-                      <span>GET DIRECTIONS</span>
+                      <span>PETUNJUK ARAH</span>
                     </a>
                   </div>
                 </div>
@@ -335,20 +335,20 @@ export default function ContactUsPage() {
           </div>
         </section>
 
-        {/* 4. FAQs Section */}
+        {/* 3. FAQs Section */}
         <FAQSection />
 
-        {/* 3. NEW: Social Media Section */}
+        {/* 4. Social Media Section */}
         <section className="bg-[#f5f0e8] text-neutral-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-black/5">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-              Connect With Us
+              Tetap Terhubung Bersama Kami
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase tracking-wide mb-3">
-              FOLLOW OUR HAWAII JOURNEY
+              IKUTI PERJALANAN HAWAII KAMI
             </h2>
             <p className="text-neutral-600 text-sm max-w-lg mx-auto mb-8 leading-relaxed font-normal">
-              Stay connected for daily island sunrises, wildlife encounters, traveler memories, and authentic Aloha stories.
+              Ikuti kabar harian matahari terbit Hawaii, momen bertemu satwa laut, dokumentasi perjalanan para tamu, dan kisah autentik semangat Aloha.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
@@ -415,7 +415,7 @@ export default function ContactUsPage() {
       <BookingDialog
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
-        defaultTour="Circle Island Tour"
+        defaultTour="Tur Keliling Pulau"
       />
     </div>
   );

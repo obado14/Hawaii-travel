@@ -30,81 +30,81 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: "Eddie \"Eke\" Keliinohomoku",
-    role: "Founder & Cultural Director",
+    role: "Pendiri & Direktur Budaya",
     image: "/sites/gotourshawaii/root/Visual-img-1-e1714631873659.jpg",
     description:
-      "Born and raised on Oahu, Eke founded Go Tours Hawaii to preserve native storytelling, sacred sites, and true Polynesian hospitality.",
+      "Lahir dan dibesarkan di Oahu, Eke mendirikan Go Tours Hawaii untuk melestarikan tradisi tutur leluhur, melindungi situs sakral, dan mempersembahkan keramahan sejati Polinesia.",
   },
   {
     name: "Koa Takahashi",
-    role: "Lead Island Guide & Oahu Specialist",
+    role: "Pemandu Utama & Spesialis Pulau Oahu",
     image: "/sites/gotourshawaii/root/Visual-img-4-e1714632180613.jpg",
     description:
-      "With over 12 years navigating Oahu's mountain ridges and coastal sanctuaries, Koa brings island folklore and hidden lookouts to life.",
+      "Dengan pengalaman lebih dari 12 tahun menyusuri perbukitan dan pesisir Oahu, Koa menghidupkan kisah cerita rakyat dan spot alam rahasia bagi setiap tamu.",
   },
   {
     name: "Leilani Kealoha",
-    role: "Marine Naturalist & Eco-Tour Lead",
+    role: "Naturalis Laut & Pemandu Ekowisata",
     image: "/sites/gotourshawaii/root/waikiki-turtle-banner.png",
     description:
-      "Dedicated to ocean conservation, Leilani educates guests on respecting Hawaii's green sea turtles (honu) and delicate coral reefs.",
+      "Berdedikasi pada pelestarian laut, Leilani mengedukasi wisatawan tentang etika menghormati penyu laut hijau (honu) dan ekosistem terumbu karang Hawaii.",
   },
   {
     name: "David Vance",
-    role: "Senior Historian & Tour Narrator",
+    role: "Sejarawan Senior & Narator Tur",
     image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
     description:
-      "A passionate military and cultural historian delivering deeply moving narratives at Pearl Harbor and historic Polynesian landmarks.",
+      "Sejarawan militer dan budaya kepulauan yang membawakan narasi mendalam serta penuh penghormatan di Pearl Harbor dan monumen bersejarah Polinesia.",
   },
 ];
 
 const timelineMilestones = [
   {
     year: "2010",
-    title: "Founded in Hawaii",
+    title: "Didirikan di Hawaii",
     description:
-      "Eddie \"Eke\" started Go Tours Hawaii on Oahu with a single van and a passionate mission: share authentic Hawaiian culture beyond tourist cliches.",
+      "Eddie \"Eke\" memulai Go Tours Hawaii di Oahu dengan satu armada van dan misi tulus: membagikan budaya Hawaii yang autentik jauh melampaui klise wisata biasa.",
   },
   {
     year: "2015",
-    title: "Expanded Island Tours",
+    title: "Perluasan Tur Kepulauan",
     description:
-      "Upgraded our entire fleet to luxury Mercedes Sprinters and launched our acclaimed full-day Circle Island and North Shore coastal itineraries.",
+      "Meningkatkan seluruh armada ke Mercedes Sprinter mewah dan meluncurkan rute Circle Island serta pesisir North Shore yang kini legendaris.",
   },
   {
     year: "2020",
-    title: "New Tour Experiences",
+    title: "Inovasi Pengalaman Baru",
     description:
-      "Pioneered bespoke private charters across Oahu and Maui, curated hidden waterfall trails, and secured VIP guaranteed Pearl Harbor access.",
+      "Menghadirkan layanan sewa tur privat eksklusif di Oahu dan Maui, menjelajahi air terjun tersembunyi, dan mengamankan akses reservasi resmi Pearl Harbor.",
   },
   {
     year: "2026",
-    title: "Serving Global Travelers",
+    title: "Melayani Wisatawan Dunia",
     description:
-      "Ranked in TripAdvisor's Top 10 Best Experiences in the World, having welcomed over 50,000 delighted guests with genuine Aloha spirit.",
+      "Dianugerahi TripAdvisor 'Best of the Best' di dunia, setelah menyambut lebih dari 50.000 tamu bahagia dengan kehangatan semangat Aloha sejati.",
   },
 ];
 
 const visualStories = [
   {
-    category: "Hawaii Landscape",
-    title: "Dramatic Island Vistas",
+    category: "Lanskap Hawaii",
+    title: "Panorama Alam yang Menakjubkan",
     description:
-      "From the towering Koʻolau volcanic ridges to the turquoise waters of Windward Oahu, nature's grandeur awaits at every turn.",
+      "Mulai dari puncak vulkanik Koʻolau yang menjulang hingga birunya Samudra Pasifik di Windward Oahu, kemegahan alam Hawaii memukau di setiap sudut.",
     image: "/sites/gotourshawaii/root/Visual-img-7-e1714632127105.jpg",
   },
   {
-    category: "Tour Experience",
-    title: "Intimate Local Journey",
+    category: "Pengalaman Tur",
+    title: "Perjalanan Hangat Bersama Keluarga",
     description:
-      "Travel in spacious, air-conditioned luxury vans with native storytellers who treat every traveler as part of our own ʻOhana.",
+      "Bepergian dengan van mewah ber-AC yang lega didampingi pemandu lokal ramah yang memperlakukan setiap tamu selayaknya bagian dari ʻOhana (keluarga) kami sendiri.",
     image: "/sites/gotourshawaii/root/our-story-hero.png",
   },
   {
-    category: "Hawaiian Culture",
-    title: "Living Sacred Traditions",
+    category: "Budaya Hawaii",
+    title: "Tradisi Leluhur yang Tetap Hidup",
     description:
-      "Experience ancient heiau temples, traditional imu feasts, storytelling hula, and the profound Hawaiian concept of aloha.",
+      "Kunjungi kuil heiau sakral, saksikan tradisi jamuan oven bawah tanah imu, nikmati tarian hula yang bercerita, dan hayati makna luhur semangat aloha.",
     image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
   },
 ];
@@ -123,7 +123,7 @@ export default function OurStoryPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/sites/gotourshawaii/root/our-story-hero.png"
-              alt="Go Tours Hawaii Team and Fleet"
+              alt="Tim dan Armada Go Tours Hawaii"
               fill
               priority
               className="object-cover object-[center_35%]"
@@ -138,14 +138,14 @@ export default function OurStoryPage() {
               <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
                 <Sparkles className="w-4 h-4 text-[#f5b324]" />
                 <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
-                  Locally Owned &amp; Operated in Hawaii
+                  Dimiliki &amp; Dikelola oleh Warga Lokal Hawaii
                 </span>
               </div>
               <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                OUR STORY
+                KISAH KAMI
               </h1>
               <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-100 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                Sharing the spirit of Aloha, authentic Hawaiian heritage, and unforgettable island memories since day one.
+                Berbagi semangat Aloha, warisan autentik Hawaii, dan kenangan tak terlupakan sejak hari pertama.
               </p>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function OurStoryPage() {
             <div className="relative w-full h-14 sm:h-18 md:h-22 lg:h-24">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
-                alt="Polynesian mountain divider"
+                alt="Transisi motif pembatas polinesia"
                 fill
                 className="object-cover object-top"
                 priority
@@ -170,25 +170,20 @@ export default function OurStoryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-7 space-y-5">
                 <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block">
-                  About Go Tours Hawaii
+                  Tentang Go Tours Hawaii
                 </span>
                 <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase leading-tight">
-                  ROOTED IN THE CULTURE OF THE ISLANDS
+                  BERAKAR DALAM BUDAYA KEPULAUAN HAWAII
                 </h2>
                 <div className="space-y-4 text-sm sm:text-base text-neutral-700 leading-relaxed sm:leading-7 font-normal">
                   <p>
-                    <strong>Go Tours Hawaii</strong> was born out of a deep passion for the Hawaiian islands&apos; rich culture,
-                    stunning landscapes, and vibrant communities. Our founder, Eddie &ldquo;Eke&rdquo; Keliinohomoku, envisioned a tour
-                    company that does more than just show visitors pretty sights—one that truly immerses them in the real history,
-                    folklore, and living traditions of Hawaii.
+                    <strong>Go Tours Hawaii</strong> lahir dari kecintaan mendalam terhadap kekayaan budaya, keindahan lanskap alam, dan komunitas kepulauan Hawaii. Pendiri kami, Eddie &ldquo;Eke&rdquo; Keliinohomoku, mendambakan sebuah perusahaan tur yang tidak sekadar membawa turis melihat pemandangan indah—melainkan mengajak mereka menyelami sejarah sejati, cerita rakyat, dan tradisi hidup Hawaii.
                   </p>
                   <p>
-                    From our beginnings as a passionate local tour crew, we have grown into one of Hawaii&apos;s highest-rated tour
-                    providers, honored with TripAdvisor&apos;s <em>Travelers&apos; Choice Best of the Best</em> (Top 10 Best Experiences in the World).
+                    Dari awal perjalanan kami sebagai tim pemandu tur lokal yang penuh semangat, kami telah berkembang menjadi salah satu operator tur dengan ulasan tertinggi di Hawaii, dianugerahi TripAdvisor <em>Travelers&apos; Choice Best of the Best</em> (10 Pengalaman Wisata Terbaik di Dunia).
                   </p>
                   <p>
-                    Unlike mega-bus tour operators, we keep our groups comfortable and intimate. We travel in modern, air-conditioned
-                    vehicles with local storytellers whose families have called Hawaii home for generations.
+                    Berbeda dari operator bus besar bertingkat, kami menjaga rombongan kami tetap intim dan nyaman. Kami bepergian dengan kendaraan modern ber-AC bersama para penutur cerita lokal yang keluarganya telah menetap di Hawaii selama turun-temurun.
                   </p>
                 </div>
               </div>
@@ -198,14 +193,14 @@ export default function OurStoryPage() {
                 <div className="relative h-[460px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <Image
                     src="/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg"
-                    alt="Byodo-In Temple serene grounds"
+                    alt="Kawasan Kuil Byodo-In yang tenang"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex items-end p-6 sm:p-8">
                     <div className="border-l-2 border-[#f15d22] pl-3.5">
                       <p className="text-white text-xs sm:text-sm leading-relaxed italic drop-shadow-sm font-medium">
-                        &ldquo;Aloha is more than a greeting—it is how we live, how we respect the land, and how we care for every guest.&rdquo;
+                        &ldquo;Aloha lebih dari sekadar salam—ini adalah cara kami hidup, menghormati bumi pertiwi, dan menyayangi setiap tamu.&rdquo;
                       </p>
                     </div>
                   </div>
@@ -215,15 +210,15 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* 3. NEW: Company Statistics Section */}
+        {/* 3. Company Statistics Section */}
         <section className="bg-white border-y border-neutral-200/80 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
               <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-                Proven Excellence
+                Prestasi &amp; Dedikasi
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase tracking-wide">
-                OUR IMPACT IN NUMBERS
+                DAMPAK PERJALANAN KAMI DALAM ANGKA
               </h2>
             </div>
 
@@ -237,9 +232,9 @@ export default function OurStoryPage() {
                   15+
                 </div>
                 <div className="font-bold text-xs sm:text-sm text-[#0c2340] uppercase tracking-wider">
-                  Years of Experience
+                  Tahun Pengalaman
                 </div>
-                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">Guiding travelers since 2010</p>
+                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">Memandu wisatawan sejak 2010</p>
               </div>
 
               {/* Stat 2 */}
@@ -251,9 +246,9 @@ export default function OurStoryPage() {
                   50K+
                 </div>
                 <div className="font-bold text-xs sm:text-sm text-[#0c2340] uppercase tracking-wider">
-                  Happy Travelers
+                  Wisatawan Bahagia
                 </div>
-                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">From all 50 states &amp; 40+ countries</p>
+                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">Dari 50 negara bagian &amp; 40+ negara</p>
               </div>
 
               {/* Stat 3 */}
@@ -265,9 +260,9 @@ export default function OurStoryPage() {
                   100+
                 </div>
                 <div className="font-bold text-xs sm:text-sm text-[#0c2340] uppercase tracking-wider">
-                  Tour Experiences
+                  Pengalaman Tur
                 </div>
-                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">Bespoke island departures weekly</p>
+                <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">Keberangkatan tur eksklusif tiap minggu</p>
               </div>
 
               {/* Stat 4 */}
@@ -279,7 +274,7 @@ export default function OurStoryPage() {
                   4.9/5
                 </div>
                 <div className="font-bold text-xs sm:text-sm text-[#0c2340] uppercase tracking-wider">
-                  Guest Rating
+                  Penilaian Tamu
                 </div>
                 <p className="text-[11px] sm:text-xs text-neutral-500 mt-1">TripAdvisor Best of the Best</p>
               </div>
@@ -287,35 +282,32 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* 4. NEW: Our Journey / Timeline Section */}
+        {/* 4. Our Journey / Timeline Section */}
         <section className="bg-[#f5f0e8] text-neutral-900 py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-black/5">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
               <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-                Our Journey
+                Perjalanan Kami
               </span>
               <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase tracking-wide mb-3">
-                HOW WE GREW WITH THE ISLANDS
+                BAGAIMANA KAMI TUMBUH BERSAMA KEPULAUAN HAWAII
               </h2>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-                From a single tour van with an authentic vision to Hawaii&apos;s premier boutique travel company.
+                Dari sebuah van tunggal dengan visi autentik hingga menjadi perusahaan tur butik terkemuka di Hawaii.
               </p>
             </div>
 
-            {/* Desktop Timeline: Horizontal Grid with Connecting Track */}
+            {/* Desktop Timeline */}
             <div className="hidden md:block relative">
-              {/* Connecting Horizontal Line */}
               <div className="absolute top-7 left-12 right-12 h-0.5 bg-neutral-300 z-0" />
 
               <div className="grid grid-cols-4 gap-6 relative z-10">
                 {timelineMilestones.map((item) => (
                   <div key={item.year} className="flex flex-col items-center text-center group">
-                    {/* Milestone Badge Dot */}
                     <div className="w-14 h-14 rounded-full bg-[#f15d22] text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg ring-4 ring-[#f5f0e8] group-hover:scale-110 transition-transform mb-6">
                       {item.year}
                     </div>
 
-                    {/* Milestone Content Card */}
                     <div className="bg-white rounded-3xl p-6 shadow-md border border-neutral-200/80 w-full flex-1 flex flex-col justify-start group-hover:-translate-y-1 group-hover:shadow-xl transition-all">
                       <h3 className="font-heading text-lg font-bold text-[#0c2340] uppercase tracking-wide mb-2 group-hover:text-[#f15d22] transition-colors">
                         {item.title}
@@ -329,14 +321,12 @@ export default function OurStoryPage() {
               </div>
             </div>
 
-            {/* Mobile Timeline: Vertical Flow with Connecting Track */}
+            {/* Mobile Timeline */}
             <div className="md:hidden relative pl-6 space-y-8">
-              {/* Vertical Track Line */}
               <div className="absolute top-4 bottom-4 left-3 w-0.5 bg-neutral-300" />
 
               {timelineMilestones.map((item) => (
                 <div key={item.year} className="relative pl-6">
-                  {/* Milestone Marker */}
                   <div className="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-[#f15d22] ring-4 ring-[#f5f0e8] flex items-center justify-center text-white text-[10px] font-bold shadow-md" />
 
                   <div className="bg-white rounded-2xl p-5 shadow-md border border-neutral-200/80">
@@ -356,14 +346,14 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* 5. Core Pillars (Preserved) */}
+        {/* 5. Core Pillars */}
         <section className="bg-[#081d38] text-white py-14 sm:py-18 px-4 sm:px-6 lg:px-8 border-t border-white/10">
           <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-12">
             <h2 className="font-heading text-4xl sm:text-6xl text-[#f5b324] uppercase tracking-wider mb-3">
-              THE PILLARS OF OUR ALOHA
+              PILAR-PILAR SEMANGAT ALOHA KAMI
             </h2>
             <p className="text-neutral-300 text-sm max-w-xl mx-auto">
-              Every tour we curate is guided by these ancestral Hawaiian principles:
+              Setiap tur yang kami rancang senantiasa dipandu oleh nilai-nilai luhur leluhur bangsa Hawaii:
             </p>
           </div>
 
@@ -373,10 +363,10 @@ export default function OurStoryPage() {
                 <Heart className="w-6 h-6" />
               </div>
               <h3 className="font-heading text-xl sm:text-2xl text-[#f15d22] uppercase tracking-wide mb-2">
-                ALOHA (Love &amp; Hospitality)
+                ALOHA (Kasih &amp; Keramahan)
               </h3>
               <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
-                Treating every traveler as part of our own &lsquo;Ohana (family), creating heartfelt memories that stay with you forever.
+                Menyambut dan memperlakukan setiap wisatawan layaknya bagian dari ʻOhana (keluarga) kami sendiri, menciptakan memori indah yang abadi.
               </p>
             </div>
 
@@ -385,10 +375,10 @@ export default function OurStoryPage() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="font-heading text-xl sm:text-2xl text-[#f15d22] uppercase tracking-wide mb-2">
-                KULEANA (Responsibility)
+                KULEANA (Tanggung Jawab)
               </h3>
               <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
-                Honoring and protecting Hawaii&apos;s natural ecosystems, wildlife (Honu sea turtles), and sacred cultural sites.
+                Menjaga dan melestarikan ekosistem alami Hawaii, satwa liar langka (penyu laut Honu), serta kesucian situs cagar budaya.
               </p>
             </div>
 
@@ -397,27 +387,27 @@ export default function OurStoryPage() {
                 <Award className="w-6 h-6" />
               </div>
               <h3 className="font-heading text-xl sm:text-2xl text-[#f15d22] uppercase tracking-wide mb-2">
-                PONO (Excellence)
+                PONO (Kualitas &amp; Integritas)
               </h3>
               <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
-                Delivering five-star service on every departure, with transparent pricing, guaranteed tickets, and knowledgeable guides.
+                Menghadirkan layanan bintang lima pada setiap keberangkatan, dengan transparansi harga, jaminan tiket resmi, dan pemandu berpengalaman.
               </p>
             </div>
           </div>
         </section>
 
-        {/* 6. NEW: Meet Our Team Section */}
+        {/* 6. Meet Our Team Section */}
         <section className="bg-[#f5f0e8] text-neutral-900 py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-black/5">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
               <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-                Local ʻOhana
+                Keluarga Lokal ʻOhana
               </span>
               <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase tracking-wide mb-3">
-                MEET THE PEOPLE BEHIND GO TOURS HAWAII
+                KENALI TIM DI BALIK GO TOURS HAWAII
               </h2>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-                Passionate island natives, certified naturalists, and historians dedicated to showing you the authentic Hawaii.
+                Putra daerah berdedikasi tinggi, naturalis bersertifikat, dan sejarawan yang bertekad mempersembahkan keindahan sejati Hawaii untuk Anda.
               </p>
             </div>
 
@@ -463,19 +453,19 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* 7. NEW: Visual Storytelling Gallery */}
+        {/* 7. Visual Storytelling Gallery */}
         <section className="bg-[#0c1f38] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
               <div className="inline-flex items-center gap-2 mb-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#f5b324] text-xs font-bold uppercase tracking-widest">
                 <Camera className="w-3.5 h-3.5" />
-                <span>Visual Storytelling</span>
+                <span>Dokumentasi Visual</span>
               </div>
               <h2 className="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wide mb-3">
-                CAPTURING THE ESSENCE OF HAWAII
+                MENGABADIKAN KEINDAHAN SEJATI HAWAII
               </h2>
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                A glimpse into the majestic landscapes, shared moments, and living traditions that define our island adventures.
+                Sekilas potret keagungan alam, kebersamaan hangat, dan tradisi hidup yang mewarnai setiap petualangan tur kami.
               </p>
             </div>
 
@@ -491,10 +481,8 @@ export default function OurStoryPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  {/* Subtle Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
-                  {/* Top Badge */}
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-[#f15d22] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
                       <MapPin className="w-3 h-3" />
@@ -502,7 +490,6 @@ export default function OurStoryPage() {
                     </span>
                   </div>
 
-                  {/* Bottom Text Content */}
                   <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 z-10">
                     <div className="w-8 h-1 bg-[#f15d22] group-hover:w-14 transition-all duration-300 rounded mb-2.5" />
                     <h3 className="font-heading text-xl sm:text-2xl text-white uppercase tracking-wide mb-2 drop-shadow-md">
@@ -524,10 +511,11 @@ export default function OurStoryPage() {
 
       <Footer />
 
+      {/* Booking Dialog Modal */}
       <BookingDialog
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
-        defaultTour="Circle Island Tour"
+        defaultTour="Tur Keliling Pulau"
       />
     </div>
   );

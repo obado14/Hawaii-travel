@@ -34,7 +34,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
       >
         <Image
           src="/sites/gotourshawaii/root/Banner-BG-Thumbnail.jpg"
-          alt="Hawaii Oahu Mountain Ridge View"
+          alt="Pemandangan Pegunungan Pulau Oahu Hawaii"
           fill
           priority
           className="object-cover object-[center_28%] scale-110 transition-transform duration-300"
@@ -55,20 +55,20 @@ export function Hero({ onOpenBooking }: HeroProps) {
               Travelers&apos; Choice Best of the Best 2024
             </span>
             <span className="block text-[11px] sm:text-xs text-white/90 font-medium">
-              Top 10 Best in the World
+              10 Pengalaman Wisata Terbaik di Dunia
             </span>
           </div>
         </div>
 
         {/* Huge Bold Headline */}
         <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.5rem] font-normal text-white uppercase tracking-wider leading-[0.93] drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] mb-5 sm:mb-6 animate-in fade-in slide-in-from-bottom-3 duration-700 delay-150">
-          BEST OAHU CIRCLE ISLAND
-          <span className="block text-white mt-1">TOUR EXPERIENCE</span>
+          PENGALAMAN TUR KELILING
+          <span className="block text-white mt-1">PULAU OAHU TERBAIK</span>
         </h1>
 
         {/* Subtitle */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-neutral-100 font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] mb-9 sm:mb-10 animate-in fade-in slide-in-from-bottom-2 duration-700 delay-300">
-          Oahu Island Tours, Excursions, &amp; Luaus Hawaiian experience.
+          Tur Pulau Oahu, Ekskursi Bersejarah, &amp; Pesta Luau Hawaii Autentik.
         </p>
 
         {/* Call to Action Button */}
@@ -78,24 +78,24 @@ export function Hero({ onOpenBooking }: HeroProps) {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white px-10 py-4 sm:px-11 sm:py-4.5 rounded-xl font-extrabold text-base sm:text-lg uppercase tracking-wider shadow-2xl shadow-[#f15d22]/40 ring-1 ring-white/20 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 hover:shadow-[#f15d22]/60"
           >
             <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span>CALL US</span>
+            <span>HUBUNGI KAMI</span>
           </a>
 
           <button
             onClick={onOpenBooking}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/20 hover:bg-white/30 text-white border-2 border-white/60 hover:border-white backdrop-blur-md px-10 py-4 sm:px-11 sm:py-4.5 rounded-xl font-extrabold text-base sm:text-lg uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer shadow-xl"
           >
-            <span>BOOK ONLINE</span>
+            <span>PESAN ONLINE</span>
           </button>
         </div>
       </div>
 
-      {/* Polynesian Tribal Divider Graphic at bottom (Reduced height decorative transition) */}
+      {/* Polynesian Tribal Divider Graphic at bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none translate-y-0.5 overflow-hidden">
         <div className="relative w-full h-24 sm:h-32 md:h-40 lg:h-44">
           <Image
             src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
-            alt="Polynesian tribal divider"
+            alt="Transisi motif tradisional polinesia"
             fill
             className="object-cover object-top"
             priority

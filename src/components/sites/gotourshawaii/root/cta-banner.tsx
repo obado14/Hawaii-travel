@@ -17,7 +17,7 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
           <div className="absolute inset-0 z-0">
             <Image
               src="/sites/gotourshawaii/root/cta-footer-optimized.webp"
-              alt="Experience Hawaii Texture"
+              alt="Tekstur Pengalaman Hawaii"
               fill
               className="object-cover object-center"
             />
@@ -28,13 +28,12 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
           {/* Content */}
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wider mb-3 leading-none">
-              EXPERIENCE HAWAII
+              RASAKAN KEAJAIBAN HAWAII
             </h2>
 
             <p className="text-neutral-700 text-xs sm:text-sm md:text-base leading-relaxed mb-6 font-normal">
-              Take the next step towards your adventure! Book now and experience the magic firsthand.
-              Don&apos;t miss out on unforgettable memories waiting to be made. Seize the moment and
-              embark on your journey with us today!
+              Ambil langkah pertama menuju petualangan tak terlupakan Anda! Pesan sekarang dan rasakan keajaiban Hawaii secara langsung.
+              Jangan lewatkan momen berharga yang menanti Anda. Mulailah perjalanan berkesan bersama kami hari ini!
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -42,14 +41,14 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
                 onClick={onBookNow}
                 className="w-full sm:w-auto bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-3 rounded-lg shadow-xl shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
-                BOOK NOW
+                PESAN SEKARANG
               </button>
 
               <a
-                href="#contact"
+                href="/contact-us"
                 className="w-full sm:w-auto bg-transparent hover:bg-[#f15d22] text-[#f15d22] hover:text-white border-2 border-[#f15d22] font-heading text-lg font-bold uppercase tracking-wider px-8 py-2.5 rounded-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
-                CONTACT US
+                HUBUNGI KAMI
               </a>
             </div>
           </div>

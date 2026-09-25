@@ -14,27 +14,27 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    title: "CIRCLE ISLAND TOURS",
+    title: "TUR KELILING PULAU",
     description:
-      "Embark on a journey that takes you through lush landscapes, stunning beaches, and captivating cultural sites.",
+      "Mulailah perjalanan melintasi pemandangan alam yang asri, pantai berpasir emas yang menakjubkan, dan situs-situs budaya yang memikat.",
     image: "/sites/gotourshawaii/root/optimized-water-fall-002.jpg",
-    alt: "Waimea Waterfall Circle Island Tour",
+    alt: "Air Terjun Waimea Tur Keliling Pulau",
   },
   {
     id: 2,
-    title: "HAWAIIAN LUAU",
+    title: "PESTA LUAU HAWAII",
     description:
-      "Experience the magic of aloha at our Hawaiian Luau! Indulge in a feast of traditional island delicacies, from succulent kalua pig to sweet poi.",
+      "Rasakan keajaiban aloha di Pesta Luau Hawaii kami! Nikmati jamuan hidangan tradisional kepulauan, mulai dari kalua pig hingga poi manis dan atraksi tari api.",
     image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
-    alt: "Hawaiian Luau Experience",
+    alt: "Pengalaman Pesta Luau Hawaii",
   },
   {
     id: 3,
     title: "PEARL HARBOR",
     description:
-      "Journey through history at Pearl Harbor, a solemn tribute to bravery and resilience. Walk in the footsteps of heroes as you explore iconic sites.",
+      "Jelajahi sejarah mendalam di Pearl Harbor, sebuah penghormatan khidmat atas keberanian dan keteguhan pahlawan saat Anda menyusuri situs bersejarah ikonis.",
     image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
-    alt: "USS Arizona Memorial Pearl Harbor",
+    alt: "Memorial USS Arizona Pearl Harbor",
   },
 ];
 
@@ -49,11 +49,10 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none mb-4">
-            CHOOSE YOUR EXPERIENCE
+            PILIH PENGALAMAN WISATA ANDA
           </h2>
           <p className="text-neutral-700 text-base sm:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
-            Come experience the best of our island with a local expert on one of our highly rated
-            Hidden Gems of Oahu tour options.
+            Nikmati keindahan terbaik pulau kami bersama pemandu lokal berlisensi melalui pilihan tur Permata Tersembunyi Oahu kami yang berperingkat tinggi.
           </p>
         </div>
 
@@ -95,7 +94,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
 
                 {/* View Details prompt on hover */}
                 <div className="mt-4 sm:mt-5 flex items-center gap-2 text-sm sm:text-base font-bold text-white tracking-wide">
-                  <span className="group-hover:text-amber-300 transition-colors duration-250">Explore Tour</span>
+                  <span className="group-hover:text-amber-300 transition-colors duration-250">Jelajahi Tur</span>
                   <span className="transition-transform duration-250 ease-out group-hover:translate-x-2 text-amber-300">→</span>
                 </div>
               </div>
