@@ -185,8 +185,8 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               Booking Ref: {bookingRef}
             </div>
 
-            <h3 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-wide">
-              RESERVATION CONFIRMED!
+            <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
+              YOUR BOOKING REQUEST HAS BEEN RECEIVED!
             </h3>
 
             <p className="text-neutral-200 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
