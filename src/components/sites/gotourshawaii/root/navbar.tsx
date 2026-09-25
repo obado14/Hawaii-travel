@@ -76,38 +76,54 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button
+              <Link
+                href="/tour-packages"
                 className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors focus:outline-none"
-                aria-expanded={dropdownOpen}
               >
                 <Sun className="w-4 h-4 text-[#f15d22]" />
                 <span className="flex items-center gap-1">
-                  Tours & Packages
+                  Tours &amp; Packages
                   <ChevronDown className="w-3 h-3 transition-transform duration-200" />
                 </span>
-              </button>
+              </Link>
 
               {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-2 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 pt-2 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="bg-[#081528] border border-white/15 rounded-xl p-2 shadow-2xl backdrop-blur-lg">
                     <Link
-                      href="#experiences"
+                      href="/tour-packages"
+                      className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-semibold text-white">All Tours &amp; Packages</div>
+                      <div className="text-xs text-[#f5b324]">Explore all 7 handcrafted tours</div>
+                    </Link>
+                    <Link
+                      href="/tour-packages"
                       className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Circle Island Tours</div>
-                      <div className="text-xs text-neutral-400">Waimea Waterfall & Byodo-In</div>
+                      <div className="text-xs text-neutral-400">Waimea Waterfall &amp; Byodo-In</div>
                     </Link>
                     <Link
-                      href="#experiences"
+                      href="/tour-packages"
+                      className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-semibold text-white">Turtle Canyon Snorkeling</div>
+                      <div className="text-xs text-neutral-400">Swim with green sea turtles</div>
+                    </Link>
+                    <Link
+                      href="/tour-packages"
                       className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Hawaiian Luau</div>
-                      <div className="text-xs text-neutral-400">Paina Waikiki Feast & Show</div>
+                      <div className="text-xs text-neutral-400">Paina Waikiki Feast &amp; Show</div>
                     </Link>
                     <Link
-                      href="#experiences"
+                      href="/tour-packages"
                       className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -115,7 +131,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                       <div className="text-xs text-neutral-400">USS Arizona Memorial Experience</div>
                     </Link>
                     <Link
-                      href="#diamond-head"
+                      href="/tour-packages"
                       className="block px-3 py-2.5 rounded-lg text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -128,7 +144,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             </div>
 
             <Link
-              href="#contact"
+              href="/private-tours"
               className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
             >
               <Bus className="w-4 h-4 text-[#f15d22]" />
@@ -136,7 +152,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             </Link>
 
             <Link
-              href="#visual-odyssey"
+              href="/blog"
               className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
             >
               <BookOpen className="w-4 h-4 text-[#f15d22]" />
@@ -144,7 +160,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             </Link>
 
             <Link
-              href="#mission"
+              href="/our-story"
               className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
             >
               <Compass className="w-4 h-4 text-[#f15d22]" />
@@ -152,7 +168,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             </Link>
 
             <Link
-              href="#contact"
+              href="/contact-us"
               className="flex flex-col items-center gap-1 text-white hover:text-[#f15d22] transition-colors py-1"
             >
               <PhoneCall className="w-4 h-4 text-[#f15d22]" />
@@ -207,34 +223,45 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           </Link>
 
           <div className="px-3 py-2 space-y-2">
-            <div className="flex items-center gap-3 text-neutral-400 text-xs font-bold uppercase tracking-wider">
+            <Link
+              href="/tour-packages"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-wider"
+            >
               <Sun className="w-4 h-4 text-[#f15d22]" />
-              <span>Tours & Experiences</span>
-            </div>
+              <span>Tours &amp; Packages</span>
+            </Link>
             <div className="pl-7 space-y-1.5 border-l border-white/10 ml-2">
               <Link
-                href="#experiences"
+                href="/tour-packages"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-sm text-neutral-300 hover:text-white py-1"
+              >
+                All Packages &amp; Excursions
+              </Link>
+              <Link
+                href="/tour-packages"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-sm text-neutral-300 hover:text-white py-1"
               >
                 Circle Island Tours
               </Link>
               <Link
-                href="#experiences"
+                href="/tour-packages"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-sm text-neutral-300 hover:text-white py-1"
               >
                 Hawaiian Luau
               </Link>
               <Link
-                href="#experiences"
+                href="/tour-packages"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-sm text-neutral-300 hover:text-white py-1"
               >
                 Pearl Harbor Experience
               </Link>
               <Link
-                href="#diamond-head"
+                href="/tour-packages"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-sm text-neutral-300 hover:text-white py-1"
               >
@@ -244,7 +271,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           </div>
 
           <Link
-            href="#contact"
+            href="/private-tours"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-200 hover:text-white hover:bg-white/5"
           >
@@ -253,25 +280,25 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           </Link>
 
           <Link
-            href="#visual-odyssey"
+            href="/blog"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-200 hover:text-white hover:bg-white/5"
           >
             <BookOpen className="w-5 h-5 text-[#f15d22]" />
-            <span className="font-semibold">Blog & Photos</span>
+            <span className="font-semibold">Blog &amp; Travel Guides</span>
           </Link>
 
           <Link
-            href="#mission"
+            href="/our-story"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-200 hover:text-white hover:bg-white/5"
           >
             <Compass className="w-5 h-5 text-[#f15d22]" />
-            <span className="font-semibold">Our Story & Mission</span>
+            <span className="font-semibold">Our Story &amp; Mission</span>
           </Link>
 
           <Link
-            href="#contact"
+            href="/contact-us"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-200 hover:text-white hover:bg-white/5"
           >

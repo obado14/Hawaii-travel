@@ -73,7 +73,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-300">
               <li>
                 <Link
-                  href="#experiences"
+                  href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-relaxed block"
                 >
                   Hidden Gems of Oahu with Waimea Botanical Garden/ Waterfall
@@ -81,7 +81,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#experiences"
+                  href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-relaxed block"
                 >
                   Hidden Gems of Oahu Byodo-In Temple &amp; Turtle Spotting
@@ -89,7 +89,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#experiences"
+                  href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-relaxed block"
                 >
                   Waikiki Turtle Canyon Snorkeling and Swim
@@ -97,7 +97,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#experiences"
+                  href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-relaxed block"
                 >
                   Paina Waikiki Luau
@@ -105,7 +105,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#experiences"
+                  href="/tour-packages"
                   className="hover:text-[#f15d22] transition-colors leading-relaxed block"
                 >
                   USS Arizona Memorial Pearl Harbor Tour
@@ -122,17 +122,17 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
                 <li>
-                  <Link href="#mission" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/our-story" className="hover:text-[#f15d22] transition-colors">
                     Go Tours Hawaii History
                   </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors">
                     Join Our Team!
                   </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors">
                     Affiliate Program
                   </Link>
                 </li>
@@ -145,12 +145,12 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
                 <li>
-                  <Link href="#visual-odyssey" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors">
                     Photos
                   </Link>
                 </li>
                 <li>
-                  <Link href="#visual-odyssey" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors">
                     Videos
                   </Link>
                 </li>
