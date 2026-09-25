@@ -63,7 +63,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
             <div
               key={exp.id}
               onClick={() => onSelectExperience?.(exp.title)}
-              className="group relative h-[480px] sm:h-[520px] lg:h-[540px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
+              className="group relative h-[500px] sm:h-[540px] md:h-[560px] lg:h-[590px] xl:h-[610px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -79,14 +79,14 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
 
               {/* Number Badge (Top Center) */}
               <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-                <div className="w-13 h-13 rounded-full border-2 border-white/70 bg-black/40 backdrop-blur-md flex items-center justify-center text-white font-heading text-2xl shadow-lg transition-transform group-hover:scale-110 group-hover:border-[#f15d22]">
+                <div className="w-14 h-14 sm:w-15 sm:h-15 rounded-full border-2 border-white/70 bg-black/40 backdrop-blur-md flex items-center justify-center text-white font-heading text-2xl sm:text-3xl shadow-lg transition-transform group-hover:scale-110 group-hover:border-[#f15d22]">
                   {exp.id}
                 </div>
               </div>
 
               {/* Content (Bottom) */}
-              <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 z-10 flex flex-col justify-end">
-                <h3 className="font-heading text-3xl sm:text-4xl font-bold text-[#f15d22] uppercase tracking-wider mb-2.5 transition-colors group-hover:text-amber-400 drop-shadow-sm">
+              <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 lg:p-9 z-10 flex flex-col justify-end">
+                <h3 className="font-heading text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-[#f15d22] uppercase tracking-wide leading-tight mb-3 transition-colors group-hover:text-amber-400 drop-shadow-md">
                   {exp.title}
                 </h3>
                 <p className="text-neutral-100 text-sm sm:text-base font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
@@ -94,7 +94,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
                 </p>
 
                 {/* View Details prompt on hover */}
-                <div className="mt-4 flex items-center gap-2 text-sm font-bold text-white tracking-wide">
+                <div className="mt-4 sm:mt-5 flex items-center gap-2 text-sm sm:text-base font-bold text-white tracking-wide">
                   <span className="group-hover:text-amber-300 transition-colors">Explore Tour</span>
                   <span className="transition-transform group-hover:translate-x-1.5 text-amber-300">→</span>
                 </div>

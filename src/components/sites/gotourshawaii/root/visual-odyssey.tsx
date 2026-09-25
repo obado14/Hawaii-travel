@@ -106,8 +106,8 @@ export function VisualOdyssey() {
             {photos.map((photo, idx) => (
               <div
                 key={photo.id}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  idx === currentIndex ? "opacity-100 z-0" : "opacity-0 z-0 pointer-events-none"
+                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                  idx === currentIndex ? "opacity-100 scale-100 z-0" : "opacity-0 scale-[1.03] z-0 pointer-events-none"
                 }`}
               >
                 <Image

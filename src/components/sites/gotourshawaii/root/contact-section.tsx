@@ -21,7 +21,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative bg-[#081d38] py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden border-t border-white/10">
+    <section id="contact" className="relative bg-[#081d38] py-16 sm:py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden border-t border-white/10">
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -33,9 +33,9 @@ export function ContactSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Form Card (Left Column - 7 cols) */}
-          <div className="lg:col-span-7 bg-white text-neutral-900 rounded-3xl p-7 sm:p-10 md:p-12 shadow-2xl border border-neutral-100">
+          <div className="lg:col-span-7 bg-white text-neutral-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-neutral-100">
             {isSubmitted ? (
               <div className="text-center py-12 space-y-4 animate-in fade-in duration-300">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
@@ -152,6 +152,9 @@ export function ContactSection() {
           {/* Contact Details (Right Column - 5 cols) */}
           <div className="lg:col-span-5 space-y-7 lg:pl-4">
             <div>
+              <span className="inline-block text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest bg-[#f15d22]/15 border border-[#f15d22]/30 px-3.5 py-1 rounded-full mb-3 shadow-sm">
+                PLAN YOUR TRIP
+              </span>
               <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#f5b324] uppercase tracking-wider mb-4 leading-tight">
                 CONTACT US
               </h2>

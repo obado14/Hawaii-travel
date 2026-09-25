@@ -73,32 +73,32 @@ export function FAQSection() {
         </div>
 
         {/* Accordions with smooth expand/collapse and transformed icon */}
-        <div className="space-y-4">
+        <div className="space-y-4 sm:space-y-5">
           {faqs.map((faq) => {
             const isOpen = openIds.includes(faq.id);
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/25 transition-all duration-300 px-5 sm:px-7 py-1 shadow-sm hover:shadow-lg"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/25 transition-all duration-300 px-6 sm:px-8 py-2 shadow-md hover:shadow-xl"
               >
                 <button
                   onClick={() => toggle(faq.id)}
                   className="w-full flex items-center justify-between text-left py-4 sm:py-5 group focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg md:text-xl font-medium text-white group-hover:text-[#f5b324] transition-colors pr-4">
+                  <span className="text-lg sm:text-xl md:text-[1.35rem] font-semibold text-white group-hover:text-[#f5b324] transition-colors pr-4 leading-snug">
                     {faq.question}
                   </span>
 
                   {/* Icon that visually transforms to show expanded state */}
                   <span
-                    className={`shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
+                    className={`shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
                       isOpen
                         ? "bg-amber-500 text-white rotate-180 scale-105"
                         : "bg-[#f15d22] text-white group-hover:scale-110 group-hover:bg-[#d84b13]"
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
+                    <ChevronDown className="w-5 h-5 stroke-[2.5]" />
                   </span>
                 </button>
 
@@ -109,7 +109,7 @@ export function FAQSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-5 pt-1 text-sm sm:text-base text-neutral-200 leading-relaxed font-normal pl-0.5 pr-6 border-t border-white/10 mt-1">
+                    <div className="pb-6 pt-2 text-base sm:text-[17px] text-neutral-100 leading-relaxed sm:leading-8 font-normal pl-0.5 pr-6 border-t border-white/15 mt-1.5">
                       <p>{faq.answer}</p>
                     </div>
                   </div>

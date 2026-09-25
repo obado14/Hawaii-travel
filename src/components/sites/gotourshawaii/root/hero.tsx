@@ -56,15 +56,15 @@ export function Hero({ onOpenBooking }: HeroProps) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
           <a
             href="tel:808-926-3090"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white px-9 py-3.5 sm:py-4 rounded-xl font-bold text-base uppercase tracking-wider shadow-2xl shadow-[#f15d22]/40 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white px-10 py-4 sm:px-11 sm:py-4.5 rounded-xl font-extrabold text-base sm:text-lg uppercase tracking-wider shadow-2xl shadow-[#f15d22]/40 ring-1 ring-white/20 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 hover:shadow-[#f15d22]/60"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>CALL US</span>
           </a>
 
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md px-9 py-3.5 sm:py-4 rounded-xl font-bold text-base uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer shadow-lg"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/20 hover:bg-white/30 text-white border-2 border-white/60 hover:border-white backdrop-blur-md px-10 py-4 sm:px-11 sm:py-4.5 rounded-xl font-extrabold text-base sm:text-lg uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer shadow-xl"
           >
             <span>BOOK ONLINE</span>
           </button>

@@ -41,7 +41,7 @@ export function MissionSection() {
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
               LOCAL EXPERTS
             </h3>
-            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
+            <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
               We are extremely proud to be 100% locally-owned and operated. With one finger directly on
               the pulse of the Hawaiian Islands, living and working here is second nature to us. This
               guarantees that you will receive the best of everything Hawaii has to offer, with the peace
@@ -62,7 +62,7 @@ export function MissionSection() {
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
               RESPONSIBILITY
             </h3>
-            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
+            <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
               Aloha is a philosophy we carry with us daily. Whether you interact with our tour guides,
               phone representatives, or management, our aloha experts adhere to the highest standard of
               responsibility and accountability. We rely on your feedback to ensure that you are being
@@ -83,7 +83,7 @@ export function MissionSection() {
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
               ALOHA
             </h3>
-            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
+            <p className="text-neutral-800 text-base sm:text-[17px] font-normal leading-relaxed sm:leading-8">
               We promise to deliver a memorable experience that will last a lifetime. Our team has put
               in countless hours making sure your experience with us is one to remember! Additionally,
               all of the tour and activity providers we work with have been through our thorough process

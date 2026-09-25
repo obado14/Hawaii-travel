@@ -32,7 +32,7 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             />
             {/* Cinematic Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent" />
           </div>
 
           {/* Top Right Orange Stamp Badge */}
@@ -47,16 +47,16 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
 
           {/* Bottom Left Content with generous padding away from edges */}
           <div className="absolute bottom-0 inset-x-0 p-8 sm:p-12 md:p-14 lg:p-16 z-10 max-w-3xl">
-            <h3 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#f15d22] uppercase tracking-wider mb-3.5 drop-shadow-md group-hover:text-amber-400 transition-colors">
+            <h3 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#f15d22] uppercase tracking-wider mb-3.5 drop-shadow-[0_3px_8px_rgba(0,0,0,0.85)] group-hover:text-amber-400 transition-colors">
               DIAMOND HEAD HIKE SHUTTLE
             </h3>
-            <p className="text-neutral-100 text-sm sm:text-base leading-relaxed drop-shadow-md max-w-2xl font-normal">
+            <p className="text-white text-base sm:text-lg leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] max-w-2xl font-medium">
               Hike Oahu&apos;s most famous trail without the hassle! We run daily shuttles from Waikiki
               with your reservation tickets already secured—just hop on, hike up, and enjoy those epic
               Diamond Head views.
             </p>
 
-            <div className="mt-5 inline-flex items-center gap-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-6 py-3 rounded-xl shadow-xl shadow-[#f15d22]/40 transition-all">
+            <div className="mt-5 sm:mt-6 inline-flex items-center gap-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white text-sm sm:text-base font-extrabold uppercase tracking-wider px-7 py-3.5 rounded-xl shadow-2xl shadow-[#f15d22]/50 ring-1 ring-white/20 transition-all">
               <span>Reserve Shuttle Pass</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </div>

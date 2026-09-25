@@ -19,20 +19,20 @@ export function Footer() {
               />
             </Link>
 
-            <div className="space-y-2.5 text-sm text-neutral-200">
+            <div className="space-y-3 text-[15px] sm:text-base text-neutral-100 font-medium">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#f15d22] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#f15d22] shrink-0 mt-1" />
                 <span className="leading-snug">2500 Kalakaua Ave Suite E Honolulu, Hawaii 96815</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#f15d22] shrink-0" />
-                <a href="tel:808-926-3090" className="hover:text-white transition-colors">
+                <a href="tel:808-926-3090" className="hover:text-[#f15d22] transition-colors">
                   808-926-3090
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#f15d22] shrink-0" />
-                <a href="mailto:info@gotourshawaii.com" className="hover:text-white transition-colors">
+                <a href="mailto:info@gotourshawaii.com" className="hover:text-[#f15d22] transition-colors">
                   info@gotourshawaii.com
                 </a>
               </div>
@@ -65,12 +65,12 @@ export function Footer() {
             </div>
           </div>
 
-            {/* Column 2: Experience */}
+          {/* Column 2: Experience */}
           <div className="space-y-3">
             <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
               Experience
             </h4>
-            <ul className="space-y-2.5 text-sm text-neutral-200">
+            <ul className="space-y-2.5 text-[14.5px] sm:text-[15px] text-neutral-100">
               <li>
                 <Link
                   href="/tour-packages"
@@ -120,7 +120,7 @@ export function Footer() {
               <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 About Us
               </h4>
-              <ul className="space-y-2 text-sm text-neutral-200">
+              <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
                   <Link href="/our-story" className="hover:text-[#f15d22] transition-colors font-medium">
                     Go Tours Hawaii History
@@ -143,7 +143,7 @@ export function Footer() {
               <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 Media
               </h4>
-              <ul className="space-y-2 text-sm text-neutral-200">
+              <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
                   <Link href="/blog" className="hover:text-[#f15d22] transition-colors font-medium">
                     Photos
@@ -172,7 +172,7 @@ export function Footer() {
                 className="w-auto h-32 sm:h-36 object-contain filter brightness-110 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-xs sm:text-sm text-neutral-300">
+            <p className="text-xs sm:text-sm text-neutral-200 font-medium">
               Centrally located in the heart of Waikiki, Honolulu.
             </p>
           </div>
