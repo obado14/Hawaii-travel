@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X, Sparkles } from "lucide-react";
 
 interface OdysseyPhoto {
   id: number;
@@ -87,11 +87,12 @@ export function VisualOdyssey() {
   const activePhoto = photos[currentIndex];
 
   return (
-    <section className="relative bg-[#0c1f38] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-[#0c1f38] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 mb-3 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#f5b324]" />
             <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
               GALERI PERJALANAN
             </span>

@@ -445,16 +445,16 @@ export default function TourPackagesPage() {
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
-            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
                 Tur Resmi Pulau Oahu &amp; Maui
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-              PAKET &amp; PENGALAMAN TUR HAWAII
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">
+              PAKET &amp; PENGALAMAN <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#f5b324] to-amber-200">TUR HAWAII</span>
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
               Jelajahi tur keliling pulau dengan rating tertinggi, pesta budaya Paina Luau, petualangan snorkeling, dan layanan shuttle harian praktis bersama pemandu lokal berlisensi.
             </p>
           </div>
@@ -529,10 +529,10 @@ export default function TourPackagesPage() {
                   <button
                     key={cat.key}
                     onClick={() => setSelectedCategory(cat.key)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                    className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       selectedCategory === cat.key
-                        ? "bg-[#f15d22] text-white shadow-md shadow-[#f15d22]/30 scale-105"
-                        : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200/80 hover:text-neutral-900"
+                        ? "bg-[#f15d22] text-white border-[#f15d22] shadow-md shadow-[#f15d22]/25 scale-105"
+                        : "bg-white text-neutral-700 border-neutral-200 hover:border-[#f15d22]/40 hover:text-[#f15d22] hover:bg-neutral-50 shadow-xs"
                     }`}
                   >
                     {cat.label}
@@ -584,7 +584,7 @@ export default function TourPackagesPage() {
                 {filteredAndSortedTours.map((tour) => (
                   <article
                     key={tour.id}
-                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/15"
+                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
                   >
                     {/* Top Image Box with Badges */}
                     <div className="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
@@ -592,13 +592,13 @@ export default function TourPackagesPage() {
                         src={tour.image}
                         alt={tour.name}
                         fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
 
                       {/* Top Badges */}
                       <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
-                        <span className="bg-black/65 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                        <span className="bg-black/65 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md border border-white/10">
                           {tour.categoryLabel}
                         </span>
                         {tour.recommended && (
@@ -610,11 +610,11 @@ export default function TourPackagesPage() {
 
                       {/* Bottom Image Strip: Duration & Location */}
                       <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-white/95 font-medium drop-shadow-md">
-                        <span className="flex items-center gap-1 bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full">
-                          <Clock className="w-3.5 h-3.5 text-[#f15d22]" />
+                        <span className="flex items-center gap-1.5 bg-black/55 backdrop-blur-sm px-3 py-0.5 rounded-full border border-white/10">
+                          <Clock className="w-3.5 h-3.5 text-[#f5b324]" />
                           {tour.duration}
                         </span>
-                        <span className="bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full">
+                        <span className="bg-black/55 backdrop-blur-sm px-3 py-0.5 rounded-full border border-white/10">
                           {tour.location}
                         </span>
                       </div>
@@ -624,7 +624,7 @@ export default function TourPackagesPage() {
                     <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                       <div>
                         {/* Rating row */}
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2 mb-2.5">
                           <div className="flex items-center text-amber-500">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -642,12 +642,12 @@ export default function TourPackagesPage() {
                         </h3>
 
                         {/* Short Excerpt */}
-                        <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                        <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2 font-normal">
                           {tour.description}
                         </p>
 
                         {/* Highlights Pills */}
-                        <div className="space-y-1.5 mb-5 pb-5 border-b border-neutral-100">
+                        <div className="space-y-1.5 mb-5 pb-5 border-t pt-3 border-neutral-100">
                           {tour.highlights.slice(0, 3).map((hl, i) => (
                             <div key={i} className="flex items-center gap-2 text-xs text-neutral-700">
                               <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
@@ -666,7 +666,7 @@ export default function TourPackagesPage() {
                               Mulai dari
                             </span>
                             <div className="flex items-baseline gap-2">
-                              <span className="text-2xl sm:text-3xl font-extrabold text-[#f15d22] leading-none">
+                              <span className="text-2xl sm:text-3xl font-extrabold text-[#f15d22] font-heading leading-none">
                                 ${tour.price}
                               </span>
                               {tour.originalPrice > tour.price && (
@@ -677,7 +677,7 @@ export default function TourPackagesPage() {
                             </div>
                           </div>
                           {tour.originalPrice > tour.price && (
-                            <span className="text-[11px] text-emerald-600 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                            <span className="text-[11px] text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
                               Hemat ${tour.originalPrice - tour.price}
                             </span>
                           )}
@@ -687,7 +687,7 @@ export default function TourPackagesPage() {
                         <div className="grid grid-cols-2 gap-2.5 pt-1">
                           <button
                             onClick={() => handleViewDetails(tour)}
-                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-neutral-300 hover:border-[#f15d22] text-neutral-700 hover:text-[#f15d22] hover:bg-neutral-50 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border-2 border-neutral-200 hover:border-[#f15d22] text-neutral-700 hover:text-[#f15d22] hover:bg-neutral-50 font-heading text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span>DETAIL</span>
@@ -695,7 +695,7 @@ export default function TourPackagesPage() {
 
                           <button
                             onClick={() => handleBook(tour.name)}
-                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg shadow-[#f15d22]/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                           >
                             <span>PESAN</span>
                             <ArrowRight className="w-3.5 h-3.5" />

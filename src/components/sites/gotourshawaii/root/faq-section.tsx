@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 
 interface FAQItem {
   id: number;
@@ -51,7 +51,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative bg-[#081d38] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+    <section className="relative bg-[#081d38] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
       {/* Texture Background */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -64,10 +64,19 @@ export function FAQSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-8 sm:mb-10">
-          <h2 className="font-heading text-4xl sm:text-6xl md:text-7xl text-[#f5b324] uppercase tracking-wider">
-            PERTANYAAN YANG SERING DIAJUKAN (FAQ)
+        <div className="text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 mb-3.5 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#f5b324]" />
+            <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
+              INFORMASI &amp; JAWABAN LENGKAP
+            </span>
+          </div>
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-md">
+            PERTANYAAN YANG SERING DIAJUKAN
           </h2>
+          <p className="text-neutral-300 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+            Semua hal yang perlu Anda ketahui sebelum memulai petualangan seru di kepulauan Hawaii.
+          </p>
         </div>
 
         {/* Accordions with smooth expand/collapse and transformed icon */}
@@ -77,7 +86,7 @@ export function FAQSection() {
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/25 transition-all duration-300 px-6 sm:px-8 py-2 shadow-md hover:shadow-xl"
+                className="rounded-3xl border border-white/12 bg-white/[0.05] hover:bg-white/[0.08] hover:border-white/25 transition-all duration-300 px-6 sm:px-8 py-2 shadow-xl"
               >
                 <button
                   onClick={() => toggle(faq.id)}

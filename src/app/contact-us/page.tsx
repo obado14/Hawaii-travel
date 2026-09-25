@@ -62,7 +62,7 @@ export default function ContactUsPage() {
               </span>
             </div>
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-              HUBUNGI KAMI
+              HUBUNGI <span className="bg-gradient-to-r from-[#f5b324] via-[#fbd160] to-[#f5b324] bg-clip-text text-transparent">KAMI</span>
             </h1>
             <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed">
               Punya pertanyaan seputar penjemputan hotel, paket tur privat, atau reservasi perjalanan? Bicaralah langsung dengan tim lokal kami yang ramah di Oahu.
@@ -88,9 +88,12 @@ export default function ContactUsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Form (Col 7 on Desktop, 1 Col on Mobile) */}
               <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-neutral-200/80">
-                <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest block mb-1.5">
-                  Kirim Pesan Langsung
-                </span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+                  <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest">
+                    Kirim Pesan Langsung
+                  </span>
+                </div>
                 <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase mb-5 leading-tight">
                   BAGAIMANA KAMI DAPAT MEMBANTU ANDA?
                 </h2>
@@ -341,9 +344,12 @@ export default function ContactUsPage() {
         {/* 4. Social Media Section */}
         <section className="bg-[#f5f0e8] text-neutral-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-black/5">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-              Tetap Terhubung Bersama Kami
-            </span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+              <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest">
+                Tetap Terhubung Bersama Kami
+              </span>
+            </div>
             <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase tracking-wide mb-3">
               IKUTI PERJALANAN HAWAII KAMI
             </h2>

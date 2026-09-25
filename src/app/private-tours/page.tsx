@@ -149,16 +149,16 @@ export default function PrivateToursPage() {
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
-            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
                 SEWA TUR VIP EKSKLUSIF
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-              PENGALAMAN TUR PRIVAT OAHU &amp; MAUI
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">
+              PENGALAMAN TUR PRIVAT <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#f5b324] to-amber-200">OAHU &amp; MAUI</span>
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
               Tur privat keliling pulau yang dirancang khusus, armada transportasi eksekutif Sprinter mewah, dan pemandu lokal berlisensi eksklusif untuk keluarga atau grup Anda.
             </p>
           </div>
@@ -177,12 +177,15 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 2. Intro Feature Highlights */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-12 sm:pt-14 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 pt-14 sm:pt-18 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
-            <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest block mb-2">
-              Layanan Eksklusif Kepulauan Hawaii
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#0c2340] uppercase mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+              <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
+                LAYANAN EKSKLUSIF KEPULAUAN HAWAII
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase mb-4 leading-tight">
               PENGALAMAN TUR PULAU PRIVAT TERBAIK
             </h2>
             <p className="text-neutral-700 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-10 sm:mb-12">
@@ -190,11 +193,11 @@ export default function PrivateToursPage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-lg border border-neutral-200/80">
-                <div className="w-12 h-12 rounded-2xl bg-[#f15d22]/10 text-[#f15d22] flex items-center justify-center mb-4">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-neutral-200/80">
+                <div className="w-13 h-13 rounded-2xl bg-[#0c2340] text-[#f5b324] flex items-center justify-center mb-4 shadow-md">
                   <Clock className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl font-bold text-[#0c2340] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase mb-2">
                   100% Jadwal Fleksibel
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed font-normal">
@@ -202,11 +205,11 @@ export default function PrivateToursPage() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-lg border border-neutral-200/80">
-                <div className="w-12 h-12 rounded-2xl bg-[#f15d22]/10 text-[#f15d22] flex items-center justify-center mb-4">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-neutral-200/80">
+                <div className="w-13 h-13 rounded-2xl bg-[#0c2340] text-[#f5b324] flex items-center justify-center mb-4 shadow-md">
                   <Car className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl font-bold text-[#0c2340] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase mb-2">
                   Eksklusif Hanya untuk Grup Anda
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed font-normal">
@@ -214,11 +217,11 @@ export default function PrivateToursPage() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-lg border border-neutral-200/80">
-                <div className="w-12 h-12 rounded-2xl bg-[#f15d22]/10 text-[#f15d22] flex items-center justify-center mb-4">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-neutral-200/80">
+                <div className="w-13 h-13 rounded-2xl bg-[#0c2340] text-[#f5b324] flex items-center justify-center mb-4 shadow-md">
                   <Compass className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl font-bold text-[#0c2340] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase mb-2">
                   Pemandu Lokal Berlisensi Terbaik
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed font-normal">
@@ -230,13 +233,16 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 3. Choose Your Private Experience */}
-        <section className="bg-[#f5f0e8] text-neutral-900 py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-t border-black/5">
+        <section className="bg-[#f5f0e8] text-neutral-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-black/5">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-              <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest block mb-2">
-                Pilihan Paket Tur Eksklusif
-              </span>
-              <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase tracking-wide mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+                <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
+                  PILIHAN PAKET EKSKLUSIF
+                </span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide mb-3 leading-tight">
                 PILIH PENGALAMAN TUR PRIVAT ANDA
               </h2>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">

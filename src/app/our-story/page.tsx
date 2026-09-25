@@ -134,17 +134,17 @@ export default function OurStoryPage() {
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
             {/* Text backdrop container for crisp readability */}
-            <div className="max-w-3xl mx-auto py-5 px-6 sm:px-8 rounded-3xl bg-black/35 backdrop-blur-[2px] border border-white/10 shadow-2xl">
-              <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="max-w-3xl mx-auto py-6 px-6 sm:px-10 rounded-3xl bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
+              <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
                 <Sparkles className="w-4 h-4 text-[#f5b324]" />
                 <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
                   Dimiliki &amp; Dikelola oleh Warga Lokal Hawaii
                 </span>
               </div>
-              <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                KISAH KAMI
+              <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[5.5rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+                KISAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#f5b324] to-amber-200">KAMI</span>
               </h1>
-              <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-100 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+              <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-100 font-normal leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                 Berbagi semangat Aloha, warisan autentik Hawaii, dan kenangan tak terlupakan sejak hari pertama.
               </p>
             </div>
@@ -165,14 +165,17 @@ export default function OurStoryPage() {
         </section>
 
         {/* 2. Narrative Section */}
-        <section className="bg-[#f5f0e8] text-neutral-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-7 space-y-5">
-                <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block">
-                  Tentang Go Tours Hawaii
-                </span>
-                <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase leading-tight">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+                  <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
+                    TENTANG GO TOURS HAWAII
+                  </span>
+                </div>
+                <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase leading-tight">
                   BERAKAR DALAM BUDAYA KEPULAUAN HAWAII
                 </h2>
                 <div className="space-y-4 text-sm sm:text-base text-neutral-700 leading-relaxed sm:leading-7 font-normal">
@@ -211,13 +214,16 @@ export default function OurStoryPage() {
         </section>
 
         {/* 3. Company Statistics Section */}
-        <section className="bg-white border-y border-neutral-200/80 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white border-y border-neutral-200/80 py-14 sm:py-18 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-              <span className="text-xs font-extrabold text-[#f15d22] uppercase tracking-widest block mb-2">
-                Prestasi &amp; Dedikasi
-              </span>
-              <h2 className="font-heading text-3xl sm:text-4xl text-[#0c2340] uppercase tracking-wide">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f15d22]/10 border border-[#f15d22]/20 mb-3 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#f15d22]" />
+                <span className="text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-widest">
+                  PRESTASI &amp; DEDIKASI
+                </span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl text-[#0c2340] uppercase tracking-wide leading-tight">
                 DAMPAK PERJALANAN KAMI DALAM ANGKA
               </h2>
             </div>

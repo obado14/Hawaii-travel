@@ -76,11 +76,29 @@
   }
   body {
     font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, .font-heading {
     font-family: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
+}
+
+/* Glassmorphism & card polish effects */
+.glass-panel {
+  background: rgba(12, 31, 56, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-pill {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Custom scrollbars and styling */
@@ -93,4 +111,7 @@
 ::-webkit-scrollbar-thumb {
   background: #f15d22;
   border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d84b13;
 }

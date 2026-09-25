@@ -98,16 +98,16 @@ export default function BlogPage() {
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
-            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
                 Wawasan Lokal &amp; Panduan Wisata Hawaii
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-              BLOG WISATA HAWAII
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">
+              BLOG WISATA <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#f5b324] to-amber-200">HAWAII</span>
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
               Panduan ahli, surga tersembunyi, sejarah budaya, dan tips lokal berharga dari tim pemandu wisata Hawaii kami.
             </p>
           </div>
