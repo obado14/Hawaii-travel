@@ -48,11 +48,11 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-40 h-16 sm:w-44 sm:h-18 transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="flex items-center group py-0.5">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/sites/gotourshawaii/root/gotours-logo.png"
-                alt="Go Tours Hawaii Logo"
+                alt="Hawaii Travel Logo"
                 fill
                 className="object-contain"
                 priority

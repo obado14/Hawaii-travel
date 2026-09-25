@@ -22,7 +22,11 @@ export const metadata: Metadata = {
   description:
     "Discover top-rated Oahu, Honolulu & Waikiki tours. Small groups, local guides, unforgettable Hawaii adventures.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/sites/gotourshawaii/root/favicon.png", type: "image/png" },
+    ],
+    apple: "/sites/gotourshawaii/root/favicon.png",
   },
   openGraph: {
     title: "Hawaii Tours: Experience the Best of Oahu",

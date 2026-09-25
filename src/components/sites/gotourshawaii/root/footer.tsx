@@ -10,10 +10,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Column 1: Brand & Contact Info */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block relative w-48 h-20">
+            <Link href="/" className="inline-block relative w-28 h-28 sm:w-32 sm:h-32 transition-transform duration-300 hover:scale-105">
               <Image
                 src="/sites/gotourshawaii/root/site-logo-white-e1714962363418.png"
-                alt="Go Tours Hawaii Logo"
+                alt="Hawaii Travel Logo"
                 fill
                 className="object-contain"
               />
