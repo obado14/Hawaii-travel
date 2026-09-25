@@ -2,85 +2,14 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { Calendar, Clock, ArrowRight, Tag, Sparkles } from "lucide-react";
-
-interface BlogPost {
-  id: string;
-  title: string;
-  category: string;
-  date: string;
-  readTime: string;
-  image: string;
-  excerpt: string;
-}
-
-const posts: BlogPost[] = [
-  {
-    id: "top-10-oahu",
-    title: "Top 10 Things to Do in Oahu for First-Time Visitors",
-    category: "Travel Guide",
-    date: "September 18, 2026",
-    readTime: "6 min read",
-    image: "/sites/gotourshawaii/root/Banner-BG-Thumbnail.jpg",
-    excerpt:
-      "Planning your dream Hawaiian vacation? From the breathtaking heights of the Koʻolau mountains to snorkeling with sea turtles, here is our ultimate local checklist.",
-  },
-  {
-    id: "turtle-canyon-guide",
-    title: "The Ultimate Guide to Snorkeling at Waikiki’s Turtle Canyon",
-    category: "Wildlife & Ocean",
-    date: "September 12, 2026",
-    readTime: "5 min read",
-    image: "/sites/gotourshawaii/root/waikiki-turtle-banner.png",
-    excerpt:
-      "Turtle Canyon is Hawaii's famous reef cleaning station. Learn the best times of day to snorkel, respectful marine guidelines, and how to spot green sea turtles.",
-  },
-  {
-    id: "pearl-harbor-tips",
-    title: "Visiting Pearl Harbor: Secrets to a Smooth and Meaningful Trip",
-    category: "History & Culture",
-    date: "August 28, 2026",
-    readTime: "7 min read",
-    image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
-    excerpt:
-      "Navigating ticket reservations, bag policies, and the emotional journey of the USS Arizona Memorial. Here is how our guided tours remove all the stress.",
-  },
-  {
-    id: "waimea-valley-waterfall",
-    title: "Waimea Valley & Waterfall: Flora, History & Swimming Guide",
-    category: "Nature & Hiking",
-    date: "August 15, 2026",
-    readTime: "4 min read",
-    image: "/sites/gotourshawaii/root/optimized-water-fall-002.jpg",
-    excerpt:
-      "Stroll through 5,000 species of tropical botanical plants before cooling off under a 45-foot cascading natural waterfall on Oahu's North Shore.",
-  },
-  {
-    id: "diamond-head-hike-tips",
-    title: "Hiking Diamond Head Crater: What to Bring, Permits & Sunrise Views",
-    category: "Adventure",
-    date: "July 30, 2026",
-    readTime: "5 min read",
-    image: "/sites/gotourshawaii/root/Header-Photo-Diamond-Head.jpeg",
-    excerpt:
-      "Everything you need to conquer Oahu’s most iconic trail. How the new state park reservation system works and why our Waikiki shuttle is the easiest way to go.",
-  },
-  {
-    id: "garlic-shrimp-north-shore",
-    title: "Where to Find the Best Kahuku Garlic Shrimp on Oahu's North Shore",
-    category: "Food & Culture",
-    date: "July 14, 2026",
-    readTime: "4 min read",
-    image: "/sites/gotourshawaii/root/Visual-img-2-e1714631806737.jpg",
-    excerpt:
-      "No trip around the island is complete without stopping at the authentic shrimp trucks in Kahuku. Butter, garlic, rice, and fresh ocean delicacies.",
-  },
-];
+import { posts } from "@/data/blog-posts";
 
 export default function BlogPage() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -142,8 +71,11 @@ export default function BlogPage() {
                   key={post.id}
                   className="h-full bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
                 >
-                  {/* Uniform Image Height */}
-                  <div className="relative h-56 sm:h-60 w-full shrink-0 overflow-hidden">
+                  {/* Uniform Image Height - Clickable Link */}
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="relative h-56 sm:h-60 w-full shrink-0 overflow-hidden block cursor-pointer"
+                  >
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -154,7 +86,7 @@ export default function BlogPage() {
                       <Tag className="w-3 h-3 text-[#f5b324]" />
                       <span>{post.category}</span>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Body Content - Consistent Flex Column */}
                   <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
@@ -172,9 +104,11 @@ export default function BlogPage() {
                         </span>
                       </div>
 
-                      {/* Prominent Title with Consistent Height Area */}
+                      {/* Prominent Title with Consistent Height Area - Clickable */}
                       <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-snug mb-3 group-hover:text-[#f15d22] transition-colors min-h-[3.5rem] sm:min-h-[4rem] line-clamp-2">
-                        {post.title}
+                        <Link href={`/blog/${post.id}`} className="hover:underline">
+                          {post.title}
+                        </Link>
                       </h2>
 
                       {/* Readable Description with Comfortable Line-height */}
@@ -183,11 +117,14 @@ export default function BlogPage() {
                       </p>
                     </div>
 
-                    {/* Bottom CTA - Anchored to Consistent Position */}
-                    <div className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs sm:text-sm font-bold text-[#f15d22] uppercase tracking-wider group-hover:translate-x-1 transition-transform mt-auto">
-                      <span>Read Full Guide</span>
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </div>
+                    {/* Bottom CTA - Clickable Link to Full Guide */}
+                    <Link
+                      href={`/blog/${post.id}`}
+                      className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs sm:text-sm font-bold text-[#f15d22] hover:text-[#d84b13] uppercase tracking-wider transition-colors mt-auto group/btn cursor-pointer"
+                    >
+                      <span className="group-hover/btn:underline">Read Full Guide</span>
+                      <ArrowRight className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </article>
               ))}
