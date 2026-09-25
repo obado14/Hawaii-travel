@@ -65,16 +65,16 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Experience */}
+            {/* Column 2: Experience */}
           <div className="space-y-3">
-            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
               Experience
             </h4>
             <ul className="space-y-2.5 text-sm text-neutral-200">
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-snug block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
                   Hidden Gems of Oahu with Waimea Botanical Garden/ Waterfall
                 </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-snug block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
                   Hidden Gems of Oahu Byodo-In Temple &amp; Turtle Spotting
                 </Link>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-snug block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
                   Waikiki Turtle Canyon Snorkeling and Swim
                 </Link>
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-snug block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
                   Paina Waikiki Luau
                 </Link>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-snug block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block font-medium"
                 >
                   USS Arizona Memorial Pearl Harbor Tour
                 </Link>
@@ -117,22 +117,22 @@ export function Footer() {
           {/* Column 3: About Us & Media */}
           <div className="space-y-5">
             <div className="space-y-2.5">
-              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
+              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 About Us
               </h4>
               <ul className="space-y-2 text-sm text-neutral-200">
                 <li>
-                  <Link href="/our-story" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/our-story" className="hover:text-[#f15d22] transition-colors font-medium">
                     Go Tours Hawaii History
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors font-medium">
                     Join Our Team!
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/contact-us" className="hover:text-[#f15d22] transition-colors font-medium">
                     Affiliate Program
                   </Link>
                 </li>
@@ -140,17 +140,17 @@ export function Footer() {
             </div>
 
             <div className="space-y-2.5 pt-1">
-              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
+              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 Media
               </h4>
               <ul className="space-y-2 text-sm text-neutral-200">
                 <li>
-                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors font-medium">
                     Photos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors">
+                  <Link href="/blog" className="hover:text-[#f15d22] transition-colors font-medium">
                     Videos
                   </Link>
                 </li>

@@ -7,7 +7,7 @@ import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
-import { Star, Clock, Users, CheckCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Star, Clock, CheckCircle, Sparkles, ArrowRight } from "lucide-react";
 
 interface TourPackage {
   id: string;
@@ -149,7 +149,7 @@ export default function TourPackagesPage() {
 
       <main className="flex-1">
         {/* Header Hero */}
-        <section className="relative w-full min-h-[460px] sm:min-h-[520px] md:min-h-[560px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-[440px] sm:min-h-[480px] md:min-h-[520px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/sites/gotourshawaii/root/waikiki-scaled.jpeg"
@@ -161,23 +161,23 @@ export default function TourPackagesPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#0c1f38]/70 via-black/40 to-[#0c1f38]/85" />
           </div>
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-12 pb-28 sm:pb-36 md:pb-44">
-            <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15 shadow-sm">
               <Sparkles className="w-4 h-4 text-[#f5b324]" />
               <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
                 Top Rated Tours &amp; Excursions in Oahu
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none">
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-sm">
               TOURS &amp; PACKAGES
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-200">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 leading-relaxed font-normal">
               Handcrafted island adventures with local expert guides. Guaranteed tickets, small groups, and unforgettable memories.
             </p>
           </div>
 
           <div className="absolute bottom-0 inset-x-0 w-full pointer-events-none z-20 translate-y-0.5 overflow-hidden">
-            <div className="relative w-full h-24 sm:h-32 md:h-40 lg:h-44">
+            <div className="relative w-full h-14 sm:h-18 md:h-22 lg:h-24">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
                 alt="Polynesian mountain divider"
@@ -190,113 +190,125 @@ export default function TourPackagesPage() {
         </section>
 
         {/* Filter Tabs & Tour Grid */}
-        <section className="bg-[#f5f0e8] text-neutral-900 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f0e8] text-neutral-900 py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-              {[
-                { label: "All Experiences", value: "all" },
-                { label: "Circle Island Tours", value: "circle-island" },
-                { label: "Snorkeling & Water", value: "adventure" },
-                { label: "Hawaiian Luau", value: "luau" },
-                { label: "Pearl Harbor", value: "history" },
-                { label: "Diamond Head Shuttles", value: "shuttle" },
-              ].map((tab) => (
-                <button
-                  key={tab.value}
-                  onClick={() => setSelectedCategory(tab.value)}
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                    selectedCategory === tab.value
-                      ? "bg-[#f15d22] text-white shadow-lg shadow-[#f15d22]/30 scale-105"
-                      : "bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+            {/* Category Filter Pills - Single horizontal row on desktop */}
+            <div className="w-full mb-10 sm:mb-12 flex justify-center">
+              <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 flex-wrap md:flex-wrap lg:flex-nowrap justify-center max-w-full overflow-x-auto no-scrollbar py-1 px-2">
+                {[
+                  { label: "All Experiences", value: "all" },
+                  { label: "Circle Island Tours", value: "circle-island" },
+                  { label: "Snorkeling & Water", value: "adventure" },
+                  { label: "Hawaiian Luau", value: "luau" },
+                  { label: "Pearl Harbor", value: "history" },
+                  { label: "Diamond Head Shuttles", value: "shuttle" },
+                ].map((tab) => (
+                  <button
+                    key={tab.value}
+                    onClick={() => setSelectedCategory(tab.value)}
+                    className={`px-4 sm:px-4.5 lg:px-5 py-2.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider whitespace-nowrap transition-all cursor-pointer shrink-0 ${
+                      selectedCategory === tab.value
+                        ? "bg-[#f15d22] text-white shadow-lg shadow-[#f15d22]/30 scale-105"
+                        : "bg-white text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 border border-neutral-200 shadow-xs"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Tours Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTours.map((tour) => (
-                <div
-                  key={tour.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
-                >
-                  {/* Image Container */}
-                  <div className="relative h-60 w-full overflow-hidden">
-                    <Image
-                      src={tour.image}
-                      alt={tour.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              {filteredTours.map((tour, index) => {
+                const isTotalOdd = filteredTours.length % 2 === 1;
+                const isSingleOnThreeCol = filteredTours.length % 3 === 1;
+                const isLastCard = index === filteredTours.length - 1;
 
-                    {tour.recommended && (
-                      <div className="absolute top-4 left-4 bg-[#f15d22] text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md">
-                        Most Popular
+                return (
+                  <div
+                    key={tour.id}
+                    className={`bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl ${
+                      isLastCard && isSingleOnThreeCol ? "lg:col-start-2 lg:col-span-1 lg:max-w-none" : ""
+                    } ${
+                      isLastCard && isTotalOdd ? "md:col-span-2 md:max-w-md md:mx-auto md:w-full lg:max-w-none lg:col-span-1" : ""
+                    }`}
+                  >
+                    {/* Image Container */}
+                    <div className="relative h-60 w-full overflow-hidden">
+                      <Image
+                        src={tour.image}
+                        alt={tour.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                      {tour.recommended && (
+                        <div className="absolute top-4 left-4 bg-[#f15d22] text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md">
+                          Most Popular
+                        </div>
+                      )}
+
+                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs font-semibold">
+                        <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                          <Clock className="w-3.5 h-3.5 text-[#f5b324]" />
+                          {tour.duration}
+                        </span>
+                        <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                          <Star className="w-3.5 h-3.5 fill-[#f5b324] text-[#f5b324]" />
+                          {tour.rating} ({tour.reviewsCount})
+                        </span>
                       </div>
-                    )}
-
-                    <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs font-semibold">
-                      <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                        <Clock className="w-3.5 h-3.5 text-[#f5b324]" />
-                        {tour.duration}
-                      </span>
-                      <span className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                        <Star className="w-3.5 h-3.5 fill-[#f5b324] text-[#f5b324]" />
-                        {tour.rating} ({tour.reviewsCount})
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Body Content */}
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="font-heading text-2xl text-[#0c2340] uppercase tracking-wide leading-tight mb-2 group-hover:text-[#f15d22] transition-colors">
-                        {tour.name}
-                      </h3>
-                      <p className="text-neutral-600 text-xs sm:text-sm font-normal leading-relaxed mb-4 line-clamp-3">
-                        {tour.description}
-                      </p>
-
-                      {/* Highlights */}
-                      <ul className="space-y-1.5 mb-6 text-xs text-neutral-700">
-                        {tour.highlights.map((h, i) => (
-                          <li key={i} className="flex items-center gap-2">
-                            <CheckCircle className="w-3.5 h-3.5 text-[#f15d22] shrink-0" />
-                            <span>{h}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
 
-                    {/* Price and CTA */}
-                    <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+                    {/* Body Content */}
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                       <div>
-                        <div className="text-[11px] text-neutral-400 font-semibold line-through">
-                          ${tour.originalPrice}
-                        </div>
-                        <div className="flex items-baseline gap-1">
-                          <span className="text-2xl font-extrabold text-[#f15d22] font-heading">
-                            ${tour.price}
-                          </span>
-                          <span className="text-[11px] text-neutral-500 font-medium">/ person</span>
-                        </div>
+                        <h3 className="font-heading text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-snug mb-2.5 group-hover:text-[#f15d22] transition-colors">
+                          {tour.name}
+                        </h3>
+                        <p className="text-neutral-600 text-sm font-normal leading-relaxed mb-4 line-clamp-3">
+                          {tour.description}
+                        </p>
+
+                        {/* Highlights */}
+                        <ul className="space-y-2 mb-6 text-xs sm:text-[13px] text-neutral-700 font-medium">
+                          {tour.highlights.map((h, i) => (
+                            <li key={i} className="flex items-center gap-2">
+                              <CheckCircle className="w-4 h-4 text-[#f15d22] shrink-0" />
+                              <span className="leading-tight">{h}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
 
-                      <button
-                        onClick={() => handleBook(tour.name)}
-                        className="bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md shadow-[#f15d22]/30 flex items-center gap-1.5 transition-all transform hover:scale-105 active:scale-95 cursor-pointer"
-                      >
-                        <span>BOOK NOW</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
+                      {/* Price and CTA */}
+                      <div className="pt-4 border-t border-neutral-100 flex items-center justify-between gap-3">
+                        <div>
+                          <div className="text-xs text-neutral-400 font-semibold line-through mb-0.5">
+                            ${tour.originalPrice}
+                          </div>
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-3xl font-extrabold text-[#f15d22] font-heading tracking-tight leading-none">
+                              ${tour.price}
+                            </span>
+                            <span className="text-xs text-neutral-500 font-medium">/ person</span>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={() => handleBook(tour.name)}
+                          className="bg-[#f15d22] hover:bg-[#d84b13] text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-5 py-3 rounded-xl shadow-md shadow-[#f15d22]/30 hover:shadow-lg hover:shadow-[#f15d22]/40 flex items-center gap-1.5 transition-all transform hover:scale-105 active:scale-95 cursor-pointer shrink-0"
+                        >
+                          <span>BOOK NOW</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

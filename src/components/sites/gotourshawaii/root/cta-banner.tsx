@@ -9,10 +9,10 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onBookNow }: CtaBannerProps) {
   return (
-    <section className="relative bg-[#071629] py-14 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#071629] py-10 sm:py-11 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Card with Parchment / Sand Texture */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-14 text-center border border-amber-200/20">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl py-8 sm:py-10 px-6 sm:px-12 text-center border border-amber-200/20">
           {/* Background Texture Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -27,11 +27,11 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
 
           {/* Content */}
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wider mb-4 leading-none">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wider mb-3 leading-none">
               EXPERIENCE HAWAII
             </h2>
 
-            <p className="text-neutral-700 text-xs sm:text-sm md:text-base leading-relaxed mb-8 font-normal">
+            <p className="text-neutral-700 text-xs sm:text-sm md:text-base leading-relaxed mb-6 font-normal">
               Take the next step towards your adventure! Book now and experience the magic firsthand.
               Don&apos;t miss out on unforgettable memories waiting to be made. Seize the moment and
               embark on your journey with us today!
