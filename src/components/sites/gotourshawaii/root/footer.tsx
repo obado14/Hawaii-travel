@@ -5,24 +5,24 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#111827] text-white pt-16 pb-8 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#111827] text-white pt-12 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-10 border-b border-white/10">
           {/* Column 1: Brand & Contact Info */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block relative w-28 h-28 sm:w-32 sm:h-32 transition-transform duration-300 hover:scale-105">
+            <Link href="/" className="inline-block relative w-28 h-24 sm:w-32 sm:h-28 transition-transform duration-300 hover:scale-105">
               <Image
                 src="/sites/gotourshawaii/root/site-logo-white-e1714962363418.png"
                 alt="Hawaii Travel Logo"
                 fill
-                className="object-contain"
+                className="object-contain object-left"
               />
             </Link>
 
-            <div className="space-y-3 pt-2 text-xs sm:text-sm text-neutral-300">
+            <div className="space-y-2.5 text-sm text-neutral-200">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#f15d22] shrink-0 mt-0.5" />
-                <span>2500 Kalakaua Ave Suite E Honolulu, Hawaii 96815</span>
+                <span className="leading-snug">2500 Kalakaua Ave Suite E Honolulu, Hawaii 96815</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#f15d22] shrink-0" />
@@ -39,7 +39,7 @@ export function Footer() {
             </div>
 
             {/* Social Media Circular Buttons */}
-            <div className="flex items-center gap-3 pt-3">
+            <div className="flex items-center gap-3 pt-2">
               <a
                 href="https://www.facebook.com/GoToursHawaii"
                 target="_blank"
@@ -67,14 +67,14 @@ export function Footer() {
 
           {/* Column 2: Experience */}
           <div className="space-y-3">
-            <h4 className="font-heading text-xl font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
               Experience
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-neutral-300">
+            <ul className="space-y-2.5 text-sm text-neutral-200">
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-relaxed block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block"
                 >
                   Hidden Gems of Oahu with Waimea Botanical Garden/ Waterfall
                 </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-relaxed block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block"
                 >
                   Hidden Gems of Oahu Byodo-In Temple &amp; Turtle Spotting
                 </Link>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-relaxed block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block"
                 >
                   Waikiki Turtle Canyon Snorkeling and Swim
                 </Link>
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-relaxed block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block"
                 >
                   Paina Waikiki Luau
                 </Link>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#f15d22] transition-colors leading-relaxed block"
+                  className="hover:text-[#f15d22] transition-colors leading-snug block"
                 >
                   USS Arizona Memorial Pearl Harbor Tour
                 </Link>
@@ -115,12 +115,12 @@ export function Footer() {
           </div>
 
           {/* Column 3: About Us & Media */}
-          <div className="space-y-6">
-            <div className="space-y-3">
-              <h4 className="font-heading text-xl font-bold text-white uppercase tracking-wider mb-2">
+          <div className="space-y-5">
+            <div className="space-y-2.5">
+              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
                 About Us
               </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
+              <ul className="space-y-2 text-sm text-neutral-200">
                 <li>
                   <Link href="/our-story" className="hover:text-[#f15d22] transition-colors">
                     Go Tours Hawaii History
@@ -139,11 +139,11 @@ export function Footer() {
               </ul>
             </div>
 
-            <div className="space-y-3">
-              <h4 className="font-heading text-xl font-bold text-white uppercase tracking-wider mb-2">
+            <div className="space-y-2.5 pt-1">
+              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
                 Media
               </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
+              <ul className="space-y-2 text-sm text-neutral-200">
                 <li>
                   <Link href="/blog" className="hover:text-[#f15d22] transition-colors">
                     Photos
@@ -160,7 +160,7 @@ export function Footer() {
 
           {/* Column 4: Find Us & Map */}
           <div className="space-y-3">
-            <h4 className="font-heading text-xl font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
               Find Us
             </h4>
             <div className="flex items-center group">
@@ -169,17 +169,17 @@ export function Footer() {
                 alt="Oahu Island Map and Headquarters Location"
                 width={317}
                 height={236}
-                className="w-auto h-36 sm:h-40 object-contain filter brightness-110 transition-transform duration-300 group-hover:scale-105"
+                className="w-auto h-32 sm:h-36 object-contain filter brightness-110 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-xs text-neutral-400">
+            <p className="text-xs sm:text-sm text-neutral-300">
               Centrally located in the heart of Waikiki, Honolulu.
             </p>
           </div>
         </div>
 
         {/* Bottom Bar: Copyright & Policy */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-neutral-300 gap-4">
           <p>© 2026 Go Tours Hawaii. All rights Reserved</p>
           <div className="flex items-center gap-6">
             <Link href="#contact" className="hover:text-white transition-colors">

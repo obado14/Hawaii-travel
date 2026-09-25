@@ -115,34 +115,34 @@ export function GuestReviews() {
           </div>
         </div>
 
-        {/* Testimonial Card Display */}
-        <div className="relative max-w-3xl mx-auto">
+        {/* Testimonial Card Display (Enlarged ~25% for better presence & readability) */}
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
           {/* Card */}
-          <div className="bg-white text-neutral-900 rounded-2xl p-7 sm:p-10 shadow-2xl transition-all duration-300 min-h-[260px] sm:min-h-[300px] flex flex-col justify-between border-4 border-white/20">
+          <div className="bg-white text-neutral-900 rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl transition-all duration-300 min-h-[320px] sm:min-h-[360px] flex flex-col justify-between border-4 border-white/20">
             <div>
               {/* 5 Stars */}
-              <div className="flex items-center justify-center gap-1 mb-5">
+              <div className="flex items-center justify-center gap-1.5 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#f59e0b] text-[#f59e0b]" />
+                  <Star key={i} className="w-6 h-6 sm:w-7 sm:h-7 fill-[#f59e0b] text-[#f59e0b]" />
                 ))}
               </div>
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-lg sm:text-xl font-bold text-center text-[#0c2340] mb-3">
+                <h4 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-center text-[#0c2340] mb-4">
                   {current.title}
                 </h4>
               )}
 
               {/* Review Quote */}
-              <p className="text-sm sm:text-base text-neutral-700 italic text-center font-normal leading-relaxed whitespace-pre-line max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl md:text-2xl text-neutral-800 italic text-center font-normal leading-relaxed whitespace-pre-line max-w-3xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
 
             {/* Author */}
-            <div className="mt-6 text-center">
-              <span className="font-heading text-base sm:text-lg font-bold text-[#f15d22] uppercase tracking-wide">
+            <div className="mt-8 text-center border-t border-neutral-100 pt-5">
+              <span className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-[#f15d22] uppercase tracking-wider">
                 ~ {current.author}
               </span>
             </div>
@@ -151,18 +151,18 @@ export function GuestReviews() {
           {/* Navigation Arrows */}
           <button
             onClick={prevReview}
-            className="absolute left-[-20px] sm:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-[-12px] sm:left-[-16px] md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
             aria-label="Previous Review"
           >
-            <ChevronLeft className="w-6 h-6 stroke-[3]" />
+            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
           </button>
 
           <button
             onClick={nextReview}
-            className="absolute right-[-20px] sm:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-[-12px] sm:right-[-16px] md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
             aria-label="Next Review"
           >
-            <ChevronRight className="w-6 h-6 stroke-[3]" />
+            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
           </button>
         </div>
 

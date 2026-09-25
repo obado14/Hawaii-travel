@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface FAQItem {
   id: number;
@@ -72,39 +72,46 @@ export function FAQSection() {
           </h2>
         </div>
 
-        {/* Accordions */}
+        {/* Accordions with smooth expand/collapse and refined hover effect */}
         <div className="space-y-4">
           {faqs.map((faq) => {
             const isOpen = openIds.includes(faq.id);
             return (
               <div
                 key={faq.id}
-                className="border-b border-white/20 pb-4 transition-colors"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/25 transition-all duration-300 px-5 sm:px-7 py-1 shadow-sm hover:shadow-lg"
               >
                 <button
                   onClick={() => toggle(faq.id)}
-                  className="w-full flex items-center justify-between text-left py-3 group focus:outline-none cursor-pointer"
+                  className="w-full flex items-center justify-between text-left py-4 sm:py-5 group focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base md:text-lg font-medium text-white group-hover:text-[#f5b324] transition-colors pr-4">
+                  <span className="text-base sm:text-lg md:text-xl font-medium text-white group-hover:text-[#f5b324] transition-colors pr-4">
                     {faq.question}
                   </span>
 
                   {/* Orange circle with arrow */}
                   <span
-                    className={`shrink-0 w-8 h-8 rounded-full bg-[#f15d22] text-white flex items-center justify-center transition-transform duration-300 ${
-                      isOpen ? "rotate-90 bg-amber-500" : "group-hover:scale-110"
+                    className={`shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#f15d22] text-white flex items-center justify-center transition-all duration-300 shadow-md ${
+                      isOpen ? "rotate-90 bg-amber-500 scale-105" : "group-hover:scale-110 group-hover:bg-[#d84b13]"
                     }`}
                   >
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                   </span>
                 </button>
 
-                {isOpen && (
-                  <div className="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed font-normal animate-in fade-in slide-in-from-top-1 duration-200 pl-1 pr-6">
-                    <p>{faq.answer}</p>
+                {/* Smooth Expand/Collapse Grid Transition */}
+                <div
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="pb-5 pt-1 text-sm sm:text-base text-neutral-200 leading-relaxed font-normal pl-0.5 pr-6 border-t border-white/10 mt-1">
+                      <p>{faq.answer}</p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

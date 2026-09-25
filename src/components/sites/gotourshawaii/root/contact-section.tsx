@@ -33,9 +33,9 @@ export function ContactSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Form Card (Left Column - 6/7 cols) */}
-          <div className="lg:col-span-6 bg-white text-neutral-900 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Form Card (Left Column - 7 cols) */}
+          <div className="lg:col-span-7 bg-white text-neutral-900 rounded-3xl p-7 sm:p-10 md:p-12 shadow-2xl border border-neutral-100">
             {isSubmitted ? (
               <div className="text-center py-12 space-y-4 animate-in fade-in duration-300">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
@@ -44,7 +44,7 @@ export function ContactSection() {
                 <h3 className="font-heading text-3xl font-bold text-[#0c2340]">
                   MAHALO FOR REACHING OUT!
                 </h3>
-                <p className="text-neutral-600 text-sm max-w-sm mx-auto">
+                <p className="text-neutral-600 text-base max-w-sm mx-auto">
                   We have received your message and one of our local tour specialists will contact you shortly.
                 </p>
                 <button
@@ -58,16 +58,16 @@ export function ContactSection() {
                       message: "",
                     });
                   }}
-                  className="mt-4 px-6 py-2 bg-[#f15d22] text-white rounded-lg text-sm font-semibold hover:bg-[#d84b13] transition-colors"
+                  className="mt-4 px-7 py-2.5 bg-[#f15d22] text-white rounded-xl text-sm font-semibold hover:bg-[#d84b13] transition-colors cursor-pointer"
                 >
                   Send Another Message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -76,11 +76,11 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-lg px-3.5 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                       Contact Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -89,14 +89,14 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+123 456 7890"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-lg px-3.5 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -105,17 +105,17 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="youremail@company.com"
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-lg px-3.5 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                       Services <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-lg px-3.5 py-2.5 text-sm text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
+                      className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all"
                     >
                       <option value="Oahu Island Tours">Oahu Island Tours</option>
                       <option value="Pearl Harbor Tours">Pearl Harbor Tours</option>
@@ -127,21 +127,21 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                     Message
                   </label>
                   <textarea
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Message"
-                    className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-lg px-3.5 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all resize-none"
+                    placeholder="Tell us about your travel dates and group..."
+                    className="w-full bg-[#f8f9fa] border border-neutral-300 rounded-xl px-4 py-3 text-base text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] focus:border-transparent transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-auto bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-2.5 rounded-lg shadow-lg shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                  className="w-auto bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-xl font-bold uppercase tracking-wider px-10 py-3.5 rounded-xl shadow-xl shadow-[#f15d22]/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                 >
                   SUBMIT
                 </button>
@@ -149,47 +149,49 @@ export function ContactSection() {
             )}
           </div>
 
-          {/* Contact Details (Right Column - 6/7 cols) */}
-          <div className="lg:col-span-6 space-y-6">
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#f5b324] uppercase tracking-wider">
-              CONTACT US
-            </h2>
+          {/* Contact Details (Right Column - 5 cols) */}
+          <div className="lg:col-span-5 space-y-7 lg:pl-4">
+            <div>
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#f5b324] uppercase tracking-wider mb-4 leading-tight">
+                CONTACT US
+              </h2>
 
-            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-              Got questions or need assistance? Contact us today! Our friendly team is here to help with
-              any inquiries, booking details, or special requests you may have.
-            </p>
+              <p className="text-neutral-200 text-base sm:text-lg leading-relaxed font-normal">
+                Got questions or need assistance? Contact us today! Our friendly team is here to help with
+                any inquiries, booking details, or special requests you may have.
+              </p>
+            </div>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-3.5">
-                <MapPin className="w-5 h-5 text-[#f15d22] shrink-0 mt-0.5" />
-                <span className="text-sm text-neutral-200">
+            <div className="space-y-5 pt-1">
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#f15d22] shrink-0 mt-0.5" />
+                <span className="text-base text-neutral-100 font-medium">
                   2500 Kalakaua Ave Suite E Honolulu, Hawaii 96815
                 </span>
               </div>
 
-              <div className="flex items-center gap-3.5">
-                <Phone className="w-5 h-5 text-[#f15d22] shrink-0" />
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#f15d22] shrink-0" />
                 <a
                   href="tel:808-926-3090"
-                  className="text-sm text-neutral-200 hover:text-white transition-colors"
+                  className="text-base text-neutral-100 font-medium hover:text-[#f5b324] transition-colors"
                 >
                   808-926-3090
                 </a>
               </div>
 
-              <div className="flex items-center gap-3.5">
-                <Clock className="w-5 h-5 text-[#f15d22] shrink-0" />
-                <span className="text-sm text-neutral-200">
+              <div className="flex items-center gap-4">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-[#f15d22] shrink-0" />
+                <span className="text-base text-neutral-100 font-medium">
                   6am-9pm HST, Available <strong className="text-white">7 days a week!</strong>
                 </span>
               </div>
 
-              <div className="flex items-center gap-3.5">
-                <Mail className="w-5 h-5 text-[#f15d22] shrink-0" />
+              <div className="flex items-center gap-4">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#f15d22] shrink-0" />
                 <a
                   href="mailto:info@gotourshawaii.com"
-                  className="text-sm text-neutral-200 hover:text-white transition-colors"
+                  className="text-base text-neutral-100 font-medium hover:text-[#f5b324] transition-colors"
                 >
                   info@gotourshawaii.com
                 </a>

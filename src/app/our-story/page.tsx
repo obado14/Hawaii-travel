@@ -47,13 +47,13 @@ export default function OurStoryPage() {
           </div>
 
           {/* Polynesian Divider */}
-          <div className="absolute bottom-0 inset-x-0 w-full pointer-events-none z-20 translate-y-0.5">
-            <div className="relative w-full aspect-[1536/284]">
+          <div className="absolute bottom-0 inset-x-0 w-full pointer-events-none z-20 translate-y-0.5 overflow-hidden">
+            <div className="relative w-full h-24 sm:h-32 md:h-40 lg:h-44">
               <Image
                 src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
                 alt="Polynesian mountain divider"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover object-top"
                 priority
               />
             </div>

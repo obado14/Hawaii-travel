@@ -27,21 +27,21 @@ export function MissionSection() {
         </div>
 
         {/* 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-8">
-          {/* Excellence */}
-          <div className="flex flex-col items-center text-center px-4 group">
-            <div className="relative w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-10 lg:gap-12">
+          {/* Column 1: Local Experts */}
+          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+            <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/1.png"
-                alt="Excellence Emblem"
+                alt="Local Experts Emblem"
                 fill
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl font-bold text-[#f15d22] uppercase tracking-wider mb-3">
-              EXCELLENCE
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
+              LOCAL EXPERTS
             </h3>
-            <p className="text-neutral-700 text-xs sm:text-sm font-normal leading-relaxed">
+            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
               We are extremely proud to be 100% locally-owned and operated. With one finger directly on
               the pulse of the Hawaiian Islands, living and working here is second nature to us. This
               guarantees that you will receive the best of everything Hawaii has to offer, with the peace
@@ -49,9 +49,9 @@ export function MissionSection() {
             </p>
           </div>
 
-          {/* Responsibility */}
-          <div className="flex flex-col items-center text-center px-4 group">
-            <div className="relative w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110">
+          {/* Column 2: Responsibility */}
+          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+            <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/2.png"
                 alt="Responsibility Emblem"
@@ -59,10 +59,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl font-bold text-[#f15d22] uppercase tracking-wider mb-3">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
               RESPONSIBILITY
             </h3>
-            <p className="text-neutral-700 text-xs sm:text-sm font-normal leading-relaxed">
+            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
               Aloha is a philosophy we carry with us daily. Whether you interact with our tour guides,
               phone representatives, or management, our aloha experts adhere to the highest standard of
               responsibility and accountability. We rely on your feedback to ensure that you are being
@@ -70,20 +70,20 @@ export function MissionSection() {
             </p>
           </div>
 
-          {/* Value */}
-          <div className="flex flex-col items-center text-center px-4 group">
-            <div className="relative w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110">
+          {/* Column 3: Aloha */}
+          <div className="flex flex-col items-center text-center px-4 sm:px-6 group">
+            <div className="relative w-22 h-22 sm:w-24 sm:h-24 mb-5 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/sites/gotourshawaii/root/3.png"
-                alt="Value Emblem"
+                alt="Aloha Emblem"
                 fill
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl font-bold text-[#f15d22] uppercase tracking-wider mb-3">
-              VALUE
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wider mb-3.5">
+              ALOHA
             </h3>
-            <p className="text-neutral-700 text-xs sm:text-sm font-normal leading-relaxed">
+            <p className="text-neutral-800 text-sm sm:text-base font-normal leading-relaxed sm:leading-7">
               We promise to deliver a memorable experience that will last a lifetime. Our team has put
               in countless hours making sure your experience with us is one to remember! Additionally,
               all of the tour and activity providers we work with have been through our thorough process

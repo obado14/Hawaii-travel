@@ -48,10 +48,10 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none mb-3">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#0c2340] uppercase tracking-wide leading-none mb-4">
             CHOOSE YOUR EXPERIENCE
           </h2>
-          <p className="text-neutral-700 text-sm sm:text-base font-normal max-w-2xl mx-auto">
+          <p className="text-neutral-700 text-base sm:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
             Come experience the best of our island with a local expert on one of our highly rated
             Hidden Gems of Oahu tour options.
           </p>
@@ -63,7 +63,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
             <div
               key={exp.id}
               onClick={() => onSelectExperience?.(exp.title)}
-              className="group relative h-[440px] sm:h-[480px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
+              className="group relative h-[480px] sm:h-[520px] lg:h-[540px] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-black/5"
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -85,18 +85,18 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
               </div>
 
               {/* Content (Bottom) */}
-              <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 z-10 flex flex-col justify-end">
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#f15d22] uppercase tracking-wide mb-2 transition-colors group-hover:text-amber-400">
+              <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 z-10 flex flex-col justify-end">
+                <h3 className="font-heading text-3xl sm:text-4xl font-bold text-[#f15d22] uppercase tracking-wider mb-2.5 transition-colors group-hover:text-amber-400 drop-shadow-sm">
                   {exp.title}
                 </h3>
-                <p className="text-neutral-200 text-xs sm:text-sm font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
+                <p className="text-neutral-100 text-sm sm:text-base font-normal leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
                   {exp.description}
                 </p>
 
                 {/* View Details prompt on hover */}
-                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-white/90 group-hover:text-white">
-                  <span>Explore Tour</span>
-                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                <div className="mt-4 flex items-center gap-2 text-sm font-bold text-white tracking-wide">
+                  <span className="group-hover:text-amber-300 transition-colors">Explore Tour</span>
+                  <span className="transition-transform group-hover:translate-x-1.5 text-amber-300">→</span>
                 </div>
               </div>
             </div>

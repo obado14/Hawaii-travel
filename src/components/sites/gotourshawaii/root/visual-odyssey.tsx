@@ -102,16 +102,26 @@ export function VisualOdyssey() {
         <div className="relative max-w-4xl mx-auto">
           {/* Main Displayed Slide */}
           <div className="relative h-[380px] sm:h-[480px] md:h-[580px] w-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 group">
-            <Image
-              src={photos[currentIndex].src}
-              alt={photos[currentIndex].alt}
-              fill
-              className="object-cover object-center transition-all duration-700 ease-in-out"
-              priority
-            />
+            {/* Layered smooth crossfade images */}
+            {photos.map((photo, idx) => (
+              <div
+                key={photo.id}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                  idx === currentIndex ? "opacity-100 z-0" : "opacity-0 z-0 pointer-events-none"
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover object-center"
+                  priority={idx === 0}
+                />
+              </div>
+            ))}
 
             {/* Gradient Caption Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-between p-6 sm:p-8">
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-6 sm:p-8">
               <div>
                 <span className="text-xs uppercase font-bold text-[#f15d22] tracking-widest block mb-1">
                   Photo {currentIndex + 1} of {photos.length}
@@ -123,7 +133,7 @@ export function VisualOdyssey() {
 
               <button
                 onClick={() => setSelectedPhoto(photos[currentIndex])}
-                className="p-2.5 rounded-full bg-black/50 hover:bg-[#f15d22] text-white transition-colors cursor-pointer"
+                className="p-2.5 rounded-full bg-black/50 hover:bg-[#f15d22] text-white transition-colors cursor-pointer shadow-md"
                 title="Expand image"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -154,23 +164,23 @@ export function VisualOdyssey() {
             </button>
           </div>
 
-          {/* Thumbnail Track */}
+          {/* Thumbnail Track with gentle hover effects */}
           <div className="mt-6 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto pb-2">
             {photos.map((photo, idx) => (
               <button
                 key={photo.id}
                 onClick={() => setCurrentIndex(idx)}
-                className={`relative w-14 h-14 sm:w-18 sm:h-18 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
+                className={`group/thumb relative w-14 h-14 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 border-2 transition-all duration-300 cursor-pointer ${
                   currentIndex === idx
-                    ? "border-[#f15d22] scale-105 shadow-md ring-2 ring-[#f15d22]/30"
-                    : "border-transparent opacity-60 hover:opacity-100"
+                    ? "border-[#f15d22] scale-105 shadow-lg ring-2 ring-[#f15d22]/40 opacity-100"
+                    : "border-transparent opacity-65 hover:opacity-100 hover:scale-105 hover:shadow-md hover:border-white/40"
                 }`}
               >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover/thumb:scale-110"
                 />
               </button>
             ))}
