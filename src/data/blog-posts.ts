@@ -284,4 +284,146 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "authentic-hawaiian-luau",
+    title: "The Art of the Hawaiian Luau: Ancient Traditions, Imu Feasts & Fire Dancers",
+    category: "History & Culture",
+    date: "July 28, 2026",
+    readTime: "6 min read",
+    image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
+    excerpt:
+      "Experience the deep cultural heartbeat of Polynesia. Discover the significance of the sacred imu underground oven, storytelling hula, and the warrior fire knife dance.",
+    author: {
+      name: "Koa Takahashi",
+      role: "Lead Cultural Guide & Oahu Native",
+    },
+    relatedTourName: "Authentic Hawaiian Luau Experience",
+    relatedTourLink: "/tour-packages",
+    sections: [
+      {
+        heading: "Ancient Origins of the Luau Feast",
+        paragraphs: [
+          "Historically known as an 'aha'aina (gathering for a meal), the traditional feast commemorated significant milestones: wartime victories, bountiful harvests, and births. In 1819, King Kamehameha II abolished the ancient tapu system by dining publicly with women, creating the modern celebration we know as the luau.",
+          "Today's luau honors this spirit of communal joy, hospitality, and cultural storytelling through music, dance, and authentic Hawaiian cuisine.",
+        ],
+      },
+      {
+        heading: "The Sacred Imu Ceremony",
+        paragraphs: [
+          "The centerpiece of any traditional luau is the kalua pig, cooked for 8 to 12 hours in an imu—an underground oven heated by porous volcanic stones and wrapped in fragrant banana leaves and ti leaves.",
+          "Attending the unearthing ceremony (umu ceremony) reveals meat so tender and richly smoked that it falls apart with a gentle touch.",
+        ],
+        tips: [
+          "Sample traditional sides: lomi salmon, poi (fermented taro), and haupia coconut pudding.",
+          "Arrive 30 minutes early to participate in lei making and Polynesian tattoo crafting workshops.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "lanikai-pillbox-hike",
+    title: "Lanikai Pillbox Hike: Sunrise Views Over the Mokulua Islands",
+    category: "Adventure",
+    date: "July 08, 2026",
+    readTime: "5 min read",
+    image: "/sites/gotourshawaii/root/Visual-img-6-e1714632145979.jpg",
+    excerpt:
+      "One of Oahu's most photogenic ridge trails overlooking Kailua Bay and the twin Mokulua islands. Here is your trail guide, safety tips, and sunrise timing.",
+    author: {
+      name: "Leilani Kealoha",
+      role: "Adventure & Hiking Specialist",
+    },
+    relatedTourName: "Hidden Gems of Oahu with Waimea Botanical Garden & Waterfall",
+    relatedTourLink: "/tour-packages",
+    sections: [
+      {
+        heading: "The Kaiwa Ridge Experience",
+        paragraphs: [
+          "Also known as the Kaiwa Ridge Trail, this 1.8-mile trail traverses a scenic windward ridge overlooking Lanikai Beach—frequently rated among the most beautiful beaches in the world. Two historic military observation bunkers (pillboxes) built during WWII serve as premier vista perches.",
+          "Looking out toward the horizon, the iconic twin islets known as the Mokulua Islands ('The Mokes') rise dramatically from the calm sapphire waters.",
+        ],
+      },
+      {
+        heading: "Best Times & Trail Etiquette",
+        paragraphs: [
+          "Sunrise is undoubtedly the most breathtaking time on the ridge. Watching the sun breach the horizon behind the Mokulua Islands casts vivid pink and gold reflections across the reef flats.",
+          "Because the trailhead is nestled in a quiet residential neighborhood, respect local residents by maintaining low noise levels and never parking in private driveways.",
+        ],
+        tips: [
+          "Bring a small headlamp or flashlight if starting the ascent before dawn.",
+          "Trail terrain has loose dirt and gravel; hiking shoes with good traction are recommended.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "haleiwa-town-guide",
+    title: "A Day in Historic Haleiwa: Surf Heritage, Boutiques & Shave Ice",
+    category: "Travel Guide",
+    date: "June 25, 2026",
+    readTime: "5 min read",
+    image: "/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg",
+    excerpt:
+      "Step into the laid-back surf capital of Oahu. Historic plantation architecture, world-famous Matsumoto Shave Ice, art galleries, and surf breaks.",
+    author: {
+      name: "David Vance",
+      role: "North Shore Storyteller & Guide",
+    },
+    relatedTourName: "Premier Circle Island with Dole Plantation & North Shore",
+    relatedTourLink: "/tour-packages",
+    sections: [
+      {
+        heading: "The Historic Gateway to the North Shore",
+        paragraphs: [
+          "Founded in the late 1800s as a sugar plantation hub and coastal railway terminus, Haleiwa Town still preserves its charming wooden storefronts, rustic boardwalks, and timeless country atmosphere.",
+          "Today, it is globally celebrated as the social headquarters of professional big wave surfing during the winter Triple Crown championships.",
+        ],
+      },
+      {
+        heading: "Matsumoto Shave Ice Tradition",
+        paragraphs: [
+          "Serving islanders and visitors since 1951, Matsumoto Shave Ice remains a quintessential North Shore pilgrimage. Fine, snow-like shaved ice topped with artisanal tropical syrups—lilikoi (passion fruit), guava, and mango—served with vanilla ice cream and sweet azuki beans.",
+        ],
+        tips: [
+          "Cross the historic 1921 Anahulu Rainbow Bridge on foot for gorgeous river and harbor views.",
+          "Explore local surf shops where legendary shapers handcraft custom surfboards.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "kualoa-ranch-jurassic",
+    title: "Exploring Kualoa Ranch: Jurassic Valley Filming Sites & Sacred Peaks",
+    category: "Nature & Hiking",
+    date: "June 14, 2026",
+    readTime: "6 min read",
+    image: "/sites/gotourshawaii/root/Hidden-Gems-of-Oahu.jpg",
+    excerpt:
+      "Towering green volcanic spires where Jurassic Park was filmed. How this 4,000-acre private nature reserve preserves native Hawaiian sanctuary and culture.",
+    author: {
+      name: "Koa Takahashi",
+      role: "Lead Island Guide & Oahu Native",
+    },
+    relatedTourName: "Hidden Gems of Oahu with Waimea Botanical Garden & Waterfall",
+    relatedTourLink: "/tour-packages",
+    sections: [
+      {
+        heading: "A Sacred Valley of Hawaiian Royalty",
+        paragraphs: [
+          "Long before Hollywood directors chose Kualoa Ranch as the dramatic backdrop for Jurassic Park, Lost, and Godzilla, this majestic valley was revered as one of the most sacred places on Oahu (wahi pana). It was where chiefs brought their children to be trained in the arts of leadership and spiritual lore.",
+          "The jagged Koʻolau mountain ridges, often shrouded in gentle morning mist, evoke a Jurassic landscape untouched by the modern world.",
+        ],
+      },
+      {
+        heading: "Conservation and Sustainable Agriculture",
+        paragraphs: [
+          "Encompassing 4,000 acres stretching from mountain peaks down to the ocean (ahupuaʻa), Kualoa operates as a thriving working cattle ranch and sustainable diversified farm growing cacao, oysters, and tropical fruits.",
+        ],
+        tips: [
+          "Look for Mokoliʻi island (Chinaman's Hat) rising offshore just beyond Kualoa Regional Park.",
+          "All our full-day guided tours pause at scenic overlooks framing the iconic valley ridges.",
+        ],
+      },
+    ],
+  },
 ];
