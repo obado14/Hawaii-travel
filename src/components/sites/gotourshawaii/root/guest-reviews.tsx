@@ -14,48 +14,31 @@ interface Review {
 const reviews: Review[] = [
   {
     id: 1,
-    quote: "Tim was awesome!!! It was fun, educational & overall a beautiful experience!",
-    author: "Megan O.",
-  },
-  {
-    id: 2,
+    title: "Pengalaman Luar Biasa Bersama Keluarga!",
     quote:
-      "Matthew was amazing! He explained everything so well and we learned so many facts that we did not know about 🙂 He was so so kind! Truly made my parent’s 30th anniversary a great one! Thank you, Matthew ☺️",
+      "Pemandu kami sangat luar biasa! Menjelaskan setiap sejarah dan keindahan budaya Hawaii dengan sangat hangat dan ramah. Merupakan pengalaman perjalanan terbaik yang pernah kami rasakan!",
     author: "Kathy L.",
   },
   {
-    id: 3,
-    title: "Kanoe was the best!",
+    id: 2,
+    title: "Pemandu Berpengetahuan Luas & Seru",
     quote:
-      "Great tour company! Picked us up at our hotel and gave an incredible tour for Pearl Harbor. We had Kanoe. She was full of more trivia than any person I know and also a great conversationalist. Would definitely use them again next time we come back to Hawaii.",
+      "Dari penjemputan hingga akhir tur, energi dan keramahtamahan pemandu membuat liburan kami di Oahu tak terlupakan. Sangat direkomendasikan bagi siapa pun yang baru pertama kali ke Hawaii.",
+    author: "Sean K.",
+  },
+  {
+    id: 3,
+    title: "Tur Pearl Harbor Sangat Berkesan",
+    quote:
+      "Penjemputan hotel tepat waktu dan tur Pearl Harbor yang sangat menyentuh. Pemandu sangat menguasai sejarah lokal kepulauan. Pasti akan memilih Go Tours Hawaii lagi saat kembali ke sini.",
     author: "Kendra L.",
   },
   {
     id: 4,
+    title: "Snorkeling Magis Bersama Penyu Laut",
     quote:
-      "My girlfriend and I just arrived in Honolulu for her birthday weekend, and she had heard great things about Go Tours Hawaii — now we know why! From the moment we arrived, RJ was incredibly helpful and friendly while guiding us around the island.\n\nWe were especially grateful for how he educated us at each stop, not just about the locations but about the culture and history of the island. His knowledge, energy, and passion really stood out and made the experience even more special.\n\nThank you again, RJ, for the laughs, the great energy, and the education — you made her birthday weekend unforgettable!",
-    author: "Sean K.",
-  },
-  {
-    id: 5,
-    title: "Amazing Snorkeling Experience with Sea Turtles!",
-    quote:
-      "We had an incredible boat tour in the ocean and went snorkeling. The experience was unforgettable! We saw large sea turtles up close, along with many colorful fish swimming around us. The water was crystal clear, and the entire trip was well-organized. It was a perfect mix of adventure and relaxation. If you’re looking for a great snorkeling experience, I highly recommend it!",
+      "Melihat penyu hijau (honu) dari dekat di air laut sebening kristal sungguh momen impian. Seluruh rangkaian tur terorganisir dengan sangat rapi, nyaman, dan aman.",
     author: "Alex B.",
-  },
-  {
-    id: 6,
-    title: "Great tour.",
-    quote:
-      "The tour was nice. The driver was really good and so was the tour guide, the Johns. It had a good atmosphere for being a full bus and I found nothing wrong with this tour.",
-    author: "MaKayla M.",
-  },
-  {
-    id: 7,
-    title: "Perfect experience for first timers.",
-    quote:
-      "Going on a guided tour around the island is definitely a must, especially if you’re a first time visitor. The tour guide and driver are friendly and knowledgeable about the island. There are no snacks allowed on the bus however frequent stops are made where you can grab a bite. Overall the views are spectacular I feel like we really experienced the beauty of the island.",
-    author: "Diona H.",
   },
 ];
 
@@ -73,7 +56,7 @@ export function GuestReviews() {
   const current = reviews[currentIndex];
 
   return (
-    <section className="relative bg-[#081d38] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden text-white">
+    <section className="relative bg-[#081d38] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden text-white">
       {/* Background Texture Overlay */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -86,14 +69,19 @@ export function GuestReviews() {
 
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-10">
-          <h2 className="font-heading text-4xl sm:text-6xl md:text-7xl text-[#f5b324] uppercase tracking-wider drop-shadow-md">
-            HEAR FROM OUR GUESTS
+        <div className="text-center mb-7 sm:mb-9">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
+            <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
+              KEPUASAN WISATAWAN
+            </span>
+          </div>
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#f5b324] uppercase tracking-wider drop-shadow-md">
+            TESTIMONI TAMU KAMI
           </h2>
 
           {/* TripAdvisor Rating Summary */}
-          <div className="mt-4 flex items-center justify-center gap-4">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14">
+          <div className="mt-3.5 flex items-center justify-center gap-3">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12">
               <Image
                 src="/sites/gotourshawaii/root/TC-Sticker-2023_White-1.png"
                 alt="TripAdvisor Travelers' Choice"
@@ -102,53 +90,53 @@ export function GuestReviews() {
               />
             </div>
             <div className="text-left">
-              <div className="text-xs uppercase tracking-wider text-neutral-300 font-semibold">
-                Overall Rating
+              <div className="text-[11px] uppercase tracking-wider text-neutral-300 font-semibold">
+                Rating Keseluruhan
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-extrabold text-[#f5b324] leading-none font-heading">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#f5b324] leading-none font-heading">
                   4.9
                 </span>
-                <span className="text-xs text-neutral-300 font-medium">4,678 reviews</span>
+                <span className="text-[11px] sm:text-xs text-neutral-300 font-medium">4.678 ulasan</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Testimonial Card Display */}
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="relative max-w-3xl mx-auto px-2 sm:px-6">
           {/* Card */}
-          <div className="bg-white text-neutral-900 rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 min-h-[320px] sm:min-h-[360px] flex flex-col justify-between border-4 border-white/20 hover:border-amber-400/30 relative">
+          <div className="bg-white text-neutral-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl min-h-[220px] sm:min-h-[250px] flex flex-col justify-between border-2 border-white/20 relative">
             {/* Animated Content on Slide Change */}
             <div key={current.id} className="animate-in fade-in duration-300">
               {/* 5 Stars & Verified Badge */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
-                <div className="flex items-center gap-1.5">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mb-4">
+                <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 sm:w-7 sm:h-7 fill-[#f59e0b] text-[#f59e0b] drop-shadow-sm" />
+                    <Star key={i} className="w-5 h-5 fill-[#f59e0b] text-[#f59e0b] drop-shadow-sm" />
                   ))}
                 </div>
-                <span className="text-xs uppercase tracking-wider font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
-                  ✓ Verified Tour Guest
+                <span className="text-[11px] uppercase tracking-wider font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                  ✓ Tamu Tur Terverifikasi
                 </span>
               </div>
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-center text-[#0c2340] mb-4">
+                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#0c2340] mb-2.5">
                   {current.title}
                 </h4>
               )}
 
               {/* Review Quote */}
-              <p className="text-base sm:text-xl md:text-[1.35rem] text-neutral-800 italic text-center font-normal leading-relaxed whitespace-pre-line max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-neutral-700 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
 
             {/* Author */}
-            <div className="mt-8 text-center border-t border-neutral-100 pt-5">
-              <span className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-[#f15d22] uppercase tracking-wider">
+            <div className="mt-5 text-center border-t border-neutral-100 pt-3">
+              <span className="font-heading text-base sm:text-lg font-bold text-[#f15d22] uppercase tracking-wider">
                 ~ {current.author}
               </span>
             </div>
@@ -157,31 +145,31 @@ export function GuestReviews() {
           {/* Navigation Arrows */}
           <button
             onClick={prevReview}
-            className="absolute left-[-12px] sm:left-[-16px] md:left-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
-            aria-label="Previous Review"
+            className="absolute left-[-6px] sm:left-[-16px] md:left-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
+            aria-label="Ulasan Sebelumnya"
           >
-            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
           <button
             onClick={nextReview}
-            className="absolute right-[-12px] sm:right-[-16px] md:right-[-24px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-2xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
-            aria-label="Next Review"
+            className="absolute right-[-6px] sm:right-[-16px] md:right-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
+            aria-label="Ulasan Berikutnya"
           >
-            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
         </div>
 
         {/* Dots Pagination */}
-        <div className="mt-8 flex items-center justify-center gap-2">
+        <div className="mt-6 flex items-center justify-center gap-2">
           {reviews.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                currentIndex === idx ? "w-8 bg-[#f15d22]" : "w-2.5 bg-white/30 hover:bg-white/60"
+              className={`h-2 rounded-full transition-all cursor-pointer ${
+                currentIndex === idx ? "w-6 bg-[#f15d22]" : "w-2 bg-white/30 hover:bg-white/60"
               }`}
-              aria-label={`Go to review ${idx + 1}`}
+              aria-label={`Buka ulasan ${idx + 1}`}
             />
           ))}
         </div>

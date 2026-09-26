@@ -9,10 +9,8 @@ import { WhyChooseUs } from "@/components/sites/gotourshawaii/root/why-choose-us
 import { DiamondHeadBanner } from "@/components/sites/gotourshawaii/root/diamond-head-banner";
 import { VisualOdyssey } from "@/components/sites/gotourshawaii/root/visual-odyssey";
 import { GuestReviews } from "@/components/sites/gotourshawaii/root/guest-reviews";
-import { MissionSection } from "@/components/sites/gotourshawaii/root/mission-section";
 import { FAQSection } from "@/components/sites/gotourshawaii/root/faq-section";
 import { TrustBadges } from "@/components/sites/gotourshawaii/root/trust-badges";
-import { ContactSection } from "@/components/sites/gotourshawaii/root/contact-section";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
@@ -37,52 +35,43 @@ export default function Home() {
 
       {/* 3. Hero Section with Koolau mountains, TripAdvisor badge & CTA */}
       <main className="flex-1">
+        {/* Step 1: Hero */}
         <Hero onOpenBooking={() => handleOpenBooking("Circle Island Tour")} />
 
-        {/* 4. Choose Your Experience (Circle Island, Luau, Pearl Harbor) */}
+        {/* Step 2: Choose Your Experience (Circle Island, Luau, Pearl Harbor) */}
         <ScrollReveal>
           <ExperienceCards onSelectExperience={(title) => handleOpenBooking(title)} />
         </ScrollReveal>
 
-        {/* 5. NEW: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
+        {/* Step 3: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
         <ScrollReveal delay={100}>
           <WhyChooseUs />
         </ScrollReveal>
 
-        {/* 6. Exclusive Diamond Head Shuttle Banner */}
+        {/* Step 4: Featured Experience (Diamond Head Shuttle) */}
         <ScrollReveal>
           <DiamondHeadBanner onBookShuttle={() => handleOpenBooking("Diamond Head Shuttle")} />
         </ScrollReveal>
 
-        {/* 7. Visual Odyssey interactive photo carousel */}
+        {/* Step 5: Visual Experience (Visual Odyssey photo gallery) */}
         <ScrollReveal>
           <VisualOdyssey />
         </ScrollReveal>
 
-        {/* 8. Hear From Our Guests review slider & ratings */}
+        {/* Step 6: Testimonials (Hear From Our Guests review slider) */}
         <ScrollReveal>
           <GuestReviews />
         </ScrollReveal>
 
-        {/* 9. Mission: Excellence, Responsibility, Value */}
-        <ScrollReveal>
-          <MissionSection />
-        </ScrollReveal>
-
-        {/* 10. Frequently Asked Questions interactive accordions */}
+        {/* Step 7: FAQ (Frequently Asked Questions - 4 Core Questions) */}
         <ScrollReveal>
           <FAQSection />
         </ScrollReveal>
 
-        {/* 11. Partner Trust Badges */}
+        {/* Partner Trust Badges (Compact credibility strip) */}
         <TrustBadges />
 
-        {/* 12. Contact Form & Details */}
-        <ScrollReveal>
-          <ContactSection />
-        </ScrollReveal>
-
-        {/* 13. Experience Hawaii Callout Banner */}
+        {/* Step 8: Single Final CTA (Rasakan Keajaiban Hawaii) */}
         <CtaBanner onBookNow={() => handleOpenBooking("Circle Island Tour")} />
       </main>
 

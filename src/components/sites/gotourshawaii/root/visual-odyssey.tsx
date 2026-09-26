@@ -87,26 +87,26 @@ export function VisualOdyssey() {
   const activePhoto = photos[currentIndex];
 
   return (
-    <section className="relative bg-[#0c1f38] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-[#0c1f38] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 mb-3 shadow-xs">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#f5b324]" />
             <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
               GALERI PERJALANAN
             </span>
           </div>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-md">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-2 leading-none drop-shadow-md">
             PETUALANGAN VISUAL
           </h2>
-          <p className="text-neutral-300 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
-            Potret momen keindahan dan kenangan magis dari para tamu kami saat menjelajahi surga Hawaii.
+          <p className="text-neutral-300 text-xs sm:text-sm font-normal max-w-lg mx-auto leading-relaxed">
+            Potret keindahan alam dan momen berkesan para tamu kami saat menjelajahi surga Hawaii.
           </p>
         </div>
 
         {/* Main Stage Image */}
-        <div className="relative w-full h-[360px] sm:h-[480px] md:h-[540px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
+        <div className="relative w-full h-[260px] sm:h-[340px] md:h-[400px] lg:h-[440px] rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
           <Image
             src={activePhoto.src}
             alt={activePhoto.alt}
@@ -121,54 +121,54 @@ export function VisualOdyssey() {
           {/* Left / Right Nav Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
             aria-label="Foto Sebelumnya"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
             aria-label="Foto Berikutnya"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Fullscreen Button */}
           <button
             onClick={() => setSelectedPhoto(activePhoto)}
-            className="absolute top-4 sm:top-6 right-4 sm:right-6 w-11 h-11 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer z-10"
+            className="absolute top-3.5 sm:top-5 right-3.5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-[#f15d22] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer z-10"
             aria-label="Lihat Layar Penuh"
           >
-            <Maximize2 className="w-5 h-5" />
+            <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Caption Overlay */}
-          <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 lg:p-10 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 lg:p-7 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest block mb-1">
+              <span className="text-[11px] sm:text-xs font-bold text-[#f5b324] uppercase tracking-widest block mb-0.5">
                 Foto {currentIndex + 1} dari {photos.length}
               </span>
-              <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white uppercase drop-shadow-md">
+              <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-white uppercase drop-shadow-md">
                 {activePhoto.caption}
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-neutral-300 max-w-md italic">
+            <p className="text-xs text-neutral-300 max-w-sm italic hidden sm:block">
               &ldquo;{activePhoto.alt}&rdquo;
             </p>
           </div>
         </div>
 
         {/* Thumbnail Carousel Bar */}
-        <div className="mt-5 grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-3">
+        <div className="mt-3.5 sm:mt-4 grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-2.5">
           {photos.map((photo, idx) => (
             <button
               key={photo.id}
               onClick={() => setCurrentIndex(idx)}
-              className={`relative h-16 sm:h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
+              className={`relative h-13 sm:h-16 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
                 idx === currentIndex
-                  ? "border-[#f15d22] scale-105 shadow-lg ring-2 ring-[#f15d22]/50"
+                  ? "border-[#f15d22] scale-105 shadow-md ring-2 ring-[#f15d22]/50"
                   : "border-transparent opacity-60 hover:opacity-100"
               }`}
               aria-label={`Pilih foto ${idx + 1}`}
