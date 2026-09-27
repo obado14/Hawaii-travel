@@ -29,7 +29,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
       {/* Hero Content with clear hierarchy and focal points */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 sm:pt-12 pb-24 sm:pb-30 lg:pb-36">
         {/* TripAdvisor Award Badge */}
-        <div className="inline-flex items-center gap-2.5 mb-5 sm:mb-6 px-4 py-1.5 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-700">
+        <div className="inline-flex items-center gap-2.5 mb-5 sm:mb-6 px-4 py-1.5 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
           <div className="w-5 h-5 rounded-full bg-[#2A9D8F] flex items-center justify-center text-white shrink-0 shadow-sm">
             <Award className="w-3 h-3" />
           </div>
@@ -44,7 +44,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
         </div>
 
         {/* Huge Bold Headline - The Focal Point */}
-        <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-normal text-white uppercase tracking-wider leading-[0.95] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] mb-4 sm:mb-5 animate-in fade-in slide-in-from-bottom-3 duration-700 delay-150">
+        <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-normal text-white uppercase tracking-wider leading-[0.95] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] mb-4 sm:mb-5">
           PENGALAMAN TUR KELILING
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-[#F4A261] to-amber-100 mt-1 drop-shadow-[0_2px_12px_rgba(244,162,97,0.4)]">
             PULAU OAHU TERBAIK
@@ -52,12 +52,12 @@ export function Hero({ onOpenBooking }: HeroProps) {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-neutral-100 font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] mb-7 sm:mb-8 animate-in fade-in slide-in-from-bottom-2 duration-700 delay-300">
+        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-neutral-100 font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] mb-7 sm:mb-8">
           Tur Pulau Oahu, Ekskursi Bersejarah, &amp; Pesta Luau Hawaii Autentik.
         </p>
 
         {/* Primary and Secondary CTA Buttons: Book Now & Explore Tours */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-6 sm:mb-7 animate-in fade-in slide-in-from-bottom-2 duration-700 delay-500">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-6 sm:mb-7">
           <Link
             href="/booking"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F4A261] hover:bg-[#e76f51] text-white px-9 py-3.5 sm:px-11 sm:py-4 rounded-xl font-heading text-base sm:text-lg font-bold uppercase tracking-wider shadow-2xl shadow-[#F4A261]/50 hover:shadow-[#F4A261]/70 ring-2 ring-white/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
@@ -76,7 +76,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
         </div>
 
         {/* Subtle Trust Indicators Bar */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-3.5 sm:gap-5 text-xs sm:text-sm text-neutral-200 font-medium px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 animate-in fade-in duration-1000 delay-700">
+        <div className="inline-flex flex-wrap items-center justify-center gap-3.5 sm:gap-5 text-xs sm:text-sm text-neutral-200 font-medium px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
           <span className="flex items-center gap-1.5 text-[#F4A261]">
             ★ <strong className="text-white">4.9 / 5.0</strong> (5.000+ Ulasan)
           </span>

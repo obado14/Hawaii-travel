@@ -107,8 +107,8 @@ export function GuestReviews() {
         <div className="relative max-w-3xl mx-auto px-2 sm:px-6">
           {/* Card */}
           <div className="bg-white text-neutral-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl min-h-[220px] sm:min-h-[250px] flex flex-col justify-between border-2 border-white/20 relative">
-            {/* Animated Content on Slide Change */}
-            <div key={current.id} className="animate-in fade-in duration-300">
+            {/* Content on Slide Change */}
+            <div key={current.id}>
               {/* 5 Stars & Verified Badge */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mb-4">
                 <div className="flex items-center gap-1">

@@ -23,6 +23,8 @@ import {
   Compass,
   CheckCircle2,
   Tag,
+  MapPin,
+  FileText,
 } from "lucide-react";
 
 interface TourItem {
@@ -59,42 +61,48 @@ const TOURS: TourItem[] = [
   },
   {
     id: "Pearl Harbor Tour",
-    name: "Ekskursi Bersejarah Pearl Harbor & Memorial USS Arizona",
-    shortDesc: "Kunjungan mendalam ke situs bersejarah Perang Pasifik dengan tiket masuk reservasi resmi.",
-    price: 119,
-    duration: "Setengah Hari (5 Jam)",
-    tag: "Tur Sejarah",
+    name: "Tur Memorial Bersejarah USS Arizona & Museum Pearl Harbor",
+    shortDesc: "Ziarah sejarah mengenang tragedi 7 Desember 1941 dengan akses prioritas tiket perahu resmi.",
+    price: 89,
+    duration: "Setengah Hari (5–6 Jam)",
+    tag: "Edukasi & Sejarah",
     image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
-    highlights: ["Tiket Resmi USS Arizona", "Pameran Museum Pearl Harbor", "Film Dokumenter Bersejarah", "Pemandu Ahli Lokal"],
+    highlights: ["Akses Perahu USS Arizona", "Galeri Pameran Sejarah PD II", "Pemandu Berlisensi Resmi", "Antar Jemput Hotel Waikiki"],
   },
   {
     id: "Diamond Head Shuttle",
-    name: "Shuttle Pendakian Kawah Diamond Head dengan Tiket Reservasi",
-    shortDesc: "Transportasi pulang-pergi nyaman dari hotel Waikiki beserta akses reservasi masuk taman negara bagian.",
-    price: 45,
-    duration: "Ekspres (3 Jam)",
-    tag: "Shuttle Harian",
+    name: "Layanan Antar Jemput Shuttle Pendakian Kawah Diamond Head",
+    shortDesc: "Akses transportasi harian praktis dari hotel Waikiki menuju kawah vulkanik ikonis Diamond Head.",
+    price: 35,
+    duration: "Ekskursi Pagi (2.5–3 Jam)",
+    tag: "Akses Praktis",
     image: "/sites/gotourshawaii/root/Header-Photo-Diamond-Head.jpeg",
-    highlights: ["Termasuk Tiket Masuk Resmi", "Jemput Langsung di Hotel", "Waktu Bebas Mendaki", "Pemandangan 360° Waikiki"],
+    highlights: ["Jemput Depan Lobi Hotel", "Tiket Masuk Monumen Termasuk", "Waktu Luang Mendaki 2 Jam", "Pemandangan Panoramik Honolulu"],
   },
   {
     id: "Waikiki Turtle Canyon Snorkeling",
-    name: "Snorkeling & Berenang Bersama Penyu Laut Hijau Turtle Canyon",
-    shortDesc: "Pelayaran katamaran ke habitat terumbu karang alami untuk snorkeling bersama honu (penyu laut).",
-    price: 129,
-    duration: "Setengah Hari (3.5 Jam)",
-    tag: "Petualangan Eko",
-    image: "/sites/gotourshawaii/root/waikiki-turtle-banner.png",
-    highlights: ["Peralatan Snorkel Lengkap", "Instruktur Profesional", "Melihat Penyu di Habitat Asli", "Camilan & Minuman di Kapal"],
+    name: "Petualangan Snorkeling Berenang Bersama Penyu Hijau di Turtle Canyon",
+    shortDesc: "Berlayar dengan katamaran nyaman dan berenang langsung bersama penyu laut raksasa Honu di perairan jernih.",
+    price: 119,
+    duration: "Pagi / Siang (3 Jam)",
+    tag: "Satwa Liar Laut",
+    image: "/sites/gotourshawaii/root/blog-hero-img.png",
+    highlights: ["Peralatan Snorkel Lengkap", "Instruktur Bersertifikat", "Spot Penyu Terverifikasi", "Snack & Minuman di Kapal"],
   },
+];
+
+const TIME_SLOTS = [
+  { id: "slot-1", time: "07:30 - 08:30", label: "Keberangkatan Pagi (Direkomendasikan)" },
+  { id: "slot-2", time: "09:00 - 10:00", label: "Keberangkatan Pertengahan Pagi" },
+  { id: "slot-3", time: "12:30 - 13:30", label: "Keberangkatan Siang Hari" },
+  { id: "slot-4", time: "16:00 - 17:00", label: "Sore Hari (Khusus Acara Luau)" },
 ];
 
 const matchTourFromQuery = (query?: string | null): string => {
   if (!query) return TOURS[0].id;
   const lower = query.toLowerCase();
-  const direct = TOURS.find((t) => t.id.toLowerCase() === lower);
-  if (direct) return direct.id;
-
+  const exact = TOURS.find((t) => t.id.toLowerCase() === lower || t.name.toLowerCase().includes(lower));
+  if (exact) return exact.id;
   if (lower.includes("luau") || lower.includes("paina")) return "Hawaiian Luau";
   if (lower.includes("pearl") || lower.includes("arizona")) return "Pearl Harbor Tour";
   if (lower.includes("diamond") || lower.includes("shuttle")) return "Diamond Head Shuttle";
@@ -107,8 +115,9 @@ function BookingPageContent() {
   const searchParams = useSearchParams();
   const initialTour = matchTourFromQuery(searchParams.get("tour"));
 
-  // State
-  const [step, setStep] = useState<1 | 2 | 3 | 4 | 5>(1);
+  // State: 6 Explicit Steps
+  // 1: Pilih Tur, 2: Pilih Tanggal & Jadwal, 3: Jumlah Peserta, 4: Data Pemesan, 5: Review Pesanan, 6: Konfirmasi Booking
+  const [step, setStep] = useState<1 | 2 | 3 | 4 | 5 | 6>(1);
   const [selectedTourId, setSelectedTourId] = useState<string>(initialTour);
 
   // Date & Time
@@ -118,7 +127,7 @@ function BookingPageContent() {
     return d.toISOString().split("T")[0];
   };
   const [date, setDate] = useState<string>(tomorrowStr);
-  const [timeSlot, setTimeSlot] = useState<string>("08:00 (Keberangkatan Pagi)");
+  const [timeSlot, setTimeSlot] = useState<string>("07:30 - 08:30");
 
   // Guests
   const [adults, setAdults] = useState<number>(2);
@@ -165,8 +174,11 @@ function BookingPageContent() {
         setErrorMsg("Minimal harus ada 1 tamu dewasa.");
         return;
       }
+      setStep(4);
+      window.scrollTo({ top: 120, behavior: "smooth" });
+    } else if (step === 4) {
       if (!fullName.trim()) {
-        setErrorMsg("Silakan masukkan nama lengkap tamu utama.");
+        setErrorMsg("Silakan masukkan nama lengkap tamu pemesan.");
         return;
       }
       if (!email.trim() || !email.includes("@")) {
@@ -177,20 +189,20 @@ function BookingPageContent() {
         setErrorMsg("Silakan masukkan nomor telepon / WhatsApp yang aktif.");
         return;
       }
-      setStep(4);
+      setStep(5);
       window.scrollTo({ top: 120, behavior: "smooth" });
-    } else if (step === 4) {
+    } else if (step === 5) {
       if (!agreedTerms) {
-        setErrorMsg("Silakan setujui syarat dan ketentuan pemesanan.");
+        setErrorMsg("Anda harus menyetujui ketentuan pemesanan dan kebijakan pembatalan.");
         return;
       }
-      // Submit booking
+      // Submit booking to Step 6 (Confirmation)
       setIsSubmitting(true);
       setTimeout(() => {
-        const randomRef = `GTH-${Math.floor(10000 + Math.random() * 90000)}`;
+        const randomRef = `GTH-${Math.floor(100000 + Math.random() * 900000)}`;
         setBookingRef(randomRef);
         setIsSubmitting(false);
-        setStep(5);
+        setStep(6);
         window.scrollTo({ top: 80, behavior: "smooth" });
       }, 700);
     }
@@ -198,46 +210,40 @@ function BookingPageContent() {
 
   const handleBack = () => {
     setErrorMsg("");
-    if (step > 1) {
-      setStep((prev) => (prev - 1) as 1 | 2 | 3 | 4 | 5);
+    if (step > 1 && step < 6) {
+      setStep((prev) => (prev - 1) as 1 | 2 | 3 | 4 | 5 | 6);
       window.scrollTo({ top: 120, behavior: "smooth" });
     }
   };
 
-  const handleStepJump = (target: 1 | 2 | 3 | 4 | 5) => {
-    if (target < step) {
+  const handleStepJump = (target: 1 | 2 | 3 | 4 | 5 | 6) => {
+    if (target < step && step !== 6) {
       setErrorMsg("");
       setStep(target);
       window.scrollTo({ top: 120, behavior: "smooth" });
     }
   };
 
-  const handlePrint = () => {
-    window.print();
-  };
+  const stepList = [
+    { num: 1 as const, title: "Pilih Tur", short: "Tur" },
+    { num: 2 as const, title: "Pilih Tanggal & Jadwal", short: "Jadwal" },
+    { num: 3 as const, title: "Jumlah Peserta", short: "Peserta" },
+    { num: 4 as const, title: "Data Pemesan", short: "Pemesan" },
+    { num: 5 as const, title: "Review Pesanan", short: "Review" },
+    { num: 6 as const, title: "Konfirmasi Booking", short: "Konfirmasi" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
-      {/* 1. Header & TopBar */}
       <TopBar />
       <Navbar />
 
-      <main className="flex-1 pb-16 sm:pb-24">
-        {/* Hero Header Strip */}
-        <section className="bg-gradient-to-b from-[#0077B6] to-[#073B4C] text-white pt-8 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-b border-white/15 relative overflow-hidden">
-          {/* Subtle Polynesian decorative background */}
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <Image
-              src="/sites/gotourshawaii/root/optimized-bg-texture-002.jpg"
-              alt="Tekstur Hawaii"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="max-w-7xl mx-auto relative z-10">
-            {/* Breadcrumbs */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/75 mb-4">
+      <main className="flex-1 pb-20">
+        {/* Header Hero Banner */}
+        <section className="relative bg-[#0077B6] text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-white/10 shadow-md">
+          <div className="max-w-7xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/75 mb-3">
               <Link href="/" className="hover:text-[#F4A261] transition-colors">
                 Beranda
               </Link>
@@ -246,64 +252,58 @@ function BookingPageContent() {
                 Tur &amp; Paket
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-white/50" />
-              <span className="text-white font-bold">Pemesanan Online</span>
+              <span className="text-[#FFF3D6] font-bold">Halaman Booking</span>
             </nav>
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00B4D8] text-xs font-bold uppercase tracking-wider mb-2.5">
-                  <Sparkles className="w-3.5 h-3.5" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-[#FFF3D6] text-xs font-bold uppercase tracking-wider mb-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#F4A261]" />
                   <span>Sistem Pemesanan Resmi Go Tours Hawaii</span>
                 </div>
                 <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wide text-white">
-                  PESAN PETUALANGAN HAWAII ANDA
+                  PESAN TUR HAWAII ANDA
                 </h1>
-                <p className="text-white/85 text-sm sm:text-base max-w-2xl mt-1.5 font-normal leading-relaxed">
-                  Lengkapi reservasi Anda dalam 5 langkah praktis. Dapatkan konfirmasi instan, jaminan harga terbaik, dan pembatalan fleksibel hingga 48 jam sebelum keberangkatan.
+                <p className="text-white/90 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed">
+                  Lakukan reservasi mudah di halaman penuh tanpa popup. Konfirmasi resmi instan, jaminan harga terbaik, dan pembatalan fleksibel hingga 48 jam sebelum tur.
                 </p>
               </div>
 
               {/* Promo Callout */}
-              <div className="bg-[#F4A261]/20 border border-[#F4A261]/40 rounded-2xl px-4 py-3 shrink-0 backdrop-blur-md self-start md:self-auto">
+              <div className="bg-[#F4A261]/25 border border-[#F4A261]/40 rounded-2xl px-4 py-2.5 shrink-0 self-start md:self-auto backdrop-blur-xs">
                 <div className="flex items-center gap-2 text-[#FFF3D6] text-xs font-bold uppercase tracking-wider">
                   <Tag className="w-4 h-4 text-[#F4A261]" />
-                  <span>Promo Online 10% Aktif</span>
+                  <span>Diskon Promo 10% Online</span>
                 </div>
-                <div className="text-white text-xs mt-0.5">Otomatis terpotong saat ringkasan biaya</div>
+                <div className="text-white/90 text-xs mt-0.5">Otomatis terhitung pada rincian pesanan</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 5-Step Progress Stepper Bar */}
+        {/* 6-Step Modern Stepper Indicator */}
         <section className="bg-white border-b border-[#073B4C]/10 shadow-xs sticky top-16 sm:top-[66px] z-30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
-            <div className="grid grid-cols-5 gap-2 sm:gap-4 items-center">
-              {[
-                { s: 1 as const, title: "Pilih Tur", desc: "Destinasi Impian" },
-                { s: 2 as const, title: "Pilih Jadwal", desc: "Tanggal & Jam" },
-                { s: 3 as const, title: "Data Peserta", desc: "Jumlah & Kontak" },
-                { s: 4 as const, title: "Review", desc: "Tinjau Rincian" },
-                { s: 5 as const, title: "Konfirmasi", desc: "Voucher Reservasi" },
-              ].map((item) => {
-                const isActive = step === item.s;
-                const isCompleted = step > item.s;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div className="grid grid-cols-6 gap-1.5 sm:gap-3 items-center">
+              {stepList.map((item) => {
+                const isActive = step === item.num;
+                const isCompleted = step > item.num;
                 return (
                   <button
-                    key={item.s}
+                    key={item.num}
                     type="button"
-                    disabled={item.s >= step}
-                    onClick={() => handleStepJump(item.s)}
-                    className={`flex items-center gap-2 sm:gap-3 p-1 sm:p-2 rounded-xl text-left transition-all ${
-                      item.s < step
+                    disabled={item.num >= step}
+                    onClick={() => handleStepJump(item.num)}
+                    className={`flex items-center gap-1.5 sm:gap-2.5 p-1 sm:p-2 rounded-xl text-left transition-all ${
+                      item.num < step
                         ? "cursor-pointer hover:bg-[#FFF3D6]/50"
-                        : item.s === step
+                        : item.num === step
                         ? "cursor-default"
-                        : "cursor-not-allowed opacity-60"
+                        : "cursor-not-allowed opacity-50"
                     }`}
                   >
                     <div
-                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-colors shadow-xs ${
+                      className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 transition-colors shadow-xs ${
                         isCompleted
                           ? "bg-[#2A9D8F] text-white"
                           : isActive
@@ -311,11 +311,11 @@ function BookingPageContent() {
                           : "bg-[#073B4C]/10 text-[#073B4C]/60"
                       }`}
                     >
-                      {isCompleted ? <Check className="w-4 h-4 stroke-[3]" /> : item.s}
+                      {isCompleted ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : item.num}
                     </div>
-                    <div className="hidden sm:block leading-tight">
-                      <div
-                        className={`text-xs font-bold uppercase tracking-wider ${
+                    <div className="leading-tight truncate">
+                      <span
+                        className={`text-[11px] sm:text-xs font-bold uppercase tracking-wider block truncate ${
                           isActive
                             ? "text-[#073B4C]"
                             : isCompleted
@@ -323,11 +323,9 @@ function BookingPageContent() {
                             : "text-[#073B4C]/50"
                         }`}
                       >
-                        {item.title}
-                      </div>
-                      <div className="text-[11px] text-[#073B4C]/60 hidden md:block">
-                        {item.desc}
-                      </div>
+                        <span className="sm:hidden">{item.short}</span>
+                        <span className="hidden sm:inline">{item.title}</span>
+                      </span>
                     </div>
                   </button>
                 );
@@ -336,39 +334,39 @@ function BookingPageContent() {
           </div>
         </section>
 
-        {/* Booking Workspace Container */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+        {/* Main Content Workspace Container */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           {errorMsg && (
-            <div className="mb-6 p-4 rounded-2xl bg-red-100 border border-red-300 text-red-800 text-sm font-semibold flex items-center gap-3 animate-in fade-in">
-              <span className="w-2 h-2 rounded-full bg-red-600 shrink-0" />
+            <div className="mb-6 p-4 rounded-2xl bg-red-100 border border-red-300 text-red-800 text-sm font-semibold flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-600 shrink-0" />
               <span>{errorMsg}</span>
             </div>
           )}
 
-          {step === 5 ? (
-            /* STEP 5: SUCCESS / CONFIRMATION SCREEN (Full Width Clean Layout) */
-            <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl border border-[#073B4C]/10 max-w-4xl mx-auto animate-in zoom-in-95 duration-300">
+          {step === 6 ? (
+            /* STEP 6: KONFIRMASI BOOKING (Success Screen) */
+            <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl border border-[#073B4C]/10 max-w-4xl mx-auto">
               <div className="text-center space-y-4">
                 <div className="w-20 h-20 bg-[#2A9D8F]/15 text-[#2A9D8F] rounded-full flex items-center justify-center mx-auto border-2 border-[#2A9D8F]/40 shadow-xl shadow-[#2A9D8F]/10">
                   <CheckCircle2 className="w-10 h-10 stroke-[2.5]" />
                 </div>
 
                 <div className="inline-block px-4 py-1.5 rounded-full bg-[#2A9D8F]/15 border border-[#2A9D8F]/30 text-[#2A9D8F] text-xs sm:text-sm font-extrabold uppercase tracking-widest">
-                  KODE BOOKING: {bookingRef}
+                  KODE RESERVASI: {bookingRef}
                 </div>
 
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#073B4C] uppercase tracking-wide">
-                  MAHALO! PESANAN ANDA TELAH TERKONFIRMASI
+                  MAHALO! BOOKING ANDA TELAH TERKONFIRMASI
                 </h2>
 
                 <p className="text-[#073B4C]/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
                   Terima kasih, <strong className="text-[#073B4C]">{fullName}</strong>! Reservasi Anda untuk{" "}
-                  <strong className="text-[#0077B6]">{currentTour.name}</strong> telah berhasil dicatat ke sistem jadwal keberangkatan kami.
+                  <strong className="text-[#0077B6]">{currentTour.name}</strong> telah berhasil didaftarkan ke sistem pemandu kami.
                 </p>
               </div>
 
               {/* Voucher Detail Card */}
-              <div className="mt-8 p-6 sm:p-8 bg-[#FFF3D6]/35 rounded-2xl border border-[#073B4C]/15 space-y-6">
+              <div className="mt-8 p-6 sm:p-8 bg-[#FFF3D6]/40 rounded-2xl border border-[#073B4C]/15 space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#073B4C]/10 pb-5">
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/15">
@@ -380,7 +378,7 @@ function BookingPageContent() {
                       />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-[#0077B6] uppercase tracking-wider bg-[#00B4D8]/15 px-2.5 py-0.5 rounded-md">
+                      <span className="text-[11px] font-bold text-[#0077B6] uppercase tracking-wider bg-[#00B4D8]/15 px-2.5 py-0.5 rounded-md">
                         {currentTour.tag}
                       </span>
                       <h3 className="font-heading text-lg sm:text-xl font-bold text-[#073B4C] mt-1">
@@ -419,14 +417,14 @@ function BookingPageContent() {
                   </div>
 
                   <div className="p-3 bg-white rounded-xl border border-[#073B4C]/10">
-                    <span className="text-xs text-[#073B4C]/60 block font-semibold uppercase">Jumlah Tamu</span>
+                    <span className="text-xs text-[#073B4C]/60 block font-semibold uppercase">Jumlah Peserta</span>
                     <strong className="text-[#073B4C] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <Users className="w-4 h-4 text-[#F4A261]" /> {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                     </strong>
                   </div>
 
                   <div className="p-3 bg-white rounded-xl border border-[#073B4C]/10">
-                    <span className="text-xs text-[#073B4C]/60 block font-semibold uppercase">Metode Bayar</span>
+                    <span className="text-xs text-[#073B4C]/60 block font-semibold uppercase">Metode Pembayaran</span>
                     <strong className="text-[#2A9D8F] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <ShieldCheck className="w-4 h-4 text-[#2A9D8F]" /> Bayar Saat Tur
                     </strong>
@@ -434,84 +432,57 @@ function BookingPageContent() {
                 </div>
 
                 <div className="p-4 bg-white rounded-xl border border-[#073B4C]/10 text-xs text-[#073B4C]/80 space-y-1.5">
-                  <div className="font-bold text-[#073B4C] text-sm mb-1">Informasi Pengiriman Voucher:</div>
+                  <div className="font-bold text-[#073B4C] text-sm mb-1">Informasi Penjemputan &amp; Voucher:</div>
                   <p>
-                    Voucher resmi dan detail jadwal penjemputan lobi hotel telah kami kirimkan ke email:{" "}
-                    <strong className="text-[#073B4C]">{email}</strong> serta WhatsApp:{" "}
+                    Voucher digital resmi dan kontak pemandu telah dikirimkan ke email:{" "}
+                    <strong className="text-[#073B4C]">{email}</strong> serta nomor WhatsApp:{" "}
                     <strong className="text-[#073B4C]">{phone}</strong>.
                   </p>
                   {hotel && (
                     <p>
-                      Lokasi Penjemputan Tercatat: <strong className="text-[#073B4C]">{hotel}</strong>.
+                      Lokasi Penjemputan Terpilih: <strong className="text-[#073B4C]">{hotel}</strong>.
                     </p>
                   )}
                 </div>
 
-                {/* Timeline Next Steps */}
-                <div className="pt-2">
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-3">
-                    Langkah Selanjutnya:
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-                    <div className="p-3 bg-white/70 rounded-xl border border-[#073B4C]/10">
-                      <div className="font-bold text-[#0077B6] mb-1">1. Simpan Voucher</div>
-                      <p className="text-[#073B4C]/70">Cek kotak masuk atau spam email Anda untuk mengunduh bukti PDF.</p>
-                    </div>
-                    <div className="p-3 bg-white/70 rounded-xl border border-[#073B4C]/10">
-                      <div className="font-bold text-[#0077B6] mb-1">2. Konfirmasi 24 Jam</div>
-                      <p className="text-[#073B4C]/70">Tim pemandu lokal kami akan mengirim reminder waktu jemput persis.</p>
-                    </div>
-                    <div className="p-3 bg-white/70 rounded-xl border border-[#073B4C]/10">
-                      <div className="font-bold text-[#0077B6] mb-1">3. Nikmati Keindahan Hawaii</div>
-                      <p className="text-[#073B4C]/70">Tunjukkan kode reservasi saat naik shuttle bus ber-AC di lobi hotel.</p>
-                    </div>
-                  </div>
+                {/* Action Buttons */}
+                <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  <button
+                    type="button"
+                    onClick={() => window.print()}
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-50 text-[#073B4C] border border-[#073B4C]/20 font-bold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-xs transition-colors"
+                  >
+                    <Printer className="w-4 h-4 text-[#0077B6]" />
+                    <span>Cetak Voucher Bukti Pesanan</span>
+                  </button>
+
+                  <Link
+                    href="/"
+                    className="w-full sm:w-auto px-8 py-3 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base font-bold uppercase tracking-wider text-center cursor-pointer shadow-lg shadow-[#F4A261]/30 transition-all"
+                  >
+                    KEMBALI KE BERANDA
+                  </Link>
                 </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <button
-                  onClick={handlePrint}
-                  className="px-6 py-3 bg-[#073B4C] hover:bg-[#052631] text-white rounded-xl font-bold text-sm transition-colors cursor-pointer flex items-center gap-2 shadow-md"
-                >
-                  <Printer className="w-4 h-4" />
-                  <span>Cetak Voucher</span>
-                </button>
-
-                <Link
-                  href="/"
-                  className="px-8 py-3 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-xl font-heading text-base font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-lg shadow-[#F4A261]/30"
-                >
-                  Kembali ke Beranda
-                </Link>
-
-                <Link
-                  href="/tour-packages"
-                  className="px-6 py-3 bg-white border border-[#073B4C]/20 hover:bg-[#FFF3D6] text-[#073B4C] rounded-xl font-bold text-sm transition-colors cursor-pointer"
-                >
-                  Lihat Paket Lainnya
-                </Link>
               </div>
             </div>
           ) : (
-            /* STEPS 1 to 4: 2-COLUMN WIDE LAYOUT */
+            /* 2-COLUMN FULL-PAGE WORKSPACE (STEPS 1 - 5) */
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* LEFT / MAIN WORKSPACE (8 Columns) */}
-              <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border border-[#073B4C]/10 space-y-6">
+              {/* Left Column: Active Step Form */}
+              <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg border border-[#073B4C]/10">
                 {/* STEP 1: PILIH TUR */}
                 {step === 1 && (
-                  <div className="space-y-6 animate-in fade-in duration-300">
+                  <div className="space-y-6">
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B4D8]/15 text-[#0077B6] text-xs font-bold uppercase tracking-wider mb-2">
                         <Compass className="w-3.5 h-3.5" />
-                        <span>Langkah 1: Pilih Pengalaman Wisata</span>
+                        <span>Langkah 1 dari 6</span>
                       </div>
                       <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#073B4C] uppercase tracking-wide">
-                        PILIH PAKET TUR EKSKLUSIF ANDA
+                        PILIH PENGALAMAN WISATA ANDA
                       </h2>
-                      <p className="text-[#073B4C]/75 text-sm sm:text-base mt-1">
-                        Pilih paket tur pemenang penghargaan dunia yang ingin Anda nikmati bersama pemandu lokal berlisensi.
+                      <p className="text-xs sm:text-sm text-[#073B4C]/75 mt-1">
+                        Pilih tur pulau Oahu atau Maui yang ingin Anda ikuti bersama pemandu lokal berlisensi.
                       </p>
                     </div>
 
@@ -521,57 +492,55 @@ function BookingPageContent() {
                         return (
                           <div
                             key={t.id}
+                            role="button"
+                            tabIndex={0}
                             onClick={() => setSelectedTourId(t.id)}
-                            className={`p-4 sm:p-5 rounded-2xl border-2 cursor-pointer transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") setSelectedTourId(t.id);
+                            }}
+                            className={`p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center gap-4 ${
                               isSelected
-                                ? "bg-[#FFF3D6]/40 border-[#F4A261] shadow-md ring-2 ring-[#F4A261]/20"
-                                : "bg-white border-[#073B4C]/10 hover:border-[#0077B6]/40 hover:bg-[#FFF3D6]/15"
+                                ? "border-[#F4A261] bg-[#FFF3D6]/30 shadow-md ring-2 ring-[#F4A261]/20"
+                                : "border-[#073B4C]/15 hover:border-[#0077B6]/50 hover:bg-neutral-50"
                             }`}
                           >
-                            <div className="flex items-start sm:items-center gap-4 w-full sm:w-auto">
-                              <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/15 shadow-inner">
-                                <Image
-                                  src={t.image}
-                                  alt={t.name}
-                                  fill
-                                  className="object-cover group-hover:scale-105 transition-transform"
-                                />
-                              </div>
-
-                              <div className="space-y-1.5 flex-1">
-                                <div className="flex flex-wrap items-center gap-2">
-                                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0077B6] bg-[#00B4D8]/15 px-2.5 py-0.5 rounded-full">
-                                    {t.tag}
-                                  </span>
-                                  <span className="text-xs text-[#073B4C]/70 flex items-center gap-1 font-medium">
-                                    <Clock className="w-3.5 h-3.5 text-[#F4A261]" /> {t.duration}
-                                  </span>
-                                </div>
-                                <h3 className="font-heading text-base sm:text-lg font-bold text-[#073B4C] leading-snug">
-                                  {t.name}
-                                </h3>
-                                <p className="text-xs text-[#073B4C]/70 line-clamp-2 leading-relaxed">
-                                  {t.shortDesc}
-                                </p>
-                              </div>
+                            <div className="relative w-full sm:w-28 h-28 sm:h-24 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/10">
+                              <Image src={t.image} alt={t.name} fill className="object-cover" />
                             </div>
 
-                            <div className="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-[#073B4C]/10 shrink-0">
-                              <div className="text-left sm:text-right">
-                                <div className="text-2xl font-extrabold text-[#073B4C] font-heading">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#00B4D8]/20 text-[#0077B6]">
+                                  {t.tag}
+                                </span>
+                                <span className="text-xs text-[#073B4C]/60 flex items-center gap-1">
+                                  <Clock className="w-3 h-3 text-[#F4A261]" /> {t.duration}
+                                </span>
+                              </div>
+                              <h3 className="font-heading text-lg sm:text-xl font-bold text-[#073B4C] leading-snug">
+                                {t.name}
+                              </h3>
+                              <p className="text-xs text-[#073B4C]/70 line-clamp-2 mt-1">
+                                {t.shortDesc}
+                              </p>
+                            </div>
+
+                            <div className="text-right shrink-0 w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between border-t sm:border-t-0 pt-3 sm:pt-0 border-neutral-100">
+                              <div>
+                                <span className="text-xs text-[#073B4C]/60 block sm:hidden">Mulai:</span>
+                                <div className="font-heading text-2xl font-extrabold text-[#0077B6]">
                                   ${t.price}
                                 </div>
-                                <span className="text-xs text-[#073B4C]/60">/ orang</span>
+                                <div className="text-[11px] text-[#073B4C]/60">/ orang</div>
                               </div>
-
                               <div
-                                className={`mt-2 px-4 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors ${
+                                className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors sm:mt-2 ${
                                   isSelected
-                                    ? "bg-[#F4A261] text-white shadow-xs"
-                                    : "bg-[#073B4C]/10 text-[#073B4C] group-hover:bg-[#073B4C]/15"
+                                    ? "border-[#F4A261] bg-[#F4A261] text-white"
+                                    : "border-neutral-300"
                                 }`}
                               >
-                                {isSelected ? "✓ Terpilih" : "Pilih Tur"}
+                                {isSelected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
                               </div>
                             </div>
                           </div>
@@ -581,172 +550,151 @@ function BookingPageContent() {
                   </div>
                 )}
 
-                {/* STEP 2: PILIH JADWAL */}
+                {/* STEP 2: PILIH TANGGAL & JADWAL */}
                 {step === 2 && (
-                  <div className="space-y-6 animate-in fade-in duration-300">
+                  <div className="space-y-6">
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B4D8]/15 text-[#0077B6] text-xs font-bold uppercase tracking-wider mb-2">
                         <Calendar className="w-3.5 h-3.5" />
-                        <span>Langkah 2: Pilih Tanggal &amp; Waktu</span>
+                        <span>Langkah 2 dari 6</span>
                       </div>
                       <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#073B4C] uppercase tracking-wide">
-                        TENTUKAN WAKTU PERJALANAN
+                        PILIH TANGGAL &amp; JADWAL KEBERANGKATAN
                       </h2>
-                      <p className="text-[#073B4C]/75 text-sm sm:text-base mt-1">
-                        Tur harian berangkat dari hotel area Waikiki dengan armada bus berpendingin udara nyaman.
+                      <p className="text-xs sm:text-sm text-[#073B4C]/75 mt-1">
+                        Pilih tanggal tur yang Anda inginkan beserta slot waktu penjemputan lobi hotel.
                       </p>
                     </div>
 
-                    {/* Active Selected Tour Reminder Card */}
-                    <div className="p-4 bg-[#FFF3D6]/50 border border-[#073B4C]/15 rounded-2xl flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[#073B4C]/10">
-                          <Image src={currentTour.image} alt={currentTour.name} fill className="object-cover" />
-                        </div>
-                        <div>
-                          <span className="text-[11px] text-[#0077B6] font-bold uppercase">{currentTour.tag}</span>
-                          <div className="font-bold text-[#073B4C] text-sm">{currentTour.name}</div>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Date Picker Input */}
+                      <div className="space-y-2">
+                        <label htmlFor="tour-date-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider">
+                          Tanggal Keberangkatan <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          id="tour-date-input"
+                          type="date"
+                          value={date}
+                          min={tomorrowStr()}
+                          onChange={(e) => setDate(e.target.value)}
+                          className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-base text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
+                        />
+                        <span className="text-[11px] text-[#073B4C]/60 block">
+                          Pemesanan dibuka hingga 12 bulan ke depan.
+                        </span>
                       </div>
-                      <button
-                        type="button"
-                        onClick={() => setStep(1)}
-                        className="text-xs text-[#0077B6] hover:text-[#F4A261] underline font-bold cursor-pointer shrink-0"
-                      >
-                        Ganti Tur
-                      </button>
-                    </div>
 
-                    {/* Date Picker Input */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-2">
-                        Tanggal Perjalanan Tur <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="date"
-                        required
-                        min={tomorrowStr()}
-                        value={date}
-                        onChange={(e) => setDate(e.target.value)}
-                        className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 hover:border-[#073B4C]/40 rounded-xl px-4 py-3 text-base text-[#073B4C] font-semibold focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all cursor-pointer"
-                      />
-                      <p className="text-xs text-[#073B4C]/60 mt-1.5 flex items-center gap-1.5">
-                        <Check className="w-3.5 h-3.5 text-[#2A9D8F]" />
-                        <span>Ketersediaan dijamin langsung untuk pemesanan minimal 1 hari sebelumnya.</span>
-                      </p>
-                    </div>
-
-                    {/* Time Slot Selector */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-2">
-                        Pilihan Jam Keberangkatan / Penjemputan
-                      </label>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {[
-                          { time: "07:30 (Penjemputan Pagi)", note: "Udara Segar, Tempat Wisata Lebih Lengang", badge: "Pagi" },
-                          { time: "09:00 (Sangat Direkomendasikan)", note: "Jadwal Terpopuler & Sempurna untuk Sarapan", badge: "Rekomendasi" },
-                          { time: "11:30 (Tengah Hari)", note: "Cocok untuk yang Ingin Istirahat Pagi", badge: "Santai" },
-                          { time: "13:00 (Siang / Sore)", note: "Menikmati Sore & Cahaya Golden Hour", badge: "Siang" },
-                        ].map((slot) => {
-                          const isSlotActive = timeSlot === slot.time;
-                          return (
-                            <button
-                              type="button"
-                              key={slot.time}
-                              onClick={() => setTimeSlot(slot.time)}
-                              className={`p-4 rounded-2xl border-2 text-left transition-all cursor-pointer ${
-                                isSlotActive
-                                  ? "bg-[#FFF3D6]/50 border-[#F4A261] ring-2 ring-[#F4A261]/25"
-                                  : "bg-white border-[#073B4C]/10 hover:border-[#0077B6]/30 hover:bg-[#FFF3D6]/15"
-                              }`}
-                            >
-                              <div className="flex items-center justify-between mb-1">
-                                <span className="font-bold text-sm text-[#073B4C]">{slot.time}</span>
-                                <span
-                                  className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full ${
-                                    isSlotActive
-                                      ? "bg-[#F4A261] text-white"
-                                      : "bg-[#00B4D8]/15 text-[#0077B6]"
-                                  }`}
-                                >
-                                  {slot.badge}
-                                </span>
-                              </div>
-                              <p className="text-xs text-[#073B4C]/70">{slot.note}</p>
-                            </button>
-                          );
-                        })}
+                      {/* Time Slots Radio Selection */}
+                      <div className="space-y-2">
+                        <label className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider">
+                          Slot Waktu Penjemputan <span className="text-red-500">*</span>
+                        </label>
+                        <div className="space-y-2.5">
+                          {TIME_SLOTS.map((slot) => {
+                            const isTimeActive = timeSlot === slot.time;
+                            return (
+                              <label
+                                key={slot.id}
+                                className={`flex items-center justify-between p-3 rounded-xl border-2 cursor-pointer transition-all ${
+                                  isTimeActive
+                                    ? "border-[#F4A261] bg-[#FFF3D6]/40"
+                                    : "border-[#073B4C]/15 hover:border-[#0077B6]/40"
+                                }`}
+                              >
+                                <div>
+                                  <div className="font-bold text-sm text-[#073B4C]">{slot.time}</div>
+                                  <div className="text-[11px] text-[#073B4C]/70">{slot.label}</div>
+                                </div>
+                                <input
+                                  type="radio"
+                                  name="timeSlot"
+                                  checked={isTimeActive}
+                                  onChange={() => setTimeSlot(slot.time)}
+                                  className="accent-[#F4A261] w-4 h-4 cursor-pointer"
+                                />
+                              </label>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* STEP 3: DATA PESERTA */}
+                {/* STEP 3: JUMLAH PESERTA */}
                 {step === 3 && (
-                  <div className="space-y-6 animate-in fade-in duration-300">
+                  <div className="space-y-6">
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B4D8]/15 text-[#0077B6] text-xs font-bold uppercase tracking-wider mb-2">
                         <Users className="w-3.5 h-3.5" />
-                        <span>Langkah 3: Jumlah Tamu &amp; Data Kontak</span>
+                        <span>Langkah 3 dari 6</span>
                       </div>
                       <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#073B4C] uppercase tracking-wide">
-                        LENGKAPI INFORMASI TAMU
+                        JUMLAH PESERTA
                       </h2>
-                      <p className="text-[#073B4C]/75 text-sm sm:text-base mt-1">
-                        Pemesanan tur rombongan kecil menjamin kenyamanan personal dan kehangatan semangat Aloha.
+                      <p className="text-xs sm:text-sm text-[#073B4C]/75 mt-1">
+                        Tentukan jumlah tamu dewasa dan anak-anak yang akan ikut serta dalam perjalanan.
                       </p>
                     </div>
 
-                    {/* Guests Steppers Card */}
-                    <div className="space-y-4 bg-[#FFF3D6]/30 p-5 rounded-2xl border border-[#073B4C]/15">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <strong className="block text-[#073B4C] text-base font-bold">Dewasa (Usia 12+ Tahun)</strong>
-                          <span className="text-xs text-[#073B4C]/70">Tiket penuh (${currentTour.price}/orang)</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      {/* Adults Counter */}
+                      <div className="p-5 rounded-2xl border-2 border-[#073B4C]/15 bg-white space-y-3">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-bold text-base text-[#073B4C]">Dewasa (Usia 12+)</div>
+                            <div className="text-xs text-[#073B4C]/60">${currentTour.price} / orang</div>
+                          </div>
+                          <Users className="w-5 h-5 text-[#0077B6]" />
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center justify-between pt-2 border-t border-neutral-100">
                           <button
                             type="button"
                             onClick={() => setAdults((prev) => Math.max(1, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-white border border-[#073B4C]/20 hover:bg-[#FFF3D6] text-[#073B4C] font-extrabold text-xl flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#FFF3D6] hover:bg-[#ffe7b3] text-[#073B4C] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            aria-label="Kurangi Dewasa"
                           >
                             -
                           </button>
-                          <span className="w-8 text-center text-xl font-heading font-extrabold text-[#073B4C]">
-                            {adults}
-                          </span>
+                          <span className="font-heading text-3xl font-bold text-[#073B4C]">{adults}</span>
                           <button
                             type="button"
-                            onClick={() => setAdults((prev) => Math.min(20, prev + 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white font-extrabold text-xl flex items-center justify-center transition-colors cursor-pointer shadow-xs"
+                            onClick={() => setAdults((prev) => prev + 1)}
+                            className="w-10 h-10 rounded-xl bg-[#0077B6] hover:bg-[#005f94] text-white font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            aria-label="Tambah Dewasa"
                           >
                             +
                           </button>
                         </div>
                       </div>
 
-                      <div className="pt-3 border-t border-[#073B4C]/10 flex items-center justify-between">
-                        <div>
-                          <strong className="block text-[#073B4C] text-base font-bold">Anak-anak (Usia 3–11 Tahun)</strong>
-                          <span className="text-xs text-[#2A9D8F] font-bold">
-                            Diskon 25% (${Math.round(currentTour.price * 0.75)}/anak)
-                          </span>
+                      {/* Children Counter */}
+                      <div className="p-5 rounded-2xl border-2 border-[#073B4C]/15 bg-white space-y-3">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-bold text-base text-[#073B4C]">Anak-anak (Usia 3–11)</div>
+                            <div className="text-xs text-[#073B4C]/60">
+                              ${Math.round(currentTour.price * 0.75)} / anak (Diskon 25%)
+                            </div>
+                          </div>
+                          <Users className="w-5 h-5 text-[#2A9D8F]" />
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center justify-between pt-2 border-t border-neutral-100">
                           <button
                             type="button"
                             onClick={() => setChildren((prev) => Math.max(0, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-white border border-[#073B4C]/20 hover:bg-[#FFF3D6] text-[#073B4C] font-extrabold text-xl flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#FFF3D6] hover:bg-[#ffe7b3] text-[#073B4C] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            aria-label="Kurangi Anak"
                           >
                             -
                           </button>
-                          <span className="w-8 text-center text-xl font-heading font-extrabold text-[#073B4C]">
-                            {children}
-                          </span>
+                          <span className="font-heading text-3xl font-bold text-[#073B4C]">{children}</span>
                           <button
                             type="button"
-                            onClick={() => setChildren((prev) => Math.min(10, prev + 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white font-extrabold text-xl flex items-center justify-center transition-colors cursor-pointer shadow-xs"
+                            onClick={() => setChildren((prev) => prev + 1)}
+                            className="w-10 h-10 rounded-xl bg-[#0077B6] hover:bg-[#005f94] text-white font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            aria-label="Tambah Anak"
                           >
                             +
                           </button>
@@ -754,217 +702,230 @@ function BookingPageContent() {
                       </div>
                     </div>
 
-                    {/* Contact Details Form */}
-                    <div className="space-y-4 pt-2">
-                      <h3 className="font-heading text-lg font-bold text-[#073B4C] uppercase tracking-wide">
-                        Data Tamu Pemesan (Penanggung Jawab)
-                      </h3>
+                    <div className="p-4 rounded-xl bg-[#FFF3D6]/50 border border-[#073B4C]/15 text-xs text-[#073B4C]/80">
+                      ℹ️ Bayi di bawah 3 tahun (infant) gratis selama duduk di pangkuan orang tua dan tidak membutuhkan kursi khusus.
+                    </div>
+                  </div>
+                )}
 
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-1.5">
-                          Nama Lengkap Sesuai Identitas / Paspor <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Contoh: Budi Santoso / Sarah Jenkins"
-                          value={fullName}
-                          onChange={(e) => setFullName(e.target.value)}
-                          className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] placeholder-[#073B4C]/45 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all"
-                        />
+                {/* STEP 4: DATA PEMESAN */}
+                {step === 4 && (
+                  <div className="space-y-6">
+                    <div>
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B4D8]/15 text-[#0077B6] text-xs font-bold uppercase tracking-wider mb-2">
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>Langkah 4 dari 6</span>
                       </div>
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#073B4C] uppercase tracking-wide">
+                        DATA PEMESAN &amp; LOKASI JEMPUT
+                      </h2>
+                      <p className="text-xs sm:text-sm text-[#073B4C]/75 mt-1">
+                        Masukkan data kontak pemesan untuk pengiriman konfirmasi instan dan jadwal penjemputan.
+                      </p>
+                    </div>
 
+                    <div className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-1.5">
-                            Alamat Email (Pengiriman Voucher) <span className="text-red-500">*</span>
+                          <label htmlFor="fullname-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider mb-1">
+                            Nama Lengkap Tamu Utama <span className="text-red-500">*</span>
                           </label>
                           <input
+                            id="fullname-input"
+                            type="text"
+                            required
+                            placeholder="cth. John Doe"
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                            className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="email-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider mb-1">
+                            Alamat Email Valid <span className="text-red-500">*</span>
+                          </label>
+                          <input
+                            id="email-input"
                             type="email"
                             required
                             placeholder="nama@email.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] placeholder-[#073B4C]/45 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all"
+                            className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
                           />
                         </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-1.5">
-                            Nomor WhatsApp / Telepon <span className="text-red-500">*</span>
+                          <label htmlFor="phone-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider mb-1">
+                            Nomor Telepon / WhatsApp <span className="text-red-500">*</span>
                           </label>
                           <input
+                            id="phone-input"
                             type="tel"
                             required
                             placeholder="+62 812-3456-7890"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] placeholder-[#073B4C]/45 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all"
+                            className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="hotel-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider mb-1">
+                            Hotel Waikiki / Lokasi Jemput <span className="text-[#073B4C]/60">(Opsional)</span>
+                          </label>
+                          <input
+                            id="hotel-input"
+                            type="text"
+                            placeholder="cth. Sheraton Waikiki, Hilton Hawaiian Village..."
+                            value={hotel}
+                            onChange={(e) => setHotel(e.target.value)}
+                            className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
                           />
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-1.5">
-                          Nama Hotel / Alamat Penjemputan di Waikiki <span className="text-[#073B4C]/50">(Opsional)</span>
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Contoh: Hilton Hawaiian Village, Sheraton Waikiki, Hyatt Regency..."
-                          value={hotel}
-                          onChange={(e) => setHotel(e.target.value)}
-                          className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] placeholder-[#073B4C]/45 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all"
-                        />
-                        <p className="text-[11px] text-[#073B4C]/60 mt-1">
-                          Jika Anda belum menentukan hotel saat ini, Anda bisa menyusulkan lokasi penjemputan nanti via WhatsApp.
-                        </p>
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-[#073B4C] mb-1.5">
-                          Permintaan Khusus / Catatan Diet <span className="text-[#073B4C]/50">(Opsional)</span>
+                        <label htmlFor="special-requests-input" className="block text-xs font-bold text-[#073B4C] uppercase tracking-wider mb-1">
+                          Catatan Khusus / Permintaan Khusus <span className="text-[#073B4C]/60">(Opsional)</span>
                         </label>
                         <textarea
+                          id="special-requests-input"
                           rows={3}
-                          placeholder="Contoh: Pilihan makanan vegetarian pada makan siang, membutuhkan kursi khusus anak, dsb."
+                          placeholder="cth. Membawa kursi dorong lipat, preferensi vegetarian untuk makan siang..."
                           value={specialRequests}
                           onChange={(e) => setSpecialRequests(e.target.value)}
-                          className="w-full bg-[#FFF3D6]/20 border border-[#073B4C]/20 rounded-xl px-4 py-3 text-sm text-[#073B4C] placeholder-[#073B4C]/45 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:bg-white transition-all resize-none"
+                          className="w-full bg-[#FFF3D6]/30 border border-[#073B4C]/20 rounded-xl px-4 py-2.5 text-sm text-[#073B4C] focus:outline-none focus:ring-2 focus:ring-[#F4A261] transition-all font-medium"
                         />
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* STEP 4: REVIEW & PERSETUJUAN */}
-                {step === 4 && (
-                  <div className="space-y-6 animate-in fade-in duration-300">
+                {/* STEP 5: REVIEW PESANAN */}
+                {step === 5 && (
+                  <div className="space-y-6">
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B4D8]/15 text-[#0077B6] text-xs font-bold uppercase tracking-wider mb-2">
-                        <ShieldCheck className="w-3.5 h-3.5" />
-                        <span>Langkah 4: Review Pesanan &amp; Verifikasi</span>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Langkah 5 dari 6</span>
                       </div>
                       <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#073B4C] uppercase tracking-wide">
-                        TINJAU KEMBALI RINCIAN PESANAN ANDA
+                        REVIEW &amp; TINJAU PESANAN ANDA
                       </h2>
-                      <p className="text-[#073B4C]/75 text-sm sm:text-base mt-1">
-                        Pastikan semua rincian di bawah ini sudah akurat sebelum mengonfirmasi pemesanan resmi Anda.
+                      <p className="text-xs sm:text-sm text-[#073B4C]/75 mt-1">
+                        Periksa kembali rincian pemesanan Anda sebelum melanjutkan ke konfirmasi akhir.
                       </p>
                     </div>
 
-                    {/* Comprehensive Summary Box */}
-                    <div className="p-6 bg-[#FFF3D6]/40 rounded-2xl border border-[#073B4C]/15 space-y-4">
-                      {/* Tour recap */}
-                      <div className="flex items-start gap-4 pb-4 border-b border-[#073B4C]/10">
-                        <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/15">
-                          <Image src={currentTour.image} alt={currentTour.name} fill className="object-cover" />
-                        </div>
+                    <div className="p-5 sm:p-6 bg-[#FFF3D6]/30 rounded-2xl border border-[#073B4C]/15 space-y-4">
+                      <div className="flex items-start justify-between border-b border-[#073B4C]/10 pb-4">
                         <div>
-                          <span className="text-xs font-bold text-[#0077B6] uppercase tracking-wider bg-[#00B4D8]/15 px-2.5 py-0.5 rounded-md">
-                            {currentTour.tag}
+                          <span className="text-[11px] font-bold text-[#0077B6] uppercase tracking-wider">
+                            Paket Tur Terpilih
                           </span>
-                          <h3 className="font-heading text-lg font-bold text-[#073B4C] mt-1">
-                            {currentTour.name}
-                          </h3>
-                          <p className="text-xs text-[#073B4C]/70">{currentTour.duration}</p>
+                          <h3 className="font-heading text-xl font-bold text-[#073B4C]">{currentTour.name}</h3>
+                          <p className="text-xs text-[#073B4C]/70 mt-0.5">{currentTour.duration}</p>
                         </div>
+                        <span className="text-xs bg-[#F4A261] text-white font-bold px-2.5 py-1 rounded-md">
+                          {currentTour.tag}
+                        </span>
                       </div>
 
-                      {/* Detail points */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm pb-4 border-b border-[#073B4C]/10">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm border-b border-[#073B4C]/10 pb-4">
                         <div>
-                          <span className="text-xs text-[#073B4C]/60 block font-semibold">Tanggal &amp; Waktu:</span>
-                          <strong className="text-[#073B4C] text-sm sm:text-base">
-                            {date} ({timeSlot})
-                          </strong>
+                          <span className="text-[#073B4C]/60 block text-xs">Tanggal Tur:</span>
+                          <strong className="text-[#073B4C]">{date}</strong>
                         </div>
                         <div>
-                          <span className="text-xs text-[#073B4C]/60 block font-semibold">Jumlah Tamu:</span>
-                          <strong className="text-[#073B4C] text-sm sm:text-base">
+                          <span className="text-[#073B4C]/60 block text-xs">Slot Waktu Jemput:</span>
+                          <strong className="text-[#073B4C]">{timeSlot}</strong>
+                        </div>
+                        <div>
+                          <span className="text-[#073B4C]/60 block text-xs">Jumlah Peserta:</span>
+                          <strong className="text-[#073B4C]">
                             {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                           </strong>
                         </div>
                         <div>
-                          <span className="text-xs text-[#073B4C]/60 block font-semibold">Tamu Penanggung Jawab:</span>
-                          <strong className="text-[#073B4C] text-sm sm:text-base">{fullName}</strong>
+                          <span className="text-[#073B4C]/60 block text-xs">Tamu Pemesan:</span>
+                          <strong className="text-[#073B4C]">{fullName || "-"}</strong>
                         </div>
+                      </div>
+
+                      <div className="text-xs text-[#073B4C]/80 space-y-1">
                         <div>
-                          <span className="text-xs text-[#073B4C]/60 block font-semibold">Kontak Pengiriman:</span>
-                          <span className="text-[#073B4C] text-xs sm:text-sm block">{email}</span>
-                          <span className="text-[#073B4C] text-xs sm:text-sm block">{phone}</span>
+                          Kontak: <strong>{email}</strong> | <strong>{phone}</strong>
                         </div>
                         {hotel && (
-                          <div className="sm:col-span-2">
-                            <span className="text-xs text-[#073B4C]/60 block font-semibold">Titik Penjemputan:</span>
-                            <strong className="text-[#073B4C] text-sm">{hotel}</strong>
+                          <div>
+                            Lokasi Jemput: <strong>{hotel}</strong>
                           </div>
                         )}
                         {specialRequests && (
-                          <div className="sm:col-span-2">
-                            <span className="text-xs text-[#073B4C]/60 block font-semibold">Permintaan Khusus:</span>
-                            <span className="text-[#073B4C] text-xs italic">{specialRequests}</span>
+                          <div>
+                            Catatan Khusus: <em>{specialRequests}</em>
                           </div>
                         )}
                       </div>
 
-                      {/* Financial summary */}
-                      <div className="space-y-2 pt-2">
-                        <div className="flex justify-between text-sm text-[#073B4C]/75">
+                      {/* Pricing Breakdown inside Review */}
+                      <div className="pt-3 border-t border-[#073B4C]/10 space-y-2">
+                        <div className="flex justify-between text-xs text-[#073B4C]/75">
                           <span>
-                            Dewasa ({adults} x ${currentTour.price}):
+                            Dewasa ({adults} x ${currentTour.price})
                           </span>
-                          <span>${(adults * currentTour.price).toFixed(2)}</span>
+                          <span>${adults * currentTour.price}</span>
                         </div>
                         {children > 0 && (
-                          <div className="flex justify-between text-sm text-[#073B4C]/75">
+                          <div className="flex justify-between text-xs text-[#073B4C]/75">
                             <span>
-                              Anak-anak ({children} x ${Math.round(currentTour.price * 0.75)}):
+                              Anak ({children} x ${Math.round(currentTour.price * 0.75)})
                             </span>
-                            <span>${(children * Math.round(currentTour.price * 0.75)).toFixed(2)}</span>
+                            <span>${children * Math.round(currentTour.price * 0.75)}</span>
                           </div>
                         )}
-                        <div className="flex justify-between text-sm font-semibold text-[#2A9D8F]">
-                          <span>Diskon Promo Online Khusus (10%):</span>
+                        <div className="flex justify-between text-xs font-semibold text-[#2A9D8F]">
+                          <span>Diskon Promo Online (10%)</span>
                           <span>-${promoDiscount.toFixed(2)}</span>
                         </div>
-                        <div className="flex justify-between items-center pt-3 border-t border-[#073B4C]/15">
+                        <div className="flex justify-between items-baseline pt-2 border-t border-[#073B4C]/10">
                           <div>
-                            <span className="font-heading text-lg font-bold text-[#073B4C] block">
-                              Total Biaya Tur:
-                            </span>
-                            <span className="text-[11px] text-[#2A9D8F] font-bold">
-                              ✓ Tanpa Uang Muka Saat Ini (Bayar Saat Hari Keberangkatan)
-                            </span>
+                            <div className="font-heading text-lg text-[#073B4C]">TOTAL AKHIR</div>
+                            <div className="text-[11px] text-[#2A9D8F]">✓ Tanpa biaya tersembunyi</div>
                           </div>
-                          <div className="text-3xl font-heading font-extrabold text-[#0077B6]">
+                          <div className="font-heading text-3xl font-extrabold text-[#0077B6]">
                             ${finalTotal.toFixed(2)}
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Terms Agreement Checkbox */}
-                    <div className="p-4 bg-white rounded-2xl border border-[#073B4C]/15 flex items-start gap-3">
+                    <div className="flex items-start gap-2.5">
                       <input
                         type="checkbox"
                         id="terms"
                         checked={agreedTerms}
                         onChange={(e) => setAgreedTerms(e.target.checked)}
-                        className="w-5 h-5 rounded-md mt-0.5 text-[#F4A261] focus:ring-[#F4A261] border-[#073B4C]/20 cursor-pointer"
+                        className="accent-[#F4A261] w-4 h-4 mt-0.5 cursor-pointer"
                       />
-                      <label htmlFor="terms" className="text-xs text-[#073B4C]/80 leading-relaxed cursor-pointer">
-                        Saya menyetujui kebijakan pemesanan Go Tours Hawaii: Pembatalan gratis berlaku hingga 48 jam sebelum jadwal tur. Konfirmasi instan akan dikirimkan ke email dan nomor kontak saya.
+                      <label htmlFor="terms" className="text-xs text-[#073B4C]/80 cursor-pointer">
+                        Saya menyetujui kebijakan pembatalan fleksibel 48 jam dan memahami pembayaran diselesaikan saat hari tur di Hawaii tanpa biaya di muka saat ini.
                       </label>
                     </div>
                   </div>
                 )}
 
                 {/* Bottom Step Navigation Bar */}
-                <div className="pt-6 border-t border-[#073B4C]/10 flex items-center justify-between gap-4">
+                <div className="mt-8 pt-6 border-t border-[#073B4C]/10 flex items-center justify-between gap-4">
                   {step > 1 ? (
                     <button
                       type="button"
                       onClick={handleBack}
-                      className="px-6 py-3 rounded-xl bg-[#FFF3D6] hover:bg-[#073B4C]/10 text-[#073B4C] font-bold text-sm transition-colors cursor-pointer flex items-center gap-2"
+                      className="px-5 py-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-[#073B4C] font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <ChevronLeft className="w-4 h-4" />
                       <span>Kembali</span>
@@ -973,158 +934,115 @@ function BookingPageContent() {
                     <div />
                   )}
 
-                  <button
-                    type="button"
-                    disabled={isSubmitting}
-                    onClick={handleNext}
-                    className="px-8 py-3.5 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-xl font-heading text-base font-bold uppercase tracking-wider shadow-lg shadow-[#F4A261]/25 hover:shadow-xl transition-all cursor-pointer flex items-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
-                        <span>MEMPROSES RESERVASI...</span>
-                      </>
-                    ) : step === 4 ? (
-                      <>
-                        <Check className="w-5 h-5 stroke-[3]" />
-                        <span>KONFIRMASI PEMESANAN SEKARANG</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>Langkah Selanjutnya</span>
-                        <ChevronRight className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
+                  {step < 5 ? (
+                    <button
+                      type="button"
+                      onClick={handleNext}
+                      className="px-7 py-3 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-lg shadow-[#F4A261]/30 transition-all transform hover:-translate-y-0.5"
+                    >
+                      <span>Lanjut: {stepList[step]?.title || "Selanjutnya"}</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled={isSubmitting}
+                      onClick={handleNext}
+                      className="px-8 py-3.5 rounded-xl bg-[#2A9D8F] hover:bg-[#238276] text-white font-heading text-lg font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xl shadow-[#2A9D8F]/30 transition-all disabled:opacity-75 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
+                          <span>MEMPROSES RESERVASI...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Check className="w-5 h-5 stroke-[3]" />
+                          <span>KONFIRMASI BOOKING SEKARANG</span>
+                        </>
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
 
-              {/* RIGHT / SIDEBAR: STICKY ORDER SUMMARY (4 Columns) */}
-              <div className="lg:col-span-4 sticky top-36 space-y-6">
-                {/* Summary Card */}
-                <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-[#073B4C]/10 space-y-5">
-                  <div className="flex items-center justify-between border-b border-[#073B4C]/10 pb-4">
-                    <h3 className="font-heading text-lg font-bold text-[#073B4C] uppercase tracking-wide">
-                      RINGKASAN PESANAN
-                    </h3>
-                    <span className="text-[11px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-[#00B4D8]/15 text-[#0077B6]">
-                      Langkah {step} dari 4
+              {/* Right Column: Sticky Order Summary & Guarantees */}
+              <div className="lg:col-span-4 sticky top-36 space-y-5">
+                <div className="bg-white rounded-3xl p-6 shadow-lg border border-[#073B4C]/10 space-y-4">
+                  <div className="flex items-center justify-between border-b border-[#073B4C]/10 pb-3">
+                    <h3 className="font-heading text-xl font-bold text-[#073B4C]">RINGKASAN PESANAN</h3>
+                    <span className="text-[11px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#2A9D8F]/15 text-[#2A9D8F]">
+                      Langkah {step} dari 6
                     </span>
                   </div>
 
-                  {/* Tour Quick Peek */}
+                  {/* Selected Tour Mini Preview */}
                   <div className="flex items-center gap-3">
-                    <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/10 shadow-xs">
-                      <Image
-                        src={currentTour.image}
-                        alt={currentTour.name}
-                        fill
-                        className="object-cover"
-                      />
+                    <div className="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 border border-[#073B4C]/10">
+                      <Image src={currentTour.image} alt={currentTour.name} fill className="object-cover" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-extrabold uppercase text-[#0077B6]">
-                        {currentTour.tag}
-                      </span>
-                      <h4 className="font-heading text-sm font-bold text-[#073B4C] leading-snug line-clamp-2">
+                      <div className="font-heading text-sm font-bold text-[#073B4C] line-clamp-1">
                         {currentTour.name}
-                      </h4>
-                      <div className="text-[11px] text-[#073B4C]/65 flex items-center gap-1 mt-0.5">
-                        <Clock className="w-3 h-3 text-[#F4A261]" /> {currentTour.duration}
                       </div>
+                      <div className="text-xs text-[#073B4C]/60">{currentTour.duration}</div>
                     </div>
                   </div>
 
-                  {/* Highlights List */}
-                  <div className="p-3 bg-[#FFF3D6]/35 rounded-xl border border-[#073B4C]/10 space-y-1.5">
-                    <div className="text-[11px] font-bold text-[#073B4C] uppercase tracking-wider">
-                      Sorotan Fasilitas Tur:
-                    </div>
-                    {currentTour.highlights.map((h, i) => (
-                      <div key={i} className="text-xs text-[#073B4C]/80 flex items-center gap-1.5">
-                        <Check className="w-3.5 h-3.5 text-[#2A9D8F] shrink-0" />
-                        <span>{h}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Live Booking Details */}
-                  <div className="space-y-2 text-xs text-[#073B4C]/80 border-t border-[#073B4C]/10 pt-4">
+                  {/* Summary Details */}
+                  <div className="space-y-2 text-xs text-[#073B4C]/80 pt-2 border-t border-[#073B4C]/10">
                     <div className="flex justify-between">
                       <span className="text-[#073B4C]/60">Tanggal:</span>
-                      <strong className="text-[#073B4C]">{date}</strong>
+                      <strong className="text-[#073B4C]">{date || "-"}</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#073B4C]/60">Waktu Jemput:</span>
-                      <strong className="text-[#073B4C]">{timeSlot.split(" ")[0]} HST</strong>
+                      <span className="text-[#073B4C]/60">Waktu:</span>
+                      <strong className="text-[#073B4C]">{timeSlot}</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#073B4C]/60">Jumlah Tamu:</span>
+                      <span className="text-[#073B4C]/60">Peserta:</span>
                       <strong className="text-[#073B4C]">
                         {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                       </strong>
                     </div>
                   </div>
 
-                  {/* Price Calculation */}
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-[#FFF3D6]/50 to-[#F4A261]/10 border border-[#073B4C]/10 space-y-2">
-                    <div className="flex justify-between text-xs text-[#073B4C]/70">
-                      <span>Harga Standar:</span>
-                      <span>${rawTotal.toFixed(2)}</span>
+                  {/* Live Cost Breakdown */}
+                  <div className="space-y-1.5 pt-3 border-t border-[#073B4C]/10 text-xs">
+                    <div className="flex justify-between text-[#073B4C]/75">
+                      <span>Harga Dewasa ({adults}x)</span>
+                      <span>${adults * currentTour.price}</span>
                     </div>
-                    <div className="flex justify-between text-xs text-[#2A9D8F] font-bold">
-                      <span>Diskon Promo Online 10%:</span>
+                    {children > 0 && (
+                      <div className="flex justify-between text-[#073B4C]/75">
+                        <span>Harga Anak ({children}x)</span>
+                        <span>${children * Math.round(currentTour.price * 0.75)}</span>
+                      </div>
+                    )}
+                    <div className="flex justify-between font-bold text-[#2A9D8F]">
+                      <span>Diskon Promo 10%</span>
                       <span>-${promoDiscount.toFixed(2)}</span>
                     </div>
-                    <div className="flex justify-between items-center pt-2 border-t border-[#073B4C]/15">
-                      <span className="text-xs font-bold text-[#073B4C] uppercase">Total Akhir:</span>
-                      <span className="text-2xl font-heading font-extrabold text-[#0077B6]">
+                    <div className="flex justify-between items-baseline pt-2 border-t border-[#073B4C]/10">
+                      <span className="font-heading text-base text-[#073B4C]">TOTAL BIAYA:</span>
+                      <span className="font-heading text-2xl font-extrabold text-[#0077B6]">
                         ${finalTotal.toFixed(2)}
                       </span>
                     </div>
                   </div>
-
-                  {/* Trust Signals */}
-                  <div className="space-y-2.5 pt-1 text-xs text-[#073B4C]/80">
-                    <div className="flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-[#2A9D8F] shrink-0" />
-                      <span>Garansi Harga Terbaik &amp; Pembatalan Gratis 48 Jam</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Award className="w-4 h-4 text-[#F4A261] shrink-0" />
-                      <span>Pemenang TripAdvisor Travelers&apos; Choice #1</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00B4D8] shrink-0" />
-                      <span>Tanpa Biaya Reservasi Tambahan</span>
-                    </div>
-                  </div>
                 </div>
 
-                {/* Need Help Card */}
-                <div className="bg-[#073B4C] text-white rounded-3xl p-5 shadow-lg border border-white/10 space-y-3">
-                  <h4 className="font-heading text-base font-bold text-[#00B4D8] uppercase tracking-wide">
-                    Butuh Bantuan Reservasi?
-                  </h4>
-                  <p className="text-xs text-white/80 leading-relaxed">
-                    Staf pemandu lokal kami di Waikiki siap membantu merencanakan liburan Anda 7 hari seminggu.
-                  </p>
-                  <div className="space-y-2 pt-1 text-xs">
-                    <a
-                      href="tel:808-926-3090"
-                      className="flex items-center gap-2 text-white hover:text-[#F4A261] transition-colors font-medium"
-                    >
-                      <Phone className="w-3.5 h-3.5 text-[#F4A261]" />
-                      <span>808-926-3090</span>
-                    </a>
-                    <a
-                      href="mailto:info@gotourshawaii.com"
-                      className="flex items-center gap-2 text-white hover:text-[#F4A261] transition-colors font-medium"
-                    >
-                      <Mail className="w-3.5 h-3.5 text-[#F4A261]" />
-                      <span>info@gotourshawaii.com</span>
-                    </a>
+                {/* Trust & Guarantee Box */}
+                <div className="bg-[#FFF3D6]/70 rounded-2xl p-5 border border-[#073B4C]/15 space-y-2.5 text-xs text-[#073B4C]/80">
+                  <div className="flex items-center gap-2 font-bold text-[#073B4C]">
+                    <ShieldCheck className="w-4 h-4 text-[#2A9D8F]" />
+                    <span>Jaminan Pemesanan Resmi:</span>
                   </div>
+                  <ul className="space-y-1.5 pl-6 list-disc text-[11.5px]">
+                    <li>Pembatalan gratis hingga 48 jam sebelum tur</li>
+                    <li>Tidak ada pembayaran uang muka saat pemesanan online</li>
+                    <li>Pemandu lokal berlisensi negara bagian Hawaii</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1132,7 +1050,6 @@ function BookingPageContent() {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
@@ -1142,11 +1059,11 @@ export default function BookingPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#FFF3D6] flex items-center justify-center">
+        <div className="min-h-screen bg-[#FFF3D6] flex items-center justify-center p-8">
           <div className="text-center space-y-3">
             <span className="w-10 h-10 border-4 border-[#0077B6] border-t-transparent rounded-full animate-spin inline-block" />
-            <p className="text-sm font-bold text-[#073B4C] uppercase tracking-widest">
-              Memuat Sistem Reservasi Go Tours Hawaii...
+            <p className="text-sm font-bold text-[#073B4C] uppercase tracking-wider">
+              Memuat Halaman Booking...
             </p>
           </div>
         </div>
