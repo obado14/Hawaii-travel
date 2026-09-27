@@ -269,8 +269,9 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             </a>
 
             {/* Desktop Primary CTA Button */}
-            <button
-              onClick={onOpenBooking}
+            <Link
+              href="/booking"
+              onClick={() => onOpenBooking?.()}
               className="hidden sm:block relative overflow-hidden group bg-[#F4A261] hover:bg-[#e76f51] text-white px-4 py-1.5 rounded-xl font-bold shadow-md shadow-[#F4A261]/35 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center leading-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <span className="block text-xs sm:text-[13px] uppercase tracking-wider font-extrabold">
@@ -279,16 +280,17 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               <span className="block text-[10px] font-normal tracking-wide text-white/90">
                 Diskon 10%
               </span>
-            </button>
+            </Link>
 
             {/* Mobile Instant Booking CTA (Visible on <640px) */}
-            <button
-              onClick={onOpenBooking}
+            <Link
+              href="/booking"
+              onClick={() => onOpenBooking?.()}
               className="sm:hidden bg-[#F4A261] hover:bg-[#e76f51] text-white px-3 py-1.5 rounded-lg text-xs font-extrabold uppercase tracking-wider shadow-md shadow-[#F4A261]/30 cursor-pointer active:scale-95 transition-transform"
               aria-label="Buka form pemesanan langsung"
             >
               PESAN
-            </button>
+            </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -442,15 +444,13 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               <span>Hubungi: 808-926-3090</span>
             </a>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenBooking?.();
-              }}
-              className="w-full bg-[#F4A261] hover:bg-[#e76f51] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-sm shadow-lg shadow-[#F4A261]/35 cursor-pointer active:scale-98 transition-transform"
+            <Link
+              href="/booking"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-center bg-[#F4A261] hover:bg-[#e76f51] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-sm shadow-lg shadow-[#F4A261]/35 cursor-pointer active:scale-98 transition-transform block"
             >
               PESAN SEKARANG (HEMAT 10%)
-            </button>
+            </Link>
           </div>
         </div>
       )}

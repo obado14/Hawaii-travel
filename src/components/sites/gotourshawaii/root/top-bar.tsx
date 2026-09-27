@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export function TopBar() {
   return (
@@ -6,9 +7,9 @@ export function TopBar() {
       <div className="container mx-auto flex items-center justify-center gap-2">
         <span className="inline-block w-2 h-2 rounded-full bg-[#F4A261] animate-pulse" />
         <span className="text-[#00B4D8] font-bold">Penawaran Khusus:</span>
-        <a href="#booking" className="hover:underline hover:text-[#FFF3D6] transition-colors">
+        <Link href="/booking" className="hover:underline hover:text-[#FFF3D6] transition-colors">
           Pesan Sekarang &amp; Dapatkan Diskon 10%!!
-        </a>
+        </Link>
       </div>
     </div>
   );
