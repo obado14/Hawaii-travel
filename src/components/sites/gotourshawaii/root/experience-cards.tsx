@@ -74,7 +74,6 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
             <Link
               key={exp.id}
               href={`/booking?tour=${encodeURIComponent(exp.tourParam)}`}
-              onClick={() => onSelectExperience?.(exp.title)}
               aria-label={`Jelajahi ${exp.title}`}
               className="group relative block h-[380px] sm:h-[420px] md:h-[460px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
             >

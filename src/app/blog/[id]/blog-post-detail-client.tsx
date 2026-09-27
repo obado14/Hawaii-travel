@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { BlogPost, posts } from "@/data/blog-posts";
 import {
@@ -26,8 +26,7 @@ interface BlogPostDetailClientProps {
 }
 
 export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
-  const [bookingOpen, setBookingOpen] = useState(false);
-  const [selectedTour, setSelectedTour] = useState(post.relatedTourName);
+  const router = useRouter();
   const [copied, setCopied] = useState(false);
 
   const otherPosts = posts.filter((p) => p.id !== post.id).slice(0, 3);
@@ -41,14 +40,13 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
   };
 
   const handleBook = (tourName: string) => {
-    setSelectedTour(tourName);
-    setBookingOpen(true);
+    router.push(`/booking?tour=${encodeURIComponent(tourName)}`);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
-      <Navbar onOpenBooking={() => handleBook(post.relatedTourName)} />
+      <Navbar />
 
       <main className="flex-1">
         {/* Article Header Hero */}
@@ -253,16 +251,10 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
           </div>
         </section>
 
-        <CtaBanner onBookNow={() => handleBook(post.relatedTourName)} />
+        <CtaBanner />
       </main>
 
       <Footer />
-
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour={selectedTour}
-      />
     </div>
   );
 }

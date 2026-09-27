@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Hero } from "@/components/sites/gotourshawaii/root/hero";
@@ -17,29 +16,22 @@ import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 import { ScrollReveal } from "@/components/sites/gotourshawaii/root/scroll-reveal";
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleOpenBooking = (tourName?: string) => {
-    const query = tourName ? `?tour=${encodeURIComponent(tourName)}` : "";
-    router.push(`/booking${query}`);
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white overflow-x-hidden">
       {/* 1. Top Announcement Bar */}
       <TopBar />
 
       {/* 2. Sticky Responsive Navbar */}
-      <Navbar onOpenBooking={() => handleOpenBooking("Circle Island Tour")} />
+      <Navbar />
 
       {/* 3. Hero Section with Koolau mountains, TripAdvisor badge & CTA */}
       <main className="flex-1">
         {/* Step 1: Hero */}
-        <Hero onOpenBooking={() => handleOpenBooking("Circle Island Tour")} />
+        <Hero />
 
         {/* Step 2: Choose Your Experience (Circle Island, Luau, Pearl Harbor) */}
         <ScrollReveal>
-          <ExperienceCards onSelectExperience={(title) => handleOpenBooking(title)} />
+          <ExperienceCards />
         </ScrollReveal>
 
         {/* Step 3: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
@@ -49,7 +41,7 @@ export default function Home() {
 
         {/* Step 4: Featured Experience (Diamond Head Shuttle) */}
         <ScrollReveal>
-          <DiamondHeadBanner onBookShuttle={() => handleOpenBooking("Diamond Head Shuttle")} />
+          <DiamondHeadBanner />
         </ScrollReveal>
 
         {/* Step 5: Visual Experience (Visual Odyssey photo gallery) */}
@@ -71,7 +63,7 @@ export default function Home() {
         <TrustBadges />
 
         {/* Step 8: Single Final CTA (Rasakan Keajaiban Hawaii) */}
-        <CtaBanner onBookNow={() => handleOpenBooking("Circle Island Tour")} />
+        <CtaBanner />
       </main>
 
       {/* 14. Comprehensive Footer with map & links */}

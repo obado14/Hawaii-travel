@@ -6,7 +6,6 @@ import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import {
   Calendar,
@@ -32,7 +31,6 @@ const categories = [
 ];
 
 export default function BlogPage() {
-  const [bookingOpen, setBookingOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Semua");
   const [visibleCount, setVisibleCount] = useState(6);
@@ -81,7 +79,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
-      <Navbar onOpenBooking={() => setBookingOpen(true)} />
+      <Navbar />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -392,16 +390,10 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <CtaBanner onBookNow={() => setBookingOpen(true)} />
+        <CtaBanner />
       </main>
 
       <Footer />
-
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour="Circle Island Tour"
-      />
     </div>
   );
 }

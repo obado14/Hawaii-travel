@@ -6,7 +6,6 @@ import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import {
   Heart,
@@ -112,12 +111,10 @@ const visualStories = [
 ];
 
 export default function OurStoryPage() {
-  const [bookingOpen, setBookingOpen] = useState(false);
-
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
-      <Navbar onOpenBooking={() => setBookingOpen(true)} />
+      <Navbar />
 
       <main className="flex-1">
         {/* 1. Hero Section */}
@@ -523,17 +520,10 @@ export default function OurStoryPage() {
         </section>
 
         {/* 8. CTA Banner */}
-        <CtaBanner onBookNow={() => setBookingOpen(true)} />
+        <CtaBanner />
       </main>
 
       <Footer />
-
-      {/* Booking Dialog Modal */}
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour="Tur Keliling Pulau"
-      />
     </div>
   );
 }

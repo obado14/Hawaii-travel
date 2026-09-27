@@ -29,7 +29,6 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
         {/* Compact Hero Card */}
         <Link
           href="/booking?tour=Diamond%20Head%20Shuttle"
-          onClick={() => onBookShuttle?.()}
           aria-label="Lihat tur shuttle pendakian Diamond Head"
           className="group relative block h-[330px] sm:h-[370px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
         >

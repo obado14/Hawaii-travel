@@ -491,7 +491,7 @@ export default function TourPackagesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white overflow-x-hidden">
       <TopBar />
-      <Navbar onOpenBooking={() => handleBook("Tur Keliling Pulau")} />
+      <Navbar />
 
       <main className="flex-1">
         {/* 1. Header Hero */}

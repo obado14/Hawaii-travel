@@ -6,7 +6,6 @@ import Link from "next/link";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { FAQSection } from "@/components/sites/gotourshawaii/root/faq-section";
 import {
   MapPin,
@@ -20,7 +19,6 @@ import {
 } from "lucide-react";
 
 export default function ContactUsPage() {
-  const [bookingOpen, setBookingOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState({
@@ -50,7 +48,7 @@ export default function ContactUsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
-      <Navbar onOpenBooking={() => setBookingOpen(true)} />
+      <Navbar />
 
       <main className="flex-1">
         {/* 1. Hero Section */}
@@ -451,12 +449,6 @@ export default function ContactUsPage() {
       </main>
 
       <Footer />
-
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour="Tur Keliling Pulau"
-      />
     </div>
   );
 }
