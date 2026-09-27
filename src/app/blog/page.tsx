@@ -79,7 +79,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
@@ -95,18 +95,18 @@ export default function BlogPage() {
               className="object-cover object-center"
             />
             {/* Softened dark overlay so the turtle is vivid while white heading remains high contrast */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0c1f38]/50 via-black/25 to-[#0c1f38]/75" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0077B6]/60 via-black/25 to-[#073B4C]/85" />
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
             <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
-              <Sparkles className="w-4 h-4 text-[#f5b324]" />
-              <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest">
+              <Sparkles className="w-4 h-4 text-[#00B4D8]" />
+              <span className="text-xs font-bold text-[#00B4D8] uppercase tracking-widest">
                 Wawasan Lokal &amp; Panduan Wisata Hawaii
               </span>
             </div>
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">
-              BLOG WISATA <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#f5b324] to-amber-200">HAWAII</span>
+              BLOG WISATA <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-[#F4A261] to-amber-100">HAWAII</span>
             </h1>
             <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] font-normal leading-relaxed">
               Panduan ahli, surga tersembunyi, sejarah budaya, dan tips lokal berharga dari tim pemandu wisata Hawaii kami.
@@ -127,27 +127,27 @@ export default function BlogPage() {
         </section>
 
         {/* Main Blog Content Section with Cream Background */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FFF3D6] text-[#073B4C] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-600 mb-6 font-medium px-1">
-              <Link href="/" className="hover:text-[#f15d22] transition-colors">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#073B4C]/70 mb-6 font-medium px-1">
+              <Link href="/" className="hover:text-[#F4A261] transition-colors">
                 Beranda
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
-              <span className="text-neutral-900 font-bold">Blog Wisata</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#073B4C]/40" />
+              <span className="text-[#073B4C] font-bold">Blog Wisata</span>
             </nav>
 
             {/* 1. Featured Article Section (Horizontal Card) */}
             <div className="mb-12 sm:mb-14">
               <div className="flex items-center gap-2 mb-4 px-1">
-                <Sparkles className="w-4 h-4 text-[#f15d22]" />
-                <span className="text-xs font-bold text-[#f15d22] uppercase tracking-widest">
+                <Sparkles className="w-4 h-4 text-[#0077B6]" />
+                <span className="text-xs font-bold text-[#0077B6] uppercase tracking-widest">
                   Cerita Pilihan
                 </span>
               </div>
 
-              <article className="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 grid grid-cols-1 lg:grid-cols-12 group transition-all duration-300 hover:shadow-2xl">
+              <article className="bg-white rounded-3xl overflow-hidden shadow-xl border border-[#073B4C]/10 grid grid-cols-1 lg:grid-cols-12 group transition-all duration-300 hover:shadow-2xl">
                 {/* Large Horizontal Featured Image */}
                 <Link
                   href={`/blog/${featuredPost.id}`}
@@ -162,12 +162,12 @@ export default function BlogPage() {
                   />
                   {/* Category & Editor's Pick Badge */}
                   <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2 z-10">
-                    <div className="bg-[#f15d22] text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
+                    <div className="bg-[#F4A261] text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
                       <Sparkles className="w-3.5 h-3.5" />
                       <span>Artikel Unggulan</span>
                     </div>
                     <div className="bg-black/60 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
-                      <Tag className="w-3 h-3 text-[#f5b324]" />
+                      <Tag className="w-3 h-3 text-[#00B4D8]" />
                       <span>{featuredPost.category}</span>
                     </div>
                   </div>
@@ -177,32 +177,32 @@ export default function BlogPage() {
                 <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
                   <div>
                     {/* Author Information */}
-                    <div className="flex items-center gap-2 text-xs font-bold text-[#f15d22] uppercase tracking-wider mb-2.5">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#0077B6] uppercase tracking-wider mb-2.5">
                       <span>Oleh Tim Go Tours Hawaii</span>
                     </div>
 
                     {/* Aligned Metadata */}
-                    <div className="flex items-center gap-3 text-xs text-neutral-500 mb-3.5 font-medium">
+                    <div className="flex items-center gap-3 text-xs text-[#073B4C]/60 mb-3.5 font-medium">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-neutral-400" />
+                        <Calendar className="w-3.5 h-3.5 text-[#073B4C]/40" />
                         {featuredPost.date}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-neutral-400" />
+                        <Clock className="w-3.5 h-3.5 text-[#073B4C]/40" />
                         {featuredPost.readTime}
                       </span>
                     </div>
 
                     {/* Prominent Title */}
-                    <h2 className="font-heading text-2xl sm:text-3xl lg:text-[30px] font-bold text-[#0c2340] uppercase tracking-wide leading-tight mb-4 group-hover:text-[#f15d22] transition-colors">
+                    <h2 className="font-heading text-2xl sm:text-3xl lg:text-[30px] font-bold text-[#073B4C] uppercase tracking-wide leading-tight mb-4 group-hover:text-[#0077B6] transition-colors">
                       <Link href={`/blog/${featuredPost.id}`} className="hover:underline">
                         {featuredPost.title}
                       </Link>
                     </h2>
 
                     {/* Short Description */}
-                    <p className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+                    <p className="text-[#073B4C]/75 text-sm sm:text-base leading-relaxed mb-6 font-normal">
                       {featuredPost.excerpt}
                     </p>
                   </div>
@@ -211,7 +211,7 @@ export default function BlogPage() {
                   <div className="pt-4 border-t border-neutral-100 flex items-center">
                     <Link
                       href={`/blog/${featuredPost.id}`}
-                      className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#f15d22]/25 group/btn cursor-pointer"
+                      className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#F4A261]/25 group/btn cursor-pointer"
                     >
                       <span>BACA PANDUAN LENGKAP</span>
                       <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
@@ -230,7 +230,7 @@ export default function BlogPage() {
                   value={searchQuery}
                   onChange={handleSearchChange}
                   placeholder="Cari artikel berdasarkan judul atau kata kunci (cth. Turtle Canyon, air terjun, kuliner)..."
-                  className="w-full pl-12 pr-10 py-3.5 sm:py-4 rounded-2xl bg-white border border-neutral-300 text-neutral-800 placeholder-neutral-400 text-sm sm:text-base shadow-sm focus:outline-none focus:border-[#f15d22] focus:ring-2 focus:ring-[#f15d22]/20 transition-all"
+                  className="w-full pl-12 pr-10 py-3.5 sm:py-4 rounded-2xl bg-white border border-[#073B4C]/15 text-[#073B4C] placeholder-[#073B4C]/40 text-sm sm:text-base shadow-sm focus:outline-none focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 transition-all"
                 />
                 {searchQuery && (
                   <button
@@ -257,8 +257,8 @@ export default function BlogPage() {
                     onClick={() => handleCategoryChange(category)}
                     className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       isActive
-                        ? "bg-[#f15d22] text-white border-[#f15d22] shadow-md shadow-[#f15d22]/25 scale-105"
-                        : "bg-white text-neutral-700 border-neutral-200 hover:border-[#f15d22]/40 hover:text-[#f15d22] hover:bg-neutral-50 shadow-sm"
+                        ? "bg-[#F4A261] text-white border-[#F4A261] shadow-md shadow-[#F4A261]/25 scale-105"
+                        : "bg-white text-[#073B4C] border-[#073B4C]/15 hover:border-[#F4A261]/40 hover:text-[#F4A261] hover:bg-neutral-50 shadow-sm"
                     }`}
                   >
                     {category}
@@ -269,19 +269,19 @@ export default function BlogPage() {
 
             {/* Active Filter or Search Status Banner */}
             {(selectedCategory !== "Semua" || searchQuery.trim()) && (
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-8 px-2 text-xs sm:text-sm text-neutral-600 border-b border-neutral-200 pb-3">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-8 px-2 text-xs sm:text-sm text-[#073B4C]/70 border-b border-[#073B4C]/15 pb-3">
                 <div>
-                  Menampilkan <strong className="text-neutral-900">{filteredPosts.length}</strong> artikel
+                  Menampilkan <strong className="text-[#073B4C]">{filteredPosts.length}</strong> artikel
                   {selectedCategory !== "Semua" && (
-                    <span> dalam kategori <strong className="text-[#f15d22]">{selectedCategory}</strong></span>
+                    <span> dalam kategori <strong className="text-[#0077B6]">{selectedCategory}</strong></span>
                   )}
                   {searchQuery.trim() && (
-                    <span> yang cocok dengan &ldquo;<strong className="text-neutral-900">{searchQuery}</strong>&rdquo;</span>
+                    <span> yang cocok dengan &ldquo;<strong className="text-[#073B4C]">{searchQuery}</strong>&rdquo;</span>
                   )}
                 </div>
                 <button
                   onClick={handleClearFilters}
-                  className="text-[#f15d22] hover:text-[#d84b13] hover:underline font-bold cursor-pointer transition-colors"
+                  className="text-[#F4A261] hover:text-[#e76f51] hover:underline font-bold cursor-pointer transition-colors"
                 >
                   Hapus Filter
                 </button>
@@ -290,17 +290,17 @@ export default function BlogPage() {
 
             {/* 4. Blog Posts Grid & Empty State */}
             {filteredPosts.length === 0 ? (
-              <div className="bg-white rounded-3xl p-10 sm:p-14 text-center max-w-lg mx-auto shadow-md border border-neutral-200 my-8">
+              <div className="bg-white rounded-3xl p-10 sm:p-14 text-center max-w-lg mx-auto shadow-md border border-[#073B4C]/10 my-8">
                 <Search className="w-10 h-10 text-neutral-300 mx-auto mb-3" />
-                <h3 className="font-heading text-xl font-bold text-[#0c2340] mb-2 uppercase">
+                <h3 className="font-heading text-xl font-bold text-[#073B4C] mb-2 uppercase">
                   Tidak Ada Artikel Ditemukan
                 </h3>
-                <p className="text-sm text-neutral-500 mb-6 leading-relaxed">
+                <p className="text-sm text-[#073B4C]/70 mb-6 leading-relaxed">
                   Kami tidak dapat menemukan artikel wisata yang cocok dengan pencarian Anda. Coba kata kunci lain atau atur ulang filter kategori.
                 </p>
                 <button
                   onClick={handleClearFilters}
-                  className="px-6 py-2.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  className="px-6 py-2.5 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   Lihat Semua Artikel
                 </button>
@@ -310,7 +310,7 @@ export default function BlogPage() {
                 {displayedPosts.map((post) => (
                   <article
                     key={post.id}
-                    className="h-full bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-200/80 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
+                    className="h-full bg-white rounded-3xl overflow-hidden shadow-xl border border-[#073B4C]/10 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
                   >
                     {/* Uniform Image Height - Clickable Link with subtle zoom */}
                     <Link
@@ -324,7 +324,7 @@ export default function BlogPage() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                        <Tag className="w-3 h-3 text-[#f5b324]" />
+                        <Tag className="w-3 h-3 text-[#00B4D8]" />
                         <span>{post.category}</span>
                       </div>
                     </Link>
@@ -333,32 +333,32 @@ export default function BlogPage() {
                     <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                       <div className="flex-1 flex flex-col">
                         {/* Author Information */}
-                        <div className="flex items-center gap-2 text-xs font-semibold text-[#f15d22] uppercase tracking-wider mb-2">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#0077B6] uppercase tracking-wider mb-2">
                           <span>Oleh Tim Go Tours Hawaii</span>
                         </div>
 
                         {/* Aligned Metadata */}
-                        <div className="flex items-center gap-3 text-xs text-neutral-500 mb-2.5 font-medium">
+                        <div className="flex items-center gap-3 text-xs text-[#073B4C]/60 mb-2.5 font-medium">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3.5 h-3.5 text-neutral-400" />
+                            <Calendar className="w-3.5 h-3.5 text-[#073B4C]/40" />
                             {post.date}
                           </span>
                           <span>•</span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5 text-neutral-400" />
+                            <Clock className="w-3.5 h-3.5 text-[#073B4C]/40" />
                             {post.readTime}
                           </span>
                         </div>
 
                         {/* Prominent Title with Consistent Height Area - Clickable */}
-                        <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#0c2340] uppercase tracking-wide leading-snug mb-3 group-hover:text-[#f15d22] transition-colors min-h-[3.5rem] sm:min-h-[4rem] line-clamp-2">
+                        <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#073B4C] uppercase tracking-wide leading-snug mb-3 group-hover:text-[#0077B6] transition-colors min-h-[3.5rem] sm:min-h-[4rem] line-clamp-2">
                           <Link href={`/blog/${post.id}`} className="hover:underline">
                             {post.title}
                           </Link>
                         </h2>
 
                         {/* Readable Description with Comfortable Line-height */}
-                        <p className="text-neutral-600 text-sm leading-relaxed mb-6 font-normal line-clamp-3 flex-1">
+                        <p className="text-[#073B4C]/75 text-sm leading-relaxed mb-6 font-normal line-clamp-3 flex-1">
                           {post.excerpt}
                         </p>
                       </div>
@@ -366,7 +366,7 @@ export default function BlogPage() {
                       {/* Bottom CTA - Clickable Link to Full Guide */}
                       <Link
                         href={`/blog/${post.id}`}
-                        className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs sm:text-sm font-bold text-[#f15d22] hover:text-[#d84b13] uppercase tracking-wider transition-colors mt-auto group/btn cursor-pointer"
+                        className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs sm:text-sm font-bold text-[#F4A261] hover:text-[#e76f51] uppercase tracking-wider transition-colors mt-auto group/btn cursor-pointer"
                       >
                         <span className="group-hover/btn:underline">Baca Panduan Lengkap</span>
                         <ArrowRight className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform" />
@@ -382,7 +382,7 @@ export default function BlogPage() {
               <div className="text-center mt-12 sm:mt-16">
                 <button
                   onClick={handleLoadMore}
-                  className="px-8 py-3.5 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#f15d22]/30 inline-flex items-center gap-2 cursor-pointer group"
+                  className="px-8 py-3.5 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#F4A261]/30 inline-flex items-center gap-2 cursor-pointer group"
                 >
                   <span>MUAT LEBIH BANYAK ARTIKEL</span>
                   <ChevronDown className="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform" />

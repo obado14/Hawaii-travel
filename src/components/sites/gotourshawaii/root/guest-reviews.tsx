@@ -56,7 +56,7 @@ export function GuestReviews() {
   const current = reviews[currentIndex];
 
   return (
-    <section className="relative bg-[#081d38] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden text-white">
+    <section className="relative bg-[#073B4C] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden text-white">
       {/* Background Texture Overlay */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -71,11 +71,11 @@ export function GuestReviews() {
         {/* Title */}
         <div className="text-center mb-7 sm:mb-9">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
-            <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#00B4D8] uppercase tracking-widest">
               KEPUASAN WISATAWAN
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#f5b324] uppercase tracking-wider drop-shadow-md">
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#00B4D8] uppercase tracking-wider drop-shadow-md">
             TESTIMONI TAMU KAMI
           </h2>
 
@@ -94,7 +94,7 @@ export function GuestReviews() {
                 Rating Keseluruhan
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl sm:text-3xl font-extrabold text-[#f5b324] leading-none font-heading">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#F4A261] leading-none font-heading">
                   4.9
                 </span>
                 <span className="text-[11px] sm:text-xs text-neutral-300 font-medium">4.678 ulasan</span>
@@ -113,30 +113,30 @@ export function GuestReviews() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mb-4">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#f59e0b] text-[#f59e0b] drop-shadow-sm" />
+                    <Star key={i} className="w-5 h-5 fill-[#F4A261] text-[#F4A261] drop-shadow-sm" />
                   ))}
                 </div>
-                <span className="text-[11px] uppercase tracking-wider font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                <span className="text-[11px] uppercase tracking-wider font-bold text-[#2A9D8F] bg-[#2A9D8F]/10 border border-[#2A9D8F]/25 px-2.5 py-0.5 rounded-full">
                   ✓ Tamu Tur Terverifikasi
                 </span>
               </div>
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#0c2340] mb-2.5">
+                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#073B4C] mb-2.5">
                   {current.title}
                 </h4>
               )}
 
               {/* Review Quote */}
-              <p className="text-sm sm:text-base md:text-lg text-neutral-700 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-[#073B4C]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
 
             {/* Author */}
             <div className="mt-5 text-center border-t border-neutral-100 pt-3">
-              <span className="font-heading text-base sm:text-lg font-bold text-[#f15d22] uppercase tracking-wider">
+              <span className="font-heading text-base sm:text-lg font-bold text-[#F4A261] uppercase tracking-wider">
                 ~ {current.author}
               </span>
             </div>
@@ -145,7 +145,7 @@ export function GuestReviews() {
           {/* Navigation Arrows */}
           <button
             onClick={prevReview}
-            className="absolute left-[-6px] sm:left-[-16px] md:left-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
+            className="absolute left-[-6px] sm:left-[-16px] md:left-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F4A261] hover:bg-[#e76f51] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
             aria-label="Ulasan Sebelumnya"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
@@ -153,7 +153,7 @@ export function GuestReviews() {
 
           <button
             onClick={nextReview}
-            className="absolute right-[-6px] sm:right-[-16px] md:right-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
+            className="absolute right-[-6px] sm:right-[-16px] md:right-[-22px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F4A261] hover:bg-[#e76f51] text-white flex items-center justify-center shadow-xl transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer ring-2 ring-white/30"
             aria-label="Ulasan Berikutnya"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
@@ -167,7 +167,7 @@ export function GuestReviews() {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`h-2 rounded-full transition-all cursor-pointer ${
-                currentIndex === idx ? "w-6 bg-[#f15d22]" : "w-2 bg-white/30 hover:bg-white/60"
+                currentIndex === idx ? "w-6 bg-[#F4A261]" : "w-2 bg-white/30 hover:bg-white/60"
               }`}
               aria-label={`Buka ulasan ${idx + 1}`}
             />

@@ -189,7 +189,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
       onClick={handleResetAndClose}
     >
       <div
-        className="relative w-full max-w-xl bg-[#0c1f38] border border-white/20 rounded-3xl shadow-2xl p-6 sm:p-8 text-white overflow-hidden animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col justify-between"
+        className="relative w-full max-w-xl bg-[#073B4C] border border-white/20 rounded-3xl shadow-2xl p-6 sm:p-8 text-white overflow-hidden animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col justify-between"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -218,7 +218,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
 
             <p className="text-neutral-200 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
               Mahalo, <strong className="text-white">{fullName}</strong>! Kami telah mengamankan kursi Anda untuk{" "}
-              <strong className="text-[#f5b324]">{currentTourData.name}</strong> pada{" "}
+              <strong className="text-[#00B4D8]">{currentTourData.name}</strong> pada{" "}
               <strong className="text-white">{date}</strong> ({timeSlot}).
             </p>
 
@@ -231,7 +231,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
               </div>
               <div className="flex justify-between text-neutral-300">
                 <span>Perkiraan Total:</span>
-                <span className="font-bold text-[#f5b324] text-base">${total.toFixed(2)}</span>
+                <span className="font-bold text-[#00B4D8] text-base">${total.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-neutral-300">
                 <span>Konfirmasi Dikirim Ke:</span>
@@ -245,7 +245,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
             <div className="pt-2">
               <button
                 onClick={handleResetAndClose}
-                className="w-full sm:w-auto px-10 py-3 bg-[#f15d22] hover:bg-[#d84b13] text-white rounded-xl font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#f15d22]/30 transition-all cursor-pointer"
+                className="w-full sm:w-auto px-10 py-3 bg-[#F4A261] hover:bg-[#e76f51] text-white rounded-xl font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#F4A261]/30 transition-all cursor-pointer"
               >
                 SELESAI &amp; JELAJAHI LEBIH LANJUT
               </button>
@@ -258,7 +258,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
             <div className="mb-6">
               <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2.5">
                 <span>Langkah {step} dari 5</span>
-                <span className="text-[#f5b324] font-semibold">
+                <span className="text-[#00B4D8] font-semibold">
                   {step === 1 && "Pilih Tur"}
                   {step === 2 && "Pilih Tanggal & Waktu"}
                   {step === 3 && "Jumlah Tamu"}
@@ -283,9 +283,9 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     onClick={() => handleStepJump(item.s)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       item.s === step
-                        ? "bg-[#f15d22] ring-2 ring-[#f15d22]/40"
+                        ? "bg-[#F4A261] ring-2 ring-[#F4A261]/40"
                         : item.s < step
-                        ? "bg-emerald-500 cursor-pointer hover:opacity-80"
+                        ? "bg-[#2A9D8F] cursor-pointer hover:opacity-80"
                         : "bg-white/15 cursor-not-allowed"
                     }`}
                     title={item.s < step ? `Klik untuk kembali ke langkah ${item.label}` : item.label}
@@ -321,13 +321,13 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                       onClick={() => setSelectedTour(t.id)}
                       className={`p-3.5 sm:p-4 rounded-2xl border cursor-pointer transition-all duration-200 flex items-center justify-between ${
                         selectedTour === t.id
-                          ? "bg-[#f15d22]/20 border-[#f15d22] ring-1 ring-[#f15d22]"
+                          ? "bg-[#F4A261]/20 border-[#F4A261] ring-1 ring-[#F4A261]"
                           : "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/25"
                       }`}
                     >
                       <div className="space-y-1 text-left">
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md">
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#00B4D8] bg-[#00B4D8]/15 px-2 py-0.5 rounded-md">
                             {t.tag}
                           </span>
                           <span className="text-xs text-neutral-400 flex items-center gap-1">
@@ -338,7 +338,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                       </div>
 
                       <div className="text-right pl-3 shrink-0">
-                        <div className="text-lg sm:text-xl font-extrabold text-[#f5b324] font-heading">
+                        <div className="text-lg sm:text-xl font-extrabold text-[#F4A261] font-heading">
                           ${t.price}
                         </div>
                         <span className="text-[11px] text-neutral-400">/ orang</span>
@@ -366,7 +366,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   <div className="text-xs text-neutral-300">
                     Pilihan: <strong className="text-white">{currentTourData.name}</strong>
                   </div>
-                  <span className="text-xs text-[#f5b324] font-bold">${currentTourData.price}/org</span>
+                  <span className="text-xs text-[#00B4D8] font-bold">${currentTourData.price}/org</span>
                 </div>
 
                 {/* Date Input */}
@@ -379,7 +379,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     required
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
+                    className="w-full bg-[#052631] border border-white/20 rounded-xl px-4 py-3 text-base text-white focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition-all"
                   />
                 </div>
 
@@ -401,7 +401,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                         onClick={() => setTimeSlot(slot)}
                         className={`p-3 rounded-xl border text-xs sm:text-sm font-medium transition-all text-left cursor-pointer ${
                           timeSlot === slot
-                            ? "bg-[#f15d22]/20 border-[#f15d22] text-white ring-1 ring-[#f15d22]"
+                            ? "bg-[#F4A261]/20 border-[#F4A261] text-white ring-1 ring-[#F4A261]"
                             : "bg-white/5 border-white/10 text-neutral-300 hover:bg-white/10"
                         }`}
                       >
@@ -447,7 +447,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     <button
                       type="button"
                       onClick={() => setAdults((prev) => Math.min(20, prev + 1))}
-                      className="w-9 h-9 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center font-bold text-lg cursor-pointer"
+                      className="w-9 h-9 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white flex items-center justify-center font-bold text-lg cursor-pointer"
                     >
                       +
                     </button>
@@ -458,7 +458,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 <div className="p-4 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-between">
                   <div>
                     <div className="font-bold text-white text-base">Anak-anak (3–11 thn)</div>
-                    <div className="text-xs text-emerald-400 font-medium">
+                    <div className="text-xs text-[#2A9D8F] font-medium">
                       Diskon 25% (${Math.round(currentTourData.price * 0.75)}/orang)
                     </div>
                   </div>
@@ -476,7 +476,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     <button
                       type="button"
                       onClick={() => setChildren((prev) => Math.min(10, prev + 1))}
-                      className="w-9 h-9 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white flex items-center justify-center font-bold text-lg cursor-pointer"
+                      className="w-9 h-9 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white flex items-center justify-center font-bold text-lg cursor-pointer"
                     >
                       +
                     </button>
@@ -484,7 +484,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 </div>
 
                 {/* Live Price Summary Box */}
-                <div className="p-4 rounded-2xl bg-gradient-to-r from-white/5 to-[#f15d22]/10 border border-white/10 flex items-center justify-between">
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-white/5 to-[#F4A261]/15 border border-white/10 flex items-center justify-between">
                   <div>
                     <div className="text-xs text-neutral-400">Total dengan Diskon Promo Online 10%:</div>
                     <div className="text-xs text-neutral-400 line-through">
@@ -492,7 +492,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-2xl sm:text-3xl font-heading font-extrabold text-[#f5b324]">
+                    <span className="text-2xl sm:text-3xl font-heading font-extrabold text-[#00B4D8]">
                       ${total.toFixed(2)}
                     </span>
                   </div>
@@ -522,7 +522,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     placeholder="cth. Sarah Jenkins"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
+                    className="w-full bg-[#052631] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition-all"
                   />
                 </div>
 
@@ -537,7 +537,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                       placeholder="sarah@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
+                      className="w-full bg-[#052631] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition-all"
                     />
                   </div>
 
@@ -551,7 +551,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                       placeholder="+62 812-3456-7890"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
+                      className="w-full bg-[#052631] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition-all"
                     />
                   </div>
                 </div>
@@ -565,7 +565,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                     placeholder="cth. Sheraton Waikiki, Hilton Hawaiian Village..."
                     value={hotel}
                     onChange={(e) => setHotel(e.target.value)}
-                    className="w-full bg-[#081528] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#f15d22] transition-all"
+                    className="w-full bg-[#052631] border border-white/20 rounded-xl px-4 py-3 text-base text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition-all"
                   />
                 </div>
               </div>
@@ -587,7 +587,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/15 space-y-3">
                   <div className="flex items-start justify-between border-b border-white/10 pb-3">
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#00B4D8]">
                         Tur Terpilih
                       </span>
                       <h4 className="font-bold text-base sm:text-lg text-white">
@@ -595,7 +595,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                       </h4>
                       <p className="text-xs text-neutral-300">{currentTourData.duration}</p>
                     </div>
-                    <span className="text-xs bg-[#f15d22]/20 text-[#f15d22] font-bold px-2.5 py-1 rounded-md">
+                    <span className="text-xs bg-[#F4A261]/20 text-[#F4A261] font-bold px-2.5 py-1 rounded-md">
                       {currentTourData.tag}
                     </span>
                   </div>
@@ -637,16 +637,16 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   <div className="pt-2 border-t border-white/10 flex items-center justify-between">
                     <div>
                       <div className="text-xs text-neutral-400">Total Pembayaran (Diskon 10%):</div>
-                      <div className="text-[11px] text-emerald-400">✓ Tanpa pembayaran di muka saat ini</div>
+                      <div className="text-[11px] text-[#2A9D8F]">✓ Tanpa pembayaran di muka saat ini</div>
                     </div>
-                    <div className="text-2xl sm:text-3xl font-heading font-extrabold text-[#f5b324]">
+                    <div className="text-2xl sm:text-3xl font-heading font-extrabold text-[#00B4D8]">
                       ${total.toFixed(2)}
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 text-xs text-neutral-300 bg-white/5 p-2.5 rounded-xl border border-white/10">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-[#2A9D8F] shrink-0" />
                   <span>Kebijakan pembatalan fleksibel 48 jam. Bayar saat keberangkatan di Hawaii.</span>
                 </div>
               </div>
@@ -671,7 +671,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="px-7 py-3 rounded-xl bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-base font-bold uppercase tracking-wider shadow-xl shadow-[#f15d22]/30 transition-all cursor-pointer flex items-center gap-1.5"
+                  className="px-7 py-3 rounded-xl bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base font-bold uppercase tracking-wider shadow-xl shadow-[#F4A261]/30 transition-all cursor-pointer flex items-center gap-1.5"
                 >
                   <span>Langkah Selanjutnya</span>
                   <ChevronRight className="w-4 h-4" />
@@ -681,7 +681,7 @@ export function BookingDialog({ isOpen, onClose, defaultTour }: BookingDialogPro
                   type="button"
                   disabled={isSubmitting}
                   onClick={handleConfirm}
-                  className="px-8 py-3.5 rounded-xl bg-[#00aa6c] hover:bg-[#00905b] text-white font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#00aa6c]/30 transition-all cursor-pointer flex items-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
+                  className="px-8 py-3.5 rounded-xl bg-[#2A9D8F] hover:bg-[#238276] text-white font-heading text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#2A9D8F]/30 transition-all cursor-pointer flex items-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

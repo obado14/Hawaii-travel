@@ -43,7 +43,7 @@ const badges: Badge[] = [
 
 export function TrustBadges() {
   return (
-    <div className="bg-[#081d38] border-t border-white/10 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#073B4C] border-t border-white/10 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <p className="text-center text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-neutral-400 mb-4">
           TERDAFTAR &amp; DIAKREDITASI RESMI OLEH OTORITAS PARIWISATA

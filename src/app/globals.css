@@ -11,12 +11,17 @@
   --font-heading: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
   --font-bebas: var(--font-bebas);
   
-  --color-hawaii-orange: #f15d22;
-  --color-hawaii-orange-hover: #d84813;
-  --color-hawaii-navy: #0c1f38;
-  --color-hawaii-navy-dark: #071629;
-  --color-hawaii-gold: #f5b324;
-  --color-hawaii-cream: #f5f0e8;
+  --color-hawaii-sand: #FFF3D6;
+  --color-hawaii-ocean: #0077B6;
+  --color-hawaii-orange: #F4A261;
+  --color-hawaii-orange-hover: #e76f51;
+  --color-hawaii-turquoise: #00B4D8;
+  --color-hawaii-palm: #2A9D8F;
+  --color-hawaii-dark: #073B4C;
+  --color-hawaii-navy: #073B4C;
+  --color-hawaii-navy-dark: #052631;
+  --color-hawaii-gold: #00B4D8;
+  --color-hawaii-cream: #FFF3D6;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -49,24 +54,24 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #f15d22;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: #f15d22;
-  --accent-foreground: oklch(1 0 0);
+  --background: #FFF3D6;
+  --foreground: #073B4C;
+  --card: #FFFFFF;
+  --card-foreground: #073B4C;
+  --popover: #FFFFFF;
+  --popover-foreground: #073B4C;
+  --primary: #F4A261;
+  --primary-foreground: #FFFFFF;
+  --secondary: #0077B6;
+  --secondary-foreground: #FFFFFF;
+  --muted: #FFF3D6;
+  --muted-foreground: #073B4C;
+  --accent: #00B4D8;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: #f15d22;
+  --border: rgba(7, 59, 76, 0.15);
+  --input: rgba(7, 59, 76, 0.15);
+  --ring: #F4A261;
   --radius: 0.5rem;
 }
 
@@ -76,7 +81,8 @@
   }
   body {
     font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
-    color: #1e293b;
+    color: #073B4C;
+    background-color: #FFF3D6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -88,10 +94,10 @@
 
 /* Glassmorphism & card polish effects */
 .glass-panel {
-  background: rgba(12, 31, 56, 0.75);
+  background: rgba(7, 59, 76, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .glass-pill {
@@ -106,12 +112,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #081528;
+  background: #073B4C;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f15d22;
+  background: #F4A261;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d84b13;
+  background: #e76f51;
 }

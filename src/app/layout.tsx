@@ -57,7 +57,7 @@ export default function RootLayout({
       lang="id"
       className={`${bebasNeue.variable} ${montserrat.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white">
+      <body className="min-h-full flex flex-col font-sans bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
         {children}
       </body>
     </html>

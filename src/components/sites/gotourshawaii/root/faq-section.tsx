@@ -45,7 +45,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative bg-[#081d38] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+    <section className="relative bg-[#073B4C] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
       {/* Texture Background */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <Image
@@ -60,8 +60,8 @@ export function FAQSection() {
         {/* Title */}
         <div className="text-center mb-7 sm:mb-9">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#f5b324]" />
-            <span className="text-xs sm:text-sm font-bold text-[#f5b324] uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5 text-[#00B4D8]" />
+            <span className="text-xs sm:text-sm font-bold text-[#00B4D8] uppercase tracking-widest">
               PERTANYAAN UMUM
             </span>
           </div>
@@ -84,11 +84,11 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggle(faq.id)}
-                  className="w-full flex items-center justify-between text-left py-3.5 sm:py-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b324] rounded-xl cursor-pointer"
+                  className="w-full flex items-center justify-between text-left py-3.5 sm:py-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] rounded-xl cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${faq.id}`}
                 >
-                  <span className="text-base sm:text-lg font-semibold text-white group-hover:text-[#f5b324] transition-colors pr-3 leading-snug">
+                  <span className="text-base sm:text-lg font-semibold text-white group-hover:text-[#00B4D8] transition-colors pr-3 leading-snug">
                     {faq.question}
                   </span>
 
@@ -96,8 +96,8 @@ export function FAQSection() {
                   <span
                     className={`shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
                       isOpen
-                        ? "bg-amber-500 text-white rotate-180 scale-105"
-                        : "bg-[#f15d22] text-white group-hover:scale-110 group-hover:bg-[#d84b13]"
+                        ? "bg-[#00B4D8] text-white rotate-180 scale-105"
+                        : "bg-[#0077B6] text-white group-hover:scale-110 group-hover:bg-[#00B4D8]"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4 stroke-[2.5]" />

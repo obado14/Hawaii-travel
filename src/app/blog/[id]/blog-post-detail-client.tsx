@@ -46,7 +46,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0c1f38] text-white selection:bg-[#f15d22] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FFF3D6] text-[#073B4C] selection:bg-[#F4A261] selection:text-white">
       <TopBar />
       <Navbar onOpenBooking={() => handleBook(post.relatedTourName)} />
 
@@ -61,7 +61,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
               priority
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0c1f38]/60 via-black/40 to-[#0c1f38]/85" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0077B6]/60 via-black/40 to-[#073B4C]/85" />
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
@@ -69,7 +69,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
             <div className="mb-4 inline-flex items-center justify-center">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-300 hover:text-white bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 transition-all hover:bg-black/60"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-200 hover:text-white bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 transition-all hover:bg-black/60"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>Kembali ke Semua Panduan</span>
@@ -77,7 +77,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
             </div>
 
             {/* Category Badge */}
-            <div className="inline-flex items-center gap-2 mb-3.5 px-3.5 py-1 rounded-full bg-[#f15d22] text-white text-xs font-bold uppercase tracking-wider shadow-md">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-3.5 py-1 rounded-full bg-[#F4A261] text-white text-xs font-bold uppercase tracking-wider shadow-md">
               <Tag className="w-3.5 h-3.5" />
               <span>{post.category}</span>
             </div>
@@ -89,17 +89,17 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
             {/* Metadata and Author */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-neutral-200 font-medium">
               <span className="flex items-center gap-1.5">
-                <User className="w-4 h-4 text-[#f5b324]" />
+                <User className="w-4 h-4 text-[#00B4D8]" />
                 {post.author.name}
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-[#f5b324]" />
+                <Calendar className="w-4 h-4 text-[#00B4D8]" />
                 {post.date}
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-[#f5b324]" />
+                <Clock className="w-4 h-4 text-[#00B4D8]" />
                 {post.readTime}
               </span>
             </div>
@@ -119,40 +119,40 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
         </section>
 
         {/* Article Body Section */}
-        <section className="bg-[#f5f0e8] text-neutral-900 pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FFF3D6] text-[#073B4C] pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               {/* Main Content Column */}
-              <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl border border-neutral-200/80">
+              <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl border border-[#073B4C]/10">
                 {/* Excerpt Lead */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-[#0c1f38]/5 border-l-4 border-[#f15d22] mb-8 text-neutral-700 text-base sm:text-lg font-medium leading-relaxed italic">
+                <div className="p-5 sm:p-6 rounded-2xl bg-[#073B4C]/5 border-l-4 border-[#F4A261] mb-8 text-[#073B4C] text-base sm:text-lg font-medium leading-relaxed italic">
                   &ldquo;{post.excerpt}&rdquo;
                 </div>
 
                 {/* Article Sections */}
-                <div className="space-y-8 text-neutral-700">
+                <div className="space-y-8 text-[#073B4C]/85">
                   {post.sections.map((section, idx) => (
                     <div key={idx} className="space-y-4">
-                      <h2 className="font-heading text-2xl sm:text-3xl text-[#0c2340] uppercase tracking-wide leading-tight">
+                      <h2 className="font-heading text-2xl sm:text-3xl text-[#073B4C] uppercase tracking-wide leading-tight">
                         {section.heading}
                       </h2>
 
                       {section.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} className="text-base leading-relaxed sm:leading-8 text-neutral-700">
+                        <p key={pIdx} className="text-base leading-relaxed sm:leading-8 text-[#073B4C]/85">
                           {p}
                         </p>
                       ))}
 
                       {section.tips && section.tips.length > 0 && (
-                        <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 mt-4">
-                          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#f15d22]">
-                            <Sparkles className="w-4 h-4 text-[#f15d22]" />
+                        <div className="p-5 rounded-2xl bg-[#00B4D8]/10 border border-[#00B4D8]/25 space-y-2 mt-4">
+                          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0077B6]">
+                            <Sparkles className="w-4 h-4 text-[#0077B6]" />
                             <span>Tips Lokal Berharga</span>
                           </div>
-                          <ul className="space-y-1.5 text-xs sm:text-sm text-neutral-800">
+                          <ul className="space-y-1.5 text-xs sm:text-sm text-[#073B4C]">
                             {section.tips.map((tip, tIdx) => (
                               <li key={tIdx} className="flex items-start gap-2">
-                                <CheckCircle className="w-4 h-4 text-[#f15d22] shrink-0 mt-0.5" />
+                                <CheckCircle className="w-4 h-4 text-[#2A9D8F] shrink-0 mt-0.5" />
                                 <span>{tip}</span>
                               </li>
                             ))}
@@ -166,14 +166,14 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 {/* Author Card & Share */}
                 <div className="mt-12 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#f15d22]/15 text-[#f15d22] flex items-center justify-center font-bold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-[#00B4D8]/15 text-[#0077B6] flex items-center justify-center font-bold text-lg">
                       {post.author.name.charAt(0)}
                     </div>
                     <div>
-                      <h4 className="font-heading text-lg font-bold text-[#0c2340]">
+                      <h4 className="font-heading text-lg font-bold text-[#073B4C]">
                         Ditulis oleh {post.author.name}
                       </h4>
-                      <p className="text-xs text-neutral-500 font-medium">
+                      <p className="text-xs text-[#073B4C]/60 font-medium">
                         {post.author.role}
                       </p>
                     </div>
@@ -181,7 +181,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
 
                   <button
                     onClick={handleShare}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-200 text-xs font-bold text-neutral-700 hover:bg-neutral-50 hover:text-[#f15d22] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-200 text-xs font-bold text-[#073B4C] hover:bg-neutral-50 hover:text-[#F4A261] transition-colors cursor-pointer"
                   >
                     <Share2 className="w-4 h-4" />
                     <span>{copied ? "Tautan Disalin!" : "Bagikan Panduan"}</span>
@@ -192,20 +192,20 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
               {/* Sidebar Column */}
               <div className="lg:col-span-4 space-y-6">
                 {/* Related Tour Booking Card */}
-                <div className="bg-[#0c1f38] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-white/10 text-center relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#f15d22]/10 rounded-full blur-2xl pointer-events-none" />
-                  <span className="text-xs font-bold text-[#f5b324] uppercase tracking-widest block mb-2">
+                <div className="bg-[#073B4C] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-white/10 text-center relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#F4A261]/10 rounded-full blur-2xl pointer-events-none" />
+                  <span className="text-xs font-bold text-[#00B4D8] uppercase tracking-widest block mb-2">
                     Rekomendasi Tur Pulau
                   </span>
                   <h3 className="font-heading text-2xl text-white uppercase leading-snug mb-3">
                     {post.relatedTourName}
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6 font-normal">
+                  <p className="text-xs sm:text-sm text-neutral-200 leading-relaxed mb-6 font-normal">
                     Rasakan langsung pengalaman destinasi ini bersama pemandu lokal berpengetahuan luas, tiket reservasi resmi, dan antar-jemput hotel tanpa repot.
                   </p>
                   <button
                     onClick={() => handleBook(post.relatedTourName)}
-                    className="w-full bg-[#f15d22] hover:bg-[#d84b13] text-white font-heading text-base font-bold uppercase tracking-wider py-3 rounded-xl shadow-lg shadow-[#f15d22]/30 transition-all transform hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base font-bold uppercase tracking-wider py-3 rounded-xl shadow-lg shadow-[#F4A261]/30 transition-all transform hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
                   >
                     <span>Pesan Tur Ini</span>
                     <ArrowRight className="w-4 h-4" />
@@ -213,8 +213,8 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 </div>
 
                 {/* More Travel Guides */}
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-neutral-200/80">
-                  <h3 className="font-heading text-lg font-bold text-[#0c2340] uppercase tracking-wider mb-4 border-b border-neutral-100 pb-3">
+                <div className="bg-white rounded-3xl p-6 shadow-xl border border-[#073B4C]/10">
+                  <h3 className="font-heading text-lg font-bold text-[#073B4C] uppercase tracking-wider mb-4 border-b border-neutral-100 pb-3">
                     Panduan Hawaii Lainnya
                   </h3>
                   <div className="space-y-4">
@@ -222,15 +222,15 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                       <Link
                         key={other.id}
                         href={`/blog/${other.id}`}
-                        className="group block space-y-1 hover:text-[#f15d22] transition-colors"
+                        className="group block space-y-1 transition-colors"
                       >
-                        <span className="text-[11px] font-bold text-[#f15d22] uppercase tracking-wider">
+                        <span className="text-[11px] font-bold text-[#0077B6] uppercase tracking-wider">
                           {other.category}
                         </span>
-                        <h4 className="text-sm font-bold text-[#0c2340] group-hover:text-[#f15d22] transition-colors line-clamp-2 leading-snug">
+                        <h4 className="text-sm font-bold text-[#073B4C] group-hover:text-[#0077B6] transition-colors line-clamp-2 leading-snug">
                           {other.title}
                         </h4>
-                        <span className="text-xs text-neutral-400 font-medium block">
+                        <span className="text-xs text-[#073B4C]/50 font-medium block">
                           {other.readTime}
                         </span>
                       </Link>
@@ -242,7 +242,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
                 <div className="text-center pt-2">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#0c2340] hover:text-[#f15d22] uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#073B4C] hover:text-[#F4A261] uppercase tracking-wider transition-colors"
                   >
                     <ArrowLeft className="w-4 h-4" />
                     <span>Lihat Semua Artikel Blog</span>
