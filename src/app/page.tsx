@@ -13,7 +13,6 @@ import { FAQSection } from "@/components/sites/gotourshawaii/root/faq-section";
 import { TrustBadges } from "@/components/sites/gotourshawaii/root/trust-badges";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { ScrollReveal } from "@/components/sites/gotourshawaii/root/scroll-reveal";
 
 export default function Home() {
   return (
@@ -33,29 +32,19 @@ export default function Home() {
         <ExperienceCards />
 
         {/* Step 3: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
-        <ScrollReveal delay={100}>
-          <WhyChooseUs />
-        </ScrollReveal>
+        <WhyChooseUs />
 
         {/* Step 4: Featured Experience (Diamond Head Shuttle) */}
-        <ScrollReveal>
-          <DiamondHeadBanner />
-        </ScrollReveal>
+        <DiamondHeadBanner />
 
         {/* Step 5: Visual Experience (Visual Odyssey photo gallery) */}
-        <ScrollReveal>
-          <VisualOdyssey />
-        </ScrollReveal>
+        <VisualOdyssey />
 
         {/* Step 6: Testimonials (Hear From Our Guests review slider) */}
-        <ScrollReveal>
-          <GuestReviews />
-        </ScrollReveal>
+        <GuestReviews />
 
         {/* Step 7: FAQ (Frequently Asked Questions - 4 Core Questions) */}
-        <ScrollReveal>
-          <FAQSection />
-        </ScrollReveal>
+        <FAQSection />
 
         {/* Partner Trust Badges (Compact credibility strip) */}
         <TrustBadges />
