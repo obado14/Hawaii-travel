@@ -77,13 +77,13 @@ export function Hero({ onOpenBooking }: HeroProps) {
 
         {/* Primary and Secondary CTA Buttons: Book Now & Explore Tours */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-6 sm:mb-7 animate-in fade-in slide-in-from-bottom-2 duration-700 delay-500">
-          <button
-            onClick={onOpenBooking}
+          <Link
+            href="/booking"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F4A261] hover:bg-[#e76f51] text-white px-9 py-3.5 sm:px-11 sm:py-4 rounded-xl font-heading text-base sm:text-lg font-bold uppercase tracking-wider shadow-2xl shadow-[#F4A261]/50 hover:shadow-[#F4A261]/70 ring-2 ring-white/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <span>PESAN SEKARANG</span>
             <span className="text-white/90 text-xs sm:text-sm font-sans font-semibold tracking-normal lowercase">(diskon 10%)</span>
-          </button>
+          </Link>
 
           <Link
             href="/tour-packages"

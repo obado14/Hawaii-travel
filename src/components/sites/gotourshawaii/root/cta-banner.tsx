@@ -43,12 +43,12 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <button
-                onClick={onBookNow}
-                className="w-full sm:w-auto bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base sm:text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#F4A261]/35 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              <Link
+                href="/booking"
+                className="w-full sm:w-auto bg-[#F4A261] hover:bg-[#e76f51] text-white font-heading text-base sm:text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#F4A261]/35 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-center"
               >
                 PESAN SEKARANG
-              </button>
+              </Link>
 
               <Link
                 href="/tour-packages"

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 
 interface DiamondHeadBannerProps {
@@ -26,18 +27,11 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
         </div>
 
         {/* Compact Hero Card */}
-        <div
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              onBookShuttle?.();
-            }
-          }}
+        <Link
+          href="/booking?tour=Diamond%20Head%20Shuttle"
+          onClick={() => onBookShuttle?.()}
           aria-label="Lihat tur shuttle pendakian Diamond Head"
-          onClick={onBookShuttle}
-          className="group relative h-[330px] sm:h-[370px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
+          className="group relative block h-[330px] sm:h-[370px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
         >
           {/* Panoramic Diamond Head Image */}
           <div className="absolute inset-0">
@@ -84,7 +78,7 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );

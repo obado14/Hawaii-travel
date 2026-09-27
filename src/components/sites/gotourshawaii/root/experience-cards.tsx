@@ -2,10 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
   title: string;
+  tourParam: string;
   description: string;
   image: string;
   alt: string;
@@ -15,6 +18,7 @@ const experiences: ExperienceItem[] = [
   {
     id: 1,
     title: "TUR KELILING PULAU",
+    tourParam: "Circle Island Tour",
     description:
       "Jelajahi pantai emas ikonis, Lembah Waimea, dan panorama spektakuler Oahu bersama pemandu lokal.",
     image: "/sites/gotourshawaii/root/optimized-water-fall-002.jpg",
@@ -23,6 +27,7 @@ const experiences: ExperienceItem[] = [
   {
     id: 2,
     title: "PESTA LUAU HAWAII",
+    tourParam: "Hawaiian Luau",
     description:
       "Rasakan kehangatan aloha dengan santapan tradisional khas kepulauan dan atraksi tari api spektakuler.",
     image: "/sites/gotourshawaii/root/optimized-luau-cover-002.jpg",
@@ -31,6 +36,7 @@ const experiences: ExperienceItem[] = [
   {
     id: 3,
     title: "PEARL HARBOR",
+    tourParam: "Pearl Harbor Tour",
     description:
       "Telusuri situs bersejarah USS Arizona Memorial dengan akses prioritas dan narasi mendalam.",
     image: "/sites/gotourshawaii/root/optimized-pearl-harbor-02.jpg",
@@ -41,8 +47,6 @@ const experiences: ExperienceItem[] = [
 interface ExperienceCardsProps {
   onSelectExperience?: (title: string) => void;
 }
-
-import { Sparkles, ArrowRight } from "lucide-react";
 
 export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
   return (
@@ -67,19 +71,12 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
         {/* 3 Experience Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {experiences.map((exp) => (
-            <div
+            <Link
               key={exp.id}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  onSelectExperience?.(exp.title);
-                }
-              }}
-              aria-label={`Jelajahi ${exp.title}`}
+              href={`/booking?tour=${encodeURIComponent(exp.tourParam)}`}
               onClick={() => onSelectExperience?.(exp.title)}
-              className="group relative h-[380px] sm:h-[420px] md:h-[460px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
+              aria-label={`Jelajahi ${exp.title}`}
+              className="group relative block h-[380px] sm:h-[420px] md:h-[460px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
             >
               {/* Background Image with subtle zoom */}
               <div className="absolute inset-0">
@@ -117,7 +114,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

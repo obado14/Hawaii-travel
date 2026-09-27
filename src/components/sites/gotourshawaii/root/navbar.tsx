@@ -217,7 +217,20 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               )}
             </div>
 
-            {/* 3. Tur Privat */}
+            {/* 3. Pesan Tur */}
+            <Link
+              href="/booking"
+              className={`transition-colors py-1 relative flex flex-col items-center ${
+                isBooking ? "text-[#F4A261]" : "text-[#FFFFFF] hover:text-[#F4A261]"
+              }`}
+            >
+              <span>Pesan Tur</span>
+              {isBooking && (
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F4A261] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+              )}
+            </Link>
+
+            {/* 4. Tur Privat */}
             <Link
               href="/private-tours"
               className={`transition-colors py-1 relative flex flex-col items-center ${
@@ -283,7 +296,6 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* Desktop Primary CTA Button */}
             <Link
               href="/booking"
-              onClick={() => onOpenBooking?.()}
               className="hidden sm:block relative overflow-hidden group bg-[#F4A261] hover:bg-[#e76f51] text-white px-4 py-1.5 rounded-xl font-bold shadow-md shadow-[#F4A261]/35 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center leading-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <span className="block text-xs sm:text-[13px] uppercase tracking-wider font-extrabold">
@@ -297,7 +309,6 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* Mobile Instant Booking CTA (Visible on <640px) */}
             <Link
               href="/booking"
-              onClick={() => onOpenBooking?.()}
               className="sm:hidden bg-[#F4A261] hover:bg-[#e76f51] text-white px-3 py-1.5 rounded-lg text-xs font-extrabold uppercase tracking-wider shadow-md shadow-[#F4A261]/30 cursor-pointer active:scale-95 transition-transform"
               aria-label="Buka form pemesanan langsung"
             >
