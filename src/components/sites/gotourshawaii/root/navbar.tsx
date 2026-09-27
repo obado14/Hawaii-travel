@@ -81,19 +81,19 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0077B6]/95 backdrop-blur-md shadow-xl border-b border-white/15 py-2"
-          : "bg-[#0077B6] border-b border-white/15 py-3"
+          ? "bg-[#0077B6]/95 backdrop-blur-md shadow-xl border-b border-white/15"
+          : "bg-[#0077B6] border-b border-white/15"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-16 sm:h-[66px]">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center group py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-lg"
+            className="flex items-center group py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-lg shrink-0"
             aria-label="Kembali ke Beranda Go Tours Hawaii"
           >
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-11 w-11 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/sites/gotourshawaii/root/gotours-logo.png"
                 alt="Logo Wisata Hawaii"
@@ -259,10 +259,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           </nav>
 
           {/* Right Action: Orange CTA Button & Phone */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <a
               href="tel:808-926-3090"
-              className="hidden xl:flex items-center gap-2 text-white/90 hover:text-white text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-md px-1 py-0.5"
+              className="hidden xl:flex items-center gap-1.5 text-white/90 hover:text-white text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-md px-1 py-0.5"
             >
               <Phone className="w-3.5 h-3.5 text-[#F4A261]" />
               <span>808-926-3090</span>
@@ -271,12 +271,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* Desktop Primary CTA Button */}
             <button
               onClick={onOpenBooking}
-              className="hidden sm:block relative overflow-hidden group bg-[#F4A261] hover:bg-[#e76f51] text-white px-5 py-2 rounded-xl font-bold shadow-lg shadow-[#F4A261]/35 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center leading-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="hidden sm:block relative overflow-hidden group bg-[#F4A261] hover:bg-[#e76f51] text-white px-4 py-1.5 rounded-xl font-bold shadow-md shadow-[#F4A261]/35 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center leading-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              <span className="block text-sm uppercase tracking-wider font-extrabold">
+              <span className="block text-xs sm:text-[13px] uppercase tracking-wider font-extrabold">
                 PESAN SEKARANG
               </span>
-              <span className="block text-[11px] font-normal tracking-wide text-white/90">
+              <span className="block text-[10px] font-normal tracking-wide text-white/90">
                 Diskon 10%
               </span>
             </button>
@@ -293,7 +293,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-[#F4A261] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-lg transition-colors cursor-pointer"
+              className="lg:hidden p-1.5 text-white hover:text-[#F4A261] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261] rounded-lg transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? "Tutup Menu Navigasi" : "Buka Menu Navigasi"}
               aria-expanded={mobileMenuOpen}
             >
