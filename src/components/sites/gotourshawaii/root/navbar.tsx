@@ -107,18 +107,18 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           {/* Desktop Nav Items */}
           <nav
             aria-label="Navigasi Utama"
-            className="hidden lg:flex items-center gap-7 text-[13px] font-medium tracking-wide"
+            className="hidden lg:flex items-center gap-5 xl:gap-7 text-[19px] xl:text-[20px] font-semibold tracking-normal"
           >
             {/* 1. Beranda */}
             <Link
               href="/"
               className={`transition-colors py-1 relative flex flex-col items-center ${
-                isHome ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                isHome ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
               }`}
             >
               <span>Beranda</span>
               {isHome && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -134,18 +134,18 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                 onClick={() => setDropdownOpen((prev) => !prev)}
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
-                className={`group flex items-center gap-1 transition-colors focus:outline-none cursor-pointer relative ${
-                  isTours ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                className={`group flex items-center gap-1.5 transition-colors focus:outline-none cursor-pointer relative ${
+                  isTours ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
                 }`}
               >
                 <span>Tur &amp; Paket</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  className={`w-4 h-4 transition-transform duration-200 ${
                     dropdownOpen ? "rotate-180" : ""
                   }`}
                 />
                 {isTours && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                  <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
                 )}
               </button>
 
@@ -154,7 +154,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                   <div className="bg-[#081528] border border-white/15 rounded-2xl p-2 shadow-2xl backdrop-blur-lg">
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Semua Tur &amp; Paket</div>
@@ -162,7 +162,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                     </Link>
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Tur Keliling Pulau (Circle Island)</div>
@@ -170,7 +170,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                     </Link>
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Snorkeling di Turtle Canyon</div>
@@ -178,7 +178,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                     </Link>
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Pesta Luau Hawaii</div>
@@ -186,7 +186,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                     </Link>
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Tur Pearl Harbor</div>
@@ -194,7 +194,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                     </Link>
                     <Link
                       href="/tour-packages"
-                      className="block px-3 py-2.5 rounded-xl text-sm text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-neutral-200 hover:text-white hover:bg-[#f15d22]/20 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <div className="font-semibold text-white">Shuttle Diamond Head</div>
@@ -209,12 +209,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/private-tours"
               className={`transition-colors py-1 relative flex flex-col items-center ${
-                isPrivate ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                isPrivate ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
               }`}
             >
               <span>Tur Privat</span>
               {isPrivate && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -222,12 +222,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/blog"
               className={`transition-colors py-1 relative flex flex-col items-center ${
-                isBlog ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                isBlog ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
               }`}
             >
               <span>Blog</span>
               {isBlog && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -235,12 +235,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/our-story"
               className={`transition-colors py-1 relative flex flex-col items-center ${
-                isStory ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                isStory ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
               }`}
             >
               <span>Kisah Kami</span>
               {isStory && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -248,12 +248,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/contact-us"
               className={`transition-colors py-1 relative flex flex-col items-center ${
-                isContact ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
+                isContact ? "text-[#f15d22]" : "text-white hover:text-[#f15d22]"
               }`}
             >
               <span>Hubungi Kami</span>
               {isContact && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
               )}
             </Link>
           </nav>
@@ -317,10 +317,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isHome
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-base sm:text-lg"
             }`}
           >
-            <span className="font-semibold text-sm">Beranda</span>
+            <span className="font-semibold text-base sm:text-lg">Beranda</span>
           </Link>
 
           {/* Tur & Paket */}
@@ -328,7 +328,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/tour-packages"
               onClick={() => setMobileMenuOpen(false)}
-              className={`flex items-center text-xs font-bold uppercase tracking-wider ${
+              className={`flex items-center text-sm sm:text-base font-semibold uppercase tracking-wider ${
                 isTours ? "text-[#f15d22]" : "text-white"
               }`}
             >
@@ -387,10 +387,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isPrivate
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-base sm:text-lg"
             }`}
           >
-            <span className="font-semibold text-sm">Tur Privat (Oahu &amp; Maui)</span>
+            <span className="font-semibold text-base sm:text-lg">Tur Privat (Oahu &amp; Maui)</span>
           </Link>
 
           {/* Blog */}
@@ -400,10 +400,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isBlog
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-base sm:text-lg"
             }`}
           >
-            <span className="font-semibold text-sm">Blog &amp; Panduan Wisata</span>
+            <span className="font-semibold text-base sm:text-lg">Blog &amp; Panduan Wisata</span>
           </Link>
 
           {/* Kisah Kami */}
@@ -413,10 +413,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isStory
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-base sm:text-lg"
             }`}
           >
-            <span className="font-semibold text-sm">Kisah Kami</span>
+            <span className="font-semibold text-base sm:text-lg">Kisah Kami</span>
           </Link>
 
           {/* Hubungi Kami */}
@@ -426,10 +426,10 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isContact
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-base sm:text-lg"
             }`}
           >
-            <span className="font-semibold text-sm">Hubungi Kami</span>
+            <span className="font-semibold text-base sm:text-lg">Hubungi Kami</span>
           </Link>
 
           {/* Mobile Action Buttons */}
