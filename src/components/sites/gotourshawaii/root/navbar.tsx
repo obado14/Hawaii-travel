@@ -5,12 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Home,
-  Sun,
-  Bus,
-  BookOpen,
-  Compass,
-  PhoneCall,
   ChevronDown,
   Menu,
   X,
@@ -118,25 +112,20 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* 1. Beranda */}
             <Link
               href="/"
-              className={`group flex flex-col items-center gap-[6px] transition-colors py-0.5 relative ${
+              className={`transition-colors py-1 relative flex flex-col items-center ${
                 isHome ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
               }`}
             >
-              <Home
-                className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                  isHome ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
-                }`}
-              />
               <span>Beranda</span>
               {isHome && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
             {/* 2. Tur & Paket Dropdown */}
             <div
               ref={dropdownRef}
-              className="relative py-0.5"
+              className="relative py-1"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
@@ -145,25 +134,18 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                 onClick={() => setDropdownOpen((prev) => !prev)}
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
-                className={`group flex flex-col items-center gap-[6px] transition-colors focus:outline-none cursor-pointer ${
+                className={`group flex items-center gap-1 transition-colors focus:outline-none cursor-pointer relative ${
                   isTours ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
                 }`}
               >
-                <Sun
-                  className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                    isTours ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
+                <span>Tur &amp; Paket</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    dropdownOpen ? "rotate-180" : ""
                   }`}
                 />
-                <span className="flex items-center gap-1">
-                  Tur &amp; Paket
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      dropdownOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </span>
                 {isTours && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
                 )}
               </button>
 
@@ -226,72 +208,52 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             {/* 3. Tur Privat */}
             <Link
               href="/private-tours"
-              className={`group flex flex-col items-center gap-[6px] transition-colors py-0.5 relative ${
+              className={`transition-colors py-1 relative flex flex-col items-center ${
                 isPrivate ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
               }`}
             >
-              <Bus
-                className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                  isPrivate ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
-                }`}
-              />
               <span>Tur Privat</span>
               {isPrivate && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
             {/* 4. Blog */}
             <Link
               href="/blog"
-              className={`group flex flex-col items-center gap-[6px] transition-colors py-0.5 relative ${
+              className={`transition-colors py-1 relative flex flex-col items-center ${
                 isBlog ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
               }`}
             >
-              <BookOpen
-                className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                  isBlog ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
-                }`}
-              />
               <span>Blog</span>
               {isBlog && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
             {/* 5. Kisah Kami */}
             <Link
               href="/our-story"
-              className={`group flex flex-col items-center gap-[6px] transition-colors py-0.5 relative ${
+              className={`transition-colors py-1 relative flex flex-col items-center ${
                 isStory ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
               }`}
             >
-              <Compass
-                className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                  isStory ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
-                }`}
-              />
               <span>Kisah Kami</span>
               {isStory && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
             {/* 6. Hubungi Kami */}
             <Link
               href="/contact-us"
-              className={`group flex flex-col items-center gap-[6px] transition-colors py-0.5 relative ${
+              className={`transition-colors py-1 relative flex flex-col items-center ${
                 isContact ? "text-[#f15d22] font-bold" : "text-white hover:text-[#f15d22]"
               }`}
             >
-              <PhoneCall
-                className={`w-[19px] h-[19px] shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                  isContact ? "text-[#f15d22]" : "text-[#f15d22]/90 group-hover:text-[#f15d22]"
-                }`}
-              />
               <span>Hubungi Kami</span>
               {isContact && (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] -mt-0.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
           </nav>
@@ -352,13 +314,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
+            className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isHome
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
             }`}
           >
-            <Home className="w-5 h-5 text-[#f15d22]" />
             <span className="font-semibold text-sm">Beranda</span>
           </Link>
 
@@ -367,14 +328,13 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             <Link
               href="/tour-packages"
               onClick={() => setMobileMenuOpen(false)}
-              className={`flex items-center gap-3 text-xs font-bold uppercase tracking-wider ${
+              className={`flex items-center text-xs font-bold uppercase tracking-wider ${
                 isTours ? "text-[#f15d22]" : "text-white"
               }`}
             >
-              <Sun className="w-5 h-5 text-[#f15d22]" />
               <span>Tur &amp; Paket (9 Tur)</span>
             </Link>
-            <div className="pl-7 space-y-1.5 border-l border-white/10 ml-2">
+            <div className="pl-4 space-y-1.5 border-l border-white/10 ml-1">
               <Link
                 href="/tour-packages"
                 onClick={() => setMobileMenuOpen(false)}
@@ -424,13 +384,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <Link
             href="/private-tours"
             onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
+            className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isPrivate
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
             }`}
           >
-            <Bus className="w-5 h-5 text-[#f15d22]" />
             <span className="font-semibold text-sm">Tur Privat (Oahu &amp; Maui)</span>
           </Link>
 
@@ -438,13 +397,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <Link
             href="/blog"
             onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
+            className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isBlog
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
             }`}
           >
-            <BookOpen className="w-5 h-5 text-[#f15d22]" />
             <span className="font-semibold text-sm">Blog &amp; Panduan Wisata</span>
           </Link>
 
@@ -452,13 +410,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <Link
             href="/our-story"
             onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
+            className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isStory
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
             }`}
           >
-            <Compass className="w-5 h-5 text-[#f15d22]" />
             <span className="font-semibold text-sm">Kisah Kami</span>
           </Link>
 
@@ -466,13 +423,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           <Link
             href="/contact-us"
             onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
+            className={`flex items-center px-3 py-2.5 rounded-xl transition-colors ${
               isContact
                 ? "bg-[#f15d22]/15 text-[#f15d22] font-bold border-l-4 border-[#f15d22]"
-                : "text-neutral-200 hover:text-white hover:bg-white/5"
+                : "text-neutral-200 hover:text-white hover:bg-white/5 font-semibold text-sm"
             }`}
           >
-            <PhoneCall className="w-5 h-5 text-[#f15d22]" />
             <span className="font-semibold text-sm">Hubungi Kami</span>
           </Link>
 
