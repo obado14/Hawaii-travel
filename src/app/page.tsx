@@ -30,9 +30,7 @@ export default function Home() {
         <Hero />
 
         {/* Step 2: Choose Your Experience (Circle Island, Luau, Pearl Harbor) */}
-        <ScrollReveal>
-          <ExperienceCards />
-        </ScrollReveal>
+        <ExperienceCards />
 
         {/* Step 3: Why Choose Go Tours Hawaii (4 Benefit Cards) */}
         <ScrollReveal delay={100}>

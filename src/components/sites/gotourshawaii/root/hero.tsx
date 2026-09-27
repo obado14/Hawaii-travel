@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Compass, Award } from "lucide-react";
@@ -10,35 +10,16 @@ interface HeroProps {
 }
 
 export function Hero({ onOpenBooking }: HeroProps) {
-  const [offsetY, setOffsetY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Subtle parallax, clamped to 120px so background never shows empty gap
-      const scroll = window.scrollY;
-      if (scroll < 900) {
-        setOffsetY(scroll * 0.15);
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section className="relative w-full min-h-[560px] sm:min-h-[620px] lg:min-h-[690px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with subtle parallax */}
-      <div
-        className="absolute inset-0 z-0 will-change-transform"
-        style={{
-          transform: `translate3d(0, ${offsetY}px, 0)`,
-        }}
-      >
+      {/* Background Image - static without parallax */}
+      <div className="absolute inset-0 z-0">
         <Image
           src="/sites/gotourshawaii/root/Banner-BG-Thumbnail.jpg"
           alt="Pemandangan Pegunungan Pulau Oahu Hawaii"
           fill
           priority
-          className="object-cover object-[center_28%] scale-105 transition-transform duration-300"
+          className="object-cover object-[center_28%]"
         />
         {/* Cinematic gradient overlay for maximum readability and dramatic depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0077B6]/70 via-black/40 to-[#073B4C]/95" />
