@@ -107,7 +107,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           {/* Desktop Nav Items */}
           <nav
             aria-label="Navigasi Utama"
-            className="hidden lg:flex items-center gap-5 xl:gap-7 text-[19px] xl:text-[20px] font-semibold tracking-normal"
+            className="hidden lg:flex items-center gap-5 xl:gap-7 text-[16px] font-semibold tracking-normal"
           >
             {/* 1. Beranda */}
             <Link
@@ -118,7 +118,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             >
               <span>Beranda</span>
               {isHome && (
-                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -140,12 +140,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               >
                 <span>Tur &amp; Paket</span>
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
                     dropdownOpen ? "rotate-180" : ""
                   }`}
                 />
                 {isTours && (
-                  <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
                 )}
               </button>
 
@@ -214,7 +214,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             >
               <span>Tur Privat</span>
               {isPrivate && (
-                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -227,7 +227,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             >
               <span>Blog</span>
               {isBlog && (
-                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -240,7 +240,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             >
               <span>Kisah Kami</span>
               {isStory && (
-                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
 
@@ -253,7 +253,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             >
               <span>Hubungi Kami</span>
               {isContact && (
-                <span className="w-2 h-2 rounded-full bg-[#f15d22] absolute -bottom-1.5 left-1/2 -translate-x-1/2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f15d22] absolute -bottom-1 left-1/2 -translate-x-1/2" />
               )}
             </Link>
           </nav>
