@@ -3,10 +3,10 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import {
   TourDetailModal,
@@ -420,13 +420,12 @@ const allTours: TourPackageDetail[] = [
 ];
 
 export default function TourPackagesPage() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [sortBy, setSortBy] = useState<string>("popular");
 
   // Modals state
-  const [bookingOpen, setBookingOpen] = useState(false);
-  const [selectedTourName, setSelectedTourName] = useState("Tur Keliling Pulau");
   const [detailTour, setDetailTour] = useState<TourPackageDetail | null>(null);
   const [detailModalOpen, setDetailModalOpen] = useState(false);
 
@@ -475,8 +474,7 @@ export default function TourPackagesPage() {
   }, [selectedCategory, searchQuery, sortBy]);
 
   const handleBook = (name: string) => {
-    setSelectedTourName(name);
-    setBookingOpen(true);
+    router.push(`/booking?tour=${encodeURIComponent(name)}`);
   };
 
   const handleViewDetails = (tour: TourPackageDetail) => {
@@ -804,13 +802,6 @@ export default function TourPackagesPage() {
       </main>
 
       <Footer />
-
-      {/* Booking Dialog Modal */}
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour={selectedTourName}
-      />
 
       {/* Tour Detail Modal */}
       <TourDetailModal

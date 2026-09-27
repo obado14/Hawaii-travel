@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { useRouter } from "next/navigation";
 import { TopBar } from "@/components/sites/gotourshawaii/root/top-bar";
 import { Navbar } from "@/components/sites/gotourshawaii/root/navbar";
 import { Hero } from "@/components/sites/gotourshawaii/root/hero";
@@ -13,16 +14,14 @@ import { FAQSection } from "@/components/sites/gotourshawaii/root/faq-section";
 import { TrustBadges } from "@/components/sites/gotourshawaii/root/trust-badges";
 import { CtaBanner } from "@/components/sites/gotourshawaii/root/cta-banner";
 import { Footer } from "@/components/sites/gotourshawaii/root/footer";
-import { BookingDialog } from "@/components/sites/gotourshawaii/root/booking-dialog";
 import { ScrollReveal } from "@/components/sites/gotourshawaii/root/scroll-reveal";
 
 export default function Home() {
-  const [bookingOpen, setBookingOpen] = useState(false);
-  const [selectedTour, setSelectedTour] = useState("Circle Island Tour");
+  const router = useRouter();
 
   const handleOpenBooking = (tourName?: string) => {
-    if (tourName) setSelectedTour(tourName);
-    setBookingOpen(true);
+    const query = tourName ? `?tour=${encodeURIComponent(tourName)}` : "";
+    router.push(`/booking${query}`);
   };
 
   return (
@@ -77,13 +76,6 @@ export default function Home() {
 
       {/* 14. Comprehensive Footer with map & links */}
       <Footer />
-
-      {/* 15. Modern 5-Step Interactive Booking Wizard */}
-      <BookingDialog
-        isOpen={bookingOpen}
-        onClose={() => setBookingOpen(false)}
-        defaultTour={selectedTour}
-      />
     </div>
   );
 }

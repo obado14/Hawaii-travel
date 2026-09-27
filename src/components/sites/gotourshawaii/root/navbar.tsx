@@ -24,6 +24,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
 
   const isHome = pathname === "/";
   const isTours = pathname.startsWith("/tour-packages");
+  const isBooking = pathname.startsWith("/booking");
   const isPrivate =
     pathname.startsWith("/private-tours") ||
     pathname.startsWith("/oahu-and-maui-private-experience");
@@ -152,6 +153,17 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               {dropdownOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 pt-2 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                   <div className="bg-[#0077B6] border border-white/20 rounded-2xl p-2 shadow-2xl backdrop-blur-lg">
+                    <Link
+                      href="/booking"
+                      className="block px-3 py-2.5 rounded-xl text-sm font-normal text-white hover:text-white bg-[#F4A261]/25 hover:bg-[#F4A261]/40 border border-[#F4A261]/40 mb-1.5 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-bold text-[#FFF3D6] flex items-center justify-between">
+                        <span>Formulir Pesan Tur (Booking)</span>
+                        <span className="text-[10px] bg-[#F4A261] text-white px-1.5 py-0.5 rounded font-extrabold">HEMAT 10%</span>
+                      </div>
+                      <div className="text-xs text-white/90">Reservasi online cepat dalam 5 langkah</div>
+                    </Link>
                     <Link
                       href="/tour-packages"
                       className="block px-3 py-2.5 rounded-xl text-sm font-normal text-white hover:text-white hover:bg-white/15 transition-colors"
@@ -323,6 +335,22 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             }`}
           >
             <span className="font-semibold text-base sm:text-lg">Beranda</span>
+          </Link>
+
+          {/* Form Pemesanan / Booking Online */}
+          <Link
+            href="/booking"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between px-3 py-2.5 rounded-xl transition-colors ${
+              isBooking
+                ? "bg-white/15 text-[#F4A261] font-bold border-l-4 border-[#F4A261]"
+                : "bg-[#F4A261]/25 text-[#FFF3D6] hover:bg-[#F4A261]/35 font-bold text-base border border-[#F4A261]/40"
+            }`}
+          >
+            <span>Formulir Pesan Tur (Booking)</span>
+            <span className="text-[10px] bg-[#F4A261] text-white px-2 py-0.5 rounded font-extrabold uppercase">
+              HEMAT 10%
+            </span>
           </Link>
 
           {/* Tur & Paket */}
