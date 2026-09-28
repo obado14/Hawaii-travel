@@ -36,7 +36,7 @@ const privateToursList: PrivateTourItem[] = [
     description:
       "Eksplorasi seluruh pulau secara eksklusif meliputi gardu pandang ikonis, pantai pasir emas, Kuil Byodo-In yang sakral, dan situs sejarah sesuai ritme Anda.",
     duration: "Sekitar 8-9 Jam",
-    image: "/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg",
+    image: "/images/private-circle-island.jpg",
   },
   {
     id: "north-shore",
@@ -44,7 +44,7 @@ const privateToursList: PrivateTourItem[] = [
     description:
       "Jelajahi kota peselancar bersejarah Haleiwa, sentra kuliner udang bawang putih Kahuku, pantai ombak besar Sunset Beach, dan pengamatan penyu laut liar.",
     duration: "Sekitar 6-7 Jam",
-    image: "/sites/gotourshawaii/root/Visual-img-2-e1714631806737.jpg",
+    image: "/images/private-north-shore.jpg",
   },
   {
     id: "waterfall-nature",
@@ -60,7 +60,7 @@ const privateToursList: PrivateTourItem[] = [
     description:
       "Rancang petualangan impian Anda sendiri di Oahu atau Maui. Pemandu dan armada kami siap mengantar ke spot tersembunyi sesuai keinginan keluarga Anda.",
     duration: "Jadwal 100% Fleksibel",
-    image: "/sites/gotourshawaii/root/Header-Photo-Diamond-Head.jpeg",
+    image: "/images/private-custom-tour.jpg",
   },
 ];
 
