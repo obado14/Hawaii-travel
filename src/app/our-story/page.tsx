@@ -92,7 +92,7 @@ const visualStories = [
     title: "Panorama Alam yang Menakjubkan",
     description:
       "Mulai dari puncak vulkanik Koʻolau yang menjulang hingga birunya Samudra Pasifik di Windward Oahu, kemegahan alam Hawaii memukau di setiap sudut.",
-    image: "/sites/gotourshawaii/root/Visual-img-7-e1714632127105.jpg",
+    image: "/images/hawaii-landscape.jpg",
   },
   {
     category: "Pengalaman Tur",
