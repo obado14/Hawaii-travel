@@ -234,14 +234,37 @@ function BookingPageContent() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col relative bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+      {/* Background Image across the entire /booking page */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <Image
+          src="/images/booking-bg.jpg"
+          alt="Hawaii Beach Background"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#FAF7F2]/88 backdrop-blur-[1px]" />
+      </div>
+
       <TopBar />
       <Navbar />
 
-      <main className="flex-1 pb-20">
-        {/* Header Hero Banner */}
-        <section className="relative bg-[#164A41] text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-white/10 shadow-md">
-          <div className="max-w-7xl mx-auto">
+      <main className="flex-1 pb-20 relative z-10">
+        {/* Header Hero Banner with image background */}
+        <section className="relative text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 shadow-md overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/booking-bg.jpg"
+              alt="Hawaii Beach Background"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#164A41]/92 via-[#164A41]/85 to-[#164A41]/90" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto">
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/75 mb-3">
               <Link href="/" className="hover:text-[#E9C46A] transition-colors">
@@ -257,20 +280,20 @@ function BookingPageContent() {
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider mb-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider mb-2">
                   <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
                   <span>Sistem Pemesanan Resmi Go Tours Hawaii</span>
                 </div>
-                <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wide text-white">
+                <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                   PESAN TUR HAWAII ANDA
                 </h1>
-                <p className="text-white/90 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed">
+                <p className="text-white/90 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed drop-shadow-sm">
                   Lakukan reservasi mudah di halaman penuh tanpa popup. Konfirmasi resmi instan, jaminan harga terbaik, dan pembatalan fleksibel hingga 48 jam sebelum tur.
                 </p>
               </div>
 
               {/* Promo Callout */}
-              <div className="bg-[#E76F51]/20 border border-[#E76F51]/40 rounded-2xl px-4 py-2.5 shrink-0 self-start md:self-auto backdrop-blur-xs">
+              <div className="bg-[#E76F51]/30 border border-[#E76F51]/50 rounded-2xl px-4 py-2.5 shrink-0 self-start md:self-auto backdrop-blur-md shadow-lg">
                 <div className="flex items-center gap-2 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider">
                   <Tag className="w-4 h-4 text-[#E9C46A]" />
                   <span>Diskon Promo 10% Online</span>
@@ -282,7 +305,7 @@ function BookingPageContent() {
         </section>
 
         {/* 6-Step Modern Stepper Indicator */}
-        <section className="bg-white border-b border-[#164A41]/10 shadow-xs sticky top-16 sm:top-[66px] z-30">
+        <section className="bg-white/95 backdrop-blur-md border-b border-[#164A41]/10 shadow-xs sticky top-16 sm:top-[66px] z-30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="grid grid-cols-6 gap-1.5 sm:gap-3 items-center">
               {stepList.map((item) => {
