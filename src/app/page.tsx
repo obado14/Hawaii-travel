@@ -16,7 +16,7 @@ import { Footer } from "@/components/sites/gotourshawaii/root/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
       {/* 1. Top Announcement Bar */}
       <TopBar />
 

@@ -28,7 +28,7 @@
   --color-tropical-teal: #2C7A7B;
   --color-tropical-coral: #E76F51;
   --color-tropical-gold: #E9C46A;
-  --color-tropical-text: #164A41;
+  --color-tropical-text: #124E50;
   --color-tropical-white: #FFFFFF;
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -63,17 +63,17 @@
 
 :root {
   --background: #F7F5EE;
-  --foreground: #164A41;
+  --foreground: #124E50;
   --card: #FFFFFF;
-  --card-foreground: #164A41;
+  --card-foreground: #124E50;
   --popover: #FFFFFF;
-  --popover-foreground: #164A41;
+  --popover-foreground: #124E50;
   --primary: #E76F51;
   --primary-foreground: #FFFFFF;
   --secondary: #164A41;
   --secondary-foreground: #FFFFFF;
   --muted: #F7F5EE;
-  --muted-foreground: #164A41;
+  --muted-foreground: #124E50;
   --accent: #2C7A7B;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
@@ -89,7 +89,7 @@
   }
   body {
     font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
-    color: #164A41;
+    color: #124E50;
     background-color: #F7F5EE;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

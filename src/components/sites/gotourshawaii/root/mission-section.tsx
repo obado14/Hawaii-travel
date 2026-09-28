@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react";
 
 export function MissionSection() {
   return (
-    <section id="mission" className="relative bg-[#F7F5EE] text-[#164A41] pt-16 sm:pt-20 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8">
+    <section id="mission" className="relative bg-[#F7F5EE] text-[#124E50] pt-16 sm:pt-20 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8">
       {/* Top Wave / Polynesian Pattern Transition */}
       <div className="absolute top-0 inset-x-0 w-full overflow-hidden leading-none -translate-y-[95%] pointer-events-none">
         <div className="relative w-full h-8 sm:h-12 md:h-16">
@@ -29,10 +29,10 @@ export function MissionSection() {
               NILAI &amp; KOMITMEN BUDAYA
             </span>
           </div>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#164A41] uppercase tracking-wide leading-none mb-3">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#124E50] uppercase tracking-wide leading-none mb-3">
             MISI GO TOURS HAWAII
           </h2>
-          <p className="text-[#164A41]/75 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#124E50]/75 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
             Menghidupkan filosofi luhur kepulauan dalam setiap perjalanan dan sentuhan pelayanan kami.
           </p>
         </div>
@@ -49,10 +49,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#164A41] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               PAKAR LOKAL ASLI
             </h3>
-            <p className="text-[#164A41]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
               Kami sangat bangga menjadi operator tur yang 100% dimiliki dan dikelola oleh warga lokal Hawaii. Berakar kuat di kepulauan ini, memahami setiap tradisi dan bentang alam adalah jati diri kami. Ini menjamin Anda mendapatkan pengalaman wisata terbaik Hawaii, didampingi oleh operator tur lokal terpercaya #1.
             </p>
           </div>
@@ -67,10 +67,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#164A41] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               TANGGUNG JAWAB (KULEANA)
             </h3>
-            <p className="text-[#164A41]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
               Semangat Aloha adalah falsafah yang kami hidupi setiap hari. Baik saat Anda berinteraksi dengan pemandu tur, staf layanan pelanggan, maupun tim manajemen, kami berkomitmen pada standar tanggung jawab dan keramahan tertinggi demi menjaga keaslian nilai aloha.
             </p>
           </div>
@@ -85,10 +85,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#164A41] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               SEMANGAT ALOHA
             </h3>
-            <p className="text-[#164A41]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
               Kami berjanji menghadirkan pengalaman berharga yang akan Anda kenang seumur hidup. Tim kami mendedikasikan dedikasi penuh untuk memastikan perjalanan Anda berjalan sempurna dan seluruh mitra atraksi kami telah lolos uji kualitas yang ketat.
             </p>
           </div>

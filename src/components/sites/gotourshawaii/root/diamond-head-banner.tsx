@@ -17,11 +17,11 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-            <span className="text-xs sm:text-sm font-bold text-[#164A41] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest">
               TUR UNGGULAN RESMI
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#164A41] uppercase tracking-wide leading-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight">
             LAYANAN EKSKLUSIF SHUTTLE DIAMOND HEAD
           </h2>
         </div>

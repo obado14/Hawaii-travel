@@ -108,7 +108,7 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
                 {tour.categoryLabel}
               </span>
               {tour.recommended && (
-                <span className="bg-[#E9C46A] text-[#164A41] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                <span className="bg-[#E9C46A] text-[#124E50] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1">
                   ★ Rekomendasi #1
                 </span>
               )}

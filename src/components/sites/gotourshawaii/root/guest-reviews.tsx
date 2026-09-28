@@ -106,7 +106,7 @@ export function GuestReviews() {
         {/* Testimonial Card Display */}
         <div className="relative max-w-3xl mx-auto px-2 sm:px-6">
           {/* Card */}
-          <div className="bg-white text-neutral-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl min-h-[220px] sm:min-h-[250px] flex flex-col justify-between border-2 border-white/20 relative">
+          <div className="bg-white text-[#124E50] rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl min-h-[220px] sm:min-h-[250px] flex flex-col justify-between border-2 border-white/20 relative">
             {/* Content on Slide Change */}
             <div key={current.id}>
               {/* 5 Stars & Verified Badge */}
@@ -123,13 +123,13 @@ export function GuestReviews() {
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#164A41] mb-2.5">
+                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#124E50] mb-2.5">
                   {current.title}
                 </h4>
               )}
 
               {/* Review Quote */}
-              <p className="text-sm sm:text-base md:text-lg text-[#164A41]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-[#124E50]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>

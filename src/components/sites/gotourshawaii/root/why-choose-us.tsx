@@ -53,10 +53,10 @@ export function WhyChooseUs() {
               KEUNGGULAN SEMANGAT ALOHA
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#164A41] uppercase tracking-wide leading-tight mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight mb-3">
             MENGAPA MEMILIH GO TOURS HAWAII
           </h2>
-          <p className="text-[#164A41]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#124E50]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
             Rasakan keistimewaan menjelajah bersama spesialis tur lokal berperingkat tertinggi di Hawaii.
           </p>
         </div>
@@ -79,24 +79,24 @@ export function WhyChooseUs() {
                     <div className="w-11 h-11 rounded-2xl bg-[#164A41] text-[#E9C46A] group-hover:bg-[#2C7A7B] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm group-hover:scale-110">
                       <Icon className="w-5 h-5 stroke-[2]" />
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-bold text-[#164A41] uppercase tracking-wider bg-[#F7F5EE] group-hover:bg-[#2C7A7B]/15 group-hover:text-[#2C7A7B] px-2.5 py-1 rounded-full transition-colors border border-[#164A41]/10">
+                    <span className="text-[10px] sm:text-[11px] font-bold text-[#124E50] uppercase tracking-wider bg-[#F7F5EE] group-hover:bg-[#2C7A7B]/15 group-hover:text-[#2C7A7B] px-2.5 py-1 rounded-full transition-colors border border-[#164A41]/10">
                       {item.badge}
                     </span>
                   </div>
 
                   {/* Benefit Title */}
-                  <h3 className="font-heading text-lg sm:text-xl font-bold text-[#164A41] uppercase tracking-wider mb-2 group-hover:text-[#2C7A7B] transition-colors">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-[#124E50] uppercase tracking-wider mb-2 group-hover:text-[#2C7A7B] transition-colors">
                     {item.title}
                   </h3>
 
                   {/* Benefit Description */}
-                  <p className="text-[#164A41]/75 text-xs sm:text-sm font-normal leading-relaxed">
+                  <p className="text-[#124E50]/75 text-xs sm:text-sm font-normal leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Subtle bottom indicator */}
-                <div className="mt-5 pt-3.5 border-t border-[#164A41]/10 flex items-center justify-between text-[11px] font-semibold text-[#164A41]/70 group-hover:text-[#2C7A7B] transition-colors">
+                <div className="mt-5 pt-3.5 border-t border-[#164A41]/10 flex items-center justify-between text-[11px] font-semibold text-[#124E50]/70 group-hover:text-[#2C7A7B] transition-colors">
                   <span>Jaminan Standar Aloha</span>
                   <span className="group-hover:translate-x-1 transition-transform text-[#2C7A7B] font-bold">→</span>
                 </div>

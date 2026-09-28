@@ -234,7 +234,7 @@ function BookingPageContent() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -308,7 +308,7 @@ function BookingPageContent() {
                           ? "bg-[#2C7A7B] text-white"
                           : isActive
                           ? "bg-[#E76F51] text-white ring-4 ring-[#E76F51]/25"
-                          : "bg-[#164A41]/10 text-[#164A41]/60"
+                          : "bg-[#164A41]/10 text-[#124E50]/60"
                       }`}
                     >
                       {isCompleted ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : item.num}
@@ -317,10 +317,10 @@ function BookingPageContent() {
                       <span
                         className={`text-[11px] sm:text-xs font-bold uppercase tracking-wider block truncate ${
                           isActive
-                            ? "text-[#164A41]"
+                            ? "text-[#124E50]"
                             : isCompleted
                             ? "text-[#2C7A7B]"
-                            : "text-[#164A41]/50"
+                            : "text-[#124E50]/50"
                         }`}
                       >
                         <span className="sm:hidden">{item.short}</span>
@@ -355,13 +355,13 @@ function BookingPageContent() {
                   KODE RESERVASI: {bookingRef}
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#124E50] uppercase tracking-wide">
                   MAHALO! BOOKING ANDA TELAH TERKONFIRMASI
                 </h2>
 
-                <p className="text-[#164A41]/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-                  Terima kasih, <strong className="text-[#164A41]">{fullName}</strong>! Reservasi Anda untuk{" "}
-                  <strong className="text-[#164A41]">{currentTour.name}</strong> telah berhasil didaftarkan ke sistem pemandu kami.
+                <p className="text-[#124E50]/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                  Terima kasih, <strong className="text-[#124E50]">{fullName}</strong>! Reservasi Anda untuk{" "}
+                  <strong className="text-[#124E50]">{currentTour.name}</strong> telah berhasil didaftarkan ke sistem pemandu kami.
                 </p>
               </div>
 
@@ -381,10 +381,10 @@ function BookingPageContent() {
                       <span className="text-[11px] font-bold text-[#2C7A7B] uppercase tracking-wider bg-[#2C7A7B]/15 px-2.5 py-0.5 rounded-md">
                         {currentTour.tag}
                       </span>
-                      <h3 className="font-heading text-lg sm:text-xl font-bold text-[#164A41] mt-1">
+                      <h3 className="font-heading text-lg sm:text-xl font-bold text-[#124E50] mt-1">
                         {currentTour.name}
                       </h3>
-                      <div className="text-xs text-[#164A41]/70 flex items-center gap-2 mt-0.5">
+                      <div className="text-xs text-[#124E50]/70 flex items-center gap-2 mt-0.5">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3.5 h-3.5 text-[#E76F51]" /> {currentTour.duration}
                         </span>
@@ -393,8 +393,8 @@ function BookingPageContent() {
                   </div>
 
                   <div className="text-left sm:text-right">
-                    <span className="text-xs text-[#164A41]/60 block">Total Pembayaran</span>
-                    <span className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41]">
+                    <span className="text-xs text-[#124E50]/60 block">Total Pembayaran</span>
+                    <span className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50]">
                       ${finalTotal.toFixed(2)}
                     </span>
                     <span className="text-[11px] text-[#2C7A7B] block font-medium">✓ Termasuk Diskon Promo 10%</span>
@@ -403,44 +403,44 @@ function BookingPageContent() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                   <div className="p-3 bg-white rounded-xl border border-[#164A41]/10">
-                    <span className="text-xs text-[#164A41]/60 block font-semibold uppercase">Tanggal Tur</span>
-                    <strong className="text-[#164A41] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
+                    <span className="text-xs text-[#124E50]/60 block font-semibold uppercase">Tanggal Tur</span>
+                    <strong className="text-[#124E50] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <Calendar className="w-4 h-4 text-[#E9C46A]" /> {date}
                     </strong>
                   </div>
 
                   <div className="p-3 bg-white rounded-xl border border-[#164A41]/10">
-                    <span className="text-xs text-[#164A41]/60 block font-semibold uppercase">Waktu Jemput</span>
-                    <strong className="text-[#164A41] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
+                    <span className="text-xs text-[#124E50]/60 block font-semibold uppercase">Waktu Jemput</span>
+                    <strong className="text-[#124E50] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <Clock className="w-4 h-4 text-[#E9C46A]" /> {timeSlot}
                     </strong>
                   </div>
 
                   <div className="p-3 bg-white rounded-xl border border-[#164A41]/10">
-                    <span className="text-xs text-[#164A41]/60 block font-semibold uppercase">Jumlah Peserta</span>
-                    <strong className="text-[#164A41] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
+                    <span className="text-xs text-[#124E50]/60 block font-semibold uppercase">Jumlah Peserta</span>
+                    <strong className="text-[#124E50] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <Users className="w-4 h-4 text-[#E9C46A]" /> {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                     </strong>
                   </div>
 
                   <div className="p-3 bg-white rounded-xl border border-[#164A41]/10">
-                    <span className="text-xs text-[#164A41]/60 block font-semibold uppercase">Metode Pembayaran</span>
+                    <span className="text-xs text-[#124E50]/60 block font-semibold uppercase">Metode Pembayaran</span>
                     <strong className="text-[#2C7A7B] text-sm sm:text-base flex items-center gap-1.5 mt-0.5">
                       <ShieldCheck className="w-4 h-4 text-[#2C7A7B]" /> Bayar Saat Tur
                     </strong>
                   </div>
                 </div>
 
-                <div className="p-4 bg-white rounded-xl border border-[#164A41]/10 text-xs text-[#164A41]/80 space-y-1.5">
-                  <div className="font-bold text-[#164A41] text-sm mb-1">Informasi Penjemputan &amp; Voucher:</div>
+                <div className="p-4 bg-white rounded-xl border border-[#164A41]/10 text-xs text-[#124E50]/80 space-y-1.5">
+                  <div className="font-bold text-[#124E50] text-sm mb-1">Informasi Penjemputan &amp; Voucher:</div>
                   <p>
                     Voucher digital resmi dan kontak pemandu telah dikirimkan ke email:{" "}
-                    <strong className="text-[#164A41]">{email}</strong> serta nomor WhatsApp:{" "}
-                    <strong className="text-[#164A41]">{phone}</strong>.
+                    <strong className="text-[#124E50]">{email}</strong> serta nomor WhatsApp:{" "}
+                    <strong className="text-[#124E50]">{phone}</strong>.
                   </p>
                   {hotel && (
                     <p>
-                      Lokasi Penjemputan Terpilih: <strong className="text-[#164A41]">{hotel}</strong>.
+                      Lokasi Penjemputan Terpilih: <strong className="text-[#124E50]">{hotel}</strong>.
                     </p>
                   )}
                 </div>
@@ -450,9 +450,9 @@ function BookingPageContent() {
                   <button
                     type="button"
                     onClick={() => window.print()}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-50 text-[#164A41] border border-[#164A41]/20 font-bold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-xs transition-colors"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-50 text-[#124E50] border border-[#164A41]/20 font-bold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-xs transition-colors"
                   >
-                    <Printer className="w-4 h-4 text-[#164A41]" />
+                    <Printer className="w-4 h-4 text-[#124E50]" />
                     <span>Cetak Voucher Bukti Pesanan</span>
                   </button>
 
@@ -478,10 +478,10 @@ function BookingPageContent() {
                         <Compass className="w-3.5 h-3.5" />
                         <span>Langkah 1 dari 6</span>
                       </div>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50] uppercase tracking-wide">
                         PILIH PENGALAMAN WISATA ANDA
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#164A41]/75 mt-1">
+                      <p className="text-xs sm:text-sm text-[#124E50]/75 mt-1">
                         Pilih tur pulau Oahu atau Maui yang ingin Anda ikuti bersama pemandu lokal berlisensi.
                       </p>
                     </div>
@@ -513,25 +513,25 @@ function BookingPageContent() {
                                 <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#2C7A7B]/15 text-[#2C7A7B]">
                                   {t.tag}
                                 </span>
-                                <span className="text-xs text-[#164A41]/60 flex items-center gap-1">
+                                <span className="text-xs text-[#124E50]/60 flex items-center gap-1">
                                   <Clock className="w-3 h-3 text-[#E76F51]" /> {t.duration}
                                 </span>
                               </div>
-                              <h3 className="font-heading text-lg sm:text-xl font-bold text-[#164A41] leading-snug">
+                              <h3 className="font-heading text-lg sm:text-xl font-bold text-[#124E50] leading-snug">
                                 {t.name}
                               </h3>
-                              <p className="text-xs text-[#164A41]/70 line-clamp-2 mt-1">
+                              <p className="text-xs text-[#124E50]/70 line-clamp-2 mt-1">
                                 {t.shortDesc}
                               </p>
                             </div>
 
                             <div className="text-right shrink-0 w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between border-t sm:border-t-0 pt-3 sm:pt-0 border-neutral-100">
                               <div>
-                                <span className="text-xs text-[#164A41]/60 block sm:hidden">Mulai:</span>
-                                <div className="font-heading text-2xl font-extrabold text-[#164A41]">
+                                <span className="text-xs text-[#124E50]/60 block sm:hidden">Mulai:</span>
+                                <div className="font-heading text-2xl font-extrabold text-[#124E50]">
                                   ${t.price}
                                 </div>
-                                <div className="text-[11px] text-[#164A41]/60">/ orang</div>
+                                <div className="text-[11px] text-[#124E50]/60">/ orang</div>
                               </div>
                               <div
                                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors sm:mt-2 ${
@@ -558,10 +558,10 @@ function BookingPageContent() {
                         <Calendar className="w-3.5 h-3.5" />
                         <span>Langkah 2 dari 6</span>
                       </div>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50] uppercase tracking-wide">
                         PILIH TANGGAL &amp; JADWAL KEBERANGKATAN
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#164A41]/75 mt-1">
+                      <p className="text-xs sm:text-sm text-[#124E50]/75 mt-1">
                         Pilih tanggal tur yang Anda inginkan beserta slot waktu penjemputan lobi hotel.
                       </p>
                     </div>
@@ -569,7 +569,7 @@ function BookingPageContent() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {/* Date Picker Input */}
                       <div className="space-y-2">
-                        <label htmlFor="tour-date-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider">
+                        <label htmlFor="tour-date-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider">
                           Tanggal Keberangkatan <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -578,16 +578,16 @@ function BookingPageContent() {
                           value={date}
                           min={tomorrowStr()}
                           onChange={(e) => setDate(e.target.value)}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-base text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-base text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                         />
-                        <span className="text-[11px] text-[#164A41]/60 block">
+                        <span className="text-[11px] text-[#124E50]/60 block">
                           Pemesanan dibuka hingga 12 bulan ke depan.
                         </span>
                       </div>
 
                       {/* Time Slots Radio Selection */}
                       <div className="space-y-2">
-                        <label className="block text-xs font-bold text-[#164A41] uppercase tracking-wider">
+                        <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider">
                           Slot Waktu Penjemputan <span className="text-red-500">*</span>
                         </label>
                         <div className="space-y-2.5">
@@ -603,8 +603,8 @@ function BookingPageContent() {
                                 }`}
                               >
                                 <div>
-                                  <div className="font-bold text-sm text-[#164A41]">{slot.time}</div>
-                                  <div className="text-[11px] text-[#164A41]/70">{slot.label}</div>
+                                  <div className="font-bold text-sm text-[#124E50]">{slot.time}</div>
+                                  <div className="text-[11px] text-[#124E50]/70">{slot.label}</div>
                                 </div>
                                 <input
                                   type="radio"
@@ -630,10 +630,10 @@ function BookingPageContent() {
                         <Users className="w-3.5 h-3.5" />
                         <span>Langkah 3 dari 6</span>
                       </div>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50] uppercase tracking-wide">
                         JUMLAH PESERTA
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#164A41]/75 mt-1">
+                      <p className="text-xs sm:text-sm text-[#124E50]/75 mt-1">
                         Tentukan jumlah tamu dewasa dan anak-anak yang akan ikut serta dalam perjalanan.
                       </p>
                     </div>
@@ -643,8 +643,8 @@ function BookingPageContent() {
                       <div className="p-5 rounded-2xl border-2 border-[#164A41]/15 bg-white space-y-3">
                         <div className="flex items-center justify-between">
                           <div>
-                            <div className="font-bold text-base text-[#164A41]">Dewasa (Usia 12+)</div>
-                            <div className="text-xs text-[#164A41]/60">${currentTour.price} / orang</div>
+                            <div className="font-bold text-base text-[#124E50]">Dewasa (Usia 12+)</div>
+                            <div className="text-xs text-[#124E50]/60">${currentTour.price} / orang</div>
                           </div>
                           <Users className="w-5 h-5 text-[#2C7A7B]" />
                         </div>
@@ -652,12 +652,12 @@ function BookingPageContent() {
                           <button
                             type="button"
                             onClick={() => setAdults((prev) => Math.max(1, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#164A41] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
                             aria-label="Kurangi Dewasa"
                           >
                             -
                           </button>
-                          <span className="font-heading text-3xl font-bold text-[#164A41]">{adults}</span>
+                          <span className="font-heading text-3xl font-bold text-[#124E50]">{adults}</span>
                           <button
                             type="button"
                             onClick={() => setAdults((prev) => prev + 1)}
@@ -673,8 +673,8 @@ function BookingPageContent() {
                       <div className="p-5 rounded-2xl border-2 border-[#164A41]/15 bg-white space-y-3">
                         <div className="flex items-center justify-between">
                           <div>
-                            <div className="font-bold text-base text-[#164A41]">Anak-anak (Usia 3–11)</div>
-                            <div className="text-xs text-[#164A41]/60">
+                            <div className="font-bold text-base text-[#124E50]">Anak-anak (Usia 3–11)</div>
+                            <div className="text-xs text-[#124E50]/60">
                               ${Math.round(currentTour.price * 0.75)} / anak (Diskon 25%)
                             </div>
                           </div>
@@ -684,12 +684,12 @@ function BookingPageContent() {
                           <button
                             type="button"
                             onClick={() => setChildren((prev) => Math.max(0, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#164A41] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
                             aria-label="Kurangi Anak"
                           >
                             -
                           </button>
-                          <span className="font-heading text-3xl font-bold text-[#164A41]">{children}</span>
+                          <span className="font-heading text-3xl font-bold text-[#124E50]">{children}</span>
                           <button
                             type="button"
                             onClick={() => setChildren((prev) => prev + 1)}
@@ -702,7 +702,7 @@ function BookingPageContent() {
                       </div>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#164A41]/15 text-xs text-[#164A41]/80">
+                    <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#164A41]/15 text-xs text-[#124E50]/80">
                       ℹ️ Bayi di bawah 3 tahun (infant) gratis selama duduk di pangkuan orang tua dan tidak membutuhkan kursi khusus.
                     </div>
                   </div>
@@ -716,10 +716,10 @@ function BookingPageContent() {
                         <FileText className="w-3.5 h-3.5" />
                         <span>Langkah 4 dari 6</span>
                       </div>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50] uppercase tracking-wide">
                         DATA PEMESAN &amp; LOKASI JEMPUT
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#164A41]/75 mt-1">
+                      <p className="text-xs sm:text-sm text-[#124E50]/75 mt-1">
                         Masukkan data kontak pemesan untuk pengiriman konfirmasi instan dan jadwal penjemputan.
                       </p>
                     </div>
@@ -727,7 +727,7 @@ function BookingPageContent() {
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label htmlFor="fullname-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider mb-1">
+                          <label htmlFor="fullname-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-1">
                             Nama Lengkap Tamu Utama <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -737,12 +737,12 @@ function BookingPageContent() {
                             placeholder="cth. John Doe"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="email-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider mb-1">
+                          <label htmlFor="email-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-1">
                             Alamat Email Valid <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -752,14 +752,14 @@ function BookingPageContent() {
                             placeholder="nama@email.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label htmlFor="phone-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider mb-1">
+                          <label htmlFor="phone-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-1">
                             Nomor Telepon / WhatsApp <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -769,13 +769,13 @@ function BookingPageContent() {
                             placeholder="+62 812-3456-7890"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="hotel-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider mb-1">
-                            Hotel Waikiki / Lokasi Jemput <span className="text-[#164A41]/60">(Opsional)</span>
+                          <label htmlFor="hotel-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-1">
+                            Hotel Waikiki / Lokasi Jemput <span className="text-[#124E50]/60">(Opsional)</span>
                           </label>
                           <input
                             id="hotel-input"
@@ -783,14 +783,14 @@ function BookingPageContent() {
                             placeholder="cth. Sheraton Waikiki, Hilton Hawaiian Village..."
                             value={hotel}
                             onChange={(e) => setHotel(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
                       </div>
 
                       <div>
-                        <label htmlFor="special-requests-input" className="block text-xs font-bold text-[#164A41] uppercase tracking-wider mb-1">
-                          Catatan Khusus / Permintaan Khusus <span className="text-[#164A41]/60">(Opsional)</span>
+                        <label htmlFor="special-requests-input" className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-1">
+                          Catatan Khusus / Permintaan Khusus <span className="text-[#124E50]/60">(Opsional)</span>
                         </label>
                         <textarea
                           id="special-requests-input"
@@ -798,7 +798,7 @@ function BookingPageContent() {
                           placeholder="cth. Membawa kursi dorong lipat, preferensi vegetarian untuk makan siang..."
                           value={specialRequests}
                           onChange={(e) => setSpecialRequests(e.target.value)}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-2.5 text-sm text-[#164A41] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                         />
                       </div>
                     </div>
@@ -813,10 +813,10 @@ function BookingPageContent() {
                         <Check className="w-3.5 h-3.5" />
                         <span>Langkah 5 dari 6</span>
                       </div>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#164A41] uppercase tracking-wide">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#124E50] uppercase tracking-wide">
                         REVIEW &amp; TINJAU PESANAN ANDA
                       </h2>
-                      <p className="text-xs sm:text-sm text-[#164A41]/75 mt-1">
+                      <p className="text-xs sm:text-sm text-[#124E50]/75 mt-1">
                         Periksa kembali rincian pemesanan Anda sebelum melanjutkan ke konfirmasi akhir.
                       </p>
                     </div>
@@ -827,8 +827,8 @@ function BookingPageContent() {
                           <span className="text-[11px] font-bold text-[#2C7A7B] uppercase tracking-wider">
                             Paket Tur Terpilih
                           </span>
-                          <h3 className="font-heading text-xl font-bold text-[#164A41]">{currentTour.name}</h3>
-                          <p className="text-xs text-[#164A41]/70 mt-0.5">{currentTour.duration}</p>
+                          <h3 className="font-heading text-xl font-bold text-[#124E50]">{currentTour.name}</h3>
+                          <p className="text-xs text-[#124E50]/70 mt-0.5">{currentTour.duration}</p>
                         </div>
                         <span className="text-xs bg-[#E76F51] text-white font-bold px-2.5 py-1 rounded-md">
                           {currentTour.tag}
@@ -837,26 +837,26 @@ function BookingPageContent() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm border-b border-[#164A41]/10 pb-4">
                         <div>
-                          <span className="text-[#164A41]/60 block text-xs">Tanggal Tur:</span>
-                          <strong className="text-[#164A41]">{date}</strong>
+                          <span className="text-[#124E50]/60 block text-xs">Tanggal Tur:</span>
+                          <strong className="text-[#124E50]">{date}</strong>
                         </div>
                         <div>
-                          <span className="text-[#164A41]/60 block text-xs">Slot Waktu Jemput:</span>
-                          <strong className="text-[#164A41]">{timeSlot}</strong>
+                          <span className="text-[#124E50]/60 block text-xs">Slot Waktu Jemput:</span>
+                          <strong className="text-[#124E50]">{timeSlot}</strong>
                         </div>
                         <div>
-                          <span className="text-[#164A41]/60 block text-xs">Jumlah Peserta:</span>
-                          <strong className="text-[#164A41]">
+                          <span className="text-[#124E50]/60 block text-xs">Jumlah Peserta:</span>
+                          <strong className="text-[#124E50]">
                             {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                           </strong>
                         </div>
                         <div>
-                          <span className="text-[#164A41]/60 block text-xs">Tamu Pemesan:</span>
-                          <strong className="text-[#164A41]">{fullName || "-"}</strong>
+                          <span className="text-[#124E50]/60 block text-xs">Tamu Pemesan:</span>
+                          <strong className="text-[#124E50]">{fullName || "-"}</strong>
                         </div>
                       </div>
 
-                      <div className="text-xs text-[#164A41]/80 space-y-1">
+                      <div className="text-xs text-[#124E50]/80 space-y-1">
                         <div>
                           Kontak: <strong>{email}</strong> | <strong>{phone}</strong>
                         </div>
@@ -874,14 +874,14 @@ function BookingPageContent() {
 
                       {/* Pricing Breakdown inside Review */}
                       <div className="pt-3 border-t border-[#164A41]/10 space-y-2">
-                        <div className="flex justify-between text-xs text-[#164A41]/75">
+                        <div className="flex justify-between text-xs text-[#124E50]/75">
                           <span>
                             Dewasa ({adults} x ${currentTour.price})
                           </span>
                           <span>${adults * currentTour.price}</span>
                         </div>
                         {children > 0 && (
-                          <div className="flex justify-between text-xs text-[#164A41]/75">
+                          <div className="flex justify-between text-xs text-[#124E50]/75">
                             <span>
                               Anak ({children} x ${Math.round(currentTour.price * 0.75)})
                             </span>
@@ -894,10 +894,10 @@ function BookingPageContent() {
                         </div>
                         <div className="flex justify-between items-baseline pt-2 border-t border-[#164A41]/10">
                           <div>
-                            <div className="font-heading text-lg text-[#164A41]">TOTAL AKHIR</div>
+                            <div className="font-heading text-lg text-[#124E50]">TOTAL AKHIR</div>
                             <div className="text-[11px] text-[#2C7A7B]">✓ Tanpa biaya tersembunyi</div>
                           </div>
-                          <div className="font-heading text-3xl font-extrabold text-[#164A41]">
+                          <div className="font-heading text-3xl font-extrabold text-[#124E50]">
                             ${finalTotal.toFixed(2)}
                           </div>
                         </div>
@@ -912,7 +912,7 @@ function BookingPageContent() {
                         onChange={(e) => setAgreedTerms(e.target.checked)}
                         className="accent-[#E76F51] w-4 h-4 mt-0.5 cursor-pointer"
                       />
-                      <label htmlFor="terms" className="text-xs text-[#164A41]/80 cursor-pointer">
+                      <label htmlFor="terms" className="text-xs text-[#124E50]/80 cursor-pointer">
                         Saya menyetujui kebijakan pembatalan fleksibel 48 jam dan memahami pembayaran diselesaikan saat hari tur di Hawaii tanpa biaya di muka saat ini.
                       </label>
                     </div>
@@ -925,7 +925,7 @@ function BookingPageContent() {
                     <button
                       type="button"
                       onClick={handleBack}
-                      className="px-5 py-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-[#164A41] font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="px-5 py-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-[#124E50] font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <ChevronLeft className="w-4 h-4" />
                       <span>Kembali</span>
@@ -970,7 +970,7 @@ function BookingPageContent() {
               <div className="lg:col-span-4 sticky top-36 space-y-5">
                 <div className="bg-white rounded-3xl p-6 shadow-lg border border-[#164A41]/10 space-y-4">
                   <div className="flex items-center justify-between border-b border-[#164A41]/10 pb-3">
-                    <h3 className="font-heading text-xl font-bold text-[#164A41]">RINGKASAN PESANAN</h3>
+                    <h3 className="font-heading text-xl font-bold text-[#124E50]">RINGKASAN PESANAN</h3>
                     <span className="text-[11px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#2C7A7B]/15 text-[#2C7A7B]">
                       Langkah {step} dari 6
                     </span>
@@ -982,26 +982,26 @@ function BookingPageContent() {
                       <Image src={currentTour.image} alt={currentTour.name} fill className="object-cover" />
                     </div>
                     <div>
-                      <div className="font-heading text-sm font-bold text-[#164A41] line-clamp-1">
+                      <div className="font-heading text-sm font-bold text-[#124E50] line-clamp-1">
                         {currentTour.name}
                       </div>
-                      <div className="text-xs text-[#164A41]/60">{currentTour.duration}</div>
+                      <div className="text-xs text-[#124E50]/60">{currentTour.duration}</div>
                     </div>
                   </div>
 
                   {/* Summary Details */}
-                  <div className="space-y-2 text-xs text-[#164A41]/80 pt-2 border-t border-[#164A41]/10">
+                  <div className="space-y-2 text-xs text-[#124E50]/80 pt-2 border-t border-[#164A41]/10">
                     <div className="flex justify-between">
-                      <span className="text-[#164A41]/60">Tanggal:</span>
-                      <strong className="text-[#164A41]">{date || "-"}</strong>
+                      <span className="text-[#124E50]/60">Tanggal:</span>
+                      <strong className="text-[#124E50]">{date || "-"}</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#164A41]/60">Waktu:</span>
-                      <strong className="text-[#164A41]">{timeSlot}</strong>
+                      <span className="text-[#124E50]/60">Waktu:</span>
+                      <strong className="text-[#124E50]">{timeSlot}</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#164A41]/60">Peserta:</span>
-                      <strong className="text-[#164A41]">
+                      <span className="text-[#124E50]/60">Peserta:</span>
+                      <strong className="text-[#124E50]">
                         {adults} Dewasa{children > 0 ? `, ${children} Anak` : ""}
                       </strong>
                     </div>
@@ -1009,12 +1009,12 @@ function BookingPageContent() {
 
                   {/* Live Cost Breakdown */}
                   <div className="space-y-1.5 pt-3 border-t border-[#164A41]/10 text-xs">
-                    <div className="flex justify-between text-[#164A41]/75">
+                    <div className="flex justify-between text-[#124E50]/75">
                       <span>Harga Dewasa ({adults}x)</span>
                       <span>${adults * currentTour.price}</span>
                     </div>
                     {children > 0 && (
-                      <div className="flex justify-between text-[#164A41]/75">
+                      <div className="flex justify-between text-[#124E50]/75">
                         <span>Harga Anak ({children}x)</span>
                         <span>${children * Math.round(currentTour.price * 0.75)}</span>
                       </div>
@@ -1024,8 +1024,8 @@ function BookingPageContent() {
                       <span>-${promoDiscount.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between items-baseline pt-2 border-t border-[#164A41]/10">
-                      <span className="font-heading text-base text-[#164A41]">TOTAL BIAYA:</span>
-                      <span className="font-heading text-2xl font-extrabold text-[#164A41]">
+                      <span className="font-heading text-base text-[#124E50]">TOTAL BIAYA:</span>
+                      <span className="font-heading text-2xl font-extrabold text-[#124E50]">
                         ${finalTotal.toFixed(2)}
                       </span>
                     </div>
@@ -1033,8 +1033,8 @@ function BookingPageContent() {
                 </div>
 
                 {/* Trust & Guarantee Box */}
-                <div className="bg-[#F7F5EE] rounded-2xl p-5 border border-[#164A41]/15 space-y-2.5 text-xs text-[#164A41]/80">
-                  <div className="flex items-center gap-2 font-bold text-[#164A41]">
+                <div className="bg-[#F7F5EE] rounded-2xl p-5 border border-[#164A41]/15 space-y-2.5 text-xs text-[#124E50]/80">
+                  <div className="flex items-center gap-2 font-bold text-[#124E50]">
                     <ShieldCheck className="w-4 h-4 text-[#2C7A7B]" />
                     <span>Jaminan Pemesanan Resmi:</span>
                   </div>
@@ -1062,7 +1062,7 @@ export default function BookingPage() {
         <div className="min-h-screen bg-[#F7F5EE] flex items-center justify-center p-8">
           <div className="text-center space-y-3">
             <span className="w-10 h-10 border-4 border-[#164A41] border-t-transparent rounded-full animate-spin inline-block" />
-            <p className="text-sm font-bold text-[#164A41] uppercase tracking-wider">
+            <p className="text-sm font-bold text-[#124E50] uppercase tracking-wider">
               Memuat Halaman Booking...
             </p>
           </div>

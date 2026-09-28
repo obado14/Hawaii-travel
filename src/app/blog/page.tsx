@@ -77,7 +77,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -125,15 +125,15 @@ export default function BlogPage() {
         </section>
 
         {/* Main Blog Content Section with Cream Background */}
-        <section className="bg-[#F7F5EE] text-[#164A41] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#F7F5EE] text-[#124E50] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#164A41]/70 mb-6 font-medium px-1">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-6 font-medium px-1">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-[#164A41]/40" />
-              <span className="text-[#164A41] font-bold">Blog Wisata</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#124E50]/40" />
+              <span className="text-[#124E50] font-bold">Blog Wisata</span>
             </nav>
 
             {/* 1. Featured Article Section (Horizontal Card) */}
@@ -180,27 +180,27 @@ export default function BlogPage() {
                     </div>
 
                     {/* Aligned Metadata */}
-                    <div className="flex items-center gap-3 text-xs text-[#164A41]/60 mb-3.5 font-medium">
+                    <div className="flex items-center gap-3 text-xs text-[#124E50]/60 mb-3.5 font-medium">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-[#164A41]/40" />
+                        <Calendar className="w-3.5 h-3.5 text-[#124E50]/40" />
                         {featuredPost.date}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-[#164A41]/40" />
+                        <Clock className="w-3.5 h-3.5 text-[#124E50]/40" />
                         {featuredPost.readTime}
                       </span>
                     </div>
 
                     {/* Prominent Title */}
-                    <h2 className="font-heading text-2xl sm:text-3xl lg:text-[30px] font-bold text-[#164A41] uppercase tracking-wide leading-tight mb-4 group-hover:text-[#2C7A7B] transition-colors">
+                    <h2 className="font-heading text-2xl sm:text-3xl lg:text-[30px] font-bold text-[#124E50] uppercase tracking-wide leading-tight mb-4 group-hover:text-[#2C7A7B] transition-colors">
                       <Link href={`/blog/${featuredPost.id}`} className="hover:underline">
                         {featuredPost.title}
                       </Link>
                     </h2>
 
                     {/* Short Description */}
-                    <p className="text-[#164A41]/75 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+                    <p className="text-[#124E50]/75 text-sm sm:text-base leading-relaxed mb-6 font-normal">
                       {featuredPost.excerpt}
                     </p>
                   </div>
@@ -228,7 +228,7 @@ export default function BlogPage() {
                   value={searchQuery}
                   onChange={handleSearchChange}
                   placeholder="Cari artikel berdasarkan judul atau kata kunci (cth. Turtle Canyon, air terjun, kuliner)..."
-                  className="w-full pl-12 pr-10 py-3.5 sm:py-4 rounded-2xl bg-white border border-[#164A41]/15 text-[#164A41] placeholder-[#164A41]/40 text-sm sm:text-base shadow-sm focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
+                  className="w-full pl-12 pr-10 py-3.5 sm:py-4 rounded-2xl bg-white border border-[#164A41]/15 text-[#124E50] placeholder-[#124E50]/40 text-sm sm:text-base shadow-sm focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
                 />
                 {searchQuery && (
                   <button
@@ -256,7 +256,7 @@ export default function BlogPage() {
                     className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       isActive
                         ? "bg-[#E76F51] text-white border-[#E76F51] shadow-md shadow-[#E76F51]/25 scale-105"
-                        : "bg-white text-[#164A41] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-sm"
+                        : "bg-white text-[#124E50] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-sm"
                     }`}
                   >
                     {category}
@@ -267,14 +267,14 @@ export default function BlogPage() {
 
             {/* Active Filter or Search Status Banner */}
             {(selectedCategory !== "Semua" || searchQuery.trim()) && (
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-8 px-2 text-xs sm:text-sm text-[#164A41]/70 border-b border-[#164A41]/15 pb-3">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-8 px-2 text-xs sm:text-sm text-[#124E50]/70 border-b border-[#164A41]/15 pb-3">
                 <div>
-                  Menampilkan <strong className="text-[#164A41]">{filteredPosts.length}</strong> artikel
+                  Menampilkan <strong className="text-[#124E50]">{filteredPosts.length}</strong> artikel
                   {selectedCategory !== "Semua" && (
                     <span> dalam kategori <strong className="text-[#2C7A7B]">{selectedCategory}</strong></span>
                   )}
                   {searchQuery.trim() && (
-                    <span> yang cocok dengan &ldquo;<strong className="text-[#164A41]">{searchQuery}</strong>&rdquo;</span>
+                    <span> yang cocok dengan &ldquo;<strong className="text-[#124E50]">{searchQuery}</strong>&rdquo;</span>
                   )}
                 </div>
                 <button
@@ -290,10 +290,10 @@ export default function BlogPage() {
             {filteredPosts.length === 0 ? (
               <div className="bg-white rounded-3xl p-10 sm:p-14 text-center max-w-lg mx-auto shadow-md border border-[#164A41]/10 my-8">
                 <Search className="w-10 h-10 text-neutral-300 mx-auto mb-3" />
-                <h3 className="font-heading text-xl font-bold text-[#164A41] mb-2 uppercase">
+                <h3 className="font-heading text-xl font-bold text-[#124E50] mb-2 uppercase">
                   Tidak Ada Artikel Ditemukan
                 </h3>
-                <p className="text-sm text-[#164A41]/70 mb-6 leading-relaxed">
+                <p className="text-sm text-[#124E50]/70 mb-6 leading-relaxed">
                   Kami tidak dapat menemukan artikel wisata yang cocok dengan pencarian Anda. Coba kata kunci lain atau atur ulang filter kategori.
                 </p>
                 <button
@@ -336,27 +336,27 @@ export default function BlogPage() {
                         </div>
 
                         {/* Aligned Metadata */}
-                        <div className="flex items-center gap-3 text-xs text-[#164A41]/60 mb-2.5 font-medium">
+                        <div className="flex items-center gap-3 text-xs text-[#124E50]/60 mb-2.5 font-medium">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3.5 h-3.5 text-[#164A41]/40" />
+                            <Calendar className="w-3.5 h-3.5 text-[#124E50]/40" />
                             {post.date}
                           </span>
                           <span>•</span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5 text-[#164A41]/40" />
+                            <Clock className="w-3.5 h-3.5 text-[#124E50]/40" />
                             {post.readTime}
                           </span>
                         </div>
 
                         {/* Prominent Title with Consistent Height Area - Clickable */}
-                        <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#164A41] uppercase tracking-wide leading-snug mb-3 group-hover:text-[#2C7A7B] transition-colors min-h-[3.5rem] sm:min-h-[4rem] line-clamp-2">
+                        <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#124E50] uppercase tracking-wide leading-snug mb-3 group-hover:text-[#2C7A7B] transition-colors min-h-[3.5rem] sm:min-h-[4rem] line-clamp-2">
                           <Link href={`/blog/${post.id}`} className="hover:underline">
                             {post.title}
                           </Link>
                         </h2>
 
                         {/* Readable Description with Comfortable Line-height */}
-                        <p className="text-[#164A41]/75 text-sm leading-relaxed mb-6 font-normal line-clamp-3 flex-1">
+                        <p className="text-[#124E50]/75 text-sm leading-relaxed mb-6 font-normal line-clamp-3 flex-1">
                           {post.excerpt}
                         </p>
                       </div>
