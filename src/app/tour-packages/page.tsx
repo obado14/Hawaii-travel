@@ -87,7 +87,7 @@ const allTours: TourPackageDetail[] = [
     reviewsCount: 1205,
     price: 139,
     originalPrice: 155,
-    image: "/sites/gotourshawaii/root/Visual-img-3-e1714632197722.jpg",
+    image: "/images/byodo-in-temple.jpg",
     description:
       "Kunjungi kuil kedamaian yang megah di kaki Pegunungan Koʻolau yang diselimuti kabut, dipadukan dengan keindahan pantai timur dan konservasi satwa liar.",
     fullDescription:
@@ -385,7 +385,7 @@ const allTours: TourPackageDetail[] = [
     reviewsCount: 512,
     price: 95,
     originalPrice: 110,
-    image: "/sites/gotourshawaii/root/3-3.jpg",
+    image: "/images/waikiki-sunset-catamaran.jpg",
     description:
       "Berlayar menuju matahari terbenam keemasan Hawaii di lepas pantai Waikiki dengan latar belakang kawah Diamond Head. Nikmati koktail tropis dan musik aloha yang menenangkan.",
     fullDescription:
