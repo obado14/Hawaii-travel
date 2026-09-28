@@ -46,7 +46,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#19312F] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -93,27 +93,27 @@ export default function ContactUsPage() {
         </section>
 
         {/* 2. Contact Form & Information */}
-        <section className="bg-[#F7F5EE] text-[#19312F] pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#F7F5EE] text-[#164A41] pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#19312F]/70 mb-6 font-medium px-1">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#164A41]/70 mb-6 font-medium px-1">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-[#19312F]/40" />
-              <span className="text-[#19312F] font-bold">Hubungi Kami</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#164A41]/40" />
+              <span className="text-[#164A41] font-bold">Hubungi Kami</span>
             </nav>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Form (Col 7 on Desktop, 1 Col on Mobile) */}
-              <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-[#19312F]/10">
+              <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-[#164A41]/10">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
                   <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
                   <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest">
                     Kirim Pesan Langsung
                   </span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-4xl text-[#19312F] uppercase mb-5 leading-tight">
+                <h2 className="font-heading text-3xl sm:text-4xl text-[#164A41] uppercase mb-5 leading-tight">
                   BAGAIMANA KAMI DAPAT MEMBANTU ANDA?
                 </h2>
 
@@ -122,10 +122,10 @@ export default function ContactUsPage() {
                     <div className="w-16 h-16 bg-[#2C7A7B]/15 text-[#2C7A7B] rounded-full flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#19312F]">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#164A41]">
                       MAHALO ATAS PERTANYAAN ANDA!
                     </h3>
-                    <p className="text-[#19312F]/80 text-sm max-w-sm mx-auto leading-relaxed">
+                    <p className="text-[#164A41]/80 text-sm max-w-sm mx-auto leading-relaxed">
                       Pesan Anda telah berhasil diterima oleh tim layanan tamu kami. Kami akan segera menghubungi Anda dengan informasi lengkap.
                     </p>
                     <button
@@ -155,7 +155,7 @@ export default function ContactUsPage() {
                     {/* Row 1: Name & Contact Number */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                        <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                           Nama Lengkap <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -164,11 +164,11 @@ export default function ContactUsPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Budi Santoso"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] placeholder-[#19312F]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] placeholder-[#164A41]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                        <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                           Nomor Telepon / WA <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -177,7 +177,7 @@ export default function ContactUsPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+62 812-3456-7890"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] placeholder-[#19312F]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] placeholder-[#164A41]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                     </div>
@@ -185,7 +185,7 @@ export default function ContactUsPage() {
                     {/* Row 2: Email & Services */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                        <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                           Alamat Email <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -194,17 +194,17 @@ export default function ContactUsPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="nama@email.com"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] placeholder-[#19312F]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] placeholder-[#164A41]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                        <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                           Pilihan Layanan <span className="text-red-500">*</span>
                         </label>
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer"
+                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer"
                         >
                           <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
                           <option value="Tur Privat">Tur Privat</option>
@@ -217,7 +217,7 @@ export default function ContactUsPage() {
 
                     {/* Row 3: Subject */}
                     <div>
-                      <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                      <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                         Subjek Pertanyaan <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -226,13 +226,13 @@ export default function ContactUsPage() {
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="Contoh: Pertanyaan Penjemputan Hotel, Tur Keliling Pulau"
-                        className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] placeholder-[#19312F]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                        className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] placeholder-[#164A41]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                       />
                     </div>
 
                     {/* Row 4: Message */}
                     <div>
-                      <label className="block text-xs font-bold uppercase text-[#19312F] mb-1.5">
+                      <label className="block text-xs font-bold uppercase text-[#164A41] mb-1.5">
                         Pesan Anda
                       </label>
                       <textarea
@@ -240,7 +240,7 @@ export default function ContactUsPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tuliskan pertanyaan detail atau permintaan khusus Anda di sini..."
-                        className="w-full bg-[#F7F5EE]/60 border border-[#19312F]/15 hover:border-[#19312F]/30 rounded-xl px-4 py-2.5 text-sm text-[#19312F] placeholder-[#19312F]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none"
+                        className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#164A41] placeholder-[#164A41]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none"
                       />
                     </div>
 
@@ -260,7 +260,7 @@ export default function ContactUsPage() {
                           <span>KIRIM PESAN</span>
                         )}
                       </button>
-                      <p className="text-xs text-[#19312F]/60 flex items-center gap-1.5 justify-center sm:justify-start">
+                      <p className="text-xs text-[#164A41]/60 flex items-center gap-1.5 justify-center sm:justify-start">
                         <Clock className="w-3.5 h-3.5 text-[#E76F51] shrink-0" />
                         <span>Kami biasanya merespons dalam 1 hari kerja.</span>
                       </p>
@@ -317,9 +317,9 @@ export default function ContactUsPage() {
                 </div>
 
                 {/* Interactive Headquarters Location Map */}
-                <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-[#19312F]/10 text-left">
+                <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-[#164A41]/10 text-left">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs sm:text-sm font-extrabold uppercase text-[#19312F] tracking-wider block">
+                    <span className="text-xs sm:text-sm font-extrabold uppercase text-[#164A41] tracking-wider block">
                       Lokasi Kantor Pusat
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#2C7A7B] bg-[#2C7A7B]/15 px-2.5 py-0.5 rounded-full">
@@ -329,7 +329,7 @@ export default function ContactUsPage() {
                   </div>
 
                   {/* Interactive Map Iframe */}
-                  <div className="relative h-56 sm:h-64 w-full rounded-2xl overflow-hidden border border-[#19312F]/10 shadow-inner mb-4 bg-[#F7F5EE]">
+                  <div className="relative h-56 sm:h-64 w-full rounded-2xl overflow-hidden border border-[#164A41]/10 shadow-inner mb-4 bg-[#F7F5EE]">
                     <iframe
                       src="https://maps.google.com/maps?q=2500+Kalakaua+Ave+Suite+E,+Honolulu,+HI+96815&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
@@ -346,10 +346,10 @@ export default function ContactUsPage() {
                   {/* Office Info & Get Directions */}
                   <div className="space-y-3">
                     <div>
-                      <h4 className="font-heading text-base font-bold text-[#19312F] uppercase">
+                      <h4 className="font-heading text-base font-bold text-[#164A41] uppercase">
                         Go Tours Hawaii / Kantor Waikiki
                       </h4>
-                      <p className="text-xs text-[#19312F]/70 mt-0.5">
+                      <p className="text-xs text-[#164A41]/70 mt-0.5">
                         2500 Kalakaua Ave Suite E, Honolulu, HI 96815
                       </p>
                     </div>
@@ -374,7 +374,7 @@ export default function ContactUsPage() {
         <FAQSection />
 
         {/* 4. Social Media Section */}
-        <section className="bg-[#F7F5EE] text-[#19312F] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#19312F]/10">
+        <section className="bg-[#F7F5EE] text-[#164A41] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
@@ -382,10 +382,10 @@ export default function ContactUsPage() {
                 Tetap Terhubung Bersama Kami
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl text-[#19312F] uppercase tracking-wide mb-3">
+            <h2 className="font-heading text-3xl sm:text-4xl text-[#164A41] uppercase tracking-wide mb-3">
               IKUTI PERJALANAN HAWAII KAMI
             </h2>
-            <p className="text-[#19312F]/75 text-sm max-w-lg mx-auto mb-8 leading-relaxed font-normal">
+            <p className="text-[#164A41]/75 text-sm max-w-lg mx-auto mb-8 leading-relaxed font-normal">
               Ikuti kabar harian matahari terbit Hawaii, momen bertemu satwa laut, dokumentasi perjalanan para tamu, dan kisah autentik semangat Aloha.
             </p>
 
@@ -395,7 +395,7 @@ export default function ContactUsPage() {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#19312F]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#19312F] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
+                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#164A41]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#164A41] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#164A41]/10 group-hover:bg-[#164A41] text-[#164A41] group-hover:text-white flex items-center justify-center transition-colors">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -404,7 +404,7 @@ export default function ContactUsPage() {
                 </div>
                 <div className="text-left">
                   <span className="block text-xs font-bold uppercase tracking-wider">Instagram</span>
-                  <span className="text-[11px] text-[#19312F]/60">@gotourshawaii</span>
+                  <span className="text-[11px] text-[#164A41]/60">@gotourshawaii</span>
                 </div>
               </a>
 
@@ -413,7 +413,7 @@ export default function ContactUsPage() {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#19312F]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#19312F] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
+                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#164A41]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#164A41] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#164A41]/10 group-hover:bg-[#164A41] text-[#164A41] group-hover:text-white flex items-center justify-center transition-colors">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -422,7 +422,7 @@ export default function ContactUsPage() {
                 </div>
                 <div className="text-left">
                   <span className="block text-xs font-bold uppercase tracking-wider">Facebook</span>
-                  <span className="text-[11px] text-[#19312F]/60">Go Tours Hawaii</span>
+                  <span className="text-[11px] text-[#164A41]/60">Go Tours Hawaii</span>
                 </div>
               </a>
 
@@ -431,7 +431,7 @@ export default function ContactUsPage() {
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#19312F]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#19312F] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
+                className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white border border-[#164A41]/10 shadow-md hover:shadow-lg hover:border-[#2C7A7B] hover:-translate-y-0.5 text-[#164A41] hover:text-[#2C7A7B] transition-all duration-200 group cursor-pointer w-full sm:w-auto"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#164A41]/10 group-hover:bg-[#164A41] text-[#164A41] group-hover:text-white flex items-center justify-center transition-colors">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -440,7 +440,7 @@ export default function ContactUsPage() {
                 </div>
                 <div className="text-left">
                   <span className="block text-xs font-bold uppercase tracking-wider">YouTube</span>
-                  <span className="text-[11px] text-[#19312F]/60">Go Tours Hawaii TV</span>
+                  <span className="text-[11px] text-[#164A41]/60">Go Tours Hawaii TV</span>
                 </div>
               </a>
             </div>

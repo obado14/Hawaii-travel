@@ -19,7 +19,7 @@
   --color-hawaii-palm: #2C7A7B;
   --color-hawaii-dark: #164A41;
   --color-hawaii-navy: #164A41;
-  --color-hawaii-navy-dark: #113832;
+  --color-hawaii-navy-dark: #164A41;
   --color-hawaii-gold: #E9C46A;
   --color-hawaii-cream: #F7F5EE;
 
@@ -28,7 +28,7 @@
   --color-tropical-teal: #2C7A7B;
   --color-tropical-coral: #E76F51;
   --color-tropical-gold: #E9C46A;
-  --color-tropical-text: #19312F;
+  --color-tropical-text: #164A41;
   --color-tropical-white: #FFFFFF;
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -63,22 +63,22 @@
 
 :root {
   --background: #F7F5EE;
-  --foreground: #19312F;
+  --foreground: #164A41;
   --card: #FFFFFF;
-  --card-foreground: #19312F;
+  --card-foreground: #164A41;
   --popover: #FFFFFF;
-  --popover-foreground: #19312F;
+  --popover-foreground: #164A41;
   --primary: #E76F51;
   --primary-foreground: #FFFFFF;
   --secondary: #164A41;
   --secondary-foreground: #FFFFFF;
   --muted: #F7F5EE;
-  --muted-foreground: #19312F;
+  --muted-foreground: #164A41;
   --accent: #2C7A7B;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(25, 49, 47, 0.12);
-  --input: rgba(25, 49, 47, 0.15);
+  --border: rgba(22, 74, 65, 0.12);
+  --input: rgba(22, 74, 65, 0.15);
   --ring: #E76F51;
   --radius: 0.5rem;
 }
@@ -89,7 +89,7 @@
   }
   body {
     font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
-    color: #19312F;
+    color: #164A41;
     background-color: #F7F5EE;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

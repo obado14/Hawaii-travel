@@ -13,7 +13,7 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
     <section className="relative bg-[#F7F5EE] py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Card with Parchment / Sand Texture */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl py-9 sm:py-12 px-6 sm:px-12 text-center border border-[#19312F]/15">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl py-9 sm:py-12 px-6 sm:px-12 text-center border border-[#164A41]/15">
           {/* Background Texture Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -29,16 +29,16 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
           {/* Content */}
           <div className="relative z-10 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E9C46A]/25 border border-[#E9C46A]/50 mb-2.5 shadow-xs">
-              <span className="text-xs font-bold text-[#19312F] uppercase tracking-widest">
+              <span className="text-xs font-bold text-[#164A41] uppercase tracking-widest">
                 SIAP UNTUK BERLIBUR?
               </span>
             </div>
 
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#19312F] uppercase tracking-wider mb-2.5 leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#164A41] uppercase tracking-wider mb-2.5 leading-tight">
               RASAKAN KEAJAIBAN HAWAII
             </h2>
 
-            <p className="text-[#19312F]/80 text-xs sm:text-sm sm:text-base leading-relaxed mb-6 font-normal max-w-xl mx-auto">
+            <p className="text-[#164A41]/80 text-xs sm:text-sm sm:text-base leading-relaxed mb-6 font-normal max-w-xl mx-auto">
               Butuh bantuan merencanakan petualangan Hawaii Anda? Konsultasikan bersama tim pemandu lokal kami atau pesan tur Anda langsung secara online.
             </p>
 
@@ -59,7 +59,7 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
 
               <Link
                 href="/contact-us"
-                className="w-full sm:w-auto bg-white hover:bg-neutral-50 text-[#19312F] border border-[#19312F]/20 hover:border-[#19312F]/40 font-heading text-base sm:text-lg font-bold uppercase tracking-wider px-7 py-3.5 rounded-xl shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="w-full sm:w-auto bg-white hover:bg-neutral-50 text-[#164A41] border border-[#164A41]/20 hover:border-[#164A41]/40 font-heading text-base sm:text-lg font-bold uppercase tracking-wider px-7 py-3.5 rounded-xl shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 HUBUNGI KAMI
               </Link>

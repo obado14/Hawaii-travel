@@ -108,7 +108,7 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
                 {tour.categoryLabel}
               </span>
               {tour.recommended && (
-                <span className="bg-[#E9C46A] text-[#19312F] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                <span className="bg-[#E9C46A] text-[#164A41] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1">
                   ★ Rekomendasi #1
                 </span>
               )}
@@ -317,7 +317,7 @@ export function TourDetailModal({ tour, isOpen, onClose, onBookNow }: TourDetail
         </div>
 
         {/* Modal Bottom Actions Sticky */}
-        <div className="p-4 bg-[#113832] border-t border-white/10 flex items-center justify-between gap-4">
+        <div className="p-4 bg-[#164A41] border-t border-white/10 flex items-center justify-between gap-4">
           <button
             onClick={onClose}
             className="px-5 py-2.5 rounded-xl border border-white/20 text-neutral-300 hover:text-white hover:bg-white/10 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"

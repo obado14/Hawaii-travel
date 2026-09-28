@@ -489,7 +489,7 @@ export default function TourPackagesPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#19312F] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
       <TopBar />
       <Navbar />
 
@@ -536,19 +536,19 @@ export default function TourPackagesPage() {
         </section>
 
         {/* 2. Main Tour Listing Section */}
-        <section className="bg-[#F7F5EE] text-[#19312F] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#F7F5EE] text-[#164A41] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#19312F]/70 mb-5 font-medium px-1">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#164A41]/70 mb-5 font-medium px-1">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-[#19312F]/40" />
-              <span className="text-[#19312F] font-bold">Tur &amp; Paket</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#164A41]/40" />
+              <span className="text-[#164A41] font-bold">Tur &amp; Paket</span>
             </nav>
 
             {/* Filter Pills, Search Bar, and Sorter */}
-            <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-lg border border-[#19312F]/10 mb-10 sm:mb-12">
+            <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-lg border border-[#164A41]/10 mb-10 sm:mb-12">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
                 {/* Search Input */}
                 <div className="relative flex-1">
@@ -558,7 +558,7 @@ export default function TourPackagesPage() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Cari tur berdasarkan nama, atraksi, atau lokasi (misal: Waimea, Penyu, Luau, Sunset)..."
-                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-[#F7F5EE]/60 border border-[#19312F]/15 text-sm text-[#19312F] placeholder-[#19312F]/40 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
+                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-[#F7F5EE]/60 border border-[#164A41]/15 text-sm text-[#164A41] placeholder-[#164A41]/40 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
                   />
                   {searchQuery && (
                     <button
@@ -573,12 +573,12 @@ export default function TourPackagesPage() {
 
                 {/* Sorter Dropdown */}
                 <div className="flex items-center gap-2.5 shrink-0 self-end lg:self-auto">
-                  <SlidersHorizontal className="w-4 h-4 text-[#19312F]/60" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#19312F]/70">Urutkan:</span>
+                  <SlidersHorizontal className="w-4 h-4 text-[#164A41]/60" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#164A41]/70">Urutkan:</span>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-[#F7F5EE]/60 border border-[#19312F]/15 rounded-xl px-3.5 py-2 text-xs font-semibold text-[#19312F] focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all cursor-pointer"
+                    className="bg-[#F7F5EE]/60 border border-[#164A41]/15 rounded-xl px-3.5 py-2 text-xs font-semibold text-[#164A41] focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all cursor-pointer"
                   >
                     <option value="popular">Paling Populer</option>
                     <option value="rating">Rating Tertinggi</option>
@@ -604,7 +604,7 @@ export default function TourPackagesPage() {
                     className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       selectedCategory === cat.key
                         ? "bg-[#E76F51] text-white border-[#E76F51] shadow-md shadow-[#E76F51]/25 scale-105"
-                        : "bg-white text-[#19312F] border-[#19312F]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-xs"
+                        : "bg-white text-[#164A41] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-xs"
                     }`}
                   >
                     {cat.label}
@@ -615,9 +615,9 @@ export default function TourPackagesPage() {
 
             {/* Results Count & Clear Button */}
             {(selectedCategory !== "all" || searchQuery.trim()) && (
-              <div className="flex items-center justify-between mb-6 px-1 text-xs sm:text-sm text-[#19312F]/70">
+              <div className="flex items-center justify-between mb-6 px-1 text-xs sm:text-sm text-[#164A41]/70">
                 <div>
-                  Menampilkan <strong className="text-[#19312F]">{filteredAndSortedTours.length}</strong> tur
+                  Menampilkan <strong className="text-[#164A41]">{filteredAndSortedTours.length}</strong> tur
                   {selectedCategory !== "all" && (
                     <span> dalam kategori <strong className="text-[#2C7A7B]">{selectedCategory}</strong></span>
                   )}
@@ -636,12 +636,12 @@ export default function TourPackagesPage() {
 
             {/* 3. The 3x3 Card Grid */}
             {filteredAndSortedTours.length === 0 ? (
-              <div className="bg-white rounded-3xl p-12 text-center max-w-md mx-auto shadow-md border border-[#19312F]/10">
-                <AlertCircle className="w-12 h-12 text-[#19312F]/40 mx-auto mb-3" />
-                <h3 className="font-heading text-xl font-bold text-[#19312F] mb-1">
+              <div className="bg-white rounded-3xl p-12 text-center max-w-md mx-auto shadow-md border border-[#164A41]/10">
+                <AlertCircle className="w-12 h-12 text-[#164A41]/40 mx-auto mb-3" />
+                <h3 className="font-heading text-xl font-bold text-[#164A41] mb-1">
                   TIDAK DITEMUKAN TUR
                 </h3>
-                <p className="text-xs text-[#19312F]/70 mb-6">
+                <p className="text-xs text-[#164A41]/70 mb-6">
                   Tidak ada paket tur yang cocok dengan filter atau kata kunci Anda. Silakan coba kata kunci lain.
                 </p>
                 <button
@@ -656,7 +656,7 @@ export default function TourPackagesPage() {
                 {filteredAndSortedTours.map((tour) => (
                   <article
                     key={tour.id}
-                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-[#19312F]/10 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
+                    className="bg-white rounded-3xl overflow-hidden shadow-xl border border-[#164A41]/10 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
                   >
                     {/* Top Image Box with Badges - Clickable for fast detail preview */}
                     <div
@@ -714,8 +714,8 @@ export default function TourPackagesPage() {
                               <Star key={i} className="w-3.5 h-3.5 fill-[#E9C46A] text-[#E9C46A]" />
                             ))}
                           </div>
-                          <span className="text-xs font-bold text-[#19312F]">{tour.rating}</span>
-                          <span className="text-[11px] text-[#19312F]/60">
+                          <span className="text-xs font-bold text-[#164A41]">{tour.rating}</span>
+                          <span className="text-[11px] text-[#164A41]/60">
                             ({tour.reviewsCount.toLocaleString()} ulasan)
                           </span>
                         </div>
@@ -723,20 +723,20 @@ export default function TourPackagesPage() {
                         {/* Title - Clickable for fast detail preview */}
                         <h3
                           onClick={() => handleViewDetails(tour)}
-                          className="font-heading text-xl sm:text-2xl font-bold text-[#19312F] uppercase tracking-wide leading-tight mb-2.5 group-hover:text-[#2C7A7B] transition-colors line-clamp-2 min-h-[3.25rem] cursor-pointer"
+                          className="font-heading text-xl sm:text-2xl font-bold text-[#164A41] uppercase tracking-wide leading-tight mb-2.5 group-hover:text-[#2C7A7B] transition-colors line-clamp-2 min-h-[3.25rem] cursor-pointer"
                         >
                           {tour.name}
                         </h3>
 
                         {/* Short Excerpt */}
-                        <p className="text-[#19312F]/75 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2 font-normal">
+                        <p className="text-[#164A41]/75 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2 font-normal">
                           {tour.description}
                         </p>
 
                         {/* Highlights Pills */}
                         <div className="space-y-1.5 mb-5 pb-5 border-t pt-3 border-neutral-100">
                           {tour.highlights.slice(0, 3).map((hl, i) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-[#19312F]">
+                            <div key={i} className="flex items-center gap-2 text-xs text-[#164A41]">
                               <CheckCircle className="w-3.5 h-3.5 text-[#2C7A7B] shrink-0" />
                               <span className="truncate">{hl}</span>
                             </div>
@@ -749,7 +749,7 @@ export default function TourPackagesPage() {
                         {/* Price Row */}
                         <div className="flex items-baseline justify-between">
                           <div>
-                            <span className="text-[11px] uppercase tracking-wider text-[#19312F]/60 block font-semibold">
+                            <span className="text-[11px] uppercase tracking-wider text-[#164A41]/60 block font-semibold">
                               Mulai dari
                             </span>
                             <div className="flex items-baseline gap-2">
@@ -757,7 +757,7 @@ export default function TourPackagesPage() {
                                 ${tour.price}
                               </span>
                               {tour.originalPrice > tour.price && (
-                                <span className="text-xs text-[#19312F]/50 line-through">
+                                <span className="text-xs text-[#164A41]/50 line-through">
                                   ${tour.originalPrice}
                                 </span>
                               )}
@@ -774,7 +774,7 @@ export default function TourPackagesPage() {
                         <div className="grid grid-cols-2 gap-2.5 pt-1">
                           <button
                             onClick={() => handleViewDetails(tour)}
-                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border-2 border-[#19312F]/20 hover:border-[#2C7A7B] text-[#19312F] hover:text-[#2C7A7B] hover:bg-[#F7F5EE] font-heading text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border-2 border-[#164A41]/20 hover:border-[#2C7A7B] text-[#164A41] hover:text-[#2C7A7B] hover:bg-[#F7F5EE] font-heading text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span>DETAIL</span>

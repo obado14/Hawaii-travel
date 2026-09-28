@@ -123,13 +123,13 @@ export function GuestReviews() {
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#19312F] mb-2.5">
+                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#164A41] mb-2.5">
                   {current.title}
                 </h4>
               )}
 
               {/* Review Quote */}
-              <p className="text-sm sm:text-base md:text-lg text-[#19312F]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-[#164A41]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>

@@ -56,14 +56,14 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-11">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2.5 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-            <span className="text-xs sm:text-sm font-bold text-[#19312F] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#164A41] uppercase tracking-widest">
               PENGALAMAN UNGGULAN OAHU
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#19312F] uppercase tracking-wide leading-tight mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#164A41] uppercase tracking-wide leading-tight mb-3">
             PILIH PENGALAMAN WISATA ANDA
           </h2>
-          <p className="text-[#19312F]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#164A41]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
             Pilihan tur Permata Tersembunyi Oahu terpopuler bersama pemandu lokal berlisensi dan jaminan kepuasan.
           </p>
         </div>

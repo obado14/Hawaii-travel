@@ -135,7 +135,7 @@ export default function PrivateToursPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#19312F] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#164A41] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
       <TopBar />
       <Navbar />
 
@@ -182,63 +182,63 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 2. Intro Feature Highlights */}
-        <section className="bg-[#F7F5EE] text-[#19312F] pt-8 sm:pt-10 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#F7F5EE] text-[#164A41] pt-8 sm:pt-10 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs text-[#19312F]/70 mb-6 font-medium">
+            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs text-[#164A41]/70 mb-6 font-medium">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-[#19312F]/40" />
-              <span className="text-[#19312F] font-bold">Tur Privat</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#164A41]/40" />
+              <span className="text-[#164A41] font-bold">Tur Privat</span>
             </nav>
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-              <span className="text-xs sm:text-sm font-bold text-[#19312F] uppercase tracking-widest">
+              <span className="text-xs sm:text-sm font-bold text-[#164A41] uppercase tracking-widest">
                 LAYANAN EKSKLUSIF KEPULAUAN HAWAII
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#19312F] uppercase mb-4 leading-tight">
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#164A41] uppercase mb-4 leading-tight">
               PENGALAMAN TUR PULAU PRIVAT TERBAIK
             </h2>
-            <p className="text-[#19312F]/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-10 sm:mb-12">
+            <p className="text-[#164A41]/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-10 sm:mb-12">
               Jelajahi Hawaii sesuai ritme Anda sendiri. Armada van Mercedes Sprinter mewah dan pemandu lokal berlisensi kami berdedikasi sepenuhnya untuk memberikan liburan terbaik bagi Anda.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#19312F]/10">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#164A41]/10">
                 <div className="w-13 h-13 rounded-2xl bg-[#164A41] text-[#E9C46A] flex items-center justify-center mb-4 shadow-md">
                   <Clock className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#19312F] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#164A41] uppercase mb-2">
                   100% Jadwal Fleksibel
                 </h3>
-                <p className="text-[#19312F]/75 text-sm leading-relaxed font-normal">
+                <p className="text-[#164A41]/75 text-sm leading-relaxed font-normal">
                   Mulai lebih pagi untuk melihat matahari terbit, habiskan waktu lebih lama di spot favorit Anda, atau sesuaikan perhentian kuliner sesuka hati tanpa terburu-buru.
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#19312F]/10">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#164A41]/10">
                 <div className="w-13 h-13 rounded-2xl bg-[#164A41] text-[#E9C46A] flex items-center justify-center mb-4 shadow-md">
                   <Car className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#19312F] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#164A41] uppercase mb-2">
                   Eksklusif Hanya untuk Grup Anda
                 </h3>
-                <p className="text-[#19312F]/75 text-sm leading-relaxed font-normal">
+                <p className="text-[#164A41]/75 text-sm leading-relaxed font-normal">
                   Kendaraan mewah ber-AC hanya untuk Anda dan keluarga. Tidak ada orang asing, bebas beristirahat, dan nikmati privasi penuh sepanjang hari.
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#19312F]/10">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 border border-[#164A41]/10">
                 <div className="w-13 h-13 rounded-2xl bg-[#164A41] text-[#E9C46A] flex items-center justify-center mb-4 shadow-md">
                   <Compass className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#19312F] uppercase mb-2">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#164A41] uppercase mb-2">
                   Pemandu Lokal Berlisensi Terbaik
                 </h3>
-                <p className="text-[#19312F]/75 text-sm leading-relaxed font-normal">
+                <p className="text-[#164A41]/75 text-sm leading-relaxed font-normal">
                   Pemandu kami adalah warga lokal berpengetahuan mendalam yang siap berbagi kisah leluhur, sejarah pulau, dan membawa Anda ke tempat-tempat rahasia.
                 </p>
               </div>
@@ -247,19 +247,19 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 3. Choose Your Private Experience */}
-        <section className="bg-[#F7F5EE] text-[#19312F] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#19312F]/10">
+        <section className="bg-[#F7F5EE] text-[#164A41] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-                <span className="text-xs sm:text-sm font-bold text-[#19312F] uppercase tracking-widest">
+                <span className="text-xs sm:text-sm font-bold text-[#164A41] uppercase tracking-widest">
                   PILIHAN PAKET EKSKLUSIF
                 </span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#19312F] uppercase tracking-wide mb-3 leading-tight">
+              <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#164A41] uppercase tracking-wide mb-3 leading-tight">
                 PILIH PENGALAMAN TUR PRIVAT ANDA
               </h2>
-              <p className="text-[#19312F]/80 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#164A41]/80 text-sm sm:text-base leading-relaxed">
                 Pilih salah satu rencana perjalanan terfavorit kami di bawah ini, atau konsultasikan rute kustom Anda kepada kami.
               </p>
             </div>
@@ -268,7 +268,7 @@ export default function PrivateToursPage() {
               {privateToursList.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-xl border border-[#19312F]/10 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
+                  className="bg-white rounded-3xl overflow-hidden shadow-xl border border-[#164A41]/10 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
                 >
                   <div className="relative h-48 sm:h-52 w-full overflow-hidden">
                     <Image
@@ -288,10 +288,10 @@ export default function PrivateToursPage() {
 
                   <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <h3 className="font-heading text-lg font-bold text-[#19312F] uppercase tracking-wide mb-2 group-hover:text-[#2C7A7B] transition-colors line-clamp-2">
+                      <h3 className="font-heading text-lg font-bold text-[#164A41] uppercase tracking-wide mb-2 group-hover:text-[#2C7A7B] transition-colors line-clamp-2">
                         {item.title}
                       </h3>
-                      <p className="text-[#19312F]/75 text-xs sm:text-sm leading-relaxed font-normal mb-5 line-clamp-3">
+                      <p className="text-[#164A41]/75 text-xs sm:text-sm leading-relaxed font-normal mb-5 line-clamp-3">
                         {item.description}
                       </p>
                     </div>
@@ -311,13 +311,13 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 4. What's Included */}
-        <section className="bg-white py-12 sm:py-14 px-4 sm:px-6 lg:px-8 border-y border-[#19312F]/10">
+        <section className="bg-white py-12 sm:py-14 px-4 sm:px-6 lg:px-8 border-y border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
               <span className="text-xs font-bold text-[#2C7A7B] uppercase tracking-widest block mb-1.5">
                 Standar Layanan VIP
               </span>
-              <h2 className="font-heading text-2xl sm:text-4xl text-[#19312F] uppercase tracking-wide">
+              <h2 className="font-heading text-2xl sm:text-4xl text-[#164A41] uppercase tracking-wide">
                 FASILITAS YANG TERMASUK
               </h2>
             </div>
@@ -335,15 +335,15 @@ export default function PrivateToursPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-[#F7F5EE] border border-[#19312F]/10 text-center flex flex-col items-center justify-center hover:bg-[#F7F5EE]/80 transition-colors"
+                    className="p-4 rounded-2xl bg-[#F7F5EE] border border-[#164A41]/10 text-center flex flex-col items-center justify-center hover:bg-[#F7F5EE]/80 transition-colors"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mb-2.5">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h4 className="font-heading text-xs sm:text-sm font-bold text-[#19312F] uppercase mb-1">
+                    <h4 className="font-heading text-xs sm:text-sm font-bold text-[#164A41] uppercase mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-[#19312F]/70 text-[11px] sm:text-xs leading-relaxed font-normal">
+                    <p className="text-[#164A41]/70 text-[11px] sm:text-xs leading-relaxed font-normal">
                       {item.desc}
                     </p>
                   </div>
@@ -354,46 +354,46 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 5. Trust / Social Proof Pillars */}
-        <section className="bg-[#F7F5EE] py-8 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-[#19312F]/10">
+        <section className="bg-[#F7F5EE] py-8 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#19312F]/10">
+              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#164A41]/10">
                 <Compass className="w-6 h-6 text-[#2C7A7B] shrink-0" />
                 <div className="text-left">
-                  <div className="font-heading text-sm font-bold text-[#19312F] uppercase">
+                  <div className="font-heading text-sm font-bold text-[#164A41] uppercase">
                     Pemandu Asli Hawaii
                   </div>
-                  <div className="text-[11px] text-[#19312F]/70">Pencerita budaya leluhur</div>
+                  <div className="text-[11px] text-[#164A41]/70">Pencerita budaya leluhur</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#19312F]/10">
+              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#164A41]/10">
                 <Car className="w-6 h-6 text-[#2C7A7B] shrink-0" />
                 <div className="text-left">
-                  <div className="font-heading text-sm font-bold text-[#19312F] uppercase">
+                  <div className="font-heading text-sm font-bold text-[#164A41] uppercase">
                     Kendaraan Mewah
                   </div>
-                  <div className="text-[11px] text-[#19312F]/70">Sprinter &amp; SUV Eksekutif</div>
+                  <div className="text-[11px] text-[#164A41]/70">Sprinter &amp; SUV Eksekutif</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#19312F]/10">
+              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#164A41]/10">
                 <Clock className="w-6 h-6 text-[#2C7A7B] shrink-0" />
                 <div className="text-left">
-                  <div className="font-heading text-sm font-bold text-[#19312F] uppercase">
+                  <div className="font-heading text-sm font-bold text-[#164A41] uppercase">
                     Jadwal Fleksibel
                   </div>
-                  <div className="text-[11px] text-[#19312F]/70">Ritme santai sesuai keinginan</div>
+                  <div className="text-[11px] text-[#164A41]/70">Ritme santai sesuai keinginan</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#19312F]/10">
+              <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#164A41]/10">
                 <ShieldCheck className="w-6 h-6 text-[#2C7A7B] shrink-0" />
                 <div className="text-left">
-                  <div className="font-heading text-sm font-bold text-[#19312F] uppercase">
+                  <div className="font-heading text-sm font-bold text-[#164A41] uppercase">
                     Pengalaman Personal
                   </div>
-                  <div className="text-[11px] text-[#19312F]/70">Dirancang khusus untuk keluarga</div>
+                  <div className="text-[11px] text-[#164A41]/70">Dirancang khusus untuk keluarga</div>
                 </div>
               </div>
             </div>
@@ -492,10 +492,10 @@ export default function PrivateToursPage() {
                         <select
                           value={formData.island}
                           onChange={(e) => setFormData({ ...formData, island: e.target.value })}
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
                         >
-                          <option value="Oahu" className="bg-[#113832]">Pulau Oahu</option>
-                          <option value="Maui" className="bg-[#113832]">Pulau Maui</option>
+                          <option value="Oahu" className="bg-[#164A41]">Pulau Oahu</option>
+                          <option value="Maui" className="bg-[#164A41]">Pulau Maui</option>
                         </select>
                       </div>
 
@@ -507,7 +507,7 @@ export default function PrivateToursPage() {
                           type="date"
                           value={formData.date}
                           onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
                         />
                       </div>
                     </div>
@@ -520,12 +520,12 @@ export default function PrivateToursPage() {
                         <select
                           value={formData.groupSize}
                           onChange={(e) => setFormData({ ...formData, groupSize: e.target.value })}
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
                         >
-                          <option value="1-4" className="bg-[#113832]">1 - 4 Tamu (SUV Mewah / Van Intim)</option>
-                          <option value="5-8" className="bg-[#113832]">5 - 8 Tamu (Mercedes Sprinter VIP)</option>
-                          <option value="9-14" className="bg-[#113832]">9 - 14 Tamu (Mercedes Sprinter Eksekutif)</option>
-                          <option value="15+" className="bg-[#113832]">15+ Tamu (Armada Rombongan Khusus)</option>
+                          <option value="1-4" className="bg-[#164A41]">1 - 4 Tamu (SUV Mewah / Van Intim)</option>
+                          <option value="5-8" className="bg-[#164A41]">5 - 8 Tamu (Mercedes Sprinter VIP)</option>
+                          <option value="9-14" className="bg-[#164A41]">9 - 14 Tamu (Mercedes Sprinter Eksekutif)</option>
+                          <option value="15+" className="bg-[#164A41]">15+ Tamu (Armada Rombongan Khusus)</option>
                         </select>
                       </div>
 
@@ -536,12 +536,12 @@ export default function PrivateToursPage() {
                         <select
                           value={formData.tourType}
                           onChange={(e) => setFormData({ ...formData, tourType: e.target.value })}
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] cursor-pointer"
                         >
-                          <option value="Tur Privat Keliling Pulau Oahu" className="bg-[#113832]">Tur Privat Keliling Pulau Oahu</option>
-                          <option value="Petualangan Privat North Shore" className="bg-[#113832]">Petualangan Privat North Shore</option>
-                          <option value="Pengalaman Privat Air Terjun" className="bg-[#113832]">Pengalaman Privat Air Terjun</option>
-                          <option value="Tur Kustom Sesuai Keinginan" className="bg-[#113832]">Tur Kustom Sesuai Keinginan</option>
+                          <option value="Tur Privat Keliling Pulau Oahu" className="bg-[#164A41]">Tur Privat Keliling Pulau Oahu</option>
+                          <option value="Petualangan Privat North Shore" className="bg-[#164A41]">Petualangan Privat North Shore</option>
+                          <option value="Pengalaman Privat Air Terjun" className="bg-[#164A41]">Pengalaman Privat Air Terjun</option>
+                          <option value="Tur Kustom Sesuai Keinginan" className="bg-[#164A41]">Tur Kustom Sesuai Keinginan</option>
                         </select>
                       </div>
                     </div>
@@ -572,7 +572,7 @@ export default function PrivateToursPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="John Doe"
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
                         />
                       </div>
 
@@ -585,7 +585,7 @@ export default function PrivateToursPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+62 812-0000-0000"
-                          className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
+                          className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B]"
                         />
                       </div>
                     </div>
@@ -650,7 +650,7 @@ export default function PrivateToursPage() {
                         value={formData.specialRequests}
                         onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
                         placeholder="Contoh: Kami ingin berhenti di kedai kopi Kona, berenang di air terjun Waimea, dan mencari restoran ramah anak..."
-                        className="w-full bg-[#113832] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] resize-none"
+                        className="w-full bg-[#164A41] border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#2C7A7B] focus:ring-1 focus:ring-[#2C7A7B] resize-none"
                       />
                     </div>
 
