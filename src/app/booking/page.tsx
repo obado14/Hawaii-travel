@@ -234,7 +234,7 @@ function BookingPageContent() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -252,12 +252,12 @@ function BookingPageContent() {
                 Tur &amp; Paket
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-white/50" />
-              <span className="text-[#F7F5EE] font-bold">Halaman Booking</span>
+              <span className="text-[#FAF7F2] font-bold">Halaman Booking</span>
             </nav>
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-[#F7F5EE] text-xs font-bold uppercase tracking-wider mb-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider mb-2">
                   <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
                   <span>Sistem Pemesanan Resmi Go Tours Hawaii</span>
                 </div>
@@ -271,7 +271,7 @@ function BookingPageContent() {
 
               {/* Promo Callout */}
               <div className="bg-[#E76F51]/20 border border-[#E76F51]/40 rounded-2xl px-4 py-2.5 shrink-0 self-start md:self-auto backdrop-blur-xs">
-                <div className="flex items-center gap-2 text-[#F7F5EE] text-xs font-bold uppercase tracking-wider">
+                <div className="flex items-center gap-2 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider">
                   <Tag className="w-4 h-4 text-[#E9C46A]" />
                   <span>Diskon Promo 10% Online</span>
                 </div>
@@ -296,7 +296,7 @@ function BookingPageContent() {
                     onClick={() => handleStepJump(item.num)}
                     className={`flex items-center gap-1.5 sm:gap-2.5 p-1 sm:p-2 rounded-xl text-left transition-all ${
                       item.num < step
-                        ? "cursor-pointer hover:bg-[#F7F5EE]"
+                        ? "cursor-pointer hover:bg-[#FAF7F2]"
                         : item.num === step
                         ? "cursor-default"
                         : "cursor-not-allowed opacity-50"
@@ -366,7 +366,7 @@ function BookingPageContent() {
               </div>
 
               {/* Voucher Detail Card */}
-              <div className="mt-8 p-6 sm:p-8 bg-[#F7F5EE] rounded-2xl border border-[#164A41]/15 space-y-6">
+              <div className="mt-8 p-6 sm:p-8 bg-[#FAF7F2] rounded-2xl border border-[#164A41]/15 space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#164A41]/10 pb-5">
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border border-[#164A41]/15">
@@ -500,8 +500,8 @@ function BookingPageContent() {
                             }}
                             className={`p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center gap-4 ${
                               isSelected
-                                ? "border-[#E76F51] bg-[#F7F5EE] shadow-md ring-2 ring-[#E76F51]/20"
-                                : "border-[#164A41]/15 hover:border-[#2C7A7B]/50 hover:bg-[#F7F5EE]/40"
+                                ? "border-[#E76F51] bg-[#FAF7F2] shadow-md ring-2 ring-[#E76F51]/20"
+                                : "border-[#164A41]/15 hover:border-[#2C7A7B]/50 hover:bg-[#FAF7F2]/40"
                             }`}
                           >
                             <div className="relative w-full sm:w-28 h-28 sm:h-24 rounded-xl overflow-hidden shrink-0 border border-[#164A41]/10">
@@ -578,7 +578,7 @@ function BookingPageContent() {
                           value={date}
                           min={tomorrowStr()}
                           onChange={(e) => setDate(e.target.value)}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-base text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-base text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                         />
                         <span className="text-[11px] text-[#124E50]/60 block">
                           Pemesanan dibuka hingga 12 bulan ke depan.
@@ -598,7 +598,7 @@ function BookingPageContent() {
                                 key={slot.id}
                                 className={`flex items-center justify-between p-3 rounded-xl border-2 cursor-pointer transition-all ${
                                   isTimeActive
-                                    ? "border-[#E76F51] bg-[#F7F5EE]"
+                                    ? "border-[#E76F51] bg-[#FAF7F2]"
                                     : "border-[#164A41]/15 hover:border-[#2C7A7B]/40"
                                 }`}
                               >
@@ -652,7 +652,7 @@ function BookingPageContent() {
                           <button
                             type="button"
                             onClick={() => setAdults((prev) => Math.max(1, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#FAF7F2] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
                             aria-label="Kurangi Dewasa"
                           >
                             -
@@ -684,7 +684,7 @@ function BookingPageContent() {
                           <button
                             type="button"
                             onClick={() => setChildren((prev) => Math.max(0, prev - 1))}
-                            className="w-10 h-10 rounded-xl bg-[#F7F5EE] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
+                            className="w-10 h-10 rounded-xl bg-[#FAF7F2] hover:bg-[#E9C46A]/30 text-[#124E50] font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
                             aria-label="Kurangi Anak"
                           >
                             -
@@ -702,7 +702,7 @@ function BookingPageContent() {
                       </div>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-[#F7F5EE] border border-[#164A41]/15 text-xs text-[#124E50]/80">
+                    <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#164A41]/15 text-xs text-[#124E50]/80">
                       ℹ️ Bayi di bawah 3 tahun (infant) gratis selama duduk di pangkuan orang tua dan tidak membutuhkan kursi khusus.
                     </div>
                   </div>
@@ -737,7 +737,7 @@ function BookingPageContent() {
                             placeholder="cth. John Doe"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
 
@@ -752,7 +752,7 @@ function BookingPageContent() {
                             placeholder="nama@email.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -769,7 +769,7 @@ function BookingPageContent() {
                             placeholder="+62 812-3456-7890"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
 
@@ -783,7 +783,7 @@ function BookingPageContent() {
                             placeholder="cth. Sheraton Waikiki, Hilton Hawaiian Village..."
                             value={hotel}
                             onChange={(e) => setHotel(e.target.value)}
-                            className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                            className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -798,7 +798,7 @@ function BookingPageContent() {
                           placeholder="cth. Membawa kursi dorong lipat, preferensi vegetarian untuk makan siang..."
                           value={specialRequests}
                           onChange={(e) => setSpecialRequests(e.target.value)}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/20 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/20 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] transition-all font-medium"
                         />
                       </div>
                     </div>
@@ -821,7 +821,7 @@ function BookingPageContent() {
                       </p>
                     </div>
 
-                    <div className="p-5 sm:p-6 bg-[#F7F5EE] rounded-2xl border border-[#164A41]/15 space-y-4">
+                    <div className="p-5 sm:p-6 bg-[#FAF7F2] rounded-2xl border border-[#164A41]/15 space-y-4">
                       <div className="flex items-start justify-between border-b border-[#164A41]/10 pb-4">
                         <div>
                           <span className="text-[11px] font-bold text-[#2C7A7B] uppercase tracking-wider">
@@ -1033,7 +1033,7 @@ function BookingPageContent() {
                 </div>
 
                 {/* Trust & Guarantee Box */}
-                <div className="bg-[#F7F5EE] rounded-2xl p-5 border border-[#164A41]/15 space-y-2.5 text-xs text-[#124E50]/80">
+                <div className="bg-[#FAF7F2] rounded-2xl p-5 border border-[#164A41]/15 space-y-2.5 text-xs text-[#124E50]/80">
                   <div className="flex items-center gap-2 font-bold text-[#124E50]">
                     <ShieldCheck className="w-4 h-4 text-[#2C7A7B]" />
                     <span>Jaminan Pemesanan Resmi:</span>
@@ -1059,7 +1059,7 @@ export default function BookingPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#F7F5EE] flex items-center justify-center p-8">
+        <div className="min-h-screen bg-[#FAF7F2] flex items-center justify-center p-8">
           <div className="text-center space-y-3">
             <span className="w-10 h-10 border-4 border-[#164A41] border-t-transparent rounded-full animate-spin inline-block" />
             <p className="text-sm font-bold text-[#124E50] uppercase tracking-wider">

@@ -10,7 +10,7 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onBookNow }: CtaBannerProps) {
   return (
-    <section className="relative bg-[#F7F5EE] py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#FAF7F2] py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Card with Parchment / Sand Texture */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl py-9 sm:py-12 px-6 sm:px-12 text-center border border-[#164A41]/15">
@@ -23,7 +23,7 @@ export function CtaBanner({ onBookNow }: CtaBannerProps) {
               className="object-cover object-center"
             />
             {/* Subtle warm wash */}
-            <div className="absolute inset-0 bg-[#F7F5EE]/90 backdrop-blur-[1px]" />
+            <div className="absolute inset-0 bg-[#FAF7F2]/90 backdrop-blur-[1px]" />
           </div>
 
           {/* Content */}

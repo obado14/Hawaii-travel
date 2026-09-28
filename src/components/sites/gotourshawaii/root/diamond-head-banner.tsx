@@ -11,7 +11,7 @@ interface DiamondHeadBannerProps {
 
 export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
   return (
-    <section id="diamond-head" className="relative bg-[#F7F5EE] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+    <section id="diamond-head" className="relative bg-[#FAF7F2] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">

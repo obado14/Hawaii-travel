@@ -46,7 +46,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -93,7 +93,7 @@ export default function ContactUsPage() {
         </section>
 
         {/* 2. Contact Form & Information */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-6 font-medium px-1">
@@ -164,7 +164,7 @@ export default function ContactUsPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Budi Santoso"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                       <div>
@@ -177,7 +177,7 @@ export default function ContactUsPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+62 812-3456-7890"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                     </div>
@@ -194,7 +194,7 @@ export default function ContactUsPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="nama@email.com"
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                         />
                       </div>
                       <div>
@@ -204,7 +204,7 @@ export default function ContactUsPage() {
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer"
                         >
                           <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
                           <option value="Tur Privat">Tur Privat</option>
@@ -226,7 +226,7 @@ export default function ContactUsPage() {
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="Contoh: Pertanyaan Penjemputan Hotel, Tur Keliling Pulau"
-                        className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
                       />
                     </div>
 
@@ -240,7 +240,7 @@ export default function ContactUsPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tuliskan pertanyaan detail atau permintaan khusus Anda di sini..."
-                        className="w-full bg-[#F7F5EE]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none"
+                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none"
                       />
                     </div>
 
@@ -329,7 +329,7 @@ export default function ContactUsPage() {
                   </div>
 
                   {/* Interactive Map Iframe */}
-                  <div className="relative h-56 sm:h-64 w-full rounded-2xl overflow-hidden border border-[#164A41]/10 shadow-inner mb-4 bg-[#F7F5EE]">
+                  <div className="relative h-56 sm:h-64 w-full rounded-2xl overflow-hidden border border-[#164A41]/10 shadow-inner mb-4 bg-[#FAF7F2]">
                     <iframe
                       src="https://maps.google.com/maps?q=2500+Kalakaua+Ave+Suite+E,+Honolulu,+HI+96815&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
@@ -374,7 +374,7 @@ export default function ContactUsPage() {
         <FAQSection />
 
         {/* 4. Social Media Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
+        <section className="bg-[#FAF7F2] text-[#124E50] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />

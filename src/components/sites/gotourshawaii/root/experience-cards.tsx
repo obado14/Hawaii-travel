@@ -50,7 +50,7 @@ interface ExperienceCardsProps {
 
 export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
   return (
-    <section id="experiences" className="relative bg-[#F7F5EE] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section id="experiences" className="relative bg-[#FAF7F2] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-11">

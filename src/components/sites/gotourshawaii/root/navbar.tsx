@@ -158,7 +158,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                       className="block px-3 py-2.5 rounded-xl text-sm font-normal text-white hover:text-white bg-[#E76F51]/25 hover:bg-[#E76F51]/35 border border-[#E76F51]/40 mb-1.5 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
-                      <div className="font-bold text-[#F7F5EE] flex items-center justify-between">
+                      <div className="font-bold text-[#FAF7F2] flex items-center justify-between">
                         <span>Formulir Pesan Tur (Booking)</span>
                         <span className="text-[10px] bg-[#E76F51] text-white px-1.5 py-0.5 rounded font-extrabold">HEMAT 10%</span>
                       </div>
@@ -355,7 +355,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className={`flex items-center justify-between px-3 py-2.5 rounded-xl transition-colors ${
               isBooking
                 ? "bg-white/15 text-[#E9C46A] font-bold border-l-4 border-[#E9C46A]"
-                : "bg-[#E76F51]/25 text-[#F7F5EE] hover:bg-[#E76F51]/35 font-bold text-base border border-[#E76F51]/40"
+                : "bg-[#E76F51]/25 text-[#FAF7F2] hover:bg-[#E76F51]/35 font-bold text-base border border-[#E76F51]/40"
             }`}
           >
             <span>Formulir Pesan Tur (Booking)</span>

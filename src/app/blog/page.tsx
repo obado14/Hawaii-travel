@@ -77,7 +77,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -125,7 +125,7 @@ export default function BlogPage() {
         </section>
 
         {/* Main Blog Content Section with Cream Background */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-6 font-medium px-1">
@@ -256,7 +256,7 @@ export default function BlogPage() {
                     className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       isActive
                         ? "bg-[#E76F51] text-white border-[#E76F51] shadow-md shadow-[#E76F51]/25 scale-105"
-                        : "bg-white text-[#124E50] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-sm"
+                        : "bg-white text-[#124E50] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#FAF7F2]/50 shadow-sm"
                     }`}
                   >
                     {category}

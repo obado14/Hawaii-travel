@@ -102,7 +102,7 @@ export function ContactSection() {
                         if (errorField === "name") setErrorField(null);
                       }}
                       placeholder="Budi Santoso"
-                      className={`w-full bg-[#F7F5EE]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
+                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
                         errorField === "name" ? "border-red-500 ring-1 ring-red-500" : "border-[#164A41]/15"
                       }`}
                     />
@@ -117,7 +117,7 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+62 812-3456-7890"
-                      className="w-full bg-[#F7F5EE]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200"
+                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export function ContactSection() {
                         if (errorField === "email") setErrorField(null);
                       }}
                       placeholder="nama@email.com"
-                      className={`w-full bg-[#F7F5EE]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
+                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
                         errorField === "email" ? "border-red-500 ring-1 ring-red-500" : "border-[#164A41]/15"
                       }`}
                     />
@@ -148,7 +148,7 @@ export function ContactSection() {
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#F7F5EE]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 cursor-pointer"
+                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 cursor-pointer"
                     >
                       <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
                       <option value="Tur Pearl Harbor">Tur Bersejarah Pearl Harbor</option>
@@ -168,7 +168,7 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tuliskan perkiraan tanggal liburan dan rencana grup Anda di sini..."
-                    className="w-full bg-[#F7F5EE]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 resize-none"
                   />
                 </div>
 

@@ -44,7 +44,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -117,7 +117,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
         </section>
 
         {/* Article Body Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-10 sm:pt-14 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               {/* Main Content Column */}
@@ -179,7 +179,7 @@ export function BlogPostDetailClient({ post }: BlogPostDetailClientProps) {
 
                   <button
                     onClick={handleShare}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-200 text-xs font-bold text-[#124E50] hover:bg-[#F7F5EE] hover:text-[#E76F51] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-200 text-xs font-bold text-[#124E50] hover:bg-[#FAF7F2] hover:text-[#E76F51] transition-colors cursor-pointer"
                   >
                     <Share2 className="w-4 h-4" />
                     <span>{copied ? "Tautan Disalin!" : "Bagikan Panduan"}</span>

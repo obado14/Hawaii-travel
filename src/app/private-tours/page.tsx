@@ -135,7 +135,7 @@ export default function PrivateToursPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
       <TopBar />
       <Navbar />
 
@@ -182,7 +182,7 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 2. Intro Feature Highlights */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-8 sm:pt-10 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-8 sm:pt-10 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
             {/* Breadcrumb Navigation for User Orientation */}
             <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs text-[#124E50]/70 mb-6 font-medium">
@@ -247,7 +247,7 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 3. Choose Your Private Experience */}
-        <section className="bg-[#F7F5EE] text-[#124E50] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
+        <section className="bg-[#FAF7F2] text-[#124E50] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
@@ -335,7 +335,7 @@ export default function PrivateToursPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-[#F7F5EE] border border-[#164A41]/10 text-center flex flex-col items-center justify-center hover:bg-[#F7F5EE]/80 transition-colors"
+                    className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#164A41]/10 text-center flex flex-col items-center justify-center hover:bg-[#FAF7F2]/80 transition-colors"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mb-2.5">
                       <Icon className="w-5 h-5" />
@@ -354,7 +354,7 @@ export default function PrivateToursPage() {
         </section>
 
         {/* 5. Trust / Social Proof Pillars */}
-        <section className="bg-[#F7F5EE] py-8 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
+        <section className="bg-[#FAF7F2] py-8 sm:py-10 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-[#164A41]/10">

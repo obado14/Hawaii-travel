@@ -11,7 +11,7 @@
   --font-heading: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
   --font-bebas: var(--font-bebas);
   
-  --color-hawaii-sand: #F7F5EE;
+  --color-hawaii-sand: #FAF7F2;
   --color-hawaii-ocean: #164A41;
   --color-hawaii-orange: #E76F51;
   --color-hawaii-orange-hover: #2C7A7B;
@@ -21,9 +21,9 @@
   --color-hawaii-navy: #164A41;
   --color-hawaii-navy-dark: #164A41;
   --color-hawaii-gold: #E9C46A;
-  --color-hawaii-cream: #F7F5EE;
+  --color-hawaii-cream: #FAF7F2;
 
-  --color-tropical-bg: #F7F5EE;
+  --color-tropical-bg: #FAF7F2;
   --color-tropical-green: #164A41;
   --color-tropical-teal: #2C7A7B;
   --color-tropical-coral: #E76F51;
@@ -62,7 +62,7 @@
 }
 
 :root {
-  --background: #F7F5EE;
+  --background: #FAF7F2;
   --foreground: #124E50;
   --card: #FFFFFF;
   --card-foreground: #124E50;
@@ -72,7 +72,7 @@
   --primary-foreground: #FFFFFF;
   --secondary: #164A41;
   --secondary-foreground: #FFFFFF;
-  --muted: #F7F5EE;
+  --muted: #FAF7F2;
   --muted-foreground: #124E50;
   --accent: #2C7A7B;
   --accent-foreground: #FFFFFF;
@@ -90,7 +90,7 @@
   body {
     font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
     color: #124E50;
-    background-color: #F7F5EE;
+    background-color: #FAF7F2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

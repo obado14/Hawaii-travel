@@ -44,7 +44,7 @@ const benefits: BenefitItem[] = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="relative bg-[#F7F5EE] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
+    <section id="why-choose-us" className="relative bg-[#FAF7F2] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-11">
@@ -79,7 +79,7 @@ export function WhyChooseUs() {
                     <div className="w-11 h-11 rounded-2xl bg-[#164A41] text-[#E9C46A] group-hover:bg-[#2C7A7B] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm group-hover:scale-110">
                       <Icon className="w-5 h-5 stroke-[2]" />
                     </div>
-                    <span className="text-[10px] sm:text-[11px] font-bold text-[#124E50] uppercase tracking-wider bg-[#F7F5EE] group-hover:bg-[#2C7A7B]/15 group-hover:text-[#2C7A7B] px-2.5 py-1 rounded-full transition-colors border border-[#164A41]/10">
+                    <span className="text-[10px] sm:text-[11px] font-bold text-[#124E50] uppercase tracking-wider bg-[#FAF7F2] group-hover:bg-[#2C7A7B]/15 group-hover:text-[#2C7A7B] px-2.5 py-1 rounded-full transition-colors border border-[#164A41]/10">
                       {item.badge}
                     </span>
                   </div>

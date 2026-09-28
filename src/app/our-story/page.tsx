@@ -112,7 +112,7 @@ const visualStories = [
 
 export default function OurStoryPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
@@ -164,7 +164,7 @@ export default function OurStoryPage() {
         </section>
 
         {/* 2. Narrative Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-8 sm:pt-12 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-8 sm:pt-12 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-8 font-medium px-1">
@@ -238,7 +238,7 @@ export default function OurStoryPage() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Stat 1 */}
-              <div className="bg-[#F7F5EE] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
+              <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Clock className="w-6 h-6" />
                 </div>
@@ -252,7 +252,7 @@ export default function OurStoryPage() {
               </div>
 
               {/* Stat 2 */}
-              <div className="bg-[#F7F5EE] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
+              <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Users className="w-6 h-6" />
                 </div>
@@ -266,7 +266,7 @@ export default function OurStoryPage() {
               </div>
 
               {/* Stat 3 */}
-              <div className="bg-[#F7F5EE] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
+              <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Compass className="w-6 h-6" />
                 </div>
@@ -280,7 +280,7 @@ export default function OurStoryPage() {
               </div>
 
               {/* Stat 4 */}
-              <div className="bg-[#F7F5EE] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
+              <div className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-8 text-center border border-[#164A41]/10 hover:-translate-y-1 transition-transform">
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Star className="w-6 h-6" />
                 </div>
@@ -297,7 +297,7 @@ export default function OurStoryPage() {
         </section>
 
         {/* 4. Our Journey / Timeline Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
+        <section className="bg-[#FAF7F2] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
               <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2">
@@ -318,7 +318,7 @@ export default function OurStoryPage() {
               <div className="grid grid-cols-4 gap-6 relative z-10">
                 {timelineMilestones.map((item) => (
                   <div key={item.year} className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 rounded-full bg-[#E76F51] text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg ring-4 ring-[#F7F5EE] group-hover:scale-110 transition-transform mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[#E76F51] text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg ring-4 ring-[#FAF7F2] group-hover:scale-110 transition-transform mb-6">
                       {item.year}
                     </div>
 
@@ -341,7 +341,7 @@ export default function OurStoryPage() {
 
               {timelineMilestones.map((item) => (
                 <div key={item.year} className="relative pl-6">
-                  <div className="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-[#E76F51] ring-4 ring-[#F7F5EE] flex items-center justify-center text-white text-[10px] font-bold shadow-md" />
+                  <div className="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-[#E76F51] ring-4 ring-[#FAF7F2] flex items-center justify-center text-white text-[10px] font-bold shadow-md" />
 
                   <div className="bg-white rounded-2xl p-5 shadow-md border border-[#164A41]/10">
                     <span className="inline-block px-3 py-0.5 rounded-full bg-[#E76F51]/15 text-[#E76F51] text-xs font-bold uppercase tracking-wider mb-1.5">
@@ -411,7 +411,7 @@ export default function OurStoryPage() {
         </section>
 
         {/* 6. Meet Our Team Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
+        <section className="bg-[#FAF7F2] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
               <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2">

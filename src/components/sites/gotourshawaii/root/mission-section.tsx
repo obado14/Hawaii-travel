@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react";
 
 export function MissionSection() {
   return (
-    <section id="mission" className="relative bg-[#F7F5EE] text-[#124E50] pt-16 sm:pt-20 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8">
+    <section id="mission" className="relative bg-[#FAF7F2] text-[#124E50] pt-16 sm:pt-20 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8">
       {/* Top Wave / Polynesian Pattern Transition */}
       <div className="absolute top-0 inset-x-0 w-full overflow-hidden leading-none -translate-y-[95%] pointer-events-none">
         <div className="relative w-full h-8 sm:h-12 md:h-16">

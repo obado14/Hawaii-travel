@@ -489,7 +489,7 @@ export default function TourPackagesPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#124E50] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white overflow-x-hidden">
       <TopBar />
       <Navbar />
 
@@ -536,7 +536,7 @@ export default function TourPackagesPage() {
         </section>
 
         {/* 2. Main Tour Listing Section */}
-        <section className="bg-[#F7F5EE] text-[#124E50] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FAF7F2] text-[#124E50] pt-6 sm:pt-8 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-5 font-medium px-1">
@@ -558,7 +558,7 @@ export default function TourPackagesPage() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Cari tur berdasarkan nama, atraksi, atau lokasi (misal: Waimea, Penyu, Luau, Sunset)..."
-                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-[#F7F5EE]/60 border border-[#164A41]/15 text-sm text-[#124E50] placeholder-[#124E50]/40 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
+                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-[#FAF7F2]/60 border border-[#164A41]/15 text-sm text-[#124E50] placeholder-[#124E50]/40 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all"
                   />
                   {searchQuery && (
                     <button
@@ -578,7 +578,7 @@ export default function TourPackagesPage() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-[#F7F5EE]/60 border border-[#164A41]/15 rounded-xl px-3.5 py-2 text-xs font-semibold text-[#124E50] focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all cursor-pointer"
+                    className="bg-[#FAF7F2]/60 border border-[#164A41]/15 rounded-xl px-3.5 py-2 text-xs font-semibold text-[#124E50] focus:outline-none focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all cursor-pointer"
                   >
                     <option value="popular">Paling Populer</option>
                     <option value="rating">Rating Tertinggi</option>
@@ -604,7 +604,7 @@ export default function TourPackagesPage() {
                     className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer border ${
                       selectedCategory === cat.key
                         ? "bg-[#E76F51] text-white border-[#E76F51] shadow-md shadow-[#E76F51]/25 scale-105"
-                        : "bg-white text-[#124E50] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#F7F5EE]/50 shadow-xs"
+                        : "bg-white text-[#124E50] border-[#164A41]/15 hover:border-[#2C7A7B]/40 hover:text-[#2C7A7B] hover:bg-[#FAF7F2]/50 shadow-xs"
                     }`}
                   >
                     {cat.label}
@@ -774,7 +774,7 @@ export default function TourPackagesPage() {
                         <div className="grid grid-cols-2 gap-2.5 pt-1">
                           <button
                             onClick={() => handleViewDetails(tour)}
-                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border-2 border-[#164A41]/20 hover:border-[#2C7A7B] text-[#124E50] hover:text-[#2C7A7B] hover:bg-[#F7F5EE] font-heading text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border-2 border-[#164A41]/20 hover:border-[#2C7A7B] text-[#124E50] hover:text-[#2C7A7B] hover:bg-[#FAF7F2] font-heading text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span>DETAIL</span>
