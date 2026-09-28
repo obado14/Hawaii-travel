@@ -373,10 +373,10 @@ export default function OurStoryPage() {
 
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 hover:bg-white/10 transition-colors text-center group">
-              <div className="w-13 h-13 rounded-full bg-[#E76F51]/20 text-[#E76F51] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
+              <div className="w-13 h-13 rounded-full bg-[#E9C46A]/20 text-[#E9C46A] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="font-heading text-xl sm:text-2xl text-[#E76F51] uppercase tracking-wide mb-2">
+              <h3 className="font-heading text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
                 ALOHA (Kasih &amp; Keramahan)
               </h3>
               <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
@@ -385,10 +385,10 @@ export default function OurStoryPage() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 hover:bg-white/10 transition-colors text-center group">
-              <div className="w-13 h-13 rounded-full bg-[#2C7A7B]/20 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
+              <div className="w-13 h-13 rounded-full bg-[#E9C46A]/20 text-[#E9C46A] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-heading text-xl sm:text-2xl text-[#2C7A7B] uppercase tracking-wide mb-2">
+              <h3 className="font-heading text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
                 KULEANA (Tanggung Jawab)
               </h3>
               <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
