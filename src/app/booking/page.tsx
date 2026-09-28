@@ -234,23 +234,11 @@ function BookingPageContent() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
-      {/* Background Image across the entire /booking page */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image
-          src="/images/booking-bg.jpg"
-          alt="Hawaii Beach Background"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#FAF7F2]/88 backdrop-blur-[1px]" />
-      </div>
-
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#124E50] selection:bg-[#E76F51] selection:text-white">
       <TopBar />
       <Navbar />
 
-      <main className="flex-1 pb-20 relative z-10">
+      <main className="flex-1 pb-20 relative">
         {/* 1. Header Hero Section (Matched with /contact-us size + Torn Paper Divider) */}
         <section className="relative w-full min-h-[440px] sm:min-h-[480px] md:min-h-[520px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
