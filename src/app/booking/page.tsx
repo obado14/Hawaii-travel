@@ -251,55 +251,72 @@ function BookingPageContent() {
       <Navbar />
 
       <main className="flex-1 pb-20 relative z-10">
-        {/* Header Hero Banner with image background */}
-        <section className="relative text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 shadow-md overflow-hidden">
+        {/* 1. Header Hero Section (Matched with /contact-us size + Torn Paper Divider) */}
+        <section className="relative w-full min-h-[440px] sm:min-h-[480px] md:min-h-[520px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/booking-bg.jpg"
-              alt="Hawaii Beach Background"
+              alt="Pesisir Pantai Hawaii"
               fill
               priority
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#164A41]/92 via-[#164A41]/85 to-[#164A41]/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#164A41]/85 via-black/25 to-[#164A41]/95" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
             {/* Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/75 mb-3">
-              <Link href="/" className="hover:text-[#E9C46A] transition-colors">
-                Beranda
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-white/50" />
-              <Link href="/tour-packages" className="hover:text-[#E9C46A] transition-colors">
-                Tur &amp; Paket
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-white/50" />
-              <span className="text-[#FAF7F2] font-bold">Halaman Booking</span>
-            </nav>
+            <div className="mb-3.5 inline-flex items-center justify-center">
+              <nav aria-label="Breadcrumb" className="inline-flex items-center gap-2 text-xs text-white/80 bg-black/35 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-sm font-medium">
+                <Link href="/" className="hover:text-[#E9C46A] transition-colors">
+                  Beranda
+                </Link>
+                <ChevronRight className="w-3 h-3 text-white/50" />
+                <Link href="/tour-packages" className="hover:text-[#E9C46A] transition-colors">
+                  Tur &amp; Paket
+                </Link>
+                <ChevronRight className="w-3 h-3 text-white/50" />
+                <span className="text-[#FAF7F2] font-bold">Halaman Booking</span>
+              </nav>
+            </div>
 
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider mb-2">
-                  <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
-                  <span>Sistem Pemesanan Resmi Go Tours Hawaii</span>
-                </div>
-                <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-                  PESAN TUR HAWAII ANDA
-                </h1>
-                <p className="text-white/90 text-xs sm:text-sm max-w-2xl mt-1 leading-relaxed drop-shadow-sm">
-                  Lakukan reservasi mudah di halaman penuh tanpa popup. Konfirmasi resmi instan, jaminan harga terbaik, dan pembatalan fleksibel hingga 48 jam sebelum tur.
-                </p>
+            <div className="flex items-center justify-center mb-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+                <Sparkles className="w-4 h-4 text-[#E9C46A]" />
+                <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-widest">
+                  Sistem Pemesanan Resmi Go Tours Hawaii
+                </span>
               </div>
+            </div>
 
-              {/* Promo Callout */}
-              <div className="bg-[#E76F51]/30 border border-[#E76F51]/50 rounded-2xl px-4 py-2.5 shrink-0 self-start md:self-auto backdrop-blur-md shadow-lg">
-                <div className="flex items-center gap-2 text-[#FAF7F2] text-xs font-bold uppercase tracking-wider">
-                  <Tag className="w-4 h-4 text-[#E9C46A]" />
-                  <span>Diskon Promo 10% Online</span>
-                </div>
-                <div className="text-white/90 text-xs mt-0.5">Otomatis terhitung pada rincian pesanan</div>
-              </div>
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+              PESAN TUR <span className="bg-gradient-to-r from-[#E9C46A] via-[#E76F51] to-[#E9C46A] bg-clip-text text-transparent">HAWAII ANDA</span>
+            </h1>
+
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed mb-5">
+              Lakukan reservasi mudah di halaman penuh tanpa popup. Konfirmasi resmi instan, jaminan harga terbaik, dan pembatalan fleksibel hingga 48 jam sebelum tur.
+            </p>
+
+            {/* Promo Callout */}
+            <div className="inline-flex items-center gap-2.5 bg-[#E76F51]/30 border border-[#E76F51]/50 rounded-2xl px-5 py-2 backdrop-blur-md shadow-lg">
+              <Tag className="w-4 h-4 text-[#E9C46A]" />
+              <span className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider">
+                Diskon Promo 10% Online
+              </span>
+              <span className="text-white/80 text-xs hidden sm:inline">• Otomatis terhitung pada rincian pesanan</span>
+            </div>
+          </div>
+
+          {/* Polynesian Torn Paper Wave Divider */}
+          <div className="absolute bottom-0 inset-x-0 w-full pointer-events-none z-20 translate-y-0.5 overflow-hidden">
+            <div className="relative w-full h-14 sm:h-18 md:h-22 lg:h-24">
+              <Image
+                src="/sites/gotourshawaii/root/banner-divider-optimized-002.png"
+                alt="Transisi motif pembatas polinesia"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </div>
         </section>
