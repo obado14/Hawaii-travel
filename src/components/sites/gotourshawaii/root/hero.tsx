@@ -22,7 +22,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
           className="object-cover object-[center_28%]"
         />
         {/* Cinematic gradient overlay for maximum readability and dramatic depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0077B6]/70 via-black/40 to-[#073B4C]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#164A41]/80 via-black/40 to-[#164A41]/95" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.5)_0%,_transparent_75%)] pointer-events-none" />
       </div>
 
@@ -30,11 +30,11 @@ export function Hero({ onOpenBooking }: HeroProps) {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 sm:pt-12 pb-24 sm:pb-30 lg:pb-36">
         {/* TripAdvisor Award Badge */}
         <div className="inline-flex items-center gap-2.5 mb-5 sm:mb-6 px-4 py-1.5 rounded-full bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
-          <div className="w-5 h-5 rounded-full bg-[#2A9D8F] flex items-center justify-center text-white shrink-0 shadow-sm">
+          <div className="w-5 h-5 rounded-full bg-[#2C7A7B] flex items-center justify-center text-white shrink-0 shadow-sm">
             <Award className="w-3 h-3" />
           </div>
           <div className="text-left leading-tight">
-            <span className="block text-xs sm:text-sm font-bold text-[#2A9D8F] tracking-wide">
+            <span className="block text-xs sm:text-sm font-bold text-[#E9C46A] tracking-wide">
               Travelers&apos; Choice Best of the Best 2024
             </span>
             <span className="block text-[11px] sm:text-xs text-white/95 font-medium">
@@ -46,7 +46,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
         {/* Huge Bold Headline - The Focal Point */}
         <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-normal text-white uppercase tracking-wider leading-[0.95] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] mb-4 sm:mb-5">
           PENGALAMAN TUR KELILING
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-[#F4A261] to-amber-100 mt-1 drop-shadow-[0_2px_12px_rgba(244,162,97,0.4)]">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E9C46A] via-[#E76F51] to-[#E9C46A] mt-1 drop-shadow-[0_2px_12px_rgba(231,111,81,0.4)]">
             PULAU OAHU TERBAIK
           </span>
         </h1>
@@ -60,7 +60,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-6 sm:mb-7">
           <Link
             href="/booking"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F4A261] hover:bg-[#e76f51] text-white px-9 py-3.5 sm:px-11 sm:py-4 rounded-xl font-heading text-base sm:text-lg font-bold uppercase tracking-wider shadow-2xl shadow-[#F4A261]/50 hover:shadow-[#F4A261]/70 ring-2 ring-white/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#E76F51] hover:bg-[#2C7A7B] text-white px-9 py-3.5 sm:px-11 sm:py-4 rounded-xl font-heading text-base sm:text-lg font-bold uppercase tracking-wider shadow-2xl shadow-[#E76F51]/50 hover:shadow-[#E76F51]/70 ring-2 ring-white/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <span>PESAN SEKARANG</span>
             <span className="text-white/90 text-xs sm:text-sm font-sans font-semibold tracking-normal lowercase">(diskon 10%)</span>
@@ -70,23 +70,23 @@ export function Hero({ onOpenBooking }: HeroProps) {
             href="/tour-packages"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white border-2 border-white/60 hover:border-white backdrop-blur-md px-8 py-3.5 sm:px-10 sm:py-4 rounded-xl font-heading text-base sm:text-lg font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-xl"
           >
-            <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#00B4D8]" />
+            <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#E9C46A]" />
             <span>JELAJAHI SEMUA TUR</span>
           </Link>
         </div>
 
         {/* Subtle Trust Indicators Bar */}
         <div className="inline-flex flex-wrap items-center justify-center gap-3.5 sm:gap-5 text-xs sm:text-sm text-neutral-200 font-medium px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
-          <span className="flex items-center gap-1.5 text-[#F4A261]">
+          <span className="flex items-center gap-1.5 text-[#E9C46A]">
             ★ <strong className="text-white">4.9 / 5.0</strong> (5.000+ Ulasan)
           </span>
           <span className="text-white/40 hidden sm:inline">•</span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[#2A9D8F]">✓</span> Pembatalan Fleksibel 48 Jam
+            <span className="text-[#2C7A7B]">✓</span> Pembatalan Fleksibel 48 Jam
           </span>
           <span className="text-white/40 hidden sm:inline">•</span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[#00B4D8]">✓</span> Jaminan Kursi Resmi
+            <span className="text-[#2C7A7B]">✓</span> Jaminan Kursi Resmi
           </span>
         </div>
       </div>

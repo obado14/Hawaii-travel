@@ -87,13 +87,13 @@ export function VisualOdyssey() {
   const activePhoto = photos[currentIndex];
 
   return (
-    <section className="relative bg-[#073B4C] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-[#164A41] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#00B4D8]" />
-            <span className="text-xs sm:text-sm font-bold text-[#00B4D8] uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
+            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest">
               GALERI PERJALANAN
             </span>
           </div>
@@ -121,7 +121,7 @@ export function VisualOdyssey() {
           {/* Left / Right Nav Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#F4A261] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#E76F51] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
             aria-label="Foto Sebelumnya"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -129,7 +129,7 @@ export function VisualOdyssey() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#F4A261] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
+            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-[#E76F51] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:scale-110 cursor-pointer z-10"
             aria-label="Foto Berikutnya"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -138,7 +138,7 @@ export function VisualOdyssey() {
           {/* Fullscreen Button */}
           <button
             onClick={() => setSelectedPhoto(activePhoto)}
-            className="absolute top-3.5 sm:top-5 right-3.5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-[#F4A261] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer z-10"
+            className="absolute top-3.5 sm:top-5 right-3.5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-[#E76F51] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer z-10"
             aria-label="Lihat Layar Penuh"
           >
             <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -147,7 +147,7 @@ export function VisualOdyssey() {
           {/* Caption Overlay */}
           <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 lg:p-7 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="text-[11px] sm:text-xs font-bold text-[#00B4D8] uppercase tracking-widest block mb-0.5">
+              <span className="text-[11px] sm:text-xs font-bold text-[#E9C46A] uppercase tracking-widest block mb-0.5">
                 Foto {currentIndex + 1} dari {photos.length}
               </span>
               <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-white uppercase drop-shadow-md">
@@ -168,7 +168,7 @@ export function VisualOdyssey() {
               onClick={() => setCurrentIndex(idx)}
               className={`relative h-13 sm:h-16 rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
                 idx === currentIndex
-                  ? "border-[#F4A261] scale-105 shadow-md ring-2 ring-[#F4A261]/50"
+                  ? "border-[#E76F51] scale-105 shadow-md ring-2 ring-[#E76F51]/50"
                   : "border-transparent opacity-60 hover:opacity-100"
               }`}
               aria-label={`Pilih foto ${idx + 1}`}
@@ -187,7 +187,7 @@ export function VisualOdyssey() {
         >
           <button
             onClick={() => setSelectedPhoto(null)}
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-[#F4A261] text-white flex items-center justify-center transition-colors cursor-pointer"
+            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-[#E76F51] text-white flex items-center justify-center transition-colors cursor-pointer"
             aria-label="Tutup Pratinjau"
           >
             <X className="w-6 h-6" />

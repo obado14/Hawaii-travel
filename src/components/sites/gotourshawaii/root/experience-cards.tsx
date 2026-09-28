@@ -50,20 +50,20 @@ interface ExperienceCardsProps {
 
 export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
   return (
-    <section id="experiences" className="relative bg-[#FFF3D6] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section id="experiences" className="relative bg-[#F7F5EE] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-11">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00B4D8]/15 border border-[#00B4D8]/30 mb-2.5 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#00B4D8]" />
-            <span className="text-xs sm:text-sm font-bold text-[#073B4C] uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2.5 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
+            <span className="text-xs sm:text-sm font-bold text-[#19312F] uppercase tracking-widest">
               PENGALAMAN UNGGULAN OAHU
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#073B4C] uppercase tracking-wide leading-tight mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#19312F] uppercase tracking-wide leading-tight mb-3">
             PILIH PENGALAMAN WISATA ANDA
           </h2>
-          <p className="text-[#073B4C]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#19312F]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
             Pilihan tur Permata Tersembunyi Oahu terpopuler bersama pemandu lokal berlisensi dan jaminan kepuasan.
           </p>
         </div>
@@ -75,7 +75,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
               key={exp.id}
               href={`/booking?tour=${encodeURIComponent(exp.tourParam)}`}
               aria-label={`Jelajahi ${exp.title}`}
-              className="group relative block h-[380px] sm:h-[420px] md:h-[460px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4A261]"
+              className="group relative block h-[380px] sm:h-[420px] md:h-[460px] lg:h-[480px] rounded-3xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 ease-out transform hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/35 border border-black/10 bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51]"
             >
               {/* Background Image with subtle zoom */}
               <div className="absolute inset-0">
@@ -91,14 +91,14 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
 
               {/* Number Badge (Top Center) */}
               <div className="absolute top-5 left-1/2 -translate-x-1/2 z-10">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/80 bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading text-xl sm:text-2xl shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-[#00B4D8] group-hover:bg-[#00B4D8] group-hover:text-white">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/80 bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading text-xl sm:text-2xl shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-[#2C7A7B] group-hover:bg-[#2C7A7B] group-hover:text-white">
                   {exp.id}
                 </div>
               </div>
 
               {/* Content (Bottom) */}
               <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 lg:p-7 z-10 flex flex-col justify-end">
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide leading-tight mb-2 transition-colors duration-250 group-hover:text-[#00B4D8] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide leading-tight mb-2 transition-colors duration-250 group-hover:text-[#E9C46A] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                   {exp.title}
                 </h3>
                 <p className="text-neutral-200 text-xs sm:text-sm font-normal leading-relaxed mb-4">
@@ -107,7 +107,7 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
 
                 {/* Interactive CTA Pill */}
                 <div>
-                  <span className="inline-flex items-center gap-1.5 bg-[#F4A261] group-hover:bg-[#e76f51] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider shadow-lg shadow-[#F4A261]/30 transition-all duration-300 transform group-hover:translate-x-1">
+                  <span className="inline-flex items-center gap-1.5 bg-[#E76F51] group-hover:bg-[#2C7A7B] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider shadow-lg shadow-[#E76F51]/30 transition-all duration-300 transform group-hover:translate-x-1">
                     <span>Jelajahi Tur</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>

@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#073B4C] text-white pt-12 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#164A41] text-white pt-12 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-10 border-b border-white/10">
           {/* Column 1: Brand & Contact Info */}
@@ -21,18 +21,18 @@ export function Footer() {
 
             <div className="space-y-3 text-[15px] sm:text-base text-neutral-100 font-medium">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#F4A261] shrink-0 mt-1" />
+                <MapPin className="w-4 h-4 text-[#E9C46A] shrink-0 mt-1" />
                 <span className="leading-snug">2500 Kalakaua Ave Suite E Honolulu, Hawaii 96815</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#F4A261] shrink-0" />
-                <a href="tel:808-926-3090" className="hover:text-[#F4A261] transition-colors">
+                <Phone className="w-4 h-4 text-[#E9C46A] shrink-0" />
+                <a href="tel:808-926-3090" className="hover:text-[#E9C46A] transition-colors">
                   808-926-3090
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#F4A261] shrink-0" />
-                <a href="mailto:info@gotourshawaii.com" className="hover:text-[#F4A261] transition-colors">
+                <Mail className="w-4 h-4 text-[#E9C46A] shrink-0" />
+                <a href="mailto:info@gotourshawaii.com" className="hover:text-[#E9C46A] transition-colors">
                   info@gotourshawaii.com
                 </a>
               </div>
@@ -44,7 +44,7 @@ export function Footer() {
                 href="https://www.facebook.com/GoToursHawaii"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-[#F4A261] hover:bg-[#e76f51] flex items-center justify-center text-white transition-transform hover:scale-110 shadow-md"
+                className="w-9 h-9 rounded-full bg-[#E76F51] hover:bg-[#2C7A7B] flex items-center justify-center text-white transition-transform hover:scale-110 shadow-md"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ export function Footer() {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-[#F4A261] hover:bg-[#e76f51] flex items-center justify-center text-white transition-transform hover:scale-110 shadow-md"
+                className="w-9 h-9 rounded-full bg-[#E76F51] hover:bg-[#2C7A7B] flex items-center justify-center text-white transition-transform hover:scale-110 shadow-md"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#00B4D8] transition-colors leading-snug block font-medium"
+                  className="hover:text-[#E9C46A] transition-colors leading-snug block font-medium"
                 >
                   Permata Tersembunyi Oahu &amp; Air Terjun Waimea
                 </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#00B4D8] transition-colors leading-snug block font-medium"
+                  className="hover:text-[#E9C46A] transition-colors leading-snug block font-medium"
                 >
                   Kuil Byodo-In &amp; Pengamatan Penyu Laut
                 </Link>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#00B4D8] transition-colors leading-snug block font-medium"
+                  className="hover:text-[#E9C46A] transition-colors leading-snug block font-medium"
                 >
                   Snorkeling Bersama Penyu di Waikiki Turtle Canyon
                 </Link>
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#00B4D8] transition-colors leading-snug block font-medium"
+                  className="hover:text-[#E9C46A] transition-colors leading-snug block font-medium"
                 >
                   Pesta Budaya Paina Waikiki Luau
                 </Link>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/tour-packages"
-                  className="hover:text-[#00B4D8] transition-colors leading-snug block font-medium"
+                  className="hover:text-[#E9C46A] transition-colors leading-snug block font-medium"
                 >
                   Tur Memorial Bersejarah USS Arizona Pearl Harbor
                 </Link>
@@ -122,17 +122,17 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
-                  <Link href="/our-story" className="hover:text-[#00B4D8] transition-colors font-medium">
+                  <Link href="/our-story" className="hover:text-[#E9C46A] transition-colors font-medium">
                     Sejarah Go Tours Hawaii
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="hover:text-[#00B4D8] transition-colors font-medium">
+                  <Link href="/contact-us" className="hover:text-[#E9C46A] transition-colors font-medium">
                     Bergabung dengan Tim Kami!
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="hover:text-[#00B4D8] transition-colors font-medium">
+                  <Link href="/contact-us" className="hover:text-[#E9C46A] transition-colors font-medium">
                     Program Kemitraan &amp; Afiliasi
                   </Link>
                 </li>
@@ -145,12 +145,12 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
                 <li>
-                  <Link href="/blog" className="hover:text-[#00B4D8] transition-colors font-medium">
+                  <Link href="/blog" className="hover:text-[#E9C46A] transition-colors font-medium">
                     Foto &amp; Dokumentasi
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-[#00B4D8] transition-colors font-medium">
+                  <Link href="/blog" className="hover:text-[#E9C46A] transition-colors font-medium">
                     Video Perjalanan
                   </Link>
                 </li>
@@ -178,7 +178,7 @@ export function Footer() {
             <div className="pt-1">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00B4D8] hover:text-white transition-colors group"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E9C46A] hover:text-white transition-colors group"
               >
                 <span>Peta Interaktif &amp; Petunjuk Arah</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
