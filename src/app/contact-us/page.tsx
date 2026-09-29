@@ -65,16 +65,16 @@ export default function ContactUsPage() {
           </div>
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
-            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm font-montserrat">
               <Sparkles className="w-4 h-4 text-[#E9C46A]" />
-              <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-widest">
+              <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
                 Kami Siap Melayani Anda 7 Hari Seminggu
               </span>
             </div>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+            <h1 className="font-heading font-bebas text-4xl sm:text-6xl md:text-7xl text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               HUBUNGI <span className="bg-gradient-to-r from-[#E9C46A] via-[#E76F51] to-[#E9C46A] bg-clip-text text-transparent">KAMI</span>
             </h1>
-            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-normal leading-relaxed">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-neutral-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] font-poppins font-normal leading-relaxed">
               Punya pertanyaan seputar penjemputan hotel, paket tur privat, atau reservasi perjalanan? Bicaralah langsung dengan tim lokal kami yang ramah di Oahu.
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function ContactUsPage() {
         <section className="bg-[#FAF7F2] text-[#124E50] pt-6 sm:pt-8 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-6 font-medium px-1">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-6 font-montserrat font-medium px-1">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
@@ -107,25 +107,25 @@ export default function ContactUsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Form (Col 7 on Desktop, 1 Col on Mobile) */}
               <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-xl border border-[#164A41]/10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs font-montserrat">
                   <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-                  <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest">
+                  <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest font-montserrat">
                     Kirim Pesan Langsung
                   </span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-4xl text-[#124E50] uppercase mb-5 leading-tight">
+                <h2 className="font-heading font-bebas text-3xl sm:text-4xl text-[#124E50] uppercase mb-5 leading-tight">
                   BAGAIMANA KAMI DAPAT MEMBANTU ANDA?
                 </h2>
 
                 {submitted ? (
-                  <div className="text-center py-10 space-y-4 animate-in fade-in duration-300">
+                  <div className="text-center py-10 space-y-4 animate-in fade-in duration-300 font-poppins">
                     <div className="w-16 h-16 bg-[#2C7A7B]/15 text-[#2C7A7B] rounded-full flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50]">
+                    <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-[#124E50]">
                       MAHALO ATAS PERTANYAAN ANDA!
                     </h3>
-                    <p className="text-[#124E50]/80 text-sm max-w-sm mx-auto leading-relaxed">
+                    <p className="text-[#124E50]/80 text-sm max-w-sm mx-auto leading-relaxed font-poppins">
                       Pesan Anda telah berhasil diterima oleh tim layanan tamu kami. Kami akan segera menghubungi Anda dengan informasi lengkap.
                     </p>
                     <button
@@ -140,7 +140,7 @@ export default function ContactUsPage() {
                           message: "",
                         });
                       }}
-                      className="mt-3 px-6 py-2.5 bg-[#E76F51] text-white rounded-xl text-sm font-semibold hover:bg-[#2C7A7B] transition-colors cursor-pointer"
+                      className="mt-3 px-6 py-2.5 bg-[#E76F51] text-white rounded-xl text-sm font-montserrat font-bold hover:bg-[#2C7A7B] transition-colors cursor-pointer"
                     >
                       Kirim Pesan Lain
                     </button>
@@ -148,14 +148,14 @@ export default function ContactUsPage() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     {formError && (
-                      <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold animate-in fade-in">
+                      <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold animate-in fade-in font-poppins">
                         {formError}
                       </div>
                     )}
                     {/* Row 1: Name & Contact Number */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                        <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                           Nama Lengkap <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -164,11 +164,11 @@ export default function ContactUsPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Budi Santoso"
-                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 font-poppins"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                        <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                           Nomor Telepon / WA <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -177,7 +177,7 @@ export default function ContactUsPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+62 812-3456-7890"
-                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 font-poppins"
                         />
                       </div>
                     </div>
@@ -185,7 +185,7 @@ export default function ContactUsPage() {
                     {/* Row 2: Email & Services */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                        <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                           Alamat Email <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -194,17 +194,17 @@ export default function ContactUsPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="nama@email.com"
-                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 font-poppins"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                        <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                           Pilihan Layanan <span className="text-red-500">*</span>
                         </label>
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer"
+                          className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 cursor-pointer font-poppins"
                         >
                           <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
                           <option value="Tur Privat">Tur Privat</option>
@@ -217,7 +217,7 @@ export default function ContactUsPage() {
 
                     {/* Row 3: Subject */}
                     <div>
-                      <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                      <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                         Subjek Pertanyaan <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -226,13 +226,13 @@ export default function ContactUsPage() {
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="Contoh: Pertanyaan Penjemputan Hotel, Tur Keliling Pulau"
-                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200"
+                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 font-poppins"
                       />
                     </div>
 
                     {/* Row 4: Message */}
                     <div>
-                      <label className="block text-xs font-bold uppercase text-[#124E50] mb-1.5">
+                      <label className="block text-xs font-montserrat font-bold uppercase text-[#124E50] mb-1.5">
                         Pesan Anda
                       </label>
                       <textarea
@@ -240,7 +240,7 @@ export default function ContactUsPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tuliskan pertanyaan detail atau permintaan khusus Anda di sini..."
-                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none"
+                        className="w-full bg-[#FAF7F2]/60 border border-[#164A41]/15 hover:border-[#164A41]/30 rounded-xl px-4 py-2.5 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:bg-white focus:border-[#2C7A7B] focus:ring-2 focus:ring-[#2C7A7B]/20 transition-all duration-200 resize-none font-poppins"
                       />
                     </div>
 
@@ -249,7 +249,7 @@ export default function ContactUsPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="bg-[#E76F51] hover:bg-[#2C7A7B] text-white font-heading text-lg font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#E76F51]/25 hover:shadow-xl hover:shadow-[#E76F51]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-center disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        className="bg-[#E76F51] hover:bg-[#2C7A7B] text-white font-montserrat text-sm sm:text-base font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-lg shadow-[#E76F51]/25 hover:shadow-xl hover:shadow-[#E76F51]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-center disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                           <>
@@ -260,7 +260,7 @@ export default function ContactUsPage() {
                           <span>KIRIM PESAN</span>
                         )}
                       </button>
-                      <p className="text-xs text-[#124E50]/60 flex items-center gap-1.5 justify-center sm:justify-start">
+                      <p className="text-xs text-[#124E50]/60 flex items-center gap-1.5 justify-center sm:justify-start font-poppins">
                         <Clock className="w-3.5 h-3.5 text-[#E76F51] shrink-0" />
                         <span>Kami biasanya merespons dalam 1 hari kerja.</span>
                       </p>
@@ -273,15 +273,15 @@ export default function ContactUsPage() {
               <div className="lg:col-span-5 space-y-6">
                 {/* Get in Touch Card */}
                 <div className="bg-[#164A41] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-white/10">
-                  <h3 className="font-heading text-2xl sm:text-3xl text-[#E9C46A] uppercase tracking-wide mb-5">
+                  <h3 className="font-heading font-bebas text-2xl sm:text-3xl text-[#E9C46A] uppercase tracking-wide mb-5">
                     KONTAK LANGSUNG
                   </h3>
 
-                  <div className="space-y-4 text-sm text-neutral-200">
+                  <div className="space-y-4 text-sm text-neutral-200 font-poppins">
                     <div className="flex items-start gap-3.5">
                       <MapPin className="w-5 h-5 text-[#E9C46A] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Kantor Waikiki:</strong>
+                        <strong className="block text-white font-montserrat font-bold">Kantor Waikiki:</strong>
                         <span>2500 Kalakaua Ave Suite E, Honolulu, Hawaii 96815</span>
                       </div>
                     </div>
@@ -289,8 +289,8 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-3.5">
                       <Phone className="w-5 h-5 text-[#E9C46A] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Telepon:</strong>
-                        <a href="tel:808-926-3090" className="hover:text-white underline">
+                        <strong className="block text-white font-montserrat font-bold">Telepon:</strong>
+                        <a href="tel:808-926-3090" className="hover:text-white underline font-montserrat font-semibold">
                           808-926-3090
                         </a>
                       </div>
@@ -299,7 +299,7 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-3.5">
                       <Clock className="w-5 h-5 text-[#E9C46A] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Jam Operasional:</strong>
+                        <strong className="block text-white font-montserrat font-bold">Jam Operasional:</strong>
                         <span>06.00 – 21.00 HST, Buka 7 Hari Seminggu!</span>
                       </div>
                     </div>
@@ -307,8 +307,8 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-3.5">
                       <Mail className="w-5 h-5 text-[#E9C46A] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="block text-white">Alamat Email:</strong>
-                        <a href="mailto:info@gotourshawaii.com" className="hover:text-white underline">
+                        <strong className="block text-white font-montserrat font-bold">Alamat Email:</strong>
+                        <a href="mailto:info@gotourshawaii.com" className="hover:text-white underline font-montserrat font-semibold">
                           info@gotourshawaii.com
                         </a>
                       </div>
@@ -318,11 +318,11 @@ export default function ContactUsPage() {
 
                 {/* Interactive Headquarters Location Map */}
                 <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-[#164A41]/10 text-left">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs sm:text-sm font-extrabold uppercase text-[#124E50] tracking-wider block">
+                  <div className="flex items-center justify-between mb-3 font-montserrat">
+                    <span className="text-xs sm:text-sm font-extrabold uppercase text-[#124E50] tracking-wider block font-montserrat">
                       Lokasi Kantor Pusat
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#2C7A7B] bg-[#2C7A7B]/15 px-2.5 py-0.5 rounded-full">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#2C7A7B] bg-[#2C7A7B]/15 px-2.5 py-0.5 rounded-full font-montserrat">
                       <MapPin className="w-3 h-3" />
                       Pantai Waikiki
                     </span>
@@ -346,10 +346,10 @@ export default function ContactUsPage() {
                   {/* Office Info & Get Directions */}
                   <div className="space-y-3">
                     <div>
-                      <h4 className="font-heading text-base font-bold text-[#124E50] uppercase">
+                      <h4 className="font-heading font-bebas text-base sm:text-lg font-bold text-[#124E50] uppercase">
                         Go Tours Hawaii / Kantor Waikiki
                       </h4>
-                      <p className="text-xs text-[#124E50]/70 mt-0.5">
+                      <p className="text-xs text-[#124E50]/70 mt-0.5 font-poppins">
                         2500 Kalakaua Ave Suite E, Honolulu, HI 96815
                       </p>
                     </div>
@@ -358,7 +358,7 @@ export default function ContactUsPage() {
                       href="https://maps.google.com/?q=2500+Kalakaua+Ave+Suite+E,+Honolulu,+HI+96815"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-[#E76F51] hover:bg-[#2C7A7B] text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-[#E76F51] hover:bg-[#2C7A7B] text-white font-montserrat text-xs font-bold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
                     >
                       <Navigation className="w-3.5 h-3.5" />
                       <span>PETUNJUK ARAH</span>
@@ -376,20 +376,20 @@ export default function ContactUsPage() {
         {/* 4. Social Media Section */}
         <section className="bg-[#FAF7F2] text-[#124E50] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-[#164A41]/10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs font-montserrat">
               <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest">
+              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest font-montserrat">
                 Tetap Terhubung Bersama Kami
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl text-[#124E50] uppercase tracking-wide mb-3">
+            <h2 className="font-heading font-bebas text-3xl sm:text-4xl text-[#124E50] uppercase tracking-wide mb-3">
               IKUTI PERJALANAN HAWAII KAMI
             </h2>
-            <p className="text-[#124E50]/75 text-sm max-w-lg mx-auto mb-8 leading-relaxed font-normal">
+            <p className="text-[#124E50]/75 text-sm max-w-lg mx-auto mb-8 leading-relaxed font-poppins font-normal">
               Ikuti kabar harian matahari terbit Hawaii, momen bertemu satwa laut, dokumentasi perjalanan para tamu, dan kisah autentik semangat Aloha.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-montserrat">
               {/* Instagram */}
               <a
                 href="https://www.instagram.com"
@@ -403,8 +403,8 @@ export default function ContactUsPage() {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <span className="block text-xs font-bold uppercase tracking-wider">Instagram</span>
-                  <span className="text-[11px] text-[#124E50]/60">@gotourshawaii</span>
+                  <span className="block text-xs font-montserrat font-bold uppercase tracking-wider">Instagram</span>
+                  <span className="text-[11px] text-[#124E50]/60 font-poppins">@gotourshawaii</span>
                 </div>
               </a>
 
@@ -421,8 +421,8 @@ export default function ContactUsPage() {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <span className="block text-xs font-bold uppercase tracking-wider">Facebook</span>
-                  <span className="text-[11px] text-[#124E50]/60">Go Tours Hawaii</span>
+                  <span className="block text-xs font-montserrat font-bold uppercase tracking-wider">Facebook</span>
+                  <span className="text-[11px] text-[#124E50]/60 font-poppins">Go Tours Hawaii</span>
                 </div>
               </a>
 
@@ -439,8 +439,8 @@ export default function ContactUsPage() {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <span className="block text-xs font-bold uppercase tracking-wider">YouTube</span>
-                  <span className="text-[11px] text-[#124E50]/60">Go Tours Hawaii TV</span>
+                  <span className="block text-xs font-montserrat font-bold uppercase tracking-wider">YouTube</span>
+                  <span className="text-[11px] text-[#124E50]/60 font-poppins">Go Tours Hawaii TV</span>
                 </div>
               </a>
             </div>

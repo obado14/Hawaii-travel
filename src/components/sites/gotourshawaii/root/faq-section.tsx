@@ -59,16 +59,16 @@ export function FAQSection() {
       <div className="relative z-10 max-w-3xl mx-auto">
         {/* Title */}
         <div className="text-center mb-7 sm:mb-9">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs font-montserrat">
             <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
-            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
               PERTANYAAN UMUM
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-2 leading-none drop-shadow-md">
+          <h2 className="font-heading font-bebas text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-2 leading-none drop-shadow-md">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-neutral-300 text-xs sm:text-sm font-normal max-w-md mx-auto leading-relaxed">
+          <p className="text-neutral-300 text-xs sm:text-sm font-poppins font-normal max-w-md mx-auto leading-relaxed">
             Informasi penting yang paling sering ditanyakan oleh wisatawan kami.
           </p>
         </div>
@@ -84,11 +84,11 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggle(faq.id)}
-                  className="w-full flex items-center justify-between text-left py-3.5 sm:py-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51] rounded-xl cursor-pointer"
+                  className="w-full flex items-center justify-between text-left py-3.5 sm:py-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51] rounded-xl cursor-pointer font-poppins"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${faq.id}`}
                 >
-                  <span className="text-base sm:text-lg font-semibold text-white group-hover:text-[#E9C46A] transition-colors pr-3 leading-snug">
+                  <span className="text-base sm:text-lg font-semibold text-white group-hover:text-[#E9C46A] transition-colors pr-3 leading-snug font-poppins">
                     {faq.question}
                   </span>
 
@@ -114,8 +114,8 @@ export function FAQSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-4 pt-1.5 text-xs sm:text-sm text-neutral-200 leading-relaxed font-normal border-t border-white/10 mt-1">
-                      <p>{faq.answer}</p>
+                    <div className="pb-4 pt-1.5 text-xs sm:text-sm text-neutral-200 leading-relaxed font-poppins font-normal border-t border-white/10 mt-1">
+                      <p className="font-poppins">{faq.answer}</p>
                     </div>
                   </div>
                 </div>

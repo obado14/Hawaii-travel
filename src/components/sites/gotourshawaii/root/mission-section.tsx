@@ -23,16 +23,16 @@ export function MissionSection() {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs font-montserrat">
             <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-            <span className="text-xs sm:text-sm font-bold text-[#2C7A7B] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#2C7A7B] uppercase tracking-widest font-montserrat">
               NILAI &amp; KOMITMEN BUDAYA
             </span>
           </div>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-[#124E50] uppercase tracking-wide leading-none mb-3">
+          <h2 className="font-heading font-bebas text-4xl sm:text-5xl md:text-6xl text-[#124E50] uppercase tracking-wide leading-none mb-3">
             MISI GO TOURS HAWAII
           </h2>
-          <p className="text-[#124E50]/75 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#124E50]/75 text-sm sm:text-base font-poppins font-normal max-w-xl mx-auto leading-relaxed">
             Menghidupkan filosofi luhur kepulauan dalam setiap perjalanan dan sentuhan pelayanan kami.
           </p>
         </div>
@@ -49,10 +49,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               PAKAR LOKAL ASLI
             </h3>
-            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-poppins font-normal leading-relaxed sm:leading-7">
               Kami sangat bangga menjadi operator tur yang 100% dimiliki dan dikelola oleh warga lokal Hawaii. Berakar kuat di kepulauan ini, memahami setiap tradisi dan bentang alam adalah jati diri kami. Ini menjamin Anda mendapatkan pengalaman wisata terbaik Hawaii, didampingi oleh operator tur lokal terpercaya #1.
             </p>
           </div>
@@ -67,10 +67,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               TANGGUNG JAWAB (KULEANA)
             </h3>
-            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-poppins font-normal leading-relaxed sm:leading-7">
               Semangat Aloha adalah falsafah yang kami hidupi setiap hari. Baik saat Anda berinteraksi dengan pemandu tur, staf layanan pelanggan, maupun tim manajemen, kami berkomitmen pada standar tanggung jawab dan keramahan tertinggi demi menjaga keaslian nilai aloha.
             </p>
           </div>
@@ -85,10 +85,10 @@ export function MissionSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
+            <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-[#124E50] uppercase tracking-wider mb-3.5 group-hover:text-[#E76F51] transition-colors">
               SEMANGAT ALOHA
             </h3>
-            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-normal leading-relaxed sm:leading-7">
+            <p className="text-[#124E50]/75 text-sm sm:text-[15px] font-poppins font-normal leading-relaxed sm:leading-7">
               Kami berjanji menghadirkan pengalaman berharga yang akan Anda kenang seumur hidup. Tim kami mendedikasikan dedikasi penuh untuk memastikan perjalanan Anda berjalan sempurna dan seluruh mitra atraksi kami telah lolos uji kualitas yang ketat.
             </p>
           </div>

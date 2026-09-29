@@ -15,13 +15,13 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2 shadow-xs font-montserrat">
             <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-            <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest font-montserrat">
               TUR UNGGULAN RESMI
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight">
+          <h2 className="font-heading font-bebas text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight">
             LAYANAN EKSKLUSIF SHUTTLE DIAMOND HEAD
           </h2>
         </div>
@@ -56,23 +56,23 @@ export function DiamondHeadBanner({ onBookShuttle }: DiamondHeadBannerProps) {
 
           {/* Bottom Left Content */}
           <div className="absolute bottom-0 inset-x-0 p-5 sm:p-7 md:p-9 z-10 max-w-2xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 border border-white/20 backdrop-blur-md mb-2.5 text-[11px] sm:text-xs font-bold text-[#E9C46A] uppercase tracking-widest shadow-md">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 border border-white/20 backdrop-blur-md mb-2.5 text-[11px] sm:text-xs font-bold text-[#E9C46A] uppercase tracking-widest shadow-md font-montserrat">
               KEBERANGKATAN SETIAP HARI DARI WAIKIKI
             </div>
 
-            <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-wider mb-2.5 drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] group-hover:text-[#E9C46A] transition-colors duration-250 leading-tight">
+            <h3 className="font-heading font-bebas text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-wider mb-2.5 drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] group-hover:text-[#E9C46A] transition-colors duration-250 leading-tight">
               SHUTTLE PENDAKIAN DIAMOND HEAD
             </h3>
-            <p className="text-neutral-100 text-xs sm:text-sm sm:text-base leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] max-w-xl font-normal mb-4 sm:mb-5 line-clamp-2 sm:line-clamp-none">
+            <p className="text-neutral-100 text-xs sm:text-sm sm:text-base leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] max-w-xl font-poppins font-normal mb-4 sm:mb-5 line-clamp-2 sm:line-clamp-none">
               Mendaki kawah ikonis Oahu tanpa repot. Termasuk antar-jemput harian dari Waikiki dan tiket reservasi resmi.
             </p>
 
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-              <span className="inline-flex items-center gap-2 px-6 py-2.5 sm:px-7 sm:py-3 rounded-xl bg-[#E76F51] text-white font-heading text-sm sm:text-base font-bold uppercase tracking-wider shadow-lg shadow-[#E76F51]/40 group-hover:bg-[#2C7A7B] transition-all transform group-hover:translate-x-1">
+              <span className="inline-flex items-center gap-2 px-6 py-2.5 sm:px-7 sm:py-3 rounded-xl bg-[#E76F51] text-white font-montserrat text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg shadow-[#E76F51]/40 group-hover:bg-[#2C7A7B] transition-all transform group-hover:translate-x-1">
                 <span>LIHAT DETAIL TUR</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-              <span className="px-3.5 py-2 rounded-xl bg-[#2C7A7B]/90 text-white text-xs sm:text-sm font-bold border border-[#2C7A7B] shadow-sm">
+              <span className="px-3.5 py-2 rounded-xl bg-[#2C7A7B]/90 text-white text-xs sm:text-sm font-montserrat font-bold border border-[#2C7A7B] shadow-sm">
                 Mulai dari $45 / orang
               </span>
             </div>

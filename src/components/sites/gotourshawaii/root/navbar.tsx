@@ -80,7 +80,7 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 font-montserrat ${
         isScrolled
           ? "bg-[#164A41]/95 backdrop-blur-md shadow-xl border-b border-white/15"
           : "bg-[#164A41] border-b border-white/15"

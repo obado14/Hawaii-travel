@@ -7,9 +7,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
-  --font-bebas: var(--font-bebas);
+  --font-bebas: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
+  --font-montserrat: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   
   --color-hawaii-sand: #FAF7F2;
   --color-hawaii-ocean: #164A41;
@@ -88,16 +90,35 @@
     @apply border-border;
   }
   body {
-    font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
     color: #124E50;
     background-color: #FAF7F2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, .font-heading {
+  h1, h2, h3, .font-heading, .font-bebas {
     font-family: var(--font-bebas), ui-sans-serif, system-ui, sans-serif;
     letter-spacing: 0.04em;
   }
+  button, nav, label, .font-montserrat {
+    font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  }
+  p, input, textarea, select, .font-poppins {
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+.font-bebas {
+  font-family: var(--font-bebas), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: 0.04em;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif !important;
 }
 
 /* Glassmorphism & card polish effects */

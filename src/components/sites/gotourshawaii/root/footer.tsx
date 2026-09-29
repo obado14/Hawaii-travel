@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#164A41] text-white pt-12 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#164A41] text-white pt-12 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-10 border-b border-white/10">
           {/* Column 1: Brand & Contact Info */}
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Column 2: Experience */}
           <div className="space-y-3">
-            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
+            <h4 className="font-heading font-bebas text-lg font-bold text-white uppercase tracking-wider mb-2.5">
               Pengalaman Wisata
             </h4>
             <ul className="space-y-2.5 text-[14.5px] sm:text-[15px] text-neutral-100">
@@ -117,7 +117,7 @@ export function Footer() {
           {/* Column 3: About Us & Media */}
           <div className="space-y-5">
             <div className="space-y-2.5">
-              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
+              <h4 className="font-heading font-bebas text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 Tentang Kami
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
@@ -140,7 +140,7 @@ export function Footer() {
             </div>
 
             <div className="space-y-2.5 pt-1">
-              <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2.5">
+              <h4 className="font-heading font-bebas text-lg font-bold text-white uppercase tracking-wider mb-2.5">
                 Media &amp; Galeri
               </h4>
               <ul className="space-y-2 text-[14.5px] sm:text-[15px] text-neutral-100">
@@ -160,7 +160,7 @@ export function Footer() {
 
           {/* Column 4: Find Us & Map */}
           <div className="space-y-3">
-            <h4 className="font-heading text-lg font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="font-heading font-bebas text-lg font-bold text-white uppercase tracking-wider mb-2">
               Lokasi Kami
             </h4>
             <div className="flex items-center group">

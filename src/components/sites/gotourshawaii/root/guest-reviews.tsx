@@ -70,12 +70,12 @@ export function GuestReviews() {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Title */}
         <div className="text-center mb-7 sm:mb-9">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
-            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs font-montserrat">
+            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
               KEPUASAN WISATAWAN
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider drop-shadow-md">
+          <h2 className="font-heading font-bebas text-3xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider drop-shadow-md">
             TESTIMONI TAMU KAMI
           </h2>
 
@@ -89,15 +89,15 @@ export function GuestReviews() {
                 className="object-contain"
               />
             </div>
-            <div className="text-left">
-              <div className="text-[11px] uppercase tracking-wider text-neutral-300 font-semibold">
+            <div className="text-left font-montserrat">
+              <div className="text-[11px] uppercase tracking-wider text-neutral-300 font-semibold font-montserrat">
                 Rating Keseluruhan
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl sm:text-3xl font-extrabold text-[#E9C46A] leading-none font-heading">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#E9C46A] leading-none font-heading font-bebas">
                   4.9
                 </span>
-                <span className="text-[11px] sm:text-xs text-neutral-300 font-medium">4.678 ulasan</span>
+                <span className="text-[11px] sm:text-xs text-neutral-300 font-poppins font-medium">4.678 ulasan</span>
               </div>
             </div>
           </div>
@@ -116,27 +116,27 @@ export function GuestReviews() {
                     <Star key={i} className="w-5 h-5 fill-[#E9C46A] text-[#E9C46A] drop-shadow-sm" />
                   ))}
                 </div>
-                <span className="text-[11px] uppercase tracking-wider font-bold text-[#2C7A7B] bg-[#2C7A7B]/10 border border-[#2C7A7B]/25 px-2.5 py-0.5 rounded-full">
+                <span className="text-[11px] uppercase tracking-wider font-montserrat font-bold text-[#2C7A7B] bg-[#2C7A7B]/10 border border-[#2C7A7B]/25 px-2.5 py-0.5 rounded-full">
                   ✓ Tamu Tur Terverifikasi
                 </span>
               </div>
 
               {/* Review Title if present */}
               {current.title && (
-                <h4 className="font-heading text-lg sm:text-xl md:text-2xl font-bold text-center text-[#124E50] mb-2.5">
+                <h4 className="font-heading font-bebas text-lg sm:text-xl md:text-2xl font-bold text-center text-[#124E50] mb-2.5">
                   {current.title}
                 </h4>
               )}
 
-              {/* Review Quote */}
-              <p className="text-sm sm:text-base md:text-lg text-[#124E50]/85 italic text-center font-normal leading-relaxed max-w-2xl mx-auto">
+              {/* Review Quote (Poppins) */}
+              <p className="text-sm sm:text-base md:text-lg text-[#124E50]/85 italic text-center font-poppins font-normal leading-relaxed max-w-2xl mx-auto">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
 
-            {/* Author */}
+            {/* Author (Montserrat) */}
             <div className="mt-5 text-center border-t border-neutral-100 pt-3">
-              <span className="font-heading text-base sm:text-lg font-bold text-[#E76F51] uppercase tracking-wider">
+              <span className="font-montserrat text-sm sm:text-base font-bold text-[#E76F51] uppercase tracking-wider">
                 ~ {current.author}
               </span>
             </div>

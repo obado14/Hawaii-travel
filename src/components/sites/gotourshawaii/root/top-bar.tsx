@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function TopBar() {
   return (
-    <div className="relative z-40 bg-[#164A41] text-white text-[11px] sm:text-xs font-semibold py-1.5 px-4 text-center tracking-widest uppercase transition-colors hover:bg-[#2C7A7B] border-b border-white/10">
+    <div className="relative z-40 bg-[#164A41] text-white font-montserrat text-[11px] sm:text-xs font-semibold py-1.5 px-4 text-center tracking-widest uppercase transition-colors hover:bg-[#2C7A7B] border-b border-white/10">
       <div className="container mx-auto flex items-center justify-center gap-2">
         <span className="inline-block w-2 h-2 rounded-full bg-[#E9C46A] animate-pulse" />
         <span className="text-[#E9C46A] font-bold">Penawaran Khusus:</span>

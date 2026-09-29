@@ -55,10 +55,10 @@ export function ContactSection() {
                 <div className="w-16 h-16 bg-[#2C7A7B]/15 text-[#2C7A7B] rounded-full flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-heading text-3xl font-bold text-[#124E50]">
+                <h3 className="font-heading font-bebas text-3xl font-bold text-[#124E50]">
                   MAHALO ATAS PERTANYAAN ANDA!
                 </h3>
-                <p className="text-[#124E50]/75 text-base max-w-sm mx-auto leading-relaxed">
+                <p className="text-[#124E50]/75 text-base max-w-sm mx-auto leading-relaxed font-poppins">
                   Pesan Anda telah kami terima. Tim pemandu wisata lokal kami akan segera menghubungi Anda dalam 1 hari kerja.
                 </p>
                 <button
@@ -72,7 +72,7 @@ export function ContactSection() {
                       message: "",
                     });
                   }}
-                  className="mt-4 px-7 py-2.5 bg-[#E76F51] text-white rounded-xl text-sm font-semibold hover:bg-[#2C7A7B] transition-colors cursor-pointer"
+                  className="mt-4 px-7 py-2.5 bg-[#E76F51] text-white rounded-xl text-xs sm:text-sm font-montserrat font-bold uppercase tracking-wider hover:bg-[#2C7A7B] transition-colors cursor-pointer"
                 >
                   Kirim Pesan Lain
                 </button>
@@ -80,17 +80,17 @@ export function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="mb-2">
-                  <span className="text-xs font-bold text-[#2C7A7B] uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-montserrat font-bold text-[#2C7A7B] uppercase tracking-widest block mb-1">
                     Kirim Pesan Langsung
                   </span>
-                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#124E50] uppercase">
+                  <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-[#124E50] uppercase">
                     KONSULTASI PERJALANAN HAWAII
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-montserrat font-bold text-[#124E50] uppercase tracking-wider mb-2">
                       Nama Lengkap <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -102,13 +102,13 @@ export function ContactSection() {
                         if (errorField === "name") setErrorField(null);
                       }}
                       placeholder="Budi Santoso"
-                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
+                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 font-poppins ${
                         errorField === "name" ? "border-red-500 ring-1 ring-red-500" : "border-[#164A41]/15"
                       }`}
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-montserrat font-bold text-[#124E50] uppercase tracking-wider mb-2">
                       Nomor Telepon / WhatsApp <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -117,14 +117,14 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+62 812-3456-7890"
-                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200"
+                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 font-poppins"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-montserrat font-bold text-[#124E50] uppercase tracking-wider mb-2">
                       Alamat Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -136,19 +136,19 @@ export function ContactSection() {
                         if (errorField === "email") setErrorField(null);
                       }}
                       placeholder="nama@email.com"
-                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 ${
+                      className={`w-full bg-[#FAF7F2]/40 focus:bg-white border rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 font-poppins ${
                         errorField === "email" ? "border-red-500 ring-1 ring-red-500" : "border-[#164A41]/15"
                       }`}
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-montserrat font-bold text-[#124E50] uppercase tracking-wider mb-2">
                       Pilihan Layanan <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 cursor-pointer"
+                      className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 cursor-pointer font-poppins"
                     >
                       <option value="Tur Keliling Pulau Oahu">Tur Keliling Pulau Oahu</option>
                       <option value="Tur Pearl Harbor">Tur Bersejarah Pearl Harbor</option>
@@ -160,7 +160,7 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#124E50] uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-montserrat font-bold text-[#124E50] uppercase tracking-wider mb-2">
                     Pesan Anda
                   </label>
                   <textarea
@@ -168,7 +168,7 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tuliskan perkiraan tanggal liburan dan rencana grup Anda di sini..."
-                    className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full bg-[#FAF7F2]/40 focus:bg-white border border-[#164A41]/15 rounded-xl px-4 py-3 text-sm text-[#124E50] placeholder-[#124E50]/45 focus:outline-none focus:ring-2 focus:ring-[#2C7A7B] focus:border-transparent transition-all duration-200 resize-none font-poppins"
                   />
                 </div>
 
@@ -176,7 +176,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto bg-[#E76F51] hover:bg-[#2C7A7B] text-white font-heading text-lg sm:text-xl font-bold uppercase tracking-wider px-10 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-[#E76F51]/30 hover:shadow-2xl hover:shadow-[#E76F51]/50 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto bg-[#E76F51] hover:bg-[#2C7A7B] text-white font-montserrat text-sm sm:text-base font-bold uppercase tracking-wider px-10 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-[#E76F51]/30 hover:shadow-2xl hover:shadow-[#E76F51]/50 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -187,26 +187,26 @@ export function ContactSection() {
                       <span>KIRIM PESAN SEKARANG</span>
                     )}
                   </button>
-                  <span className="text-xs text-[#124E50]/60">Respon dalam 1 hari kerja</span>
+                  <span className="text-xs text-[#124E50]/60 font-poppins">Respon dalam 1 hari kerja</span>
                 </div>
               </form>
             )}
           </div>
 
           {/* Contact Details (Right Column - 5 cols) */}
-          <div className="lg:col-span-5 space-y-7 lg:pl-4">
+          <div className="lg:col-span-5 space-y-7 lg:pl-4 font-poppins">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs font-montserrat">
                 <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
-                <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest">
+                <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
                   RENCANAKAN PERJALANAN ANDA
                 </span>
               </div>
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider mb-4 leading-tight">
+              <h2 className="font-heading font-bebas text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-wider mb-4 leading-tight">
                 HUBUNGI KAMI
               </h2>
 
-              <p className="text-neutral-200 text-base sm:text-lg leading-relaxed font-normal">
+              <p className="text-neutral-200 text-base sm:text-lg leading-relaxed font-poppins font-normal">
                 Punya pertanyaan seputar reservasi atau kebutuhan penjemputan hotel? Tim lokal kami yang ramah siap membantu Anda mewujudkan liburan impian di Hawaii.
               </p>
             </div>

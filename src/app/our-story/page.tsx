@@ -133,17 +133,17 @@ export default function OurStoryPage() {
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-14 pb-16 sm:pb-20 md:pb-24">
             {/* Text backdrop container for crisp readability */}
-            <div className="max-w-3xl mx-auto py-6 px-6 sm:px-10 rounded-3xl bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl">
-              <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm">
+            <div className="max-w-3xl mx-auto py-6 px-6 sm:px-10 rounded-3xl bg-black/55 backdrop-blur-md border border-white/20 shadow-2xl font-montserrat">
+              <div className="inline-flex items-center gap-2 mb-3.5 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-sm font-montserrat">
                 <Sparkles className="w-4 h-4 text-[#E9C46A]" />
-                <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-widest">
+                <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
                   Dimiliki &amp; Dikelola oleh Warga Lokal Hawaii
                 </span>
               </div>
-              <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[5.5rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+              <h1 className="font-heading font-bebas text-5xl sm:text-7xl md:text-8xl lg:text-[5.5rem] text-white uppercase tracking-wider mb-3 leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
                 KISAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E9C46A] via-[#E76F51] to-[#E9C46A]">KAMI</span>
               </h1>
-              <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-100 font-normal leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+              <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-100 font-poppins font-normal leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                 Berbagi semangat Aloha, warisan autentik Hawaii, dan kenangan tak terlupakan sejak hari pertama.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function OurStoryPage() {
         <section className="bg-[#FAF7F2] text-[#124E50] pt-8 sm:pt-12 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb Navigation for User Orientation */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-8 font-medium px-1">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#124E50]/70 mb-8 font-montserrat font-medium px-1">
               <Link href="/" className="hover:text-[#E76F51] transition-colors">
                 Beranda
               </Link>
@@ -177,16 +177,16 @@ export default function OurStoryPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 shadow-xs">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 shadow-xs font-montserrat">
                   <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-                  <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest">
+                  <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest font-montserrat">
                     TENTANG GO TOURS HAWAII
                   </span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#124E50] uppercase leading-tight">
+                <h2 className="font-heading font-bebas text-3xl sm:text-5xl md:text-6xl text-[#124E50] uppercase leading-tight">
                   BERAKAR DALAM BUDAYA KEPULAUAN HAWAII
                 </h2>
-                <div className="space-y-4 text-sm sm:text-base text-[#124E50]/80 leading-relaxed sm:leading-7 font-normal">
+                <div className="space-y-4 text-sm sm:text-base text-[#124E50]/80 leading-relaxed sm:leading-7 font-poppins font-normal">
                   <p>
                     <strong>Go Tours Hawaii</strong> lahir dari kecintaan mendalam terhadap kekayaan budaya, keindahan lanskap alam, dan komunitas kepulauan Hawaii. Pendiri kami, Eddie &ldquo;Eke&rdquo; Keliinohomoku, mendambakan sebuah perusahaan tur yang tidak sekadar membawa turis melihat pemandangan indah—melainkan mengajak mereka menyelami sejarah sejati, cerita rakyat, dan tradisi hidup Hawaii.
                   </p>
@@ -210,7 +210,7 @@ export default function OurStoryPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex items-end p-6 sm:p-8">
                     <div className="border-l-2 border-[#E76F51] pl-3.5">
-                      <p className="text-white text-xs sm:text-sm leading-relaxed italic drop-shadow-sm font-medium">
+                      <p className="text-white text-xs sm:text-sm leading-relaxed italic drop-shadow-sm font-poppins font-medium">
                         &ldquo;Aloha lebih dari sekadar salam—ini adalah cara kami hidup, menghormati bumi pertiwi, dan menyayangi setiap tamu.&rdquo;
                       </p>
                     </div>
@@ -224,14 +224,14 @@ export default function OurStoryPage() {
         {/* 3. Company Statistics Section */}
         <section className="bg-white border-y border-[#164A41]/10 py-14 sm:py-18 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 font-montserrat">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-3 shadow-xs font-montserrat">
                 <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-                <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest">
+                <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest font-montserrat">
                   PRESTASI &amp; DEDIKASI
                 </span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide leading-tight">
+              <h2 className="font-heading font-bebas text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide leading-tight">
                 DAMPAK PERJALANAN KAMI DALAM ANGKA
               </h2>
             </div>
@@ -242,13 +242,13 @@ export default function OurStoryPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Clock className="w-6 h-6" />
                 </div>
-                <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
+                <div className="font-heading font-bebas text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
                   15+
                 </div>
-                <div className="font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
+                <div className="font-montserrat font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
                   Tahun Pengalaman
                 </div>
-                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1">Memandu wisatawan sejak 2010</p>
+                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1 font-poppins">Memandu wisatawan sejak 2010</p>
               </div>
 
               {/* Stat 2 */}
@@ -256,13 +256,13 @@ export default function OurStoryPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Users className="w-6 h-6" />
                 </div>
-                <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
+                <div className="font-heading font-bebas text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
                   50K+
                 </div>
-                <div className="font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
+                <div className="font-montserrat font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
                   Wisatawan Bahagia
                 </div>
-                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1">Dari 50 negara bagian &amp; 40+ negara</p>
+                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1 font-poppins">Dari 50 negara bagian &amp; 40+ negara</p>
               </div>
 
               {/* Stat 3 */}
@@ -270,13 +270,13 @@ export default function OurStoryPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Compass className="w-6 h-6" />
                 </div>
-                <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
+                <div className="font-heading font-bebas text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
                   100+
                 </div>
-                <div className="font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
+                <div className="font-montserrat font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
                   Pengalaman Tur
                 </div>
-                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1">Keberangkatan tur eksklusif tiap minggu</p>
+                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1 font-poppins">Keberangkatan tur eksklusif tiap minggu</p>
               </div>
 
               {/* Stat 4 */}
@@ -284,13 +284,13 @@ export default function OurStoryPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#2C7A7B]/15 text-[#2C7A7B] flex items-center justify-center mx-auto mb-3">
                   <Star className="w-6 h-6" />
                 </div>
-                <div className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
+                <div className="font-heading font-bebas text-4xl sm:text-5xl lg:text-6xl font-bold text-[#124E50] tracking-tight mb-2">
                   4.9/5
                 </div>
-                <div className="font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
+                <div className="font-montserrat font-bold text-xs sm:text-sm text-[#124E50] uppercase tracking-wider">
                   Penilaian Tamu
                 </div>
-                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1">TripAdvisor Best of the Best</p>
+                <p className="text-[11px] sm:text-xs text-[#124E50]/70 mt-1 font-poppins">TripAdvisor Best of the Best</p>
               </div>
             </div>
           </div>
@@ -299,14 +299,14 @@ export default function OurStoryPage() {
         {/* 4. Our Journey / Timeline Section */}
         <section className="bg-[#FAF7F2] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 font-montserrat">
+              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2 font-montserrat">
                 Perjalanan Kami
               </span>
-              <h2 className="font-heading text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide mb-3">
+              <h2 className="font-heading font-bebas text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide mb-3">
                 BAGAIMANA KAMI TUMBUH BERSAMA KEPULAUAN HAWAII
               </h2>
-              <p className="text-[#124E50]/75 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#124E50]/75 text-sm sm:text-base leading-relaxed font-poppins">
                 Dari sebuah van tunggal dengan visi autentik hingga menjadi perusahaan tur butik terkemuka di Hawaii.
               </p>
             </div>
@@ -318,15 +318,15 @@ export default function OurStoryPage() {
               <div className="grid grid-cols-4 gap-6 relative z-10">
                 {timelineMilestones.map((item) => (
                   <div key={item.year} className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 rounded-full bg-[#E76F51] text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg ring-4 ring-[#FAF7F2] group-hover:scale-110 transition-transform mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[#E76F51] text-white flex items-center justify-center font-heading font-bebas font-bold text-lg shadow-lg ring-4 ring-[#FAF7F2] group-hover:scale-110 transition-transform mb-6">
                       {item.year}
                     </div>
 
                     <div className="bg-white rounded-3xl p-6 shadow-md border border-[#164A41]/10 w-full flex-1 flex flex-col justify-start group-hover:-translate-y-1 group-hover:shadow-xl transition-all">
-                      <h3 className="font-heading text-lg font-bold text-[#124E50] uppercase tracking-wide mb-2 group-hover:text-[#2C7A7B] transition-colors">
+                      <h3 className="font-heading font-bebas text-lg sm:text-xl font-bold text-[#124E50] uppercase tracking-wide mb-2 group-hover:text-[#2C7A7B] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-[#124E50]/75 text-xs sm:text-sm leading-relaxed font-normal">
+                      <p className="text-[#124E50]/75 text-xs sm:text-sm leading-relaxed font-poppins font-normal">
                         {item.description}
                       </p>
                     </div>
@@ -341,16 +341,16 @@ export default function OurStoryPage() {
 
               {timelineMilestones.map((item) => (
                 <div key={item.year} className="relative pl-6">
-                  <div className="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-[#E76F51] ring-4 ring-[#FAF7F2] flex items-center justify-center text-white text-[10px] font-bold shadow-md" />
+                  <div className="absolute -left-6 top-1.5 w-6 h-6 rounded-full bg-[#E76F51] ring-4 ring-[#FAF7F2] flex items-center justify-center text-white text-[10px] font-heading font-bebas font-bold shadow-md" />
 
                   <div className="bg-white rounded-2xl p-5 shadow-md border border-[#164A41]/10">
-                    <span className="inline-block px-3 py-0.5 rounded-full bg-[#E76F51]/15 text-[#E76F51] text-xs font-bold uppercase tracking-wider mb-1.5">
+                    <span className="inline-block px-3 py-0.5 rounded-full bg-[#E76F51]/15 text-[#E76F51] text-xs font-montserrat font-bold uppercase tracking-wider mb-1.5">
                       {item.year}
                     </span>
-                    <h3 className="font-heading text-base font-bold text-[#124E50] uppercase tracking-wide mb-1.5">
+                    <h3 className="font-heading font-bebas text-base font-bold text-[#124E50] uppercase tracking-wide mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="text-[#124E50]/75 text-xs leading-relaxed font-normal">
+                    <p className="text-[#124E50]/75 text-xs leading-relaxed font-poppins font-normal">
                       {item.description}
                     </p>
                   </div>
@@ -363,10 +363,10 @@ export default function OurStoryPage() {
         {/* 5. Core Pillars */}
         <section className="bg-[#164A41] text-white py-14 sm:py-18 px-4 sm:px-6 lg:px-8 border-t border-white/10">
           <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-12">
-            <h2 className="font-heading text-4xl sm:text-6xl text-[#E9C46A] uppercase tracking-wider mb-3">
+            <h2 className="font-heading font-bebas text-4xl sm:text-6xl text-[#E9C46A] uppercase tracking-wider mb-3">
               PILAR-PILAR SEMANGAT ALOHA KAMI
             </h2>
-            <p className="text-neutral-200 text-sm max-w-xl mx-auto">
+            <p className="text-neutral-200 text-sm max-w-xl mx-auto font-poppins">
               Setiap tur yang kami rancang senantiasa dipandu oleh nilai-nilai luhur leluhur bangsa Hawaii:
             </p>
           </div>
@@ -376,10 +376,10 @@ export default function OurStoryPage() {
               <div className="w-13 h-13 rounded-full bg-[#E9C46A]/20 text-[#E9C46A] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="font-heading text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
+              <h3 className="font-heading font-bebas text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
                 ALOHA (Kasih &amp; Keramahan)
               </h3>
-              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
+              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-poppins">
                 Menyambut dan memperlakukan setiap wisatawan layaknya bagian dari ʻOhana (keluarga) kami sendiri, menciptakan memori indah yang abadi.
               </p>
             </div>
@@ -388,10 +388,10 @@ export default function OurStoryPage() {
               <div className="w-13 h-13 rounded-full bg-[#E9C46A]/20 text-[#E9C46A] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-heading text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
+              <h3 className="font-heading font-bebas text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
                 KULEANA (Tanggung Jawab)
               </h3>
-              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
+              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-poppins">
                 Menjaga dan melestarikan ekosistem alami Hawaii, satwa liar langka (penyu laut Honu), serta kesucian situs cagar budaya.
               </p>
             </div>
@@ -400,10 +400,10 @@ export default function OurStoryPage() {
               <div className="w-13 h-13 rounded-full bg-[#E9C46A]/20 text-[#E9C46A] flex items-center justify-center mx-auto mb-3.5 group-hover:scale-110 transition-transform">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="font-heading text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
+              <h3 className="font-heading font-bebas text-xl sm:text-2xl text-[#E9C46A] uppercase tracking-wide mb-2">
                 PONO (Kualitas &amp; Integritas)
               </h3>
-              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed">
+              <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-poppins">
                 Menghadirkan layanan bintang lima pada setiap keberangkatan, dengan transparansi harga, jaminan tiket resmi, dan pemandu berpengalaman.
               </p>
             </div>
@@ -413,14 +413,14 @@ export default function OurStoryPage() {
         {/* 6. Meet Our Team Section */}
         <section className="bg-[#FAF7F2] text-[#124E50] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#164A41]/10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 font-montserrat">
+              <span className="text-xs font-extrabold text-[#2C7A7B] uppercase tracking-widest block mb-2 font-montserrat">
                 Keluarga Lokal ʻOhana
               </span>
-              <h2 className="font-heading text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide mb-3">
+              <h2 className="font-heading font-bebas text-3xl sm:text-5xl text-[#124E50] uppercase tracking-wide mb-3">
                 KENALI TIM DI BALIK GO TOURS HAWAII
               </h2>
-              <p className="text-[#124E50]/75 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#124E50]/75 text-sm sm:text-base leading-relaxed font-poppins">
                 Putra daerah berdedikasi tinggi, naturalis bersertifikat, dan sejarawan yang bertekad mempersembahkan keindahan sejati Hawaii untuk Anda.
               </p>
             </div>
@@ -441,7 +441,7 @@ export default function OurStoryPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70" />
                     <div className="absolute bottom-3 left-3 right-3">
-                      <span className="inline-block bg-[#164A41]/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/20">
+                      <span className="inline-block bg-[#164A41]/90 backdrop-blur-md text-white text-[10px] font-montserrat font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/20">
                         {member.role.split("&")[0].trim()}
                       </span>
                     </div>
@@ -450,13 +450,13 @@ export default function OurStoryPage() {
                   {/* Member Info */}
                   <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <h3 className="font-heading text-lg sm:text-xl font-bold text-[#124E50] uppercase tracking-wide mb-1 group-hover:text-[#2C7A7B] transition-colors">
+                      <h3 className="font-heading font-bebas text-lg sm:text-xl font-bold text-[#124E50] uppercase tracking-wide mb-1 group-hover:text-[#2C7A7B] transition-colors">
                         {member.name}
                       </h3>
-                      <p className="text-[#2C7A7B] text-xs font-bold uppercase tracking-wider mb-3">
+                      <p className="text-[#2C7A7B] text-xs font-montserrat font-bold uppercase tracking-wider mb-3">
                         {member.role}
                       </p>
-                      <p className="text-[#124E50]/75 text-xs sm:text-sm leading-relaxed font-normal">
+                      <p className="text-[#124E50]/75 text-xs sm:text-sm leading-relaxed font-poppins font-normal">
                         {member.description}
                       </p>
                     </div>
@@ -470,15 +470,15 @@ export default function OurStoryPage() {
         {/* 7. Visual Storytelling Gallery */}
         <section className="bg-[#164A41] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-              <div className="inline-flex items-center gap-2 mb-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#E9C46A] text-xs font-bold uppercase tracking-widest">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 font-montserrat">
+              <div className="inline-flex items-center gap-2 mb-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#E9C46A] text-xs font-montserrat font-bold uppercase tracking-widest">
                 <Camera className="w-3.5 h-3.5" />
                 <span>Dokumentasi Visual</span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wide mb-3">
+              <h2 className="font-heading font-bebas text-3xl sm:text-5xl text-white uppercase tracking-wide mb-3">
                 MENGABADIKAN KEINDAHAN SEJATI HAWAII
               </h2>
-              <p className="text-neutral-200 text-sm sm:text-base leading-relaxed">
+              <p className="text-neutral-200 text-sm sm:text-base leading-relaxed font-poppins">
                 Sekilas potret keagungan alam, kebersamaan hangat, dan tradisi hidup yang mewarnai setiap petualangan tur kami.
               </p>
             </div>
@@ -498,7 +498,7 @@ export default function OurStoryPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-[#E76F51] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
+                    <span className="bg-[#E76F51] text-white text-[11px] font-montserrat font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
                       <MapPin className="w-3 h-3" />
                       {story.category}
                     </span>
@@ -506,10 +506,10 @@ export default function OurStoryPage() {
 
                   <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 z-10">
                     <div className="w-8 h-1 bg-[#E76F51] group-hover:w-14 transition-all duration-300 rounded mb-2.5" />
-                    <h3 className="font-heading text-xl sm:text-2xl text-white uppercase tracking-wide mb-2 drop-shadow-md">
+                    <h3 className="font-heading font-bebas text-xl sm:text-2xl text-white uppercase tracking-wide mb-2 drop-shadow-md">
                       {story.title}
                     </h3>
-                    <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-normal drop-shadow-sm">
+                    <p className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-poppins font-normal drop-shadow-sm">
                       {story.description}
                     </p>
                   </div>

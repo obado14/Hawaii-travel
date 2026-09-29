@@ -91,16 +91,16 @@ export function VisualOdyssey() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-2 shadow-xs font-montserrat">
             <Sparkles className="w-3.5 h-3.5 text-[#E9C46A]" />
-            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#E9C46A] uppercase tracking-widest font-montserrat">
               GALERI PERJALANAN
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-2 leading-none drop-shadow-md">
+          <h2 className="font-heading font-bebas text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-2 leading-none drop-shadow-md">
             PETUALANGAN VISUAL
           </h2>
-          <p className="text-neutral-300 text-xs sm:text-sm font-normal max-w-lg mx-auto leading-relaxed">
+          <p className="text-neutral-300 text-xs sm:text-sm font-poppins font-normal max-w-lg mx-auto leading-relaxed">
             Potret keindahan alam dan momen berkesan para tamu kami saat menjelajahi surga Hawaii.
           </p>
         </div>
@@ -147,14 +147,14 @@ export function VisualOdyssey() {
           {/* Caption Overlay */}
           <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 lg:p-7 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="text-[11px] sm:text-xs font-bold text-[#E9C46A] uppercase tracking-widest block mb-0.5">
+              <span className="text-[11px] sm:text-xs font-bold text-[#E9C46A] uppercase tracking-widest block mb-0.5 font-montserrat">
                 Foto {currentIndex + 1} dari {photos.length}
               </span>
-              <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-white uppercase drop-shadow-md">
+              <h3 className="font-heading font-bebas text-xl sm:text-2xl md:text-3xl text-white uppercase drop-shadow-md">
                 {activePhoto.caption}
               </h3>
             </div>
-            <p className="text-xs text-neutral-300 max-w-sm italic hidden sm:block">
+            <p className="text-xs text-neutral-300 max-w-sm italic hidden sm:block font-poppins">
               &ldquo;{activePhoto.alt}&rdquo;
             </p>
           </div>
@@ -204,7 +204,7 @@ export function VisualOdyssey() {
                 className="object-contain"
               />
             </div>
-            <p className="text-center font-heading text-xl sm:text-2xl text-white mt-4 uppercase">
+            <p className="text-center font-heading font-bebas text-xl sm:text-2xl text-white mt-4 uppercase">
               {selectedPhoto.caption}
             </p>
           </div>

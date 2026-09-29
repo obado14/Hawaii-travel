@@ -54,16 +54,16 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-11">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2.5 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2C7A7B]/15 border border-[#2C7A7B]/30 mb-2.5 shadow-xs font-montserrat">
             <Sparkles className="w-3.5 h-3.5 text-[#2C7A7B]" />
-            <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest">
+            <span className="text-xs sm:text-sm font-bold text-[#124E50] uppercase tracking-widest font-montserrat">
               PENGALAMAN UNGGULAN OAHU
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight mb-3">
+          <h2 className="font-heading font-bebas text-3xl sm:text-4xl md:text-5xl text-[#124E50] uppercase tracking-wide leading-tight mb-3">
             PILIH PENGALAMAN WISATA ANDA
           </h2>
-          <p className="text-[#124E50]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#124E50]/80 text-sm sm:text-base font-poppins font-normal max-w-xl mx-auto leading-relaxed">
             Pilihan tur Permata Tersembunyi Oahu terpopuler bersama pemandu lokal berlisensi dan jaminan kepuasan.
           </p>
         </div>
@@ -91,23 +91,23 @@ export function ExperienceCards({ onSelectExperience }: ExperienceCardsProps) {
 
               {/* Number Badge (Top Center) */}
               <div className="absolute top-5 left-1/2 -translate-x-1/2 z-10">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/80 bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading text-xl sm:text-2xl shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-[#2C7A7B] group-hover:bg-[#2C7A7B] group-hover:text-white">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/80 bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-montserrat font-bold text-xl sm:text-2xl shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-[#2C7A7B] group-hover:bg-[#2C7A7B] group-hover:text-white">
                   {exp.id}
                 </div>
               </div>
 
               {/* Content (Bottom) */}
               <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 lg:p-7 z-10 flex flex-col justify-end">
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide leading-tight mb-2 transition-colors duration-250 group-hover:text-[#E9C46A] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                <h3 className="font-heading font-bebas text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide leading-tight mb-2 transition-colors duration-250 group-hover:text-[#E9C46A] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                   {exp.title}
                 </h3>
-                <p className="text-neutral-200 text-xs sm:text-sm font-normal leading-relaxed mb-4">
+                <p className="text-neutral-200 text-xs sm:text-sm font-poppins font-normal leading-relaxed mb-4">
                   {exp.description}
                 </p>
 
-                {/* Interactive CTA Pill */}
+                {/* Interactive CTA Pill (Montserrat) */}
                 <div>
-                  <span className="inline-flex items-center gap-1.5 bg-[#E76F51] group-hover:bg-[#2C7A7B] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider shadow-lg shadow-[#E76F51]/30 transition-all duration-300 transform group-hover:translate-x-1">
+                  <span className="inline-flex items-center gap-1.5 bg-[#E76F51] group-hover:bg-[#2C7A7B] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-montserrat font-bold uppercase tracking-wider shadow-lg shadow-[#E76F51]/30 transition-all duration-300 transform group-hover:translate-x-1">
                     <span>Jelajahi Tur</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
